@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "snapshot_id": "20260921T204122Z",
+    "status": "COMPLETE",
+    "tm1_version": "11.8.03500.4"
+  },
+  "lineage": {
+    "snapshot_id": "20260921T211754Z",
+    "status": "COMPLETE",
+    "process_count": 385,
+    "relationship_count": 4007
+  }
+}
