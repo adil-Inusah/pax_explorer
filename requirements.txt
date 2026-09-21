@@ -1,0 +1,35 @@
+
+# Application
+streamlit
+
+# Data and metadata processing
+pandas
+pyarrow
+duckdb
+pydantic
+
+# REST and configuration
+requests
+httpx
+python-dotenv
+PyYAML
+tenacity
+
+# Graph analysis and diagrams
+networkx
+pyvis
+graphviz
+
+# Documentation and exports
+Jinja2
+python-docx
+reportlab
+openpyxl
+
+# Console output and diagnostics
+rich
+
+# Testing and code quality
+pytest
+pytest-cov
+ruff

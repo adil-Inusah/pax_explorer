@@ -1,0 +1,110 @@
+@'
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.python-version
+
+# ============================================================
+# Virtual environments
+# ============================================================
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# ============================================================
+# Python package and build artifacts
+# ============================================================
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================
+# Testing and code quality
+# ============================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.tox/
+.nox/
+.ruff_cache/
+.mypy_cache/
+.pytype/
+
+# ============================================================
+# Streamlit
+# ============================================================
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+
+# ============================================================
+# Local configuration and secrets
+# ============================================================
+.env
+.env.*
+!.env.example
+
+*.secret
+*.secrets
+*.key
+*.pem
+*.pfx
+*.p12
+*.crt
+
+# OAuth and API credentials
+client_secret*.json
+credentials*.json
+token*.json
+oauth*.json
+
+# ============================================================
+# TM1 and Planning Analytics sensitive configuration
+# ============================================================
+config/environments.yaml
+config/connections.yaml
+config/credentials.yaml
+config/secrets.yaml
+
+# TM1 server and application configuration
+tm1s.cfg
+tm1p.ini
+*.pro.private
+*.cho.private
+
+# ============================================================
+# Generated metadata and snapshots
+# ============================================================
+data/raw/*
+data/normalized/*
+data/snapshots/*
+data/graph/*
+data/annotations/local/*
+
+# Preserve required data directories
+!data/raw/.gitkeep
+!data/normalized/.gitkeep
+!data/snapshots/.gitkeep
