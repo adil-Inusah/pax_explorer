@@ -108,3 +108,10 @@ data/annotations/local/*
 !data/raw/.gitkeep
 !data/normalized/.gitkeep
 !data/snapshots/.gitkeep
+
+
+data/snapshots/*
+data/current/*
+
+!data/snapshots/.gitkeep
+!data/current/.gitkeep
