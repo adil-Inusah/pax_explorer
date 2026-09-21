@@ -3,5 +3,5 @@
 "user_account": "oxystg01_tm1_automation",
 "instance": "OXYChem",
 "namespace": "LDAP",
-"base_url":  "https://oxyprd.planning-analytics.cloud.ibm.com/tm1/api/OXYChem"
+"base_url":  "https://oxystg.planning-analytics.cloud.ibm.com/tm1/api/OXYChem"
 }
