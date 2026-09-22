@@ -3,8 +3,8 @@
   "environment": "STAGING",
   "database_name": "OXYChem",
   "status": "COMPLETE",
-  "started_at": "2026-09-22T15:48:11.046061+00:00",
-  "completed_at": "2026-09-22T15:48:11.288795+00:00",
+  "started_at": "2026-09-22T16:48:38.921092+00:00",
+  "completed_at": "2026-09-22T16:48:39.214454+00:00",
   "collector_version": "0.3.0-json-adapter",
   "tm1_version": "11.8.03500.4",
   "object_counts": {
@@ -26,7 +26,7 @@
     "INCREMENTS_CUBE": 118,
     "READS_ATTRIBUTE": 843,
     "READS_FROM_CUBE": 374,
-    "REFERENCES": 252,
+    "REFERENCES": 267,
     "UPDATES_DIMENSION": 108,
     "UPDATES_HIERARCHY": 1,
     "UPDATES_SUBSET": 199,
@@ -37,7 +37,7 @@
   },
   "validation_counts": {
     "BROKEN_REFERENCE": 33,
-    "NOT_CROSS_CHECKED": 2545,
+    "NOT_CROSS_CHECKED": 2560,
     "UNRESOLVED_DYNAMIC_REFERENCE": 640,
     "VALID": 1041
   },

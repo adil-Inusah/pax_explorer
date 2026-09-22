@@ -149455,6 +149455,25 @@
   },
   {
     "snapshot_id": "20260922T143432Z",
+    "evidence_id": "7ad3eab432e81c6b033ddde8",
+    "source_object_id": "2580d93affe81cc60fc98613",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Fiscal Period'",
+    "procedure": null,
+    "function_name": "ELCOMPN",
+    "line_number": 87,
+    "code_reference": "ELCOMPN ( 'Fiscal Period', !Fiscal Period )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Fiscal Period",
+      "legacy_target_type": "DIMENSION",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
     "evidence_id": "590cf77fbadbaf613eee64d6",
     "source_object_id": "2580d93affe81cc60fc98613",
     "relationship_type": "REFERENCES",
@@ -151032,6 +151051,25 @@
   },
   {
     "snapshot_id": "20260922T143432Z",
+    "evidence_id": "71a5387ab2a53c2c4e237210",
+    "source_object_id": "ffc7f3e1f7bacc5f6c464f85",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Fiscal Period'",
+    "procedure": null,
+    "function_name": "ELCOMPN",
+    "line_number": 12,
+    "code_reference": "ELCOMPN ('Fiscal Period', !Fiscal Period)",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Fiscal Period",
+      "legacy_target_type": "DIMENSION",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
     "evidence_id": "e74a378cb8bbd280d0a272db",
     "source_object_id": "ffc7f3e1f7bacc5f6c464f85",
     "relationship_type": "REFERENCES",
@@ -151082,6 +151120,25 @@
     "properties": {
       "legacy_target_name": "Fiscal Period",
       "legacy_target_type": "HIERARCHY",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
+    "evidence_id": "41364d99d50b5b4a478e0695",
+    "source_object_id": "ffc7f3e1f7bacc5f6c464f85",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Fiscal Period'",
+    "procedure": null,
+    "function_name": "ELCOMPN",
+    "line_number": 19,
+    "code_reference": "ELCOMPN ('Fiscal Period', !Fiscal Period)",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Fiscal Period",
+      "legacy_target_type": "DIMENSION",
       "attribute_name": null,
       "target_measure": null,
       "sequence": null
@@ -151233,6 +151290,25 @@
     "confidence": "UNRESOLVED",
     "properties": {
       "legacy_target_name": "Fixed Manufacturing Cost",
+      "legacy_target_type": "CUBE",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
+    "evidence_id": "ca9a80178289dfb3908d4505",
+    "source_object_id": "98411f23996b4091eaee9148",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Cost Estimate'",
+    "procedure": null,
+    "function_name": "CONSOLIDATEDAVG",
+    "line_number": 5,
+    "code_reference": "ConsolidatedAvg( 2, 'Cost Estimate', !Currency Type, !Fiscal Period, !Plant, !Profit Center, !Material, !Component, !ELEMENT, !mCost Estimate )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Cost Estimate",
       "legacy_target_type": "CUBE",
       "attribute_name": null,
       "target_measure": null,
@@ -151595,6 +151671,25 @@
     "properties": {
       "legacy_target_name": "Fiscal Period",
       "legacy_target_type": "HIERARCHY",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
+    "evidence_id": "865a27a98ee4f0089b19a66f",
+    "source_object_id": "9b53a9a5443f5b57d2d734a9",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Fiscal Period'",
+    "procedure": null,
+    "function_name": "ELCOMPN",
+    "line_number": 15,
+    "code_reference": "ELCOMPN('Fiscal Period', !Fiscal Period)",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Fiscal Period",
+      "legacy_target_type": "DIMENSION",
       "attribute_name": null,
       "target_measure": null,
       "sequence": null
@@ -153578,6 +153673,25 @@
   },
   {
     "snapshot_id": "20260922T143432Z",
+    "evidence_id": "65de79e3dffc8c34694c9f99",
+    "source_object_id": "d8244cc09c58d05df2228503",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Fiscal Period'",
+    "procedure": null,
+    "function_name": "ELCOMPN",
+    "line_number": 71,
+    "code_reference": "ELCOMPN ( 'Fiscal Period', !Fiscal Period )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Fiscal Period",
+      "legacy_target_type": "DIMENSION",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
     "evidence_id": "4c079c64b1b5ef29f47d6d67",
     "source_object_id": "d8244cc09c58d05df2228503",
     "relationship_type": "REFERENCES",
@@ -154319,6 +154433,44 @@
   },
   {
     "snapshot_id": "20260922T143432Z",
+    "evidence_id": "e98ca753a515398323a1270a",
+    "source_object_id": "3b733f1c4ad109a91d7df01e",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Manual Input'",
+    "procedure": null,
+    "function_name": "CONSOLIDATEDMAX",
+    "line_number": 20,
+    "code_reference": "ConsolidatedMax( 3,'Manual Input', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Manual Input",
+      "legacy_target_type": "CUBE",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
+    "evidence_id": "75ce7b0d5d4d09178fe8c8ec",
+    "source_object_id": "3b733f1c4ad109a91d7df01e",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Manual Input'",
+    "procedure": null,
+    "function_name": "CONSOLIDATEDMAX",
+    "line_number": 24,
+    "code_reference": "ConsolidatedMax( 3,'Manual Input', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Manual Input",
+      "legacy_target_type": "CUBE",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
     "evidence_id": "2dfa246148aa11bddb5219d2",
     "source_object_id": "3b733f1c4ad109a91d7df01e",
     "relationship_type": "REFERENCES",
@@ -154737,6 +154889,25 @@
   },
   {
     "snapshot_id": "20260922T143432Z",
+    "evidence_id": "ccb3ddbabae989d4959f1440",
+    "source_object_id": "0fc1113a31a3613e8c6a6fa2",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Manual Input Balance Sheet'",
+    "procedure": null,
+    "function_name": "CONSOLIDATEDMAX",
+    "line_number": 19,
+    "code_reference": "ConsolidatedMax( 3,'Manual Input Balance Sheet', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input Balance Sheet )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Manual Input Balance Sheet",
+      "legacy_target_type": "CUBE",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
     "evidence_id": "32c0e7009a3eea3490aea69d",
     "source_object_id": "0fc1113a31a3613e8c6a6fa2",
     "relationship_type": "REFERENCES",
@@ -154984,6 +155155,25 @@
   },
   {
     "snapshot_id": "20260922T143432Z",
+    "evidence_id": "d40b66384f1d59c73bde14cc",
+    "source_object_id": "fb31962893bbfb3d5ee23639",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Manual Input Below the Line'",
+    "procedure": null,
+    "function_name": "CONSOLIDATEDMAX",
+    "line_number": 20,
+    "code_reference": "ConsolidatedMax( 3,'Manual Input Below the Line', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input Below the Line )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Manual Input Below the Line",
+      "legacy_target_type": "CUBE",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
     "evidence_id": "05a615d5102e64c921831218",
     "source_object_id": "fb31962893bbfb3d5ee23639",
     "relationship_type": "REFERENCES",
@@ -155167,6 +155357,25 @@
     "properties": {
       "legacy_target_name": "Manual Upload LineNo",
       "legacy_target_type": "DIMENSION",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
+    "evidence_id": "c1fc9d40c26163cc988ecc9e",
+    "source_object_id": "77d2eadbd6eea7e4827aa39c",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Manual Upload'",
+    "procedure": null,
+    "function_name": "CONSOLIDATEDMAX",
+    "line_number": 19,
+    "code_reference": "ConsolidatedMax( 3, 'Manual Upload', !}Clients, !Fiscal Period, 'All Lines', 'Upload (System)' )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Manual Upload",
+      "legacy_target_type": "CUBE",
       "attribute_name": null,
       "target_measure": null,
       "sequence": null
@@ -155687,6 +155896,25 @@
   },
   {
     "snapshot_id": "20260922T143432Z",
+    "evidence_id": "68333d1b913d9adcfb627b5e",
+    "source_object_id": "d1006e3b3353ae61598a3e74",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Manual Upload'",
+    "procedure": null,
+    "function_name": "CONSOLIDATEDMAX",
+    "line_number": 19,
+    "code_reference": "ConsolidatedMax( 3, 'Manual Upload', !}Clients, !Fiscal Period, 'All Lines', 'Upload (System)' )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Manual Upload",
+      "legacy_target_type": "CUBE",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
     "evidence_id": "30a42e7225ad2a446b96dc34",
     "source_object_id": "d1006e3b3353ae61598a3e74",
     "relationship_type": "REFERENCES",
@@ -156003,6 +156231,25 @@
     "properties": {
       "legacy_target_name": "Manual Upload LineNo",
       "legacy_target_type": "DIMENSION",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
+    "evidence_id": "613ba3450aeb6a3fc7bf1f2a",
+    "source_object_id": "d14ded3a40ba3b70305c08b3",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Manual Upload Below the Line'",
+    "procedure": null,
+    "function_name": "CONSOLIDATEDMAX",
+    "line_number": 20,
+    "code_reference": "ConsolidatedMax( 3, 'Manual Upload Below the Line', !}Clients, !Fiscal Period, 'All Lines', 'Upload (System)' )",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Manual Upload Below the Line",
+      "legacy_target_type": "CUBE",
       "attribute_name": null,
       "target_measure": null,
       "sequence": null
@@ -162508,6 +162755,25 @@
   },
   {
     "snapshot_id": "20260922T143432Z",
+    "evidence_id": "9b78f03140925a7e4853fd79",
+    "source_object_id": "addd9cadec9e885d75322120",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'SYS Parent Child Hierarchy'",
+    "procedure": null,
+    "function_name": "CONSOLIDATECHILDREN",
+    "line_number": 12,
+    "code_reference": "ConsolidateChildren('SYS Parent Child Hierarchy')",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "SYS Parent Child Hierarchy",
+      "legacy_target_type": "DIMENSION",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
     "evidence_id": "38e67f871563c058b7c4c109",
     "source_object_id": "addd9cadec9e885d75322120",
     "relationship_type": "REFERENCES",
@@ -165795,6 +166061,44 @@
   },
   {
     "snapshot_id": "20260922T143432Z",
+    "evidence_id": "eca6b24e822974df83739f58",
+    "source_object_id": "05974679ad62a748a399abd3",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'UOM'",
+    "procedure": null,
+    "function_name": "CONSOLIDATECHILDREN",
+    "line_number": 4,
+    "code_reference": "ConsolidateChildren ('UOM')",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "UOM",
+      "legacy_target_type": "DIMENSION",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
+    "evidence_id": "be409ca18973604745392e65",
+    "source_object_id": "05974679ad62a748a399abd3",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'UOM'",
+    "procedure": null,
+    "function_name": "CONSOLIDATECHILDREN",
+    "line_number": 13,
+    "code_reference": "ConsolidateChildren ('UOM')",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "UOM",
+      "legacy_target_type": "DIMENSION",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
     "evidence_id": "cc030f4f290c5dbb3526fdbb",
     "source_object_id": "00398c0573977fa5cb05c9e8",
     "relationship_type": "REFERENCES",
@@ -165978,6 +166282,25 @@
     "properties": {
       "legacy_target_name": "Fiscal Period",
       "legacy_target_type": "HIERARCHY",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
+    "evidence_id": "4f65654f1801646dc5b3e7ea",
+    "source_object_id": "3fbe1f406059b15b83dcfc69",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Fiscal Period'",
+    "procedure": null,
+    "function_name": "ELCOMPN",
+    "line_number": 16,
+    "code_reference": "ELCOMPN('Fiscal Period', !Fiscal Period)",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Fiscal Period",
+      "legacy_target_type": "DIMENSION",
       "attribute_name": null,
       "target_measure": null,
       "sequence": null
@@ -169170,6 +169493,25 @@
     "properties": {
       "legacy_target_name": "Fiscal Period",
       "legacy_target_type": "HIERARCHY",
+      "attribute_name": null,
+      "target_measure": null,
+      "sequence": null
+    }
+  },
+  {
+    "snapshot_id": "20260922T143432Z",
+    "evidence_id": "97a908ab4db154f14aae2852",
+    "source_object_id": "d2be5651d305cb6220c4e3a3",
+    "relationship_type": "REFERENCES",
+    "target_expression": "'Fiscal Period'",
+    "procedure": null,
+    "function_name": "ELCOMPN",
+    "line_number": 11,
+    "code_reference": "ELCOMPN('Fiscal Period', !Fiscal Period)",
+    "confidence": "UNRESOLVED",
+    "properties": {
+      "legacy_target_name": "Fiscal Period",
+      "legacy_target_type": "DIMENSION",
       "attribute_name": null,
       "target_measure": null,
       "sequence": null

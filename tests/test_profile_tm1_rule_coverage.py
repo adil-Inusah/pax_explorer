@@ -1,4 +1,8 @@
-from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from parsers.rule_parser import DEFAULT_FUNCTION_SPECS
 
 from scripts.profile_tm1_rule_coverage import build_profiles, discover_function_calls
 
@@ -108,3 +112,38 @@ def test_masks_doubled_quotes_inside_string():
     assert malformed == []
     assert [item.function_name for item in calls] == ["DB"]
     assert calls[0].expression == "DB('Manager''s Cube (Actual)', !Period)"
+
+
+
+
+def test_supported_lineage_registry_matches_rule_parser():
+    registry_path = (
+        Path(__file__).resolve().parent.parent
+        / "config"
+        / "tm1_lineage_functions.json"
+    )
+
+    registry = json.loads(
+        registry_path.read_text(
+            encoding="utf-8",
+        )
+    )
+
+    supported_lineage_functions = {
+        function_name.upper()
+        for function_name, metadata
+        in registry["functions"].items()
+        if metadata["parser_status"] == "SUPPORTED"
+        and metadata["category"] in {
+            "DIRECT",
+            "CONTEXTUAL",
+        }
+    }
+
+    parser_functions = {
+        function_name.upper()
+        for function_name
+        in DEFAULT_FUNCTION_SPECS
+    }
+
+    assert supported_lineage_functions <= parser_functions

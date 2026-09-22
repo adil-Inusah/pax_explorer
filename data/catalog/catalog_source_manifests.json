@@ -21,15 +21,15 @@
     "error_count": 0
   },
   "rule_lineage": {
-    "snapshot_id": "20260922T143620Z",
-    "started_at": "2026-09-22T14:36:20.674111+00:00",
-    "completed_at": "2026-09-22T14:36:50.771468+00:00",
+    "snapshot_id": "20260922T164303Z",
+    "started_at": "2026-09-22T16:43:03.670457+00:00",
+    "completed_at": "2026-09-22T16:43:30.193435+00:00",
     "status": "COMPLETE",
     "cube_count": 379,
     "cube_with_rules_count": 92,
-    "evidence_count": 1120,
-    "relationship_count": 252,
-    "validation_count": 252,
+    "evidence_count": 1138,
+    "relationship_count": 267,
+    "validation_count": 267,
     "error_count": 0
   }
 }
