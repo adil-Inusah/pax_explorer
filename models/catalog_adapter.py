@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any, TypeVar
 
@@ -54,6 +54,21 @@ OBJECT_TYPE_MAP: dict[str, ObjectType] = {
 RELATIONSHIP_TYPE_MAP = {item.value.upper(): item for item in RelationshipType}
 CONFIDENCE_MAP = {item.value.upper(): item for item in ConfidenceLevel}
 VALIDATION_STATUS_MAP = {item.value.upper(): item for item in ValidationStatus}
+
+# Parser terminology is intentionally more specific than the catalog enum.
+# These aliases preserve the strongest catalog semantics that are available.
+RELATIONSHIP_TYPE_ALIASES = {
+    "READS_FROM": "READS_FROM_CUBE",
+    "FEEDS": "FEEDS_CUBE",
+    "USES_ATTRIBUTE": "REFERENCES",
+    "REFERENCES_DIMENSION": "REFERENCES",
+    "REFERENCES_HIERARCHY": "REFERENCES",
+}
+CONFIDENCE_ALIASES = {
+    "HIGH": "RESOLVED",
+    "MEDIUM": "PARAMETERIZED",
+    "LOW": "UNRESOLVED",
+}
 
 
 @dataclass
@@ -121,15 +136,15 @@ def map_object_type(value: str | None) -> ObjectType:
 
 
 def map_relationship_type(value: str | None) -> RelationshipType:
-    return RELATIONSHIP_TYPE_MAP.get(
-        normalize_name(value).upper(), RelationshipType.REFERENCES
-    )
+    normalized_value = normalize_name(value).upper()
+    alias = RELATIONSHIP_TYPE_ALIASES.get(normalized_value, normalized_value)
+    return RELATIONSHIP_TYPE_MAP.get(alias, RelationshipType.REFERENCES)
 
 
 def map_confidence(value: str | None) -> ConfidenceLevel:
-    return CONFIDENCE_MAP.get(
-        normalize_name(value).upper(), ConfidenceLevel.UNRESOLVED
-    )
+    normalized_value = normalize_name(value).upper()
+    alias = CONFIDENCE_ALIASES.get(normalized_value, normalized_value)
+    return CONFIDENCE_MAP.get(alias, ConfidenceLevel.UNRESOLVED)
 
 
 def map_validation_status(value: str | None) -> ValidationStatus:
@@ -154,7 +169,53 @@ def catalog_lookup_key(
 class CatalogJsonAdapter:
     """Adapt existing TM1 inventory and lineage JSON into CatalogSnapshot."""
 
+    @staticmethod
+    def _is_literal_target_expression(
+        expression: Any,
+    ) -> bool:
+        value = normalize_name(expression)
 
+        if len(value) < 2:
+            return False
+
+        return (
+            value.startswith("'")
+            and value.endswith("'")
+        )
+
+
+    def _effective_relationship_confidence(
+        self,
+        *,
+        record: dict[str, Any],
+        target_type: ObjectType,
+        target_name: str,
+    ) -> ConfidenceLevel:
+        confidence = map_confidence(
+            record.get("confidence")
+        )
+
+        target_expression = normalize_name(
+            record.get("target_expression")
+        )
+
+        if not target_expression:
+            return confidence
+
+        target = self._find_object(
+            object_type=target_type,
+            object_name=target_name,
+        )
+
+        if target is not None:
+            return ConfidenceLevel.RESOLVED
+
+        if self._is_literal_target_expression(
+            target_expression
+        ):
+            return confidence
+
+        return ConfidenceLevel.UNRESOLVED
     @staticmethod
     def _source_object_type(
         record: dict[str, Any],
@@ -222,12 +283,13 @@ class CatalogJsonAdapter:
         snapshot.objects.extend(
             self._adapt_objects(payload=objects_payload, snapshot_id=snapshot_id)
         )
+        adapted_relationships = self._adapt_relationships(
+            payload=relationships_payload or [],
+            snapshot_id=snapshot_id,
+            snapshot=snapshot,
+        )
         snapshot.relationships.extend(
-            self._adapt_relationships(
-                payload=relationships_payload or [],
-                snapshot_id=snapshot_id,
-                snapshot=snapshot,
-            )
+            self._aggregate_relationships(adapted_relationships)
         )
         snapshot.evidence.extend(
             self._adapt_evidence(
@@ -381,12 +443,34 @@ class CatalogJsonAdapter:
 
     @staticmethod
     def _normalize_rule_relationship(record: dict[str, Any]) -> dict[str, Any]:
-        return {**record, "lineage_source": "RULE", "source_type": "cube",
-                "source_name": record.get("source_cube"),
-                "target_type": record.get("target_object_type"),
-                "reference_count": record.get("evidence_count", 1),
-                "procedures": [], "functions": [record.get("function_name")],
-                "evidence_lines": [record.get("first_line")]}
+        target_type = normalize_name(record.get("target_object_type"))
+        target_name = normalize_name(record.get("target_name"))
+        dimension_name = normalize_name(record.get("dimension_name"))
+        attribute_name = normalize_name(record.get("attribute_name"))
+
+        # Attribute names are only unique within their owning dimension.
+        # Preserve both pieces so separate attributes do not collapse into one edge.
+        if (
+            target_type.upper() == "ATTRIBUTE"
+            and dimension_name
+            and attribute_name
+        ):
+            target_name = f"{dimension_name}::{attribute_name}"
+
+        return {
+            **record,
+            "lineage_source": "RULE",
+            "source_type": "cube",
+            "source_name": record.get("source_cube"),
+            "target_type": target_type,
+            "target_name": target_name,
+            "reference_count": record.get("evidence_count", 1),
+            "procedures": [],
+            "functions": [record.get("function_name")],
+            "evidence_lines": [record.get("first_line")],
+            "dimension_name": dimension_name or None,
+            "attribute_name": attribute_name or None,
+        }
 
     @staticmethod
     def _normalize_ti_evidence(record: dict[str, Any]) -> dict[str, Any]:
@@ -608,9 +692,7 @@ class CatalogJsonAdapter:
                 )
                 continue
             source = self._ensure_source_object(
-                    source_type=map_object_type(
-                        record.get("source_type")
-                    ),
+                    source_type=self._source_object_type(record),
                     source_name=source_name,
                 snapshot_id=snapshot_id,
                     snapshot=snapshot,
@@ -620,7 +702,13 @@ class CatalogJsonAdapter:
             relationship_type = map_relationship_type(
                 record.get("relationship_type")
             )
-            confidence = map_confidence(record.get("confidence"))
+            confidence = (
+                self._effective_relationship_confidence(
+                    record=record,
+                    target_type=target_type,
+                    target_name=target_name,
+                )
+            )
             target, target_qualified_name, validation_status = self._resolve_target(
                 target_type=target_type,
                 target_name=target_name,
@@ -650,7 +738,10 @@ class CatalogJsonAdapter:
                     function_name=self._only_item(functions),
                     line_number=self._only_item(evidence_lines),
                     properties={
+                        "lineage_source": record.get("lineage_source"),
                         "legacy_target_name": target_name,
+                        "dimension_name": record.get("dimension_name"),
+                        "attribute_name": record.get("attribute_name"),
                         "procedures": procedures,
                         "functions": functions,
                         "evidence_lines": evidence_lines,
@@ -719,6 +810,76 @@ class CatalogJsonAdapter:
             )
         return evidence_records
 
+    def _aggregate_relationships(
+        self,
+        relationships: list[CatalogRelationship],
+    ) -> list[CatalogRelationship]:
+        """Return one catalog row per deterministic relationship identity.
+
+        Function, procedure, line, and discovery differences are evidence about
+        the same graph edge. They are retained in aggregate properties instead
+        of producing duplicate relationship rows.
+        """
+        grouped: dict[str, list[CatalogRelationship]] = {}
+        for relationship in relationships:
+            grouped.setdefault(relationship.relationship_id, []).append(relationship)
+
+        aggregated: list[CatalogRelationship] = []
+        for relationship_id, group in grouped.items():
+            representative = group[0]
+            functions: set[str] = set()
+            procedures: set[str] = set()
+            evidence_lines: set[int] = set()
+            discovery_methods: set[str] = set()
+            source_counts: dict[tuple[Any, ...], int] = {}
+
+            for item in group:
+                item_functions = self._string_list(
+                    item.properties.get("functions") or item.function_name
+                )
+                item_procedures = self._string_list(
+                    item.properties.get("procedures") or item.procedure
+                )
+                item_lines = self._integer_list(
+                    item.properties.get("evidence_lines") or item.line_number
+                )
+                functions.update(item_functions)
+                procedures.update(item_procedures)
+                evidence_lines.update(item_lines)
+                discovery_methods.add(item.discovery_method)
+
+                signature = (
+                    item.discovery_method,
+                    tuple(sorted(item_functions)),
+                    tuple(sorted(item_procedures)),
+                    tuple(sorted(item_lines)),
+                )
+                source_counts[signature] = max(
+                    source_counts.get(signature, 0), item.reference_count
+                )
+
+            properties = dict(representative.properties)
+            properties.update(
+                {
+                    "functions": sorted(functions),
+                    "procedures": sorted(procedures),
+                    "evidence_lines": sorted(evidence_lines),
+                    "discovery_methods": sorted(discovery_methods),
+                    "aggregated_row_count": len(group),
+                }
+            )
+            aggregated.append(
+                replace(
+                    representative,
+                    reference_count=sum(source_counts.values()),
+                    function_name=self._only_item(sorted(functions)),
+                    procedure=self._only_item(sorted(procedures)),
+                    line_number=self._only_item(sorted(evidence_lines)),
+                    properties=properties,
+                )
+            )
+        return aggregated
+
     def _adapt_validations(
         self,
         *,
@@ -726,28 +887,21 @@ class CatalogJsonAdapter:
         snapshot_id: str,
         snapshot: CatalogSnapshot,
     ) -> list[CatalogValidation]:
-        validations: list[CatalogValidation] = []
-        relationship_index = {
-            (
-                normalized_key(item.source_qualified_name),
-                item.relationship_type.value,
-                normalized_key(item.target_qualified_name),
-            ): item
-            for item in snapshot.relationships
-        }
+        """Create one canonical, linked validation per final relationship.
+
+        Collector validation records are retained as matching source records in
+        properties, but canonical linkage and status come from the normalized
+        relationship that the adapter actually published.
+        """
+        source_records_by_key: dict[tuple[str, str, str], list[dict[str, Any]]] = {}
         for record in payload:
             source_name = normalize_name(record.get("source_name"))
-            target_name = normalize_name(record.get("target_name"))
-            target_type = map_object_type(record.get("target_type"))
-            relationship_type = map_relationship_type(
-                record.get("relationship_type")
-            )
+            source_type = self._source_object_type(record)
             source = self._find_object(
-                object_type=self._source_object_type(
-                    record
-                ),
-                object_name=source_name,
+                object_type=source_type, object_name=source_name
             )
+            target_type = map_object_type(record.get("target_type"))
+            target_name = normalize_name(record.get("target_name"))
             target = self._find_object(
                 object_type=target_type, object_name=target_name
             )
@@ -756,31 +910,41 @@ class CatalogJsonAdapter:
                 if target is not None
                 else fallback_qualified_name(target_type, target_name)
             )
-            relationship: CatalogRelationship | None = None
-            if source is not None:
-                relationship = relationship_index.get(
-                    (
-                        normalized_key(source.qualified_name),
-                        relationship_type.value,
-                        normalized_key(target_qualified_name),
-                    )
-                )
-            status = map_validation_status(record.get("validation_status"))
+            relationship_type = map_relationship_type(record.get("relationship_type"))
+            if source is None:
+                continue
+            key = (
+                normalized_key(source.qualified_name),
+                relationship_type.value,
+                normalized_key(target_qualified_name),
+            )
+            source_records_by_key.setdefault(key, []).append(record)
+
+        validations: list[CatalogValidation] = []
+        for relationship in snapshot.relationships:
+            key = (
+                normalized_key(relationship.source_qualified_name),
+                relationship.relationship_type.value,
+                normalized_key(relationship.target_qualified_name),
+            )
+            source_records = source_records_by_key.get(key, [])
+            status = relationship.validation_status
             validations.append(
                 CatalogValidation.create(
                     snapshot_id=snapshot_id,
                     validation_status=status,
-                    relationship_id=(
-                        relationship.relationship_id
-                        if relationship is not None
-                        else None
-                    ),
+                    relationship_id=relationship.relationship_id,
                     severity=self._severity_for_status(status),
                     message=(
-                        f"Legacy validation {status.value}: {source_name} "
-                        f"{relationship_type.value} {target_name}"
+                        f"Catalog validation {status.value}: "
+                        f"{relationship.source_qualified_name} "
+                        f"{relationship.relationship_type.value} "
+                        f"{relationship.target_qualified_name}"
                     ),
-                    properties={"legacy_record": record},
+                    properties={
+                        "source_validation_records": source_records,
+                        "source_validation_record_count": len(source_records),
+                    },
                 )
             )
         return validations
@@ -795,6 +959,8 @@ class CatalogJsonAdapter:
             return ValidationStatus.UNRESOLVED_DYNAMIC_REFERENCE
         if target_type in {
             ObjectType.ATTRIBUTE,
+            ObjectType.HIERARCHY,
+            ObjectType.ELEMENT,
             ObjectType.VIEW,
             ObjectType.SUBSET,
             ObjectType.FILE,

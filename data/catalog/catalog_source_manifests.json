@@ -5,15 +5,15 @@
     "tm1_version": "11.8.03500.4"
   },
   "lineage": {
-    "snapshot_id": "20260922T143432Z",
+    "snapshot_id": "20260922T221808Z",
     "status": "COMPLETE",
     "process_count": 385,
     "relationship_count": 4007
   },
   "ti_lineage": {
-    "snapshot_id": "20260922T143432Z",
-    "started_at": "2026-09-22T14:34:32.395523+00:00",
-    "completed_at": "2026-09-22T14:35:06.266829+00:00",
+    "snapshot_id": "20260922T221808Z",
+    "started_at": "2026-09-22T22:18:08.333081+00:00",
+    "completed_at": "2026-09-22T22:18:35.848196+00:00",
     "status": "COMPLETE",
     "process_count": 385,
     "evidence_count": 7847,

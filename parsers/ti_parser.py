@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass,field
 from typing import Any, Iterable
 
 
@@ -29,18 +29,22 @@ class RelationshipEvidence:
         return asdict(self)
 
 
-@dataclass(frozen=True)
+@dataclass
 class RelationshipSummary:
-    source_type: str
-    source_name: str
+    process_name: str
     relationship_type: str
     target_type: str
-    target_name: str
-    reference_count: int
-    procedures: tuple[str, ...]
-    functions: tuple[str, ...]
+    target_name: str | None
     confidence: str
-    evidence_lines: tuple[int, ...]
+    reference_count: int
+    procedures: list[str]
+    functions: list[str]
+    evidence_lines: list[int]
+
+    target_expression: str | None = None
+    target_expressions: list[str] = field(
+        default_factory=list
+    )
 
     def to_dict(self) -> dict[str, Any]:
         result = asdict(self)
@@ -727,10 +731,36 @@ def parse_process(
 # Relationship Aggregation and Validation
 # ============================================================
 
+def _is_quoted_literal(
+    expression: str | None,
+) -> bool:
+    """Return True when an expression is a complete string literal."""
+    value = (expression or "").strip()
+
+    return (
+        len(value) >= 2
+        and value[0] in {"'", '"'}
+        and value[-1] == value[0]
+    )
+
+
 def summarize_relationships(
-    evidence_records: Iterable[RelationshipEvidence],
+    evidence_records: Iterable[
+        RelationshipEvidence
+    ],
 ) -> list[RelationshipSummary]:
-    groups: dict[tuple[str, str, str, str], list[RelationshipEvidence]] = {}
+    """Aggregate TI evidence into semantic relationships.
+
+    Literal targets retain their strongest confidence.
+
+    Targets referenced through variables remain available through
+    target_name, but are marked UNRESOLVED until catalog validation
+    proves that the inferred target exists.
+    """
+    groups: dict[
+        tuple[str, str, str, str],
+        list[RelationshipEvidence],
+    ] = {}
 
     for evidence in evidence_records:
         key = (
@@ -739,34 +769,92 @@ def summarize_relationships(
             evidence.target_type,
             evidence.target_name,
         )
-        groups.setdefault(key, []).append(evidence)
+
+        groups.setdefault(
+            key,
+            [],
+        ).append(evidence)
 
     summaries: list[RelationshipSummary] = []
 
     for key, records in groups.items():
-        process_name, relationship_type, target_type, target_name = key
-        highest_confidence = max(
-            (record.confidence for record in records),
-            key=lambda confidence: CONFIDENCE_RANK[confidence],
+        (
+            process_name,
+            relationship_type,
+            target_type,
+            target_name,
+        ) = key
+
+        target_expressions = sorted(
+            {
+                record.target_expression.strip()
+                for record in records
+                if record.target_expression
+                and record.target_expression.strip()
+            }
         )
+
+        target_expression = (
+            target_expressions[0]
+            if len(target_expressions) == 1
+            else None
+        )
+
+        has_dynamic_expression = any(
+            not _is_quoted_literal(
+                expression
+            )
+            for expression in target_expressions
+        )
+
+        if has_dynamic_expression:
+            summary_confidence = "UNRESOLVED"
+        else:
+            summary_confidence = max(
+                (
+                    record.confidence
+                    for record in records
+                ),
+                key=lambda confidence: (
+                    CONFIDENCE_RANK[
+                        confidence
+                    ]
+                ),
+            )
 
         summaries.append(
             RelationshipSummary(
-                source_type="process",
-                source_name=process_name,
-                relationship_type=relationship_type,
+                process_name=process_name,
+                relationship_type=(
+                    relationship_type
+                ),
                 target_type=target_type,
                 target_name=target_name,
+                confidence=summary_confidence,
                 reference_count=len(records),
-                procedures=tuple(
-                    sorted({record.procedure for record in records})
+                procedures=sorted(
+                    {
+                        record.procedure
+                        for record in records
+                    }
                 ),
-                functions=tuple(
-                    sorted({record.function_name for record in records})
+                functions=sorted(
+                    {
+                        record.function_name
+                        for record in records
+                    }
                 ),
-                confidence=highest_confidence,
-                evidence_lines=tuple(
-                    sorted({record.line_number for record in records})
+                evidence_lines=sorted(
+                    {
+                        record.line_number
+                        for record in records
+                    }
+                ),
+                target_expression=(
+                    target_expression
+                ),
+                target_expressions=(
+                    target_expressions
                 ),
             )
         )
@@ -774,47 +862,105 @@ def summarize_relationships(
     return sorted(
         summaries,
         key=lambda item: (
-            item.source_name.casefold(),
+            item.process_name.casefold(),
             item.relationship_type,
-            item.target_name.casefold(),
+            (
+                item.target_name or ""
+            ).casefold(),
         ),
     )
 
 
 def validate_relationships(
-    summaries: Iterable[RelationshipSummary],
-    object_catalog: Iterable[dict[str, Any]],
+    summaries: Iterable[
+        RelationshipSummary
+    ],
+    object_catalog: Iterable[
+        dict[str, Any]
+    ],
 ) -> list[dict[str, Any]]:
+    """Validate relationship summaries against the object catalog."""
     known_objects = {
         (
-            str(record.get("object_type", "")).casefold(),
-            str(record.get("object_name", "")).casefold(),
+            str(
+                record.get(
+                    "object_type",
+                    "",
+                )
+            ).casefold(),
+            str(
+                record.get(
+                    "object_name",
+                    "",
+                )
+            ).casefold(),
         )
         for record in object_catalog
     }
 
-    validations: list[dict[str, Any]] = []
+    validations: list[
+        dict[str, Any]
+    ] = []
 
     for summary in summaries:
-        if summary.confidence == "UNRESOLVED":
-            status = "UNRESOLVED_DYNAMIC_REFERENCE"
-        elif summary.target_type in {"attribute", "view", "subset", "file", "command"}:
+        target_name = (
+            summary.target_name or ""
+        )
+
+        if (
+            summary.confidence
+            == "UNRESOLVED"
+        ):
+            status = (
+                "UNRESOLVED_DYNAMIC_REFERENCE"
+            )
+
+        elif summary.target_type in {
+            "attribute",
+            "hierarchy",
+            "element",
+            "view",
+            "subset",
+            "file",
+            "command",
+        }:
             status = "NOT_CROSS_CHECKED"
+
         elif (
             summary.target_type.casefold(),
-            summary.target_name.casefold(),
+            target_name.casefold(),
         ) in known_objects:
             status = "VALID"
+
         else:
             status = "BROKEN_REFERENCE"
 
         validations.append(
             {
-                "source_name": summary.source_name,
-                "relationship_type": summary.relationship_type,
-                "target_type": summary.target_type,
-                "target_name": summary.target_name,
-                "confidence": summary.confidence,
+                "source_name": (
+                    summary.process_name
+                ),
+                "process_name": (
+                    summary.process_name
+                ),
+                "relationship_type": (
+                    summary.relationship_type
+                ),
+                "target_type": (
+                    summary.target_type
+                ),
+                "target_name": (
+                    summary.target_name
+                ),
+                "target_expression": (
+                    summary.target_expression
+                ),
+                "target_expressions": list(
+                    summary.target_expressions
+                ),
+                "confidence": (
+                    summary.confidence
+                ),
                 "validation_status": status,
             }
         )

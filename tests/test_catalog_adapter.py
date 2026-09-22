@@ -282,3 +282,158 @@ def test_attribute_target_is_not_invented():
     assert adapted.validation_status == (
         ValidationStatus.NOT_YET_CATALOGED
     )
+
+    def test_missing_inferred_variable_target_is_dynamic_not_broken():
+        result = build_adapter().adapt(
+            objects_payload=[
+                {
+                    "snapshot_id": "20260922T000000Z",
+                    "object_type": "process",
+                    "object_name": "Load Process",
+                }
+            ],
+            relationships_payload=[
+                {
+                    "source_type": "process",
+                    "source_name": "Load Process",
+                    "target_type": "cube",
+                    "target_name": "Missing Cube",
+                    "target_expression": "sCube",
+                    "relationship_type": "READS_FROM_CUBE",
+                    "confidence": "RESOLVED",
+                }
+            ],
+        )
+
+        relationship = result.snapshot.relationships[0]
+
+        assert (
+            relationship.validation_status
+            == ValidationStatus.UNRESOLVED_DYNAMIC_REFERENCE
+        )
+
+    def test_missing_inferred_variable_target_is_dynamic():
+        result = build_adapter().adapt(
+            objects_payload=[
+                {
+                    "snapshot_id": (
+                        "20260922T000000Z"
+                    ),
+                    "object_type": "process",
+                    "object_name": "Load Process",
+                }
+            ],
+            relationships_payload=[
+                {
+                    "source_type": "process",
+                    "source_name": "Load Process",
+                    "target_type": "cube",
+                    "target_name": "Missing Cube",
+                    "target_expression": "sCube",
+                    "relationship_type": (
+                        "READS_FROM_CUBE"
+                    ),
+                    "confidence": "RESOLVED",
+                }
+            ],
+        )
+
+        assert len(
+            result.snapshot.relationships
+        ) == 1
+
+        relationship = (
+            result.snapshot.relationships[0]
+        )
+
+        assert relationship.validation_status == (
+            ValidationStatus
+            .UNRESOLVED_DYNAMIC_REFERENCE
+        )
+
+        assert (
+            relationship.properties[
+                "target_expression"
+            ]
+            == "sCube"
+        )
+
+
+    def test_missing_literal_target_remains_broken():
+        result = build_adapter().adapt(
+            objects_payload=[
+                {
+                    "snapshot_id": (
+                        "20260922T000000Z"
+                    ),
+                    "object_type": "process",
+                    "object_name": "Load Process",
+                }
+            ],
+            relationships_payload=[
+                {
+                    "source_type": "process",
+                    "source_name": "Load Process",
+                    "target_type": "cube",
+                    "target_name": "grpdesc",
+                    "target_expression": "'grpdesc'",
+                    "relationship_type": (
+                        "READS_FROM_CUBE"
+                    ),
+                    "confidence": "RESOLVED",
+                }
+            ],
+        )
+
+        assert len(
+            result.snapshot.relationships
+        ) == 1
+
+        relationship = (
+            result.snapshot.relationships[0]
+        )
+
+        assert relationship.validation_status == (
+            ValidationStatus.BROKEN_REFERENCE
+        )
+
+    def test_existing_inferred_variable_target_is_valid():
+        result = build_adapter().adapt(
+            objects_payload=[
+                {
+                    "snapshot_id": (
+                        "20260922T000000Z"
+                    ),
+                    "object_type": "process",
+                    "object_name": "Load Process",
+                },
+                {
+                    "snapshot_id": (
+                        "20260922T000000Z"
+                    ),
+                    "object_type": "cube",
+                    "object_name": "Target Cube",
+                },
+            ],
+            relationships_payload=[
+                {
+                    "source_type": "process",
+                    "source_name": "Load Process",
+                    "target_type": "cube",
+                    "target_name": "Target Cube",
+                    "target_expression": "sCube",
+                    "relationship_type": (
+                        "READS_FROM_CUBE"
+                    ),
+                    "confidence": "RESOLVED",
+                }
+            ],
+        )
+
+        relationship = (
+            result.snapshot.relationships[0]
+        )
+
+        assert relationship.validation_status == (
+            ValidationStatus.VALID
+        )

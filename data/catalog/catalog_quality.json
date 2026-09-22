@@ -1,0 +1,110 @@
+{
+  "quality_status": "FAIL",
+  "quality_control_score_percent": 93.75,
+  "relationship_validation_coverage_percent": 100.0,
+  "validation_resolution_rate_percent": 26.88,
+  "counts": {
+    "objects": 1683,
+    "relationships": 4264,
+    "evidence": 8985,
+    "validations": 4264,
+    "adapter_warnings": 0,
+    "unknown_objects": 0,
+    "orphan_relationship_sources": 0,
+    "invalid_relationship_target_links": 0,
+    "orphan_evidence_sources": 0,
+    "blank_evidence_targets": 0,
+    "validated_relationships": 4264,
+    "relationships_without_linked_validation": 0,
+    "orphan_validation_relationships": 0,
+    "valid_validations": 1146,
+    "tracked_nonerror_validations": 3117,
+    "error_validations": 1
+  },
+  "distributions": {
+    "object_types": {
+      "CHORE": 18,
+      "CUBE": 379,
+      "DIMENSION": 901,
+      "PROCESS": 385
+    },
+    "relationship_types": {
+      "CALLS_PROCESS": 55,
+      "CLEARS_CUBE": 180,
+      "CREATES_ATTRIBUTE": 669,
+      "CREATES_SUBSET": 51,
+      "CREATES_VIEW": 7,
+      "DELETES_ATTRIBUTE": 36,
+      "DELETES_SUBSET": 50,
+      "DELETES_VIEW": 9,
+      "EXECUTES_COMMAND": 35,
+      "FEEDS_CUBE": 2,
+      "INCREMENTS_CUBE": 118,
+      "READS_ATTRIBUTE": 843,
+      "READS_FROM_CUBE": 449,
+      "REFERENCES": 180,
+      "UPDATES_DIMENSION": 108,
+      "UPDATES_HIERARCHY": 1,
+      "UPDATES_SUBSET": 199,
+      "USES_VIEW": 162,
+      "WRITES_ATTRIBUTE": 763,
+      "WRITES_FILE": 64,
+      "WRITES_TO_CUBE": 283
+    },
+    "discovery_methods": {
+      "TM1_RULE_PARSER": 257,
+      "TM1_TI_PARSER": 4007
+    },
+    "relationship_validation_statuses": {
+      "BROKEN_REFERENCE": 1,
+      "NOT_YET_CATALOGED": 474,
+      "PARAMETERIZED_REFERENCE": 2,
+      "UNRESOLVED_DYNAMIC_REFERENCE": 2641,
+      "VALID": 1146
+    },
+    "validation_statuses": {
+      "BROKEN_REFERENCE": 1,
+      "NOT_YET_CATALOGED": 474,
+      "PARAMETERIZED_REFERENCE": 2,
+      "UNRESOLVED_DYNAMIC_REFERENCE": 2641,
+      "VALID": 1146
+    }
+  },
+  "source_manifest_checks": {
+    "metadata": true,
+    "ti_lineage": true,
+    "rule_lineage": true
+  },
+  "quality_gates": {
+    "catalog_status_complete": true,
+    "source_manifests_complete": true,
+    "adapter_warning_count_zero": true,
+    "object_ids_unique": true,
+    "relationship_ids_unique": true,
+    "unknown_object_count_zero": true,
+    "blank_object_name_count_zero": true,
+    "orphan_relationship_source_count_zero": true,
+    "invalid_relationship_target_link_count_zero": true,
+    "blank_relationship_source_count_zero": true,
+    "blank_relationship_target_count_zero": true,
+    "orphan_evidence_source_count_zero": true,
+    "blank_evidence_target_count_zero": true,
+    "orphan_validation_relationship_count_zero": true,
+    "relationship_validation_coverage_100": true,
+    "error_validation_count_zero": false
+  },
+  "issues": {
+    "unknown_objects": [],
+    "orphan_relationship_sources": [],
+    "invalid_relationship_target_links": [],
+    "orphan_evidence_sources": [],
+    "blank_evidence_targets": [],
+    "missing_relationship_validation_ids": [],
+    "orphan_validation_relationships": []
+  },
+  "interpretation": {
+    "quality_control_score": "Percentage of structural and integrity gates that passed.",
+    "relationship_validation_coverage": "Percentage of catalog relationships linked to at least one validation record.",
+    "validation_resolution_rate": "Percentage of validation records with VALID status. Dynamic and not-yet-cataloged references remain visible and do not get relabeled as valid."
+  }
+}
