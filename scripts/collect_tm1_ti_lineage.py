@@ -66,7 +66,7 @@ def get_process_procedures(process: Any) -> dict[str, str]:
     return procedures
 
 
-def collect_process_lineage() -> dict[str, Any]:
+def collect_ti_lineage() -> dict[str, Any]:
     current_objects_path = CURRENT_ROOT / "objects.json"
     if not current_objects_path.exists():
         raise FileNotFoundError(
@@ -76,7 +76,7 @@ def collect_process_lineage() -> dict[str, Any]:
     object_catalog = read_json(current_objects_path)
     started_at = utc_now()
     run_snapshot_id = snapshot_id(started_at)
-    output_directory = SNAPSHOT_ROOT / run_snapshot_id / "lineage"
+    output_directory = SNAPSHOT_ROOT / run_snapshot_id / "ti_lineage"
 
     process_definitions: list[dict[str, Any]] = []
     all_evidence = []
@@ -134,18 +134,33 @@ def collect_process_lineage() -> dict[str, Any]:
     write_json(output_directory / "manifest.json", manifest)
 
     if manifest["status"] == "COMPLETE":
-        write_json(CURRENT_ROOT / "process_definitions.json", process_definitions)
-        write_json(CURRENT_ROOT / "relationship_evidence.json", evidence_payload)
-        write_json(CURRENT_ROOT / "relationships.json", summary_payload)
-        write_json(CURRENT_ROOT / "relationship_validations.json", validations)
-        write_json(CURRENT_ROOT / "lineage_manifest.json", manifest)
+        write_json(
+            CURRENT_ROOT / "ti_process_definitions.json",
+            process_definitions,
+        )
+        write_json(
+            CURRENT_ROOT / "ti_relationship_evidence.json",
+            evidence_payload,
+        )
+        write_json(
+            CURRENT_ROOT / "ti_relationships.json",
+            summary_payload,
+        )
+        write_json(
+            CURRENT_ROOT / "ti_relationship_validations.json",
+            validations,
+        )
+        write_json(
+            CURRENT_ROOT / "ti_lineage_manifest.json",
+            manifest,
+        )
 
     return manifest
 
 
 def main() -> int:
     try:
-        manifest = collect_process_lineage()
+        manifest = collect_ti_lineage()
         print("=" * 70)
         print("TM1 TI PROCESS LINEAGE")
         print("=" * 70)
