@@ -1,17 +1,17 @@
 {
-  "snapshot_id": "20260921T211754Z",
+  "snapshot_id": "20260922T143432Z",
   "environment": "STAGING",
-  "database_name": "OXYCHEM",
+  "database_name": "OXYChem",
   "status": "COMPLETE",
-  "started_at": "2026-09-21T23:09:13.583198+00:00",
-  "completed_at": "2026-09-21T23:09:13.851001+00:00",
+  "started_at": "2026-09-22T15:48:11.046061+00:00",
+  "completed_at": "2026-09-22T15:48:11.288795+00:00",
   "collector_version": "0.3.0-json-adapter",
   "tm1_version": "11.8.03500.4",
   "object_counts": {
     "chore": 18,
-    "cube": 380,
-    "dimension": 916,
-    "process": 386
+    "cube": 379,
+    "dimension": 901,
+    "process": 385
   },
   "relationship_counts": {
     "CALLS_PROCESS": 55,
@@ -26,6 +26,7 @@
     "INCREMENTS_CUBE": 118,
     "READS_ATTRIBUTE": 843,
     "READS_FROM_CUBE": 374,
+    "REFERENCES": 252,
     "UPDATES_DIMENSION": 108,
     "UPDATES_HIERARCHY": 1,
     "UPDATES_SUBSET": 199,
@@ -36,7 +37,7 @@
   },
   "validation_counts": {
     "BROKEN_REFERENCE": 33,
-    "NOT_CROSS_CHECKED": 2293,
+    "NOT_CROSS_CHECKED": 2545,
     "UNRESOLVED_DYNAMIC_REFERENCE": 640,
     "VALID": 1041
   },

@@ -69,6 +69,7 @@ class AdapterResult:
         return payloads
 
 
+
 def read_json(path: Path, *, required: bool = True) -> Any:
     path = Path(path)
     if not path.exists():
@@ -153,6 +154,25 @@ def catalog_lookup_key(
 class CatalogJsonAdapter:
     """Adapt existing TM1 inventory and lineage JSON into CatalogSnapshot."""
 
+
+    @staticmethod
+    def _source_object_type(
+        record: dict[str, Any],
+    ) -> ObjectType:
+        source_type = map_object_type(
+            record.get("source_type")
+        )
+
+        if source_type != ObjectType.UNKNOWN:
+            return source_type
+
+        if normalize_name(
+            record.get("lineage_source")
+        ).upper() == "RULE":
+            return ObjectType.CUBE
+
+        return ObjectType.PROCESS
+
     def __init__(
         self,
         *,
@@ -236,36 +256,161 @@ class CatalogJsonAdapter:
         )
 
     def adapt_directory(self, current_root: Path) -> AdapterResult:
+        """Load source-specific TI and rule lineage, with legacy TI fallback."""
         current_root = Path(current_root)
-        return self.adapt(
+
+        ti_relationships_raw = read_json(
+            current_root / "ti_relationships.json", required=False
+        )
+        ti_evidence_raw = read_json(
+            current_root / "ti_relationship_evidence.json", required=False
+        )
+        ti_validations_raw = read_json(
+            current_root / "ti_relationship_validations.json", required=False
+        )
+        ti_manifest = optional_manifest(
+            read_json(current_root / "ti_lineage_manifest.json", required=False),
+            "ti_lineage_manifest.json",
+        )
+        used_legacy = False
+        if ti_relationships_raw is None:
+            ti_relationships_raw = read_json(
+                current_root / "relationships.json", required=False
+            )
+            ti_evidence_raw = read_json(
+                current_root / "relationship_evidence.json", required=False
+            )
+            ti_validations_raw = read_json(
+                current_root / "relationship_validations.json", required=False
+            )
+            ti_manifest = optional_manifest(
+                read_json(current_root / "lineage_manifest.json", required=False),
+                "lineage_manifest.json",
+            )
+            used_legacy = ti_relationships_raw is not None
+
+        ti_relationships = [
+            self._normalize_ti_relationship(record)
+            for record in as_record_list(
+                ti_relationships_raw, "ti_relationships.json"
+            )
+        ]
+        ti_evidence = [
+            self._normalize_ti_evidence(record)
+            for record in as_record_list(
+                ti_evidence_raw, "ti_relationship_evidence.json"
+            )
+        ]
+        ti_validations = [
+            self._normalize_ti_validation(record)
+            for record in as_record_list(
+                ti_validations_raw, "ti_relationship_validations.json"
+            )
+        ]
+        rule_relationships = [
+            self._normalize_rule_relationship(record)
+            for record in as_record_list(
+                read_json(current_root / "rule_relationships.json", required=False),
+                "rule_relationships.json",
+            )
+        ]
+        rule_evidence = [
+            self._normalize_rule_evidence(record)
+            for record in as_record_list(
+                read_json(
+                    current_root / "rule_relationship_evidence.json",
+                    required=False,
+                ),
+                "rule_relationship_evidence.json",
+            )
+        ]
+        rule_validations = [
+            self._normalize_rule_validation(record)
+            for record in as_record_list(
+                read_json(
+                    current_root / "rule_relationship_validations.json",
+                    required=False,
+                ),
+                "rule_relationship_validations.json",
+            )
+        ]
+        rule_manifest = optional_manifest(
+            read_json(current_root / "rule_lineage_manifest.json", required=False),
+            "rule_lineage_manifest.json",
+        )
+
+        result = self.adapt(
             objects_payload=as_record_list(
                 read_json(current_root / "objects.json"), "objects.json"
             ),
-            relationships_payload=as_record_list(
-                read_json(current_root / "relationships.json", required=False),
-                "relationships.json",
-            ),
-            evidence_payload=as_record_list(
-                read_json(
-                    current_root / "relationship_evidence.json", required=False
-                ),
-                "relationship_evidence.json",
-            ),
-            validations_payload=as_record_list(
-                read_json(
-                    current_root / "relationship_validations.json", required=False
-                ),
-                "relationship_validations.json",
-            ),
+            relationships_payload=ti_relationships + rule_relationships,
+            evidence_payload=ti_evidence + rule_evidence,
+            validations_payload=ti_validations + rule_validations,
             metadata_manifest=optional_manifest(
                 read_json(current_root / "manifest.json", required=False),
                 "manifest.json",
             ),
-            lineage_manifest=optional_manifest(
-                read_json(current_root / "lineage_manifest.json", required=False),
-                "lineage_manifest.json",
-            ),
+            lineage_manifest=ti_manifest,
         )
+        result.source_manifests["ti_lineage"] = ti_manifest or {}
+        result.source_manifests["rule_lineage"] = rule_manifest or {}
+        if used_legacy:
+            result.warnings.append({
+                "warning_type": "LEGACY_TI_INPUT_USED",
+                "message": "Legacy generic TI lineage files were used as fallback.",
+                "record": {},
+            })
+        if ti_manifest is None:
+            result.warnings.append({
+                "warning_type": "MISSING_TI_LINEAGE",
+                "message": "TI lineage input was not found.",
+                "record": {},
+            })
+        if rule_manifest is None:
+            result.warnings.append({
+                "warning_type": "MISSING_RULE_LINEAGE",
+                "message": "Rule lineage input was not found.",
+                "record": {},
+            })
+        return result
+
+    @staticmethod
+    def _normalize_ti_relationship(record: dict[str, Any]) -> dict[str, Any]:
+        return {**record, "lineage_source": "TI", "source_type": "process",
+                "source_name": record.get("source_name") or record.get("process_name")}
+
+    @staticmethod
+    def _normalize_rule_relationship(record: dict[str, Any]) -> dict[str, Any]:
+        return {**record, "lineage_source": "RULE", "source_type": "cube",
+                "source_name": record.get("source_cube"),
+                "target_type": record.get("target_object_type"),
+                "reference_count": record.get("evidence_count", 1),
+                "procedures": [], "functions": [record.get("function_name")],
+                "evidence_lines": [record.get("first_line")]}
+
+    @staticmethod
+    def _normalize_ti_evidence(record: dict[str, Any]) -> dict[str, Any]:
+        return {**record, "lineage_source": "TI", "source_type": "process",
+                "source_name": record.get("source_name") or record.get("process_name")}
+
+    @staticmethod
+    def _normalize_rule_evidence(record: dict[str, Any]) -> dict[str, Any]:
+        return {**record, "lineage_source": "RULE", "source_type": "cube",
+                "source_name": record.get("source_cube"),
+                "target_type": record.get("target_object_type"),
+                "code_reference": record.get("expression")}
+
+    @staticmethod
+    def _normalize_ti_validation(record: dict[str, Any]) -> dict[str, Any]:
+        return {**record, "lineage_source": "TI", "source_type": "process",
+                "source_name": record.get("source_name") or record.get("process_name")}
+
+    @staticmethod
+    def _normalize_rule_validation(record: dict[str, Any]) -> dict[str, Any]:
+        return {**record, "lineage_source": "RULE", "source_type": "cube",
+                "source_name": record.get("source_cube"),
+                "target_type": record.get("target_object_type"),
+                "validation_status": record.get("status")}
 
     def _reset_state(self) -> None:
         self.warnings.clear()
@@ -395,42 +540,32 @@ class CatalogJsonAdapter:
             objects.append(item)
         return objects
 
-    def _ensure_source_process(
-        self,
-        *,
-        process_name: str,
-        snapshot_id: str,
-        snapshot: CatalogSnapshot,
+    def _ensure_source_object(
+        self, *, source_type: ObjectType, source_name: str,
+        snapshot_id: str, snapshot: CatalogSnapshot,
     ) -> CatalogObject:
         existing = self._find_object(
-            object_type=ObjectType.PROCESS, object_name=process_name
+            object_type=source_type, object_name=source_name
         )
         if existing is not None:
             return existing
         generated = CatalogObject.create(
-            snapshot_id=snapshot_id,
-            environment=self.environment,
-            database_name=self.database_name,
-            object_type=ObjectType.PROCESS,
-            object_name=process_name,
-            definition={"adapter_generated": True},
+            snapshot_id=snapshot_id, environment=self.environment,
+            database_name=self.database_name, object_type=source_type,
+            object_name=source_name, definition={"adapter_generated": True},
             source_connector="json_adapter",
             properties={"adapter_generated": True},
         )
         self._register_object(generated)
         snapshot.objects.append(generated)
-        snapshot.validations.append(
-            CatalogValidation.create(
-                snapshot_id=snapshot_id,
-                validation_status=ValidationStatus.NOT_YET_CATALOGED,
-                object_id=generated.object_id,
-                severity="WARNING",
-                message=(
-                    "The relationship source process was missing from objects.json "
-                    f"and was created as an adapter placeholder: {process_name}"
-                ),
-            )
-        )
+        snapshot.validations.append(CatalogValidation.create(
+            snapshot_id=snapshot_id,
+            validation_status=ValidationStatus.NOT_YET_CATALOGED,
+            object_id=generated.object_id, severity="WARNING",
+            message=("The relationship source object was missing from objects.json "
+                     f"and was created as a placeholder: "
+                     f"{source_type.value}::{source_name}"),
+        ))
         return generated
 
     def _resolve_target(
@@ -472,11 +607,14 @@ class CatalogJsonAdapter:
                     record=record,
                 )
                 continue
-            source = self._ensure_source_process(
-                process_name=source_name,
+            source = self._ensure_source_object(
+                    source_type=map_object_type(
+                        record.get("source_type")
+                    ),
+                    source_name=source_name,
                 snapshot_id=snapshot_id,
-                snapshot=snapshot,
-            )
+                    snapshot=snapshot,
+                )
             target_type = map_object_type(record.get("target_type"))
             target_name = normalize_name(record.get("target_name"))
             relationship_type = map_relationship_type(
@@ -501,7 +639,10 @@ class CatalogJsonAdapter:
                     relationship_type=relationship_type,
                     confidence=confidence,
                     validation_status=validation_status,
-                    discovery_method="legacy_ti_json_adapter",
+                    discovery_method=(
+                        "tm1_rule_parser" if record.get("lineage_source") == "RULE"
+                        else "tm1_ti_parser"
+                    ),
                     reference_count=self._positive_integer(
                         record.get("reference_count"), default=1
                     ),
@@ -527,7 +668,9 @@ class CatalogJsonAdapter:
     ) -> list[CatalogEvidence]:
         evidence_records: list[CatalogEvidence] = []
         for record in payload:
-            process_name = normalize_name(record.get("process_name"))
+            process_name = normalize_name(
+                record.get("source_name") or record.get("process_name")
+            )
             if not process_name:
                 self._warn(
                     warning_type="SKIPPED_EVIDENCE_WITHOUT_SOURCE",
@@ -535,8 +678,11 @@ class CatalogJsonAdapter:
                     record=record,
                 )
                 continue
-            source = self._ensure_source_process(
-                process_name=process_name,
+            source = self._ensure_source_object(
+                source_type=self._source_object_type(
+                    record
+                ),
+                source_name=process_name,
                 snapshot_id=snapshot_id,
                 snapshot=snapshot,
             )
@@ -597,7 +743,10 @@ class CatalogJsonAdapter:
                 record.get("relationship_type")
             )
             source = self._find_object(
-                object_type=ObjectType.PROCESS, object_name=source_name
+                object_type=self._source_object_type(
+                    record
+                ),
+                object_name=source_name,
             )
             target = self._find_object(
                 object_type=target_type, object_name=target_name
