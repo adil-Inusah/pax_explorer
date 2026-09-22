@@ -64,9 +64,13 @@ def test_quality_report_detects_orphan_relationship_source():
     assert report["counts"]["orphan_relationship_sources"] == 1
 
 def test_quality_report_detects_missing_linked_validation():
-    objects, relationships, evidence, validations, sources = (
-        base_payloads()
-    )
+    (
+        objects,
+        relationships,
+        evidence,
+        validations,
+        sources,
+    ) = base_payloads()
 
     validations[0].pop("relationship_id")
 
@@ -81,9 +85,12 @@ def test_quality_report_detects_missing_linked_validation():
     )
 
     assert (
-        report["relationship_validation_coverage_percent"]
+        report[
+            "relationship_validation_coverage_percent"
+        ]
         == 0.0
     )
+
     assert (
         report["quality_gates"][
             "relationship_validation_coverage_100"
@@ -91,19 +98,80 @@ def test_quality_report_detects_missing_linked_validation():
         is False
     )
 
+    assert (
+        report["counts"][
+            "relationships_without_linked_validation"
+        ]
+        == 1
+    )
+
+    assert report["quality_status"] == "FAIL"
+
 
 def test_dynamic_status_is_tracked_but_not_counted_as_valid():
-    objects, relationships, evidence, validations, sources = base_payloads()
-    validations[0]["validation_status"] = "UNRESOLVED_DYNAMIC_REFERENCE"
-    report = build_quality_report(
-        manifest={"status": "COMPLETE"}, objects=objects,
-        relationships=relationships, evidence=evidence,
-        validations=validations, warnings=[], source_manifests=sources,
-    )
-    assert report["counts"]["tracked_nonerror_validations"] == 1
-    assert report["validation_resolution_rate_percent"] == 0.0
-    assert report["counts"]["error_validations"] == 0
+    (
+        objects,
+        relationships,
+        evidence,
+        validations,
+        sources,
+    ) = base_payloads()
 
+    validations[0]["validation_status"] = (
+        "UNRESOLVED_DYNAMIC_REFERENCE"
+    )
+
+    report = build_quality_report(
+        manifest={"status": "COMPLETE"},
+        objects=objects,
+        relationships=relationships,
+        evidence=evidence,
+        validations=validations,
+        warnings=[],
+        source_manifests=sources,
+    )
+
+    assert (
+        report["counts"][
+            "tracked_nonerror_validations"
+        ]
+        == 1
+    )
+
+    assert (
+        report[
+            "validation_resolution_rate_percent"
+        ]
+        == 0.0
+    )
+
+    assert (
+        report["counts"][
+            "raw_error_validations"
+        ]
+        == 0
+    )
+
+    assert (
+        report["counts"][
+            "accepted_error_validations"
+        ]
+        == 0
+    )
+
+    assert (
+        report["counts"][
+            "unaccepted_error_validations"
+        ]
+        == 0
+    )
+
+    assert (
+        report["quality_gates"][
+            "unaccepted_error_validation_count_zero"
+        ]
+        is True
+    )
 
 def test_broken_reference_fails_error_gate():
     objects, relationships, evidence, validations, sources = base_payloads()
@@ -113,6 +181,31 @@ def test_broken_reference_fails_error_gate():
         relationships=relationships, evidence=evidence,
         validations=validations, warnings=[], source_manifests=sources,
     )
-    assert report["counts"]["error_validations"] == 1
-    assert report["quality_gates"]["error_validation_count_zero"] is False
+    assert (
+        report["counts"][
+            "raw_error_validations"
+        ]
+        == 1
+    )
+
+    assert (
+        report["counts"][
+            "accepted_error_validations"
+        ]
+        == 0
+    )
+
+    assert (
+        report["counts"][
+            "unaccepted_error_validations"
+        ]
+        == 1
+    )
+
+    assert (
+        report["quality_gates"][
+            "unaccepted_error_validation_count_zero"
+        ]
+        is False
+    )
     assert report["quality_status"] == "FAIL"

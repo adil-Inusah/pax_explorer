@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "exceptions": [
+    {
+      "exception_id": "TM1-BROKEN-001",
+      "environment": "STAGING",
+      "database": "OXYChem",
+      "source_object": "process::AAQ_BUILD AFE ROLLUP_V2",
+      "relationship_type": "READS_FROM_CUBE",
+      "target_object": "cube::grpdesc",
+      "validation_status": "BROKEN_REFERENCE",
+      "disposition": "ACCEPTED_KNOWN_ISSUE",
+      "reason": "The TI process contains the literal reference CellGETS('grpdesc', GROUP, 'Parent'), but cube::grpdesc is absent from the current model.",
+      "owner": "TM1 model support",
+      "first_observed_snapshot": "20260922T222141Z",
+      "review_date": "2026-10-22"
+    }
+  ]
+}
