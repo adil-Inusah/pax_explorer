@@ -1,10 +1,10 @@
 {
-  "snapshot_id": "20260922T221808Z",
+  "snapshot_id": "20260922T222141Z",
   "environment": "STAGING",
   "database_name": "OXYChem",
   "status": "COMPLETE",
-  "started_at": "2026-09-22T22:19:36.476242+00:00",
-  "completed_at": "2026-09-22T22:19:36.702687+00:00",
+  "started_at": "2026-09-22T22:22:10.176911+00:00",
+  "completed_at": "2026-09-22T22:22:10.425517+00:00",
   "collector_version": "0.3.0-json-adapter",
   "tm1_version": "11.8.03500.4",
   "object_counts": {
