@@ -33,3 +33,7 @@ rich
 pytest
 pytest-cov
 ruff
+TM1py
+pandas
+pyarrow
+pydantic
