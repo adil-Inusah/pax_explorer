@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "statuses": [
+    "SUPPORTED",
+    "PARTIALLY_SUPPORTED",
+    "NOT_SUPPORTED",
+    "INTENTIONALLY_IGNORED",
+    "REVIEW_REQUIRED",
+    "DEPRECATED"
+  ],
+  "categories": [
+    "DIRECT",
+    "CONTEXTUAL",
+    "DYNAMIC",
+    "NON_LINEAGE",
+    "REVIEW_REQUIRED"
+  ],
+  "functions": {
+    "DB": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "READS_FROM",
+      "target_object_type": "CUBE"
+    },
+    "ATTRN": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "USES_ATTRIBUTE",
+      "target_object_type": "ATTRIBUTE"
+    },
+    "ATTRS": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "USES_ATTRIBUTE",
+      "target_object_type": "ATTRIBUTE"
+    },
+    "DIMIX": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "REFERENCES_DIMENSION",
+      "target_object_type": "DIMENSION"
+    },
+    "DIMNM": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "REFERENCES_DIMENSION",
+      "target_object_type": "DIMENSION"
+    },
+    "DIMSIZ": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "REFERENCES_DIMENSION",
+      "target_object_type": "DIMENSION"
+    },
+    "ELPAR": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "REFERENCES_HIERARCHY",
+      "target_object_type": "HIERARCHY"
+    },
+    "ELCOMP": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "REFERENCES_HIERARCHY",
+      "target_object_type": "HIERARCHY"
+    },
+    "ELISANC": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "REFERENCES_HIERARCHY",
+      "target_object_type": "HIERARCHY"
+    },
+    "ELLEV": {
+      "category": "DIRECT",
+      "parser_status": "SUPPORTED",
+      "relationship_type": "REFERENCES_HIERARCHY",
+      "target_object_type": "HIERARCHY"
+    },
+    "CUBEATTRN": {
+      "category": "CONTEXTUAL",
+      "parser_status": "NOT_SUPPORTED",
+      "relationship_type": "READS_CUBE_ATTRIBUTE",
+      "target_object_type": "CUBE"
+    },
+    "CUBEATTRS": {
+      "category": "CONTEXTUAL",
+      "parser_status": "NOT_SUPPORTED",
+      "relationship_type": "READS_CUBE_ATTRIBUTE",
+      "target_object_type": "CUBE"
+    },
+    "DIMENSIONATTRN": {
+      "category": "CONTEXTUAL",
+      "parser_status": "NOT_SUPPORTED",
+      "relationship_type": "READS_DIMENSION_ATTRIBUTE",
+      "target_object_type": "DIMENSION"
+    },
+    "DIMENSIONATTRS": {
+      "category": "CONTEXTUAL",
+      "parser_status": "NOT_SUPPORTED",
+      "relationship_type": "READS_DIMENSION_ATTRIBUTE",
+      "target_object_type": "DIMENSION"
+    },
+    "ELEMENTATTRN": {
+      "category": "CONTEXTUAL",
+      "parser_status": "NOT_SUPPORTED",
+      "relationship_type": "READS_ELEMENT_ATTRIBUTE",
+      "target_object_type": "ELEMENT"
+    },
+    "ELEMENTATTRS": {
+      "category": "CONTEXTUAL",
+      "parser_status": "NOT_SUPPORTED",
+      "relationship_type": "READS_ELEMENT_ATTRIBUTE",
+      "target_object_type": "ELEMENT"
+    },
+    "IF": {
+      "category": "DYNAMIC",
+      "parser_status": "PARTIALLY_SUPPORTED"
+    },
+    "SUBST": {
+      "category": "DYNAMIC",
+      "parser_status": "NOT_SUPPORTED"
+    },
+    "SCAN": {
+      "category": "DYNAMIC",
+      "parser_status": "NOT_SUPPORTED"
+    },
+    "LONG": {
+      "category": "DYNAMIC",
+      "parser_status": "NOT_SUPPORTED"
+    },
+    "NUMBERTOSTRING": {
+      "category": "DYNAMIC",
+      "parser_status": "NOT_SUPPORTED"
+    },
+    "STR": {
+      "category": "DYNAMIC",
+      "parser_status": "NOT_SUPPORTED"
+    },
+    "ABS": {
+      "category": "NON_LINEAGE",
+      "parser_status": "INTENTIONALLY_IGNORED"
+    },
+    "ROUND": {
+      "category": "NON_LINEAGE",
+      "parser_status": "INTENTIONALLY_IGNORED"
+    },
+    "MIN": {
+      "category": "NON_LINEAGE",
+      "parser_status": "INTENTIONALLY_IGNORED"
+    },
+    "MAX": {
+      "category": "NON_LINEAGE",
+      "parser_status": "INTENTIONALLY_IGNORED"
+    },
+    "EXP": {
+      "category": "NON_LINEAGE",
+      "parser_status": "INTENTIONALLY_IGNORED"
+    },
+    "LOG": {
+      "category": "NON_LINEAGE",
+      "parser_status": "INTENTIONALLY_IGNORED"
+    },
+  "ISLEAF": {
+    "category": "NON_LINEAGE",
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "notes": "Tests whether the current rule cell is a leaf cell. It does not independently identify another TM1 object."
+  },
+  "NUMBR": {
+    "category": "NON_LINEAGE",
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "notes": "Converts a string value to a number. Any nested DB or attribute function carries the lineage relationship."
+  },
+  "ROUNDP": {
+    "category": "NON_LINEAGE",
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "notes": "Rounds a numeric result. Any nested function, such as DB, carries the lineage relationship."
+  },
+  "CONSOLIDATEDMAX": {
+    "category": "DIRECT",
+    "parser_status": "SUPPORTED",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_argument": 1,
+    "notes": "Reads consolidation values from the cube identified by the second argument. Confirm argument usage against collected expressions before implementing parser support."
+  },
+  "ELCOMPN": {
+    "category": "DIRECT",
+    "parser_status": "SUPPORTED",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_argument": 0,
+    "notes": "Returns the number of components in a consolidated element. The first argument identifies the dimension."
+  },
+  "TRIM": {
+    "category": "DYNAMIC",
+    "parser_status": "NOT_SUPPORTED",
+    "notes": "Does not independently create lineage but can contribute to a dynamically constructed target expression."
+  },
+  "DAYNO": {
+    "category": "NON_LINEAGE",
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "notes": "Date conversion function that does not independently identify a TM1 catalog object."
+  },
+  "CONSOLIDATECHILDREN": {
+    "category": "CONTEXTUAL",
+    "parser_status": "SUPPORTED",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "notes": "Calculates a consolidation from immediate children along a dimension. Inspect the collected calls before assigning a target_argument value."
+  },
+  "NOW": {
+    "category": "NON_LINEAGE",
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "notes": "Returns the current date and time and does not independently identify a TM1 catalog object."
+  },
+  "TIMST": {
+    "category": "NON_LINEAGE",
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "notes": "Date and time conversion function that does not independently identify a TM1 catalog object."
+  },
+  "CONSOLIDATEDAVG": {
+    "category": "DIRECT",
+    "parser_status": "SUPPORTED",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_argument": 1,
+    "notes": "Reads consolidation values from the cube identified by the second argument."
+  }
+}
+}
+  

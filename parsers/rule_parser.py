@@ -113,6 +113,10 @@ DEFAULT_FUNCTION_SPECS: dict[str, FunctionSpec] = {
     "ELCOMP": FunctionSpec("ELCOMP", RelationshipType.REFERENCES_HIERARCHY, TargetObjectType.HIERARCHY),
     "ELISANC": FunctionSpec("ELISANC", RelationshipType.REFERENCES_HIERARCHY, TargetObjectType.HIERARCHY),
     "ELLEV": FunctionSpec("ELLEV", RelationshipType.REFERENCES_HIERARCHY, TargetObjectType.HIERARCHY),
+    "ELCOMPN": FunctionSpec("ELCOMPN", RelationshipType.REFERENCES_DIMENSION,TargetObjectType.DIMENSION, target_argument=0,),
+    "CONSOLIDATEDMAX": FunctionSpec( "CONSOLIDATEDMAX", RelationshipType.READS_FROM, TargetObjectType.CUBE, target_argument=1,),
+    "CONSOLIDATEDAVG": FunctionSpec( "CONSOLIDATEDAVG", RelationshipType.READS_FROM, TargetObjectType.CUBE, target_argument=1,),
+    "CONSOLIDATECHILDREN": FunctionSpec( "CONSOLIDATECHILDREN",  RelationshipType.REFERENCES_DIMENSION,TargetObjectType.DIMENSION,target_argument=0,),
 }
 
 _IDENTIFIER_RE = re.compile(r"[A-Za-z_][A-Za-z0-9_]*")
