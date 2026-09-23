@@ -43,5 +43,23 @@
     "UNRESOLVED_DYNAMIC_REFERENCE": 2641,
     "VALID": 1146
   },
-  "errors": []
+  "errors": [],
+  "collection_scope": {
+    "included": [
+      "chores",
+      "cubes",
+      "dimensions",
+      "processes",
+      "relationships",
+      "validations"
+    ],
+    "deferred": [
+      {
+        "component": "attributes",
+        "status": "DEFERRED",
+        "required_for_overall_success": false,
+        "reason": "Excluded from the holistic exploration because attribute collection can retrieve large hierarchy element payloads and cause excessive runtime or timeout conditions."
+      }
+    ]
+  }
 }

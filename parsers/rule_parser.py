@@ -338,23 +338,142 @@ def summarize_relationships(
     return sorted(results, key=lambda item: (item.source_cube.casefold(), item.first_line, item.function_name))
 
 
+def normalized_key(value: Any) -> str:
+    """Return a case-insensitive, whitespace-normalized catalog key."""
+    return " ".join(
+        str(value or "")
+        .strip()
+        .casefold()
+        .split()
+    )
+
+
+def _catalog_records(
+    object_catalog: Any,
+) -> list[dict[str, Any]]:
+    """Normalize a top-level object list or catalog wrapper."""
+
+    if object_catalog is None:
+        return []
+
+    if isinstance(object_catalog, list):
+        return [
+            record
+            for record in object_catalog
+            if isinstance(record, dict)
+        ]
+
+    if isinstance(object_catalog, dict):
+        candidate_keys: tuple[str, ...] = (
+            "objects",
+            "items",
+            "records",
+            "data",
+            "results",
+        )
+
+        for key in candidate_keys:
+            candidate = object_catalog.get(key)
+
+            if isinstance(candidate, list):
+                return [
+                    record
+                    for record in candidate
+                    if isinstance(record, dict)
+                ]
+
+    return []
+
+
+def _catalog_value(record: dict[str, Any], *keys: str) -> Any:
+    for key in keys:
+        value = record.get(key)
+        if value is not None and str(value).strip():
+            return value
+    return None
+
+
 def validate_relationships(
     relationships: Sequence[RuleRelationship],
-    object_catalog: Mapping[str, Any] | None = None,
+    object_catalog: Iterable[dict[str, Any]] | Mapping[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
-    """Validation extension point.
+    """Validate rule targets using the same resolved-target precedence.
 
-    The current skeleton flags dynamic references and leaves catalog-shape
-    normalization to the catalog adapter. Object existence checks will be added
-    once the canonical catalog lookup contract is wired in.
+    Rule literals have HIGH confidence and are catalog-checkable. MEDIUM/LOW
+    records represent unresolved expressions. Attribute and hierarchy targets
+    stay outside cross-checking while the attribute inventory is deferred.
     """
+    catalog_index: dict[tuple[str, str], dict[str, Any]] = {}
+    for record in _catalog_records(object_catalog):
+        object_type = normalized_key(
+            _catalog_value(record, "object_type", "ObjectType", "type")
+        )
+        object_name = normalized_key(
+            _catalog_value(record, "object_name", "ObjectName", "name")
+        )
+        if object_type and object_name:
+            catalog_index.setdefault((object_type, object_name), record)
+
+    non_catalog_types = {
+        "attribute",
+        "hierarchy",
+        "element",
+        "view",
+        "subset",
+        "file",
+        "command",
+    }
     validations: list[dict[str, Any]] = []
+
     for relationship in relationships:
-        validations.append({
-            "source_cube": relationship.source_cube,
-            "target_name": relationship.target_name,
-            "target_object_type": relationship.target_object_type,
-            "status": "PENDING_DYNAMIC_RESOLUTION" if relationship.target_name is None else "PENDING_CATALOG_LOOKUP",
-            "message": "Target is computed at runtime." if relationship.target_name is None else "Target extracted; catalog lookup not yet connected.",
-        })
+        target_name = str(relationship.target_name or "").strip()
+        target_type = normalized_key(relationship.target_object_type)
+        catalog_match_name = ""
+
+        if not target_name or relationship.confidence != Confidence.HIGH.value:
+            status = "PENDING_DYNAMIC_RESOLUTION"
+            message = "The target is computed at runtime."
+        elif target_type in non_catalog_types:
+            status = "NOT_CROSS_CHECKED"
+            message = (
+                "The target was extracted, but this target type is not "
+                "included in the current object catalog."
+            )
+        else:
+            match = catalog_index.get(
+                (target_type, normalized_key(target_name))
+            )
+            if match is not None:
+                status = "VALID"
+                catalog_match_name = str(
+                    _catalog_value(
+                        match,
+                        "object_name",
+                        "ObjectName",
+                        "name",
+                    )
+                    or target_name
+                )
+                message = (
+                    "The extracted target matched an object in objects.json."
+                )
+            else:
+                status = "BROKEN_REFERENCE"
+                message = (
+                    "The extracted target does not exist in objects.json."
+                )
+
+        validations.append(
+            {
+                "source_cube": relationship.source_cube,
+                "relationship_type": relationship.relationship_type,
+                "target_name": relationship.target_name,
+                "target_object_type": relationship.target_object_type,
+                "confidence": relationship.confidence,
+                "catalog_match_name": catalog_match_name,
+                "status": status,
+                "message": message,
+            }
+        )
+
     return validations

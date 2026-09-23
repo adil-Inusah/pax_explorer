@@ -1,4 +1,5 @@
 from __future__ import annotations
+from collections.abc import Mapping
 
 import re
 from dataclasses import asdict, dataclass,field
@@ -731,31 +732,120 @@ def parse_process(
 # Relationship Aggregation and Validation
 # ============================================================
 
-def _is_quoted_literal(
-    expression: str | None,
-) -> bool:
-    """Return True when an expression is a complete string literal."""
-    value = (expression or "").strip()
+def normalized_key(
+    value: Any,
+) -> str:
+    """Return a case-insensitive, whitespace-normalized key."""
 
-    return (
-        len(value) >= 2
-        and value[0] in {"'", '"'}
-        and value[-1] == value[0]
+    return " ".join(
+        str(value or "")
+        .strip()
+        .casefold()
+        .split()
     )
 
 
+def _catalog_records(
+    object_catalog: Any,
+) -> list[dict[str, Any]]:
+    """Normalize a top-level object list or catalog wrapper."""
+
+    if isinstance(object_catalog, list):
+        return [
+            record
+            for record in object_catalog
+            if isinstance(record, dict)
+        ]
+
+    if isinstance(object_catalog, dict):
+        for key in (
+            "objects",
+            "items",
+            "records",
+            "data",
+            "results",
+        ):
+            candidate: Any = object_catalog.get(key)
+
+            if isinstance(candidate, list):
+                return [
+                    record
+                    for record in candidate
+                    if isinstance(record, dict)
+                ]
+
+    return []
+
+
+def _catalog_value(
+    record: dict[str, Any],
+    *keys: str,
+) -> Any:
+    """Return the first nonempty catalog value for the supplied keys."""
+
+    for key in keys:
+        value = record.get(key)
+
+        if value is not None and str(value).strip():
+            return value
+
+    return None
+
+
+def build_catalog_index(
+    object_catalog: Any,
+) -> dict[
+    tuple[str, str],
+    dict[str, Any],
+]:
+    """Index catalog objects by normalized type and name."""
+
+    index: dict[
+        tuple[str, str],
+        dict[str, Any],
+    ] = {}
+
+    for record in _catalog_records(
+        object_catalog
+    ):
+        object_type = normalized_key(
+            _catalog_value(
+                record,
+                "object_type",
+                "ObjectType",
+                "type",
+            )
+        )
+        object_name = normalized_key(
+            _catalog_value(
+                record,
+                "object_name",
+                "ObjectName",
+                "name",
+            )
+        )
+
+        if object_type and object_name:
+            index.setdefault(
+                (
+                    object_type,
+                    object_name,
+                ),
+                record,
+            )
+
+    return index
+
 def summarize_relationships(
-    evidence_records: Iterable[
-        RelationshipEvidence
-    ],
+    evidence_records: Iterable[RelationshipEvidence],
 ) -> list[RelationshipSummary]:
-    """Aggregate TI evidence into semantic relationships.
+    """Aggregate TI evidence without discarding successful resolution.
 
-    Literal targets retain their strongest confidence.
-
-    Targets referenced through variables remain available through
-    target_name, but are marked UNRESOLVED until catalog validation
-    proves that the inferred target exists.
+    The original source expression may be a variable, but a variable-backed
+    target is no longer dynamic once ``resolve_expression`` has produced a
+    dependable target name. Confidence is therefore derived from the parser's
+    actual resolution result, not from whether the source expression was a
+    quoted literal.
     """
     groups: dict[
         tuple[str, str, str, str],
@@ -769,14 +859,9 @@ def summarize_relationships(
             evidence.target_type,
             evidence.target_name,
         )
-
-        groups.setdefault(
-            key,
-            [],
-        ).append(evidence)
+        groups.setdefault(key, []).append(evidence)
 
     summaries: list[RelationshipSummary] = []
-
     for key, records in groups.items():
         (
             process_name,
@@ -793,69 +878,38 @@ def summarize_relationships(
                 and record.target_expression.strip()
             }
         )
-
         target_expression = (
             target_expressions[0]
             if len(target_expressions) == 1
             else None
         )
 
-        has_dynamic_expression = any(
-            not _is_quoted_literal(
-                expression
-            )
-            for expression in target_expressions
+        # All records in this group resolve to the same target name. Preserve
+        # the strongest actual parser result instead of downgrading variables.
+        summary_confidence = max(
+            (record.confidence for record in records),
+            key=CONFIDENCE_RANK.__getitem__,
         )
-
-        if has_dynamic_expression:
-            summary_confidence = "UNRESOLVED"
-        else:
-            summary_confidence = max(
-                (
-                    record.confidence
-                    for record in records
-                ),
-                key=lambda confidence: (
-                    CONFIDENCE_RANK[
-                        confidence
-                    ]
-                ),
-            )
 
         summaries.append(
             RelationshipSummary(
                 process_name=process_name,
-                relationship_type=(
-                    relationship_type
-                ),
+                relationship_type=relationship_type,
                 target_type=target_type,
                 target_name=target_name,
                 confidence=summary_confidence,
                 reference_count=len(records),
                 procedures=sorted(
-                    {
-                        record.procedure
-                        for record in records
-                    }
+                    {record.procedure for record in records}
                 ),
                 functions=sorted(
-                    {
-                        record.function_name
-                        for record in records
-                    }
+                    {record.function_name for record in records}
                 ),
                 evidence_lines=sorted(
-                    {
-                        record.line_number
-                        for record in records
-                    }
+                    {record.line_number for record in records}
                 ),
-                target_expression=(
-                    target_expression
-                ),
-                target_expressions=(
-                    target_expressions
-                ),
+                target_expression=target_expression,
+                target_expressions=target_expressions,
             )
         )
 
@@ -864,104 +918,94 @@ def summarize_relationships(
         key=lambda item: (
             item.process_name.casefold(),
             item.relationship_type,
-            (
-                item.target_name or ""
-            ).casefold(),
+            (item.target_name or "").casefold(),
         ),
     )
 
 
 def validate_relationships(
-    summaries: Iterable[
-        RelationshipSummary
-    ],
-    object_catalog: Iterable[
-        dict[str, Any]
-    ],
+    summaries: Iterable[RelationshipSummary],
+    object_catalog: Iterable[dict[str, Any]] | dict[str, Any],
 ) -> list[dict[str, Any]]:
-    """Validate relationship summaries against the object catalog."""
-    known_objects = {
-        (
-            str(
-                record.get(
-                    "object_type",
-                    "",
-                )
-            ).casefold(),
-            str(
-                record.get(
-                    "object_name",
-                    "",
-                )
-            ).casefold(),
-        )
-        for record in object_catalog
+    """Validate resolved TI targets before classifying them as dynamic.
+
+    Precedence:
+    1. A target with CONFIRMED or RESOLVED confidence is dependable.
+    2. Catalog-backed object types are matched against objects.json.
+    3. Unsupported/deferred object types are NOT_CROSS_CHECKED.
+    4. Only targets that were not dependably resolved remain dynamic.
+    """
+    catalog_index = build_catalog_index(object_catalog)
+    dependable_confidences = {"CONFIRMED", "RESOLVED"}
+    non_catalog_types = {
+        "attribute",
+        "hierarchy",
+        "element",
+        "view",
+        "subset",
+        "file",
+        "command",
     }
 
-    validations: list[
-        dict[str, Any]
-    ] = []
-
+    validations: list[dict[str, Any]] = []
     for summary in summaries:
-        target_name = (
-            summary.target_name or ""
+        target_name = str(summary.target_name or "").strip()
+        target_type = normalized_key(summary.target_type)
+        dependable_target = (
+            bool(target_name)
+            and summary.confidence in dependable_confidences
         )
+        catalog_match_name = ""
 
-        if (
-            summary.confidence
-            == "UNRESOLVED"
-        ):
-            status = (
-                "UNRESOLVED_DYNAMIC_REFERENCE"
+        if not dependable_target:
+            status = "UNRESOLVED_DYNAMIC_REFERENCE"
+            reason = (
+                "The target could not be resolved to a dependable "
+                "catalog name."
             )
-
-        elif summary.target_type in {
-            "attribute",
-            "hierarchy",
-            "element",
-            "view",
-            "subset",
-            "file",
-            "command",
-        }:
+        elif target_type in non_catalog_types:
             status = "NOT_CROSS_CHECKED"
-
-        elif (
-            summary.target_type.casefold(),
-            target_name.casefold(),
-        ) in known_objects:
-            status = "VALID"
-
+            reason = (
+                "The target was resolved, but this target type is not "
+                "included in the current object catalog."
+            )
         else:
-            status = "BROKEN_REFERENCE"
+            match = catalog_index.get(
+                (target_type, normalized_key(target_name))
+            )
+            if match is not None:
+                status = "VALID"
+                catalog_match_name = str(
+                    _catalog_value(
+                        match,
+                        "object_name",
+                        "ObjectName",
+                        "name",
+                    )
+                    or target_name
+                )
+                reason = (
+                    "The resolved target matched an object in objects.json."
+                )
+            else:
+                status = "BROKEN_REFERENCE"
+                reason = (
+                    "The resolved target does not exist in objects.json."
+                )
 
         validations.append(
             {
-                "source_name": (
-                    summary.process_name
-                ),
-                "process_name": (
-                    summary.process_name
-                ),
-                "relationship_type": (
-                    summary.relationship_type
-                ),
-                "target_type": (
-                    summary.target_type
-                ),
-                "target_name": (
-                    summary.target_name
-                ),
-                "target_expression": (
-                    summary.target_expression
-                ),
-                "target_expressions": list(
-                    summary.target_expressions
-                ),
-                "confidence": (
-                    summary.confidence
-                ),
+                "source_name": summary.process_name,
+                "process_name": summary.process_name,
+                "relationship_type": summary.relationship_type,
+                "target_type": summary.target_type,
+                "target_name": summary.target_name,
+                "target_expression": summary.target_expression,
+                "target_expressions": list(summary.target_expressions),
+                "confidence": summary.confidence,
+                "catalog_match_name": catalog_match_name,
                 "validation_status": status,
+                "reason": reason,
             }
         )
 
