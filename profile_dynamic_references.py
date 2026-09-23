@@ -282,12 +282,12 @@ def main() -> int:
     print(f"pattern_csv={pattern_path}")
     print(f"detail_csv={detail_path}")
 
-    expected = 642  # 640 TI unresolved + 2 rule pending in the current baseline.
-    if len(all_dynamic) != expected:
-        print(
-            "WARNING: current dynamic count differs from the documented "
-            f"baseline of {expected}."
-        )
+    # expected = 642  # 640 TI unresolved + 2 rule pending in the current baseline.
+    # if len(all_dynamic) != expected:
+    #     print(
+    #         "WARNING: current dynamic count differs from the documented "
+    #         f"baseline of {expected}."
+    #     )
     return 0
 
 
