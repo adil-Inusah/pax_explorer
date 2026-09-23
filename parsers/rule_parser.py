@@ -13,6 +13,12 @@ from enum import Enum
 import re
 from typing import Any, Iterable, Iterator, Mapping, Sequence
 
+from parsers.catalog_validation import (
+    build_catalog_index,
+    build_exception_index,
+    classify_target,
+)
+
 
 class RelationshipType(str, Enum):
     READS_FROM = "READS_FROM"
@@ -87,6 +93,8 @@ class RuleRelationship:
     evidence_count: int
     first_line: int
     confidence: str
+    target_expression: str | None = None
+    target_expressions: tuple[str, ...] = ()
     dimension_name: str | None = None
     hierarchy_name: str | None = None
     attribute_name: str | None = None
@@ -316,164 +324,106 @@ def parse_rules(
 def summarize_relationships(
     evidence: Sequence[RuleRelationshipEvidence],
 ) -> list[RuleRelationship]:
-    """Collapse repeated evidence while preserving traceability counts."""
+    """Collapse repeated rule evidence and preserve target expressions."""
     grouped: dict[tuple[Any, ...], list[RuleRelationshipEvidence]] = {}
     for item in evidence:
         key = (
-            item.source_cube, item.relationship_type, item.target_object_type,
-            item.target_name, item.function_name, item.dimension_name,
-            item.hierarchy_name, item.attribute_name,
+            item.source_cube,
+            item.relationship_type,
+            item.target_object_type,
+            item.target_name,
+            item.function_name,
+            item.dimension_name,
+            item.hierarchy_name,
+            item.attribute_name,
         )
         grouped.setdefault(key, []).append(item)
-    results = []
+
+    results: list[RuleRelationship] = []
     for key, records in grouped.items():
-        first = min(record.line_number for record in records)
-        confidence = min((record.confidence for record in records), key=lambda value: list(Confidence).index(Confidence(value)))
-        results.append(RuleRelationship(
-            source_cube=key[0], relationship_type=key[1], target_object_type=key[2],
-            target_name=key[3], function_name=key[4], evidence_count=len(records),
-            first_line=first, confidence=confidence, dimension_name=key[5],
-            hierarchy_name=key[6], attribute_name=key[7],
-        ))
-    return sorted(results, key=lambda item: (item.source_cube.casefold(), item.first_line, item.function_name))
-
-
-def normalized_key(value: Any) -> str:
-    """Return a case-insensitive, whitespace-normalized catalog key."""
-    return " ".join(
-        str(value or "")
-        .strip()
-        .casefold()
-        .split()
-    )
-
-
-def _catalog_records(
-    object_catalog: Any,
-) -> list[dict[str, Any]]:
-    """Normalize a top-level object list or catalog wrapper."""
-
-    if object_catalog is None:
-        return []
-
-    if isinstance(object_catalog, list):
-        return [
-            record
-            for record in object_catalog
-            if isinstance(record, dict)
-        ]
-
-    if isinstance(object_catalog, dict):
-        candidate_keys: tuple[str, ...] = (
-            "objects",
-            "items",
-            "records",
-            "data",
-            "results",
+        first_line = min(record.line_number for record in records)
+        confidence = min(
+            (record.confidence for record in records),
+            key=lambda value: list(Confidence).index(Confidence(value)),
+        )
+        target_expressions = tuple(
+            sorted(
+                {
+                    record.target_expression.strip()
+                    for record in records
+                    if record.target_expression and record.target_expression.strip()
+                }
+            )
+        )
+        target_expression = (
+            target_expressions[0]
+            if len(target_expressions) == 1
+            else None
+        )
+        results.append(
+            RuleRelationship(
+                source_cube=key[0],
+                relationship_type=key[1],
+                target_object_type=key[2],
+                target_name=key[3],
+                function_name=key[4],
+                evidence_count=len(records),
+                first_line=first_line,
+                confidence=confidence,
+                target_expression=target_expression,
+                target_expressions=target_expressions,
+                dimension_name=key[5],
+                hierarchy_name=key[6],
+                attribute_name=key[7],
+            )
         )
 
-        for key in candidate_keys:
-            candidate = object_catalog.get(key)
-
-            if isinstance(candidate, list):
-                return [
-                    record
-                    for record in candidate
-                    if isinstance(record, dict)
-                ]
-
-    return []
-
-
-def _catalog_value(record: dict[str, Any], *keys: str) -> Any:
-    for key in keys:
-        value = record.get(key)
-        if value is not None and str(value).strip():
-            return value
-    return None
+    return sorted(
+        results,
+        key=lambda item: (
+            item.source_cube.casefold(),
+            item.first_line,
+            item.function_name,
+        ),
+    )
 
 
 def validate_relationships(
     relationships: Sequence[RuleRelationship],
-    object_catalog: Iterable[dict[str, Any]] | Mapping[str, Any] | None = None,
+    object_catalog: Any = None,
+    quality_exceptions: Any = None,
 ) -> list[dict[str, Any]]:
-    """Validate rule targets using the same resolved-target precedence.
-
-    Rule literals have HIGH confidence and are catalog-checkable. MEDIUM/LOW
-    records represent unresolved expressions. Attribute and hierarchy targets
-    stay outside cross-checking while the attribute inventory is deferred.
-    """
-    catalog_index: dict[tuple[str, str], dict[str, Any]] = {}
-    for record in _catalog_records(object_catalog):
-        object_type = normalized_key(
-            _catalog_value(record, "object_type", "ObjectType", "type")
-        )
-        object_name = normalized_key(
-            _catalog_value(record, "object_name", "ObjectName", "name")
-        )
-        if object_type and object_name:
-            catalog_index.setdefault((object_type, object_name), record)
-
-    non_catalog_types = {
-        "attribute",
-        "hierarchy",
-        "element",
-        "view",
-        "subset",
-        "file",
-        "command",
-    }
+    """Validate rule targets with the shared final-status model."""
+    catalog_index = build_catalog_index(object_catalog)
+    exception_index = build_exception_index(quality_exceptions)
     validations: list[dict[str, Any]] = []
 
     for relationship in relationships:
-        target_name = str(relationship.target_name or "").strip()
-        target_type = normalized_key(relationship.target_object_type)
-        catalog_match_name = ""
-
-        if not target_name or relationship.confidence != Confidence.HIGH.value:
-            status = "PENDING_DYNAMIC_RESOLUTION"
-            message = "The target is computed at runtime."
-        elif target_type in non_catalog_types:
-            status = "NOT_CROSS_CHECKED"
-            message = (
-                "The target was extracted, but this target type is not "
-                "included in the current object catalog."
-            )
-        else:
-            match = catalog_index.get(
-                (target_type, normalized_key(target_name))
-            )
-            if match is not None:
-                status = "VALID"
-                catalog_match_name = str(
-                    _catalog_value(
-                        match,
-                        "object_name",
-                        "ObjectName",
-                        "name",
-                    )
-                    or target_name
-                )
-                message = (
-                    "The extracted target matched an object in objects.json."
-                )
-            else:
-                status = "BROKEN_REFERENCE"
-                message = (
-                    "The extracted target does not exist in objects.json."
-                )
-
-        validations.append(
-            {
-                "source_cube": relationship.source_cube,
-                "relationship_type": relationship.relationship_type,
-                "target_name": relationship.target_name,
-                "target_object_type": relationship.target_object_type,
-                "confidence": relationship.confidence,
-                "catalog_match_name": catalog_match_name,
-                "status": status,
-                "message": message,
-            }
+        decision = classify_target(
+            target_type=relationship.target_object_type,
+            target_name=relationship.target_name,
+            confidence=relationship.confidence,
+            catalog_index=catalog_index,
+            exception_index=exception_index,
         )
+        validation = {
+            "source_cube": relationship.source_cube,
+            "source_name": relationship.source_cube,
+            "relationship_type": relationship.relationship_type,
+            "target_name": relationship.target_name,
+            "target_object_type": relationship.target_object_type,
+            "target_type": relationship.target_object_type,
+            "target_expression": relationship.target_expression,
+            "target_expressions": list(relationship.target_expressions),
+            "function_name": relationship.function_name,
+            "evidence_count": relationship.evidence_count,
+            "first_line": relationship.first_line,
+            "confidence": relationship.confidence,
+        }
+        validation.update(decision.to_dict())
+        # Preserve the historical rule output key during migration.
+        validation["status"] = validation["validation_status"]
+        validation["message"] = validation["reason"]
+        validations.append(validation)
 
     return validations

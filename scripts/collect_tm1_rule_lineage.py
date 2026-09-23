@@ -19,6 +19,7 @@ from utilities.tm1_connection import get_tm1_connection
 
 CURRENT_ROOT = ROOT_DIR / "data" / "current"
 SNAPSHOT_ROOT = ROOT_DIR / "data" / "snapshots"
+QUALITY_EXCEPTIONS_PATH = ROOT_DIR / "config" / "Catalog_quality_exceptions.json"
 
 
 def utc_now() -> datetime:
@@ -33,6 +34,12 @@ def read_json(path: Path) -> Any:
     with path.open("r", encoding="utf-8") as file:
         return json.load(file)
 
+
+def read_quality_exceptions() -> Any:
+    """Load the optional canonical quality-exception register."""
+    if not QUALITY_EXCEPTIONS_PATH.is_file():
+        return {"exceptions": []}
+    return read_json(QUALITY_EXCEPTIONS_PATH)
 
 def write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -89,6 +96,7 @@ def collect_rule_lineage() -> dict[str, Any]:
         )
 
     object_catalog = read_json(current_objects_path)
+    quality_exceptions = read_quality_exceptions()
     started_at = utc_now()
     run_snapshot_id = snapshot_id(started_at)
     output_directory = (
@@ -134,7 +142,25 @@ def collect_rule_lineage() -> dict[str, Any]:
                 )
 
     summaries = summarize_relationships(all_evidence)
-    validations = validate_relationships(summaries, object_catalog)
+    validations = validate_relationships(
+        summaries,
+        object_catalog,
+        quality_exceptions,
+    )
+    validation_counts: dict[str, int] = {}
+    registered_exception_count = 0
+    excluded_relationship_count = 0
+    for validation in validations:
+        status = str(
+            validation.get("validation_status")
+            or validation.get("status")
+            or "UNKNOWN"
+        )
+        validation_counts[status] = validation_counts.get(status, 0) + 1
+        if validation.get("exception_id"):
+            registered_exception_count += 1
+        if validation.get("exclude_from_quality_score") is True:
+            excluded_relationship_count += 1
 
     evidence_payload = [record.to_dict() for record in all_evidence]
     summary_payload = [record.to_dict() for record in summaries]
@@ -150,6 +176,9 @@ def collect_rule_lineage() -> dict[str, Any]:
         "evidence_count": len(evidence_payload),
         "relationship_count": len(summary_payload),
         "validation_count": len(validations),
+        "validation_counts": dict(sorted(validation_counts.items())),
+        "registered_exception_count": registered_exception_count,
+        "excluded_relationship_count": excluded_relationship_count,
         "error_count": len(errors),
     }
 

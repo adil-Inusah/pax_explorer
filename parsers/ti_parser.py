@@ -1,9 +1,14 @@
 from __future__ import annotations
-from collections.abc import Mapping
 
 import re
 from dataclasses import asdict, dataclass,field
 from typing import Any, Iterable
+
+from parsers.catalog_validation import (
+    build_catalog_index,
+    build_exception_index,
+    classify_target,
+)
 
 
 # ============================================================
@@ -731,127 +736,19 @@ def parse_process(
 # ============================================================
 # Relationship Aggregation and Validation
 # ============================================================
-
-def normalized_key(
-    value: Any,
-) -> str:
-    """Return a case-insensitive, whitespace-normalized key."""
-
-    return " ".join(
-        str(value or "")
-        .strip()
-        .casefold()
-        .split()
-    )
-
-
-def _catalog_records(
-    object_catalog: Any,
-) -> list[dict[str, Any]]:
-    """Normalize a top-level object list or catalog wrapper."""
-
-    if isinstance(object_catalog, list):
-        return [
-            record
-            for record in object_catalog
-            if isinstance(record, dict)
-        ]
-
-    if isinstance(object_catalog, dict):
-        for key in (
-            "objects",
-            "items",
-            "records",
-            "data",
-            "results",
-        ):
-            candidate: Any = object_catalog.get(key)
-
-            if isinstance(candidate, list):
-                return [
-                    record
-                    for record in candidate
-                    if isinstance(record, dict)
-                ]
-
-    return []
-
-
-def _catalog_value(
-    record: dict[str, Any],
-    *keys: str,
-) -> Any:
-    """Return the first nonempty catalog value for the supplied keys."""
-
-    for key in keys:
-        value = record.get(key)
-
-        if value is not None and str(value).strip():
-            return value
-
-    return None
-
-
-def build_catalog_index(
-    object_catalog: Any,
-) -> dict[
-    tuple[str, str],
-    dict[str, Any],
-]:
-    """Index catalog objects by normalized type and name."""
-
-    index: dict[
-        tuple[str, str],
-        dict[str, Any],
-    ] = {}
-
-    for record in _catalog_records(
-        object_catalog
-    ):
-        object_type = normalized_key(
-            _catalog_value(
-                record,
-                "object_type",
-                "ObjectType",
-                "type",
-            )
-        )
-        object_name = normalized_key(
-            _catalog_value(
-                record,
-                "object_name",
-                "ObjectName",
-                "name",
-            )
-        )
-
-        if object_type and object_name:
-            index.setdefault(
-                (
-                    object_type,
-                    object_name,
-                ),
-                record,
-            )
-
-    return index
-
 def summarize_relationships(
     evidence_records: Iterable[RelationshipEvidence],
 ) -> list[RelationshipSummary]:
-    """Aggregate TI evidence without discarding successful resolution.
+    """Aggregate evidence while preserving successful resolution.
 
-    The original source expression may be a variable, but a variable-backed
-    target is no longer dynamic once ``resolve_expression`` has produced a
-    dependable target name. Confidence is therefore derived from the parser's
-    actual resolution result, not from whether the source expression was a
-    quoted literal.
+    A variable-backed expression remains RESOLVED after the symbol resolver
+    determines a concrete target. The original expression is retained for
+    provenance and profiling.
     """
     groups: dict[
         tuple[str, str, str, str],
         list[RelationshipEvidence],
     ] = {}
-
     for evidence in evidence_records:
         key = (
             evidence.process_name,
@@ -863,19 +760,12 @@ def summarize_relationships(
 
     summaries: list[RelationshipSummary] = []
     for key, records in groups.items():
-        (
-            process_name,
-            relationship_type,
-            target_type,
-            target_name,
-        ) = key
-
+        process_name, relationship_type, target_type, target_name = key
         target_expressions = sorted(
             {
                 record.target_expression.strip()
                 for record in records
-                if record.target_expression
-                and record.target_expression.strip()
+                if record.target_expression and record.target_expression.strip()
             }
         )
         target_expression = (
@@ -883,14 +773,10 @@ def summarize_relationships(
             if len(target_expressions) == 1
             else None
         )
-
-        # All records in this group resolve to the same target name. Preserve
-        # the strongest actual parser result instead of downgrading variables.
         summary_confidence = max(
             (record.confidence for record in records),
             key=CONFIDENCE_RANK.__getitem__,
         )
-
         summaries.append(
             RelationshipSummary(
                 process_name=process_name,
@@ -899,15 +785,9 @@ def summarize_relationships(
                 target_name=target_name,
                 confidence=summary_confidence,
                 reference_count=len(records),
-                procedures=sorted(
-                    {record.procedure for record in records}
-                ),
-                functions=sorted(
-                    {record.function_name for record in records}
-                ),
-                evidence_lines=sorted(
-                    {record.line_number for record in records}
-                ),
+                procedures=sorted({record.procedure for record in records}),
+                functions=sorted({record.function_name for record in records}),
+                evidence_lines=sorted({record.line_number for record in records}),
                 target_expression=target_expression,
                 target_expressions=target_expressions,
             )
@@ -925,88 +805,37 @@ def summarize_relationships(
 
 def validate_relationships(
     summaries: Iterable[RelationshipSummary],
-    object_catalog: Iterable[dict[str, Any]] | dict[str, Any],
+    object_catalog: Any,
+    quality_exceptions: Any = None,
 ) -> list[dict[str, Any]]:
-    """Validate resolved TI targets before classifying them as dynamic.
-
-    Precedence:
-    1. A target with CONFIRMED or RESOLVED confidence is dependable.
-    2. Catalog-backed object types are matched against objects.json.
-    3. Unsupported/deferred object types are NOT_CROSS_CHECKED.
-    4. Only targets that were not dependably resolved remain dynamic.
-    """
+    """Validate TI relationships and apply registered quality exceptions."""
     catalog_index = build_catalog_index(object_catalog)
-    dependable_confidences = {"CONFIRMED", "RESOLVED"}
-    non_catalog_types = {
-        "attribute",
-        "hierarchy",
-        "element",
-        "view",
-        "subset",
-        "file",
-        "command",
-    }
-
+    exception_index = build_exception_index(quality_exceptions)
     validations: list[dict[str, Any]] = []
+
     for summary in summaries:
-        target_name = str(summary.target_name or "").strip()
-        target_type = normalized_key(summary.target_type)
-        dependable_target = (
-            bool(target_name)
-            and summary.confidence in dependable_confidences
+        decision = classify_target(
+            target_type=summary.target_type,
+            target_name=summary.target_name,
+            confidence=summary.confidence,
+            catalog_index=catalog_index,
+            exception_index=exception_index,
         )
-        catalog_match_name = ""
-
-        if not dependable_target:
-            status = "UNRESOLVED_DYNAMIC_REFERENCE"
-            reason = (
-                "The target could not be resolved to a dependable "
-                "catalog name."
-            )
-        elif target_type in non_catalog_types:
-            status = "NOT_CROSS_CHECKED"
-            reason = (
-                "The target was resolved, but this target type is not "
-                "included in the current object catalog."
-            )
-        else:
-            match = catalog_index.get(
-                (target_type, normalized_key(target_name))
-            )
-            if match is not None:
-                status = "VALID"
-                catalog_match_name = str(
-                    _catalog_value(
-                        match,
-                        "object_name",
-                        "ObjectName",
-                        "name",
-                    )
-                    or target_name
-                )
-                reason = (
-                    "The resolved target matched an object in objects.json."
-                )
-            else:
-                status = "BROKEN_REFERENCE"
-                reason = (
-                    "The resolved target does not exist in objects.json."
-                )
-
-        validations.append(
-            {
-                "source_name": summary.process_name,
-                "process_name": summary.process_name,
-                "relationship_type": summary.relationship_type,
-                "target_type": summary.target_type,
-                "target_name": summary.target_name,
-                "target_expression": summary.target_expression,
-                "target_expressions": list(summary.target_expressions),
-                "confidence": summary.confidence,
-                "catalog_match_name": catalog_match_name,
-                "validation_status": status,
-                "reason": reason,
-            }
-        )
+        validation = {
+            "source_name": summary.process_name,
+            "process_name": summary.process_name,
+            "relationship_type": summary.relationship_type,
+            "target_type": summary.target_type,
+            "target_name": summary.target_name,
+            "target_expression": summary.target_expression,
+            "target_expressions": list(summary.target_expressions),
+            "confidence": summary.confidence,
+            "reference_count": summary.reference_count,
+            "procedures": list(summary.procedures),
+            "functions": list(summary.functions),
+            "evidence_lines": list(summary.evidence_lines),
+        }
+        validation.update(decision.to_dict())
+        validations.append(validation)
 
     return validations
