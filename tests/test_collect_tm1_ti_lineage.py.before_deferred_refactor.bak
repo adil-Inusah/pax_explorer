@@ -222,8 +222,6 @@ def test_collect_ti_lineage_creates_complete_snapshot_and_current_outputs(
         "ti_parameter_bindings.json",
         "ti_parameter_aliases.json",
         "ti_parameter_resolution_rejections.json",
-        "ti_missing_object_candidates.json",
-        "ti_deferred_reference_inventory.json",
         "ti_parameter_resolution_metrics.json",
         "ti_lineage_manifest.json",
     }
@@ -238,8 +236,6 @@ def test_collect_ti_lineage_creates_complete_snapshot_and_current_outputs(
         "ti_parameter_bindings.json",
         "ti_parameter_aliases.json",
         "ti_parameter_resolution_rejections.json",
-        "ti_missing_object_candidates.json",
-        "ti_deferred_reference_inventory.json",
     }
     for file_name in parameter_list_files:
         payload = read_json(current_root / file_name)
@@ -253,26 +249,6 @@ def test_collect_ti_lineage_creates_complete_snapshot_and_current_outputs(
     assert (
         metrics["input_summary_count"]
         >= metrics["replaced_unresolved_count"]
-    )
-    assert (
-        metrics["missing_object_candidate_count"]
-        + metrics["deferred_reference_count"]
-        == metrics["rejection_count"]
-    )
-
-    missing_candidates = read_json(
-        current_root / "ti_missing_object_candidates.json"
-    )
-    deferred_references = read_json(
-        current_root / "ti_deferred_reference_inventory.json"
-    )
-    assert all(
-        record["requires_quality_exception"] is True
-        for record in missing_candidates
-    )
-    assert all(
-        record["requires_quality_exception"] is False
-        for record in deferred_references
     )
 
     definitions = read_json(current_root / "ti_process_definitions.json")

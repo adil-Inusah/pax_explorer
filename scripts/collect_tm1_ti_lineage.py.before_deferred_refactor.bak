@@ -197,56 +197,6 @@ def collect_ti_lineage() -> dict[str, Any]:
         object_catalog=object_catalog,
     )
     summaries = resolution.summaries
-
-    unclassified_rejections = [
-        record
-        for record in resolution.rejections
-        if record.get(
-            "requires_quality_exception"
-        )
-        not in {
-            True,
-            False,
-        }
-    ]
-
-    if unclassified_rejections:
-        raise ValueError(
-            "Parameter resolver produced "
-            f"{len(unclassified_rejections)} "
-            "rejection records without a valid "
-            "requires_quality_exception value."
-        )
-
-    missing_object_candidates = [
-        record
-        for record in resolution.rejections
-        if record[
-            "requires_quality_exception"
-        ]
-        is True
-    ]
-
-    deferred_reference_inventory = [
-        record
-        for record in resolution.rejections
-        if record[
-            "requires_quality_exception"
-        ]
-        is False
-    ]
-
-    if (
-        len(missing_object_candidates)
-        + len(deferred_reference_inventory)
-        != len(resolution.rejections)
-    ):
-        raise ValueError(
-            "Missing-object and deferred-reference "
-            "inventories do not reconcile to the "
-            "complete parameter rejection inventory."
-        )
-    
     validations = validate_relationships(
         summaries,
         object_catalog,
@@ -281,8 +231,6 @@ def collect_ti_lineage() -> dict[str, Any]:
         "parameter_binding_count": len(resolution.bindings),
         "parameter_alias_count": len(resolution.aliases),
         "parameter_rejection_count": len(resolution.rejections),
-        "missing_object_candidate_count": len(missing_object_candidates),
-        "deferred_reference_count": len(deferred_reference_inventory),
         "parameter_resolution_metrics": resolution.metrics,
         "evidence_count": len(evidence_payload),
         "direct_relationship_count": len(direct_summaries),
@@ -323,8 +271,6 @@ def collect_ti_lineage() -> dict[str, Any]:
             "ti_parameter_bindings.json": resolution.bindings,
             "ti_parameter_aliases.json": resolution.aliases,
             "ti_parameter_resolution_rejections.json": resolution.rejections,
-            "ti_missing_object_candidates.json": missing_object_candidates,
-            "ti_deferred_reference_inventory.json": deferred_reference_inventory,
             "ti_parameter_resolution_metrics.json": resolution.metrics,
             "ti_lineage_manifest.json": manifest,
         }
@@ -466,14 +412,6 @@ def print_manifest(
     print(
         "Rejected candidates    : "
         f"{parameter_rejection_count:,}"
-    )
-    print(
-        "Missing core candidates: "
-        f"{int(manifest.get('missing_object_candidate_count', 0) or 0):,}"
-    )
-    print(
-        "Deferred references    : "
-        f"{int(manifest.get('deferred_reference_count', 0) or 0):,}"
     )
 
     print(

@@ -1,0 +1,853 @@
+from __future__ import annotations
+
+import re
+from collections import defaultdict
+from dataclasses import dataclass, replace
+from typing import Any, Iterable, Iterator, Sequence
+
+from parsers.ti_parser import RelationshipSummary
+
+
+IDENTIFIER_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+QUOTED_RE = re.compile(r"^\s*(['\"])(.*?)\1\s*$", re.DOTALL)
+ASSIGNMENT_RE = re.compile(
+    r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*;?\s*$",
+    re.DOTALL,
+)
+CALL_NAMES = {"EXECUTEPROCESS", "RUNPROCESS"}
+PROCEDURE_ORDER = ("Prolog", "Metadata", "Data", "Epilog")
+
+CATALOG_GOVERNED_TARGET_TYPES = frozenset(
+    {"cube", "dimension", "process", "chore"}
+)
+DEFERRED_TARGET_STATUS = {
+    "attribute": "ATTRIBUTE_CATALOG_DEFERRED",
+    "hierarchy": "HIERARCHY_CATALOG_DEFERRED",
+    "subset": "SUBSET_CATALOG_DEFERRED",
+    "view": "VIEW_CATALOG_DEFERRED",
+    "file": "DYNAMIC_EXTERNAL_FILE",
+    "command": "DYNAMIC_EXTERNAL_COMMAND",
+}
+
+
+@dataclass(frozen=True)
+class ParameterDefinition:
+    process_name: str
+    parameter_name: str
+    parameter_type: str
+    prompt: str
+    default_value: Any
+    position: int
+
+    @property
+    def has_default(self) -> bool:
+        return self.default_value is not None and str(self.default_value).strip() != ""
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "process_name": self.process_name,
+            "parameter_name": self.parameter_name,
+            "parameter_type": self.parameter_type,
+            "prompt": self.prompt,
+            "default_value": self.default_value,
+            "has_nonempty_default": self.has_default,
+            "position": self.position,
+        }
+
+
+@dataclass(frozen=True)
+class ParameterBinding:
+    calling_process: str
+    called_process: str | None
+    procedure: str
+    line_number: int
+    parameter_name: str | None
+    argument_expression: str
+    resolved_value: str | None
+    resolution_status: str
+    raw_expression: str
+
+    def to_dict(self) -> dict[str, Any]:
+        return self.__dict__.copy()
+
+
+@dataclass(frozen=True)
+class AliasDefinition:
+    process_name: str
+    procedure: str
+    line_number: int
+    variable_name: str
+    expression: str
+    dependencies: tuple[str, ...]
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            **self.__dict__,
+            "dependencies": list(self.dependencies),
+        }
+
+
+@dataclass(frozen=True)
+class ResolutionContext:
+    source_kind: str
+    value: str
+    calling_process: str | None = None
+    calling_procedure: str | None = None
+    calling_line_number: int | None = None
+    parameter_name: str | None = None
+    alias_expression: str | None = None
+
+    def to_dict(self) -> dict[str, Any]:
+        return self.__dict__.copy()
+
+
+@dataclass(frozen=True)
+class ResolvedRelationship:
+    summary: RelationshipSummary
+    context: ResolutionContext
+    catalog_match_name: str
+    catalog_match_scope: str
+    catalog_match_is_control: bool
+
+
+# @dataclass(frozen=True)
+# class RejectedCandidate:
+#     process_name: str
+#     relationship_type: str
+#     target_type: str
+#     target_expression: str
+#     candidate_value: str
+#     rejection_reason: str
+#     reference_class: str
+#     catalog_status: str
+#     requires_quality_exception: bool
+#     provenance: ResolutionContext
+
+#     def to_dict(self) -> dict[str, Any]:
+#         return {
+#             "process_name": self.process_name,
+#             "relationship_type": self.relationship_type,
+#             "target_type": self.target_type,
+#             "target_expression": self.target_expression,
+#             "candidate_value": self.candidate_value,
+#             "rejection_reason": self.rejection_reason,
+#             "provenance": self.provenance.to_dict(),
+#         }
+
+@dataclass(frozen=True)
+class RejectedCandidate:
+    process_name: str
+    relationship_type: str
+    target_type: str
+    target_expression: str
+    candidate_value: str
+    rejection_reason: str
+    reference_class: str
+    catalog_status: str
+    requires_quality_exception: bool
+    provenance: ResolutionContext
+
+    def to_dict(
+        self,
+    ) -> dict[str, Any]:
+        return {
+            "process_name": (
+                self.process_name
+            ),
+            "relationship_type": (
+                self.relationship_type
+            ),
+            "target_type": (
+                self.target_type
+            ),
+            "target_expression": (
+                self.target_expression
+            ),
+            "candidate_value": (
+                self.candidate_value
+            ),
+            "rejection_reason": (
+                self.rejection_reason
+            ),
+            "reference_class": (
+                self.reference_class
+            ),
+            "catalog_status": (
+                self.catalog_status
+            ),
+            "requires_quality_exception": (
+                self.requires_quality_exception
+            ),
+            "provenance": (
+                self.provenance.to_dict()
+            ),
+        }
+
+
+@dataclass(frozen=True)
+class ResolutionResult:
+    summaries: list[RelationshipSummary]
+    provenance_by_key: dict[tuple[str, str, str, str], list[dict[str, Any]]]
+    parameters: list[dict[str, Any]]
+    bindings: list[dict[str, Any]]
+    aliases: list[dict[str, Any]]
+    rejections: list[dict[str, Any]]
+    metrics: dict[str, Any]
+
+
+def normalized(value: Any) -> str:
+    return " ".join(str(value or "").strip().casefold().split())
+
+
+def first_value(record: dict[str, Any], *keys: str) -> Any:
+    mapping = {str(key).casefold(): value for key, value in record.items()}
+    for key in keys:
+        value = mapping.get(key.casefold())
+        if value is not None:
+            return value
+    return None
+
+
+def extract_parameters(process: Any, process_name: str) -> list[ParameterDefinition]:
+    raw_parameters = getattr(process, "parameters", None)
+    if raw_parameters is None:
+        raw_parameters = getattr(process, "_parameters", None)
+    result: list[ParameterDefinition] = []
+    for position, raw in enumerate(raw_parameters or [], start=1):
+        if isinstance(raw, dict):
+            name = first_value(raw, "Name", "name")
+            prompt = first_value(raw, "Prompt", "prompt")
+            value = first_value(raw, "Value", "value")
+            parameter_type = first_value(raw, "Type", "type")
+        else:
+            name = getattr(raw, "name", None) or getattr(raw, "Name", None)
+            prompt = getattr(raw, "prompt", None) or getattr(raw, "Prompt", None)
+            value = getattr(raw, "value", None)
+            if value is None:
+                value = getattr(raw, "Value", None)
+            parameter_type = getattr(raw, "type", None) or getattr(raw, "Type", None)
+        name_text = str(name or "").strip()
+        if not name_text:
+            continue
+        result.append(
+            ParameterDefinition(
+                process_name=process_name,
+                parameter_name=name_text,
+                parameter_type=str(parameter_type or "UNKNOWN").strip(),
+                prompt=str(prompt or "").strip(),
+                default_value=value,
+                position=position,
+            )
+        )
+    return result
+
+
+def mask_comments(text: str) -> str:
+    chars = list(text)
+    i = 0
+    quote: str | None = None
+    while i < len(chars):
+        if quote:
+            if chars[i] == quote:
+                if i + 1 < len(chars) and chars[i + 1] == quote:
+                    i += 2
+                    continue
+                quote = None
+            i += 1
+            continue
+        if chars[i] in "'\"":
+            quote = chars[i]
+            i += 1
+            continue
+        if text.startswith("#", i) or text.startswith("//", i):
+            while i < len(chars) and chars[i] not in "\r\n":
+                chars[i] = " "
+                i += 1
+            continue
+        if text.startswith("/*", i):
+            chars[i] = chars[i + 1] = " "
+            i += 2
+            while i < len(chars) and not text.startswith("*/", i):
+                if chars[i] not in "\r\n":
+                    chars[i] = " "
+                i += 1
+            if i < len(chars) - 1:
+                chars[i] = chars[i + 1] = " "
+                i += 2
+            continue
+        i += 1
+    return "".join(chars)
+
+
+def split_arguments(text: str) -> list[str]:
+    values: list[str] = []
+    start = 0
+    depth = 0
+    quote: str | None = None
+    i = 0
+    while i < len(text):
+        char = text[i]
+        if quote:
+            if char == quote:
+                if i + 1 < len(text) and text[i + 1] == quote:
+                    i += 2
+                    continue
+                quote = None
+        elif char in "'\"":
+            quote = char
+        elif char == "(":
+            depth += 1
+        elif char == ")":
+            depth = max(0, depth - 1)
+        elif char == "," and depth == 0:
+            values.append(text[start:i].strip())
+            start = i + 1
+        i += 1
+    tail = text[start:].strip()
+    if tail or values:
+        values.append(tail)
+    return values
+
+
+def iter_function_calls(text: str) -> Iterator[dict[str, Any]]:
+    masked = mask_comments(text)
+    pattern = re.compile(r"\b(EXECUTEPROCESS|RUNPROCESS)\s*\(", re.IGNORECASE)
+    for match in pattern.finditer(masked):
+        opening = masked.find("(", match.start())
+        depth = 1
+        quote: str | None = None
+        i = opening + 1
+        while i < len(masked) and depth:
+            char = masked[i]
+            if quote:
+                if char == quote:
+                    if i + 1 < len(masked) and masked[i + 1] == quote:
+                        i += 2
+                        continue
+                    quote = None
+            elif char in "'\"":
+                quote = char
+            elif char == "(":
+                depth += 1
+            elif char == ")":
+                depth -= 1
+            i += 1
+        if depth:
+            continue
+        yield {
+            "function_name": match.group(1).upper(),
+            "arguments": split_arguments(text[opening + 1 : i - 1]),
+            "line_number": text.count("\n", 0, match.start()) + 1,
+            "raw_expression": text[match.start() : i].strip(),
+        }
+
+
+def unquote(expression: str) -> str | None:
+    match = QUOTED_RE.match(expression.strip())
+    if not match:
+        return None
+    quote = match.group(1)
+    return match.group(2).replace(quote * 2, quote)
+
+
+def split_concatenation(expression: str) -> list[str] | None:
+    parts: list[str] = []
+    start = 0
+    depth = 0
+    quote: str | None = None
+    i = 0
+    while i < len(expression):
+        char = expression[i]
+        if quote:
+            if char == quote:
+                if i + 1 < len(expression) and expression[i + 1] == quote:
+                    i += 2
+                    continue
+                quote = None
+        elif char in "'\"":
+            quote = char
+        elif char == "(":
+            depth += 1
+        elif char == ")":
+            depth = max(0, depth - 1)
+        elif char == "|" and depth == 0:
+            parts.append(expression[start:i].strip())
+            start = i + 1
+        i += 1
+    if not parts:
+        return None
+    parts.append(expression[start:].strip())
+    return parts
+
+
+def dependencies(expression: str) -> tuple[str, ...]:
+    if unquote(expression) is not None:
+        return ()
+    parts = split_concatenation(expression)
+    if parts:
+        result: set[str] = set()
+        for part in parts:
+            result.update(dependencies(part))
+        return tuple(sorted(result, key=str.casefold))
+    token = expression.strip().rstrip(";").strip()
+    return (token,) if IDENTIFIER_RE.match(token) else ()
+
+
+def iter_statements(code: str) -> Iterator[tuple[str, int]]:
+    masked = mask_comments(code)
+    start = 0
+    depth = 0
+    quote: str | None = None
+    line = 1
+    statement_line = 1
+    i = 0
+    while i < len(masked):
+        char = masked[i]
+        if char == "\n":
+            line += 1
+        if quote:
+            if char == quote:
+                if i + 1 < len(masked) and masked[i + 1] == quote:
+                    i += 2
+                    continue
+                quote = None
+        elif char in "'\"":
+            quote = char
+        elif char == "(":
+            depth += 1
+        elif char == ")":
+            depth = max(0, depth - 1)
+        elif char == ";" and depth == 0:
+            statement = code[start : i + 1].strip()
+            if statement:
+                yield statement, statement_line
+            start = i + 1
+            statement_line = line
+        i += 1
+    tail = code[start:].strip()
+    if tail:
+        yield tail, statement_line
+
+
+def collect_aliases(process_name: str, procedures: dict[str, str]) -> list[AliasDefinition]:
+    result: list[AliasDefinition] = []
+    for procedure in PROCEDURE_ORDER:
+        for statement, line_number in iter_statements(procedures.get(procedure, "")):
+            match = ASSIGNMENT_RE.match(statement)
+            if not match:
+                continue
+            expression = match.group(2).strip().rstrip(";").strip()
+            deps = dependencies(expression)
+            if not deps:
+                continue
+            result.append(
+                AliasDefinition(
+                    process_name=process_name,
+                    procedure=procedure,
+                    line_number=line_number,
+                    variable_name=match.group(1),
+                    expression=expression,
+                    dependencies=deps,
+                )
+            )
+    return result
+
+
+def resolve_expression(expression: str, symbols: dict[str, str]) -> str | None:
+    literal = unquote(expression)
+    if literal is not None:
+        return literal
+    parts = split_concatenation(expression)
+    if parts:
+        resolved_parts: list[str] = []
+        for part in parts:
+            value = resolve_expression(part, symbols)
+            if value is None:
+                return None
+            resolved_parts.append(value)
+        return "".join(resolved_parts)
+    token = expression.strip().rstrip(";").strip()
+    return symbols.get(normalized(token)) if IDENTIFIER_RE.match(token) else None
+
+
+def collect_bindings(
+    caller: str,
+    procedures: dict[str, str],
+    literal_symbols: dict[str, str],
+) -> list[ParameterBinding]:
+    result: list[ParameterBinding] = []
+    for procedure in PROCEDURE_ORDER:
+        for call in iter_function_calls(procedures.get(procedure, "")):
+            arguments = call["arguments"]
+            if not arguments:
+                continue
+            called_process = resolve_expression(arguments[0], literal_symbols)
+            pairs = arguments[1:]
+            for offset in range(0, len(pairs) - 1, 2):
+                parameter_name = resolve_expression(pairs[offset], literal_symbols)
+                argument_expression = pairs[offset + 1]
+                resolved_value = resolve_expression(argument_expression, literal_symbols)
+                result.append(
+                    ParameterBinding(
+                        calling_process=caller,
+                        called_process=called_process,
+                        procedure=procedure,
+                        line_number=call["line_number"],
+                        parameter_name=parameter_name,
+                        argument_expression=argument_expression,
+                        resolved_value=resolved_value,
+                        resolution_status=(
+                            "CONFIRMED" if resolved_value is not None else "UNRESOLVED"
+                        ),
+                        raw_expression=call["raw_expression"],
+                    )
+                )
+    return result
+
+
+def build_catalog_index(object_catalog: Iterable[dict[str, Any]]) -> dict[tuple[str, str], dict[str, Any]]:
+    return {
+        (normalized(record.get("object_type")), normalized(record.get("object_name"))): record
+        for record in object_catalog
+        if record.get("object_type") and record.get("object_name")
+    }
+
+
+def summary_key(summary: RelationshipSummary) -> tuple[str, str, str, str]:
+    return (
+        normalized(summary.process_name),
+        normalized(summary.relationship_type),
+        normalized(summary.target_type),
+        normalized(summary.target_name),
+    )
+
+
+def expression_for(
+    summary: RelationshipSummary,
+) -> str:
+    if summary.target_expression:
+        return summary.target_expression.strip()
+
+    if len(summary.target_expressions) == 1:
+        return summary.target_expressions[0].strip()
+
+    return  ""
+
+
+def evaluate_alias(
+    expression: str,
+    parameter_name: str,
+    parameter_value: str,
+) -> str | None:
+    return resolve_expression(expression, {normalized(parameter_name): parameter_value})
+
+
+def resolve_parameter_relationships(
+    summaries: Sequence[RelationshipSummary],
+    *,
+    process_definitions: dict[str, dict[str, Any]],
+    object_catalog: Iterable[dict[str, Any]],
+) -> ResolutionResult:
+    """Resolve dependable parameter-backed TI targets.
+
+    The resolver is conservative. It publishes only exact type/name catalog
+    matches. Missing deterministic values are emitted as rejection records and
+    remain governed through the quality-exception register.
+    """
+    catalog_index = build_catalog_index(object_catalog)
+    parameter_definitions: list[ParameterDefinition] = []
+    aliases: list[AliasDefinition] = []
+    bindings: list[ParameterBinding] = []
+
+    defaults: dict[tuple[str, str], str] = {}
+    aliases_by_process: dict[tuple[str, str], list[AliasDefinition]] = defaultdict(list)
+
+    for process_name, definition in process_definitions.items():
+        parameters = definition.get("parameters", [])
+        for position, raw in enumerate(parameters, start=1):
+            if not isinstance(raw, dict):
+                continue
+            name = str(first_value(raw, "parameter_name", "Name", "name") or "").strip()
+            if not name:
+                continue
+            item = ParameterDefinition(
+                process_name=process_name,
+                parameter_name=name,
+                parameter_type=str(first_value(raw, "parameter_type", "Type", "type") or "UNKNOWN"),
+                prompt=str(first_value(raw, "prompt", "Prompt") or ""),
+                default_value=first_value(raw, "default_value", "Value", "value"),
+                position=int(raw.get("position") or position),
+            )
+            parameter_definitions.append(item)
+            if item.has_default:
+                defaults[(normalized(process_name), normalized(name))] = str(item.default_value).strip()
+
+        procedures = definition.get("procedures", {})
+        process_aliases = collect_aliases(process_name, procedures)
+        aliases.extend(process_aliases)
+        for alias in process_aliases:
+            aliases_by_process[(normalized(process_name), normalized(alias.variable_name))].append(alias)
+
+        literal_symbols: dict[str, str] = {}
+        for procedure in PROCEDURE_ORDER:
+            for statement, _ in iter_statements(procedures.get(procedure, "")):
+                match = ASSIGNMENT_RE.match(statement)
+                if not match:
+                    continue
+                value = resolve_expression(match.group(2).strip().rstrip(";").strip(), literal_symbols)
+                if value is not None:
+                    literal_symbols[normalized(match.group(1))] = value
+        bindings.extend(collect_bindings(process_name, procedures, literal_symbols))
+
+    bindings_by_target: dict[tuple[str, str], list[ParameterBinding]] = defaultdict(list)
+    unresolved_calls_by_target: set[tuple[str, str]] = set()
+    calls_by_process: set[str] = set()
+    for binding in bindings:
+        if not binding.called_process or not binding.parameter_name:
+            continue
+        process_key = normalized(binding.called_process)
+        parameter_key = normalized(binding.parameter_name)
+        key = (process_key, parameter_key)
+        calls_by_process.add(process_key)
+        bindings_by_target[key].append(binding)
+        if binding.resolved_value is None:
+            unresolved_calls_by_target.add(key)
+
+    result_summaries: list[RelationshipSummary] = []
+    provenance_by_key: dict[tuple[str, str, str, str], list[dict[str, Any]]] = defaultdict(list)
+    rejections: list[RejectedCandidate] = []
+    replaced_count = 0
+    derived_count = 0
+
+    for summary in summaries:
+        if str(getattr(summary, "confidence", "")).upper() != "UNRESOLVED":
+            result_summaries.append(summary)
+            continue
+
+        process_name = str(summary.process_name)
+        process_key = normalized(process_name)
+        expression = expression_for(summary)
+        expression_key = normalized(expression)
+        target_type = normalized(summary.target_type)
+
+        upstream_parameters: list[tuple[str, str | None]] = []
+        if IDENTIFIER_RE.match(expression):
+            direct_key = (process_key, expression_key)
+            if direct_key in defaults or direct_key in bindings_by_target:
+                upstream_parameters.append((expression, None))
+            for alias in aliases_by_process.get(direct_key, []):
+                if len(alias.dependencies) == 1:
+                    upstream_parameters.append((alias.dependencies[0], alias.expression))
+        else:
+            deps = dependencies(expression)
+            if len(deps) == 1:
+                upstream_parameters.append((deps[0], expression))
+
+        contexts: list[ResolutionContext] = []
+        fully_covered = bool(upstream_parameters)
+        for parameter_name, alias_expression in upstream_parameters:
+            key = (process_key, normalized(parameter_name))
+            explicit_bindings = bindings_by_target.get(key, [])
+            resolved_explicit = [binding for binding in explicit_bindings if binding.resolved_value is not None]
+            unresolved_explicit = any(binding.resolved_value is None for binding in explicit_bindings)
+
+            if resolved_explicit:
+                for binding in resolved_explicit:
+                    effective = str(binding.resolved_value)
+                    if alias_expression:
+                        effective = evaluate_alias(alias_expression, parameter_name, effective) or ""
+                    if effective:
+                        contexts.append(
+                            ResolutionContext(
+                                source_kind="EXECUTE_PROCESS_ARGUMENT",
+                                value=effective,
+                                calling_process=binding.calling_process,
+                                calling_procedure=binding.procedure,
+                                calling_line_number=binding.line_number,
+                                parameter_name=parameter_name,
+                                alias_expression=alias_expression,
+                            )
+                        )
+            elif key in defaults:
+                effective = defaults[key]
+                if alias_expression:
+                    effective = evaluate_alias(alias_expression, parameter_name, effective) or ""
+                if effective:
+                    contexts.append(
+                        ResolutionContext(
+                            source_kind=("PARAMETER_ALIAS" if alias_expression else "PARAMETER_DEFAULT"),
+                            value=effective,
+                            parameter_name=parameter_name,
+                            alias_expression=alias_expression,
+                        )
+                    )
+            else:
+                fully_covered = False
+
+            if unresolved_explicit:
+                fully_covered = False
+            if process_key in calls_by_process and not explicit_bindings and key not in defaults:
+                fully_covered = False
+
+        unique_contexts: dict[tuple[Any, ...], ResolutionContext] = {}
+        for context in contexts:
+            context_key = (
+                normalized(context.value),
+                normalized(context.calling_process),
+                context.calling_line_number,
+                normalized(context.parameter_name),
+                context.source_kind,
+            )
+            unique_contexts.setdefault(context_key, context)
+
+        published: list[ResolvedRelationship] = []
+        for context in unique_contexts.values():
+            catalog_match = catalog_index.get((target_type, normalized(context.value)))
+            if catalog_match is None:
+                if (
+                    target_type
+                    in CATALOG_GOVERNED_TARGET_TYPES
+                ):
+                    reference_class = (
+                        "CORE_OBJECT"
+                    )
+                    catalog_status = (
+                        "CANDIDATE_NOT_IN_OBJECT_CATALOG"
+                    )
+                    requires_quality_exception = True
+                else:
+                    reference_class = (
+                        "DEFERRED_NONCORE"
+                    )
+                    catalog_status = (
+                        DEFERRED_TARGET_STATUS.get(
+                            target_type,
+                            "TARGET_TYPE_NOT_CATALOGED",
+                        )
+                    )
+                    requires_quality_exception = False
+
+                rejections.append(
+                    RejectedCandidate(
+                        process_name=process_name,
+                        relationship_type=str(
+                            summary.relationship_type
+                        ),
+                        target_type=str(
+                            summary.target_type
+                        ),
+                        target_expression=expression,
+                        candidate_value=context.value,
+                        rejection_reason=(
+                            catalog_status
+                        ),
+                        reference_class=(
+                            reference_class
+                        ),
+                        catalog_status=(
+                            catalog_status
+                        ),
+                        requires_quality_exception=(
+                            requires_quality_exception
+                        ),
+                        provenance=context,
+                    )
+                )
+
+                continue
+      
+            canonical_name = str(catalog_match.get("object_name") or context.value)
+            derived_summary = replace(
+                summary,
+                target_name=canonical_name,
+                confidence="RESOLVED",
+            )
+            published.append(
+                ResolvedRelationship(
+                    summary=derived_summary,
+                    context=context,
+                    catalog_match_name=canonical_name,
+                    catalog_match_scope=str(catalog_match.get("catalog_scope") or ("CONTROL" if canonical_name.startswith("}") else "REGULAR")),
+                    catalog_match_is_control=bool(catalog_match.get("is_control", canonical_name.startswith("}"))),
+                )
+            )
+
+        if published:
+            dedupe: set[tuple[str, str, str, str]] = set()
+            for item in published:
+                key = summary_key(item.summary)
+                if key not in dedupe:
+                    result_summaries.append(item.summary)
+                    dedupe.add(key)
+                    derived_count += 1
+                provenance_by_key[key].append(
+                    {
+                        **item.context.to_dict(),
+                        "catalog_match_name": item.catalog_match_name,
+                        "catalog_match_scope": item.catalog_match_scope,
+                        "catalog_match_is_control": item.catalog_match_is_control,
+                        "original_target_expression": expression,
+                    }
+                )
+            if fully_covered and len(published) == len(unique_contexts):
+                replaced_count += 1
+            else:
+                result_summaries.append(summary)
+        else:
+            result_summaries.append(summary)
+
+    missing_object_candidates = [
+        item for item in rejections if item.requires_quality_exception
+    ]
+    deferred_references = [
+        item for item in rejections if not item.requires_quality_exception
+    ]
+
+    def distinct_target_count(items: list[RejectedCandidate]) -> int:
+        return len(
+            {
+                (normalized(item.target_type), normalized(item.candidate_value))
+                for item in items
+            }
+        )
+
+    def counts_by_type(items: list[RejectedCandidate]) -> dict[str, int]:
+        counts: dict[str, int] = {}
+        for item in items:
+            key = normalized(item.target_type)
+            counts[key] = counts.get(key, 0) + 1
+        return dict(sorted(counts.items()))
+
+    metrics = {
+        "input_summary_count": len(summaries),
+        "output_summary_count": len(result_summaries),
+        "replaced_unresolved_count": replaced_count,
+        "derived_relationship_count": derived_count,
+        "rejection_count": len(rejections),
+        "missing_object_candidate_count": len(missing_object_candidates),
+        "deferred_reference_count": len(deferred_references),
+        "missing_object_target_count": distinct_target_count(
+            missing_object_candidates
+        ),
+        "deferred_reference_target_count": distinct_target_count(
+            deferred_references
+        ),
+        "missing_object_counts_by_type": counts_by_type(
+            missing_object_candidates
+        ),
+        "deferred_reference_counts_by_type": counts_by_type(
+            deferred_references
+        ),
+        "parameter_count": len(parameter_definitions),
+        "binding_count": len(bindings),
+        "alias_count": len(aliases),
+    }
+    return ResolutionResult(
+        summaries=result_summaries,
+        provenance_by_key=dict(provenance_by_key),
+        parameters=[item.to_dict() for item in parameter_definitions],
+        bindings=[item.to_dict() for item in bindings],
+        aliases=[item.to_dict() for item in aliases],
+        rejections=[item.to_dict() for item in rejections],
+        metrics=metrics,
+    )

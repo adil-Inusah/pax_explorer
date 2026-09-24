@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "register_name": "TM1 Relationship Validation Exceptions",
   "description": "Approved exceptions for confirmed, resolved, or deterministically parameter-derived TM1 relationship targets absent from the current full object catalog.",
-  "catalog_snapshot_id": "20260923T231311Z",
+  "catalog_snapshot_id": "20260923T165459Z",
   "exception_count": 15,
   "relationship_count": 41,
   "exceptions": [
@@ -20,10 +20,8 @@
       "reason": "Confirmed literal cube target is absent from the refreshed TM1 object catalog.",
       "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PUBLISHED_VALIDATION",
-      "applies_to_validation_records": true
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-REL-EXC-002",
@@ -39,10 +37,8 @@
       "reason": "Variable-backed target resolves consistently, but the resolved cube name is absent from the refreshed TM1 object catalog.",
       "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PUBLISHED_VALIDATION",
-      "applies_to_validation_records": true
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-REL-EXC-003",
@@ -58,10 +54,8 @@
       "reason": "Variable-backed target resolves consistently, but the resolved cube name is absent from the refreshed TM1 object catalog.",
       "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PUBLISHED_VALIDATION",
-      "applies_to_validation_records": true
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-REL-EXC-004",
@@ -77,10 +71,8 @@
       "reason": "Resolved cube target is absent from the refreshed TM1 object catalog.",
       "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PUBLISHED_VALIDATION",
-      "applies_to_validation_records": true
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-REL-EXC-005",
@@ -96,10 +88,8 @@
       "reason": "Resolved cube target is absent from the refreshed TM1 object catalog.",
       "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PUBLISHED_VALIDATION",
-      "applies_to_validation_records": true
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-REL-EXC-006",
@@ -115,10 +105,8 @@
       "reason": "Resolved cube target is absent from the refreshed TM1 object catalog.",
       "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PUBLISHED_VALIDATION",
-      "applies_to_validation_records": true
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-REL-EXC-007",
@@ -134,10 +122,8 @@
       "reason": "Resolved cube target is absent from the refreshed TM1 object catalog.",
       "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PUBLISHED_VALIDATION",
-      "applies_to_validation_records": true
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-REL-EXC-008",
@@ -153,10 +139,8 @@
       "reason": "Resolved cube target is absent from the refreshed TM1 object catalog.",
       "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PUBLISHED_VALIDATION",
-      "applies_to_validation_records": true
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-REL-EXC-009",
@@ -172,10 +156,8 @@
       "reason": "Resolved process target is absent from the refreshed TM1 object catalog.",
       "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PUBLISHED_VALIDATION",
-      "applies_to_validation_records": true
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-PARAM-EXC-001",
@@ -199,12 +181,10 @@
       "exclude_from_quality_score": true,
       "required_for_holistic_success": false,
       "reason": "A deterministic parameter-derived target name is present in TI code provenance but is absent from the current full TM1 object catalog.",
-      "catalog_snapshot_id": "20260923T231311Z",
+      "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PROVENANCE_CANDIDATE",
-      "applies_to_validation_records": false
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-PARAM-EXC-002",
@@ -227,12 +207,10 @@
       "exclude_from_quality_score": true,
       "required_for_holistic_success": false,
       "reason": "A deterministic parameter-derived target name is present in TI code provenance but is absent from the current full TM1 object catalog.",
-      "catalog_snapshot_id": "20260923T231311Z",
+      "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PROVENANCE_CANDIDATE",
-      "applies_to_validation_records": false
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-PARAM-EXC-003",
@@ -255,12 +233,10 @@
       "exclude_from_quality_score": true,
       "required_for_holistic_success": false,
       "reason": "A deterministic parameter-derived target name is present in TI code provenance but is absent from the current full TM1 object catalog.",
-      "catalog_snapshot_id": "20260923T231311Z",
+      "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PROVENANCE_CANDIDATE",
-      "applies_to_validation_records": false
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-PARAM-EXC-004",
@@ -285,12 +261,10 @@
       "exclude_from_quality_score": true,
       "required_for_holistic_success": false,
       "reason": "A deterministic parameter-derived target name is present in TI code provenance but is absent from the current full TM1 object catalog.",
-      "catalog_snapshot_id": "20260923T231311Z",
+      "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PROVENANCE_CANDIDATE",
-      "applies_to_validation_records": false
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-PARAM-EXC-005",
@@ -317,12 +291,10 @@
       "exclude_from_quality_score": true,
       "required_for_holistic_success": false,
       "reason": "A deterministic parameter-derived target name is present in TI code provenance but is absent from the current full TM1 object catalog.",
-      "catalog_snapshot_id": "20260923T231311Z",
+      "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PROVENANCE_CANDIDATE",
-      "applies_to_validation_records": false
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     },
     {
       "exception_id": "TM1-PARAM-EXC-006",
@@ -345,17 +317,11 @@
       "disposition": "PROVENANCE_CANDIDATE_NOT_IN_CATALOG",
       "exclude_from_quality_score": true,
       "required_for_holistic_success": false,
-      "reason": "A deterministic parameter-derived target name is present in TI code provenance but is absent from the current full TM1 object catalog.",
-      "catalog_snapshot_id": "20260923T231311Z",
+      "reason": "A deterministic parameter alias produced a control cube name that is absent from the current full TM1 object catalog.",
+      "catalog_snapshot_id": "20260923T165459Z",
       "registered_on": "2026-09-23",
-      "last_verified_snapshot_id": "20260923T231311Z",
-      "last_verified_on": "2026-09-23",
-      "application_scope": "PROVENANCE_CANDIDATE",
-      "applies_to_validation_records": false
+      "last_verified_snapshot_id": "20260923T165459Z",
+      "last_verified_on": "2026-09-23"
     }
-  ],
-  "published_validation_exception_count": 9,
-  "published_validation_relationship_count": 29,
-  "provenance_candidate_exception_count": 6,
-  "provenance_candidate_relationship_count": 12
+  ]
 }

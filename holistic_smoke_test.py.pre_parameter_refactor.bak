@@ -592,58 +592,10 @@ def validate_exception_application(
         if record.get("required_for_holistic_success") is True
     ]
 
-    # expected_registered_edges = sum(
-    #     record.get("relationship_count", 0)
-    #     for record in exception_by_key.values()
-    #     if isinstance(record.get("relationship_count"), int)
-    # )
-
-    published_exceptions = [
-        record
-        for record in exception_by_key.values()
-        if record.get(
-            "applies_to_validation_records",
-            True,
-        )
-        is True
-    ]
-
-    provenance_exceptions = [
-        record
-        for record in exception_by_key.values()
-        if record.get(
-            "applies_to_validation_records",
-            True,
-        )
-        is not True
-    ]
-
     expected_registered_edges = sum(
-        record.get(
-            "relationship_count",
-            0,
-        )
-        for record in published_exceptions
-        if isinstance(
-            record.get(
-                "relationship_count"
-            ),
-            int,
-        )
-    )
-
-    provenance_relationship_count = sum(
-        record.get(
-            "relationship_count",
-            0,
-        )
-        for record in provenance_exceptions
-        if isinstance(
-            record.get(
-                "relationship_count"
-            ),
-            int,
-        )
+        record.get("relationship_count", 0)
+        for record in exception_by_key.values()
+        if isinstance(record.get("relationship_count"), int)
     )
     if applied_records and len(applied_records) != expected_registered_edges:
         failures.append(
@@ -656,30 +608,11 @@ def validate_exception_application(
         )
 
     return {
-        "registered_exception_targets": (
-            len(exception_by_key)
-        ),
-        "published_exception_targets": (
-            len(published_exceptions)
-        ),
-        "registered_exception_records": (
-            len(applied_records)
-        ),
-        "provenance_candidate_targets": (
-            len(provenance_exceptions)
-        ),
-        "provenance_candidate_records": (
-            provenance_relationship_count
-        ),
-        "excluded_from_quality_score": (
-            len(excluded_records)
-        ),
-        "raw_missing_target_records": (
-            len(raw_issue_records)
-        ),
-        "unregistered_missing_target_records": (
-            len(unregistered_issue_records)
-        ),
+        "registered_exception_targets": len(exception_by_key),
+        "registered_exception_records": len(applied_records),
+        "excluded_from_quality_score": len(excluded_records),
+        "raw_missing_target_records": len(raw_issue_records),
+        "unregistered_missing_target_records": len(unregistered_issue_records),
     }
 
 

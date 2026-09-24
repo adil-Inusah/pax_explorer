@@ -15,6 +15,7 @@ if str(ROOT_DIR) not in sys.path:
 from utilities.tm1_connection import get_tm1_connection
 
 CURRENT_ROOT = ROOT_DIR / "data" / "current"
+LATEST_ROOT = CURRENT_ROOT
 SNAPSHOT_ROOT = ROOT_DIR / "data" / "snapshots"
 
 OBJECT_SERVICES: tuple[tuple[str, str], ...] = (
@@ -42,17 +43,10 @@ def normalized_key(value: Any) -> str:
 
 
 def is_control_object(object_name: Any) -> bool:
-    """Return True when the TM1 object name uses the control prefix."""
     return normalize_name(object_name).startswith("}")
 
 
-def read_json(path: Path) -> Any:
-    with Path(path).open("r", encoding="utf-8-sig") as file:
-        return json.load(file)
-
-
 def write_json(path: Path, payload: Any) -> None:
-    """Write JSON atomically so current output is never partially published."""
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary_path = path.with_suffix(path.suffix + ".tmp")
     with temporary_path.open("w", encoding="utf-8") as file:
@@ -85,53 +79,6 @@ def sorted_unique_names(values: Any) -> list[str]:
     return sorted(by_key.values(), key=str.casefold)
 
 
-def get_service_names(tm1: Any, service_name: str) -> list[str]:
-    service = getattr(tm1, service_name, None)
-    if service is None:
-        raise AttributeError(
-            f"The TM1 connection does not expose the {service_name} service."
-        )
-    getter = getattr(service, "get_all_names", None)
-    if not callable(getter):
-        raise AttributeError(
-            f"The TM1 {service_name} service does not support get_all_names()."
-        )
-    return sorted_unique_names(getter())
-
-
-def get_tm1_version(tm1: Any) -> str:
-    """Return the server version without making version retrieval fatal."""
-    candidates: tuple[Callable[[], Any], ...] = tuple(
-        candidate
-        for candidate in (
-            getattr(getattr(tm1, "server", None), "get_product_version", None),
-            getattr(getattr(tm1, "server", None), "get_version", None),
-            getattr(getattr(tm1, "rest", None), "get_version", None),
-        )
-        if callable(candidate)
-    )
-    for candidate in candidates:
-        try:
-            version = normalize_name(candidate())
-            if version:
-                return version
-        except Exception:
-            continue
-
-    for owner in (tm1, getattr(tm1, "server", None), getattr(tm1, "rest", None)):
-        if owner is None:
-            continue
-        for property_name in (
-            "version",
-            "product_version",
-            "tm1_version",
-        ):
-            version = normalize_name(getattr(owner, property_name, None))
-            if version:
-                return version
-    return "UNKNOWN"
-
-
 def build_object_record(
     *,
     snapshot_id: str,
@@ -148,6 +95,91 @@ def build_object_record(
         "catalog_scope": "CONTROL" if control else "REGULAR",
         "collected_at": collected_at,
     }
+
+
+def collect_names(
+    tm1: Any,
+    object_type: str,
+    retrieval_function: Callable[[Any], Any],
+    snapshot_id: str,
+    collected_at: str,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Collect one object family while preserving the legacy result contract."""
+    started_at = perf_counter()
+    try:
+        names = sorted_unique_names(retrieval_function(tm1))
+        object_records = [
+            build_object_record(
+                snapshot_id=snapshot_id,
+                collected_at=collected_at,
+                object_type=object_type,
+                object_name=name,
+            )
+            for name in names
+        ]
+        count = len(object_records)
+        return object_records, {
+            "object_type": object_type,
+            "status": "PASS",
+            "record_count": count,
+            "count": count,
+            "duration_seconds": round(perf_counter() - started_at, 6),
+            "error": None,
+        }
+    except Exception as error:
+        return [], {
+            "object_type": object_type,
+            "status": "FAIL",
+            "record_count": 0,
+            "count": 0,
+            "duration_seconds": round(perf_counter() - started_at, 6),
+            "error": f"{type(error).__name__}: {error}",
+        }
+
+
+def _scalar_version(value: Any) -> str | None:
+    if isinstance(value, str):
+        text = value.strip()
+        return text or None
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        return str(value)
+    return None
+
+
+def get_tm1_version(tm1: Any) -> str:
+    """Return a real scalar server version and ignore unconfigured mocks."""
+    for property_name in ("version", "tm1_version", "product_version"):
+        version = _scalar_version(getattr(tm1, property_name, None))
+        if version:
+            return version
+
+    server = getattr(tm1, "server", None)
+    rest = getattr(tm1, "rest", None)
+    for owner in (server, rest):
+        if owner is None:
+            continue
+        for property_name in ("version", "tm1_version", "product_version"):
+            version = _scalar_version(getattr(owner, property_name, None))
+            if version:
+                return version
+
+    for owner, method_names in (
+        (server, ("get_product_version", "get_version")),
+        (rest, ("get_server_version", "get_version")),
+    ):
+        if owner is None:
+            continue
+        for method_name in method_names:
+            method = getattr(owner, method_name, None)
+            if not callable(method):
+                continue
+            try:
+                version = _scalar_version(method())
+            except Exception:
+                continue
+            if version:
+                return version
+    return "UNKNOWN"
 
 
 def object_sort_key(record: dict[str, Any]) -> tuple[str, str]:
@@ -171,7 +203,6 @@ def validate_object_split(
     regular_objects: list[dict[str, Any]],
     control_objects: list[dict[str, Any]],
 ) -> None:
-    """Fail before publication if the regular/control split is inconsistent."""
     if len(all_objects) != len(regular_objects) + len(control_objects):
         raise ValueError(
             "Object split does not reconcile: "
@@ -212,7 +243,6 @@ def validate_object_split(
     all_keys = {record_key(record) for record in all_objects}
     regular_keys = {record_key(record) for record in regular_objects}
     control_keys = {record_key(record) for record in control_objects}
-
     if regular_keys & control_keys:
         raise ValueError("Regular and control object catalogs overlap.")
     if all_keys != regular_keys | control_keys:
@@ -242,15 +272,19 @@ def write_catalog_files(
 def collect_tm1_metadata(
     tm1: Any | None = None,
     *,
-    current_root: Path = CURRENT_ROOT,
-    snapshot_root: Path = SNAPSHOT_ROOT,
+    current_root: Path | None = None,
+    snapshot_root: Path | None = None,
     timestamp: datetime | None = None,
 ) -> dict[str, Any]:
-    """Collect and publish full, regular, and control TM1 object catalogs."""
+    publication_root = current_root if current_root is not None else LATEST_ROOT
+    historical_root = snapshot_root if snapshot_root is not None else SNAPSHOT_ROOT
     started_at = timestamp or utc_now()
     run_snapshot_id = build_snapshot_id(started_at)
     collected_at = started_at.isoformat()
-    snapshot_directory = snapshot_root / run_snapshot_id / "metadata"
+    snapshot_directory = (
+        historical_root
+        / run_snapshot_id
+    )
 
     objects: list[dict[str, Any]] = []
     errors: list[dict[str, Any]] = []
@@ -259,42 +293,27 @@ def collect_tm1_metadata(
     def collect(connection: Any) -> str:
         tm1_version = get_tm1_version(connection)
         for object_type, service_name in OBJECT_SERVICES:
-            section_started = perf_counter()
-            try:
-                names = get_service_names(connection, service_name)
-                objects.extend(
-                    build_object_record(
-                        snapshot_id=run_snapshot_id,
-                        collected_at=collected_at,
-                        object_type=object_type,
-                        object_name=name,
-                    )
-                    for name in names
-                )
-                collection_results[object_type] = {
-                    "status": "PASS",
-                    "count": len(names),
-                    "duration_seconds": round(
-                        perf_counter() - section_started,
-                        6,
-                    ),
-                }
-            except Exception as error:
+            object_records, result = collect_names(
+                tm1=connection,
+                object_type=object_type,
+                retrieval_function=(
+                    lambda current_tm1, current_service=service_name: getattr(
+                        current_tm1, current_service
+                    ).get_all_names()
+                ),
+                snapshot_id=run_snapshot_id,
+                collected_at=collected_at,
+            )
+            objects.extend(object_records)
+            collection_results[object_type] = dict(result)
+            if result["status"] == "FAIL":
                 errors.append(
                     {
                         "object_type": object_type,
                         "service_name": service_name,
-                        "error": f"{type(error).__name__}: {error}",
+                        "error": result["error"],
                     }
                 )
-                collection_results[object_type] = {
-                    "status": "FAIL",
-                    "count": 0,
-                    "duration_seconds": round(
-                        perf_counter() - section_started,
-                        6,
-                    ),
-                }
         return tm1_version
 
     if tm1 is None:
@@ -306,12 +325,27 @@ def collect_tm1_metadata(
     objects = sorted(objects, key=object_sort_key)
     regular_objects = [record for record in objects if not record["is_control"]]
     control_objects = [record for record in objects if record["is_control"]]
-
     validate_object_split(objects, regular_objects, control_objects)
 
     object_counts = count_by_type(objects)
     regular_object_counts = count_by_type(regular_objects)
     control_object_counts = count_by_type(control_objects)
+    collections = [
+        dict(
+            collection_results.get(
+                object_type,
+                {
+                    "object_type": object_type,
+                    "status": "MISSING",
+                    "record_count": 0,
+                    "count": 0,
+                    "duration_seconds": 0.0,
+                    "error": None,
+                },
+            )
+        )
+        for object_type, _ in OBJECT_SERVICES
+    ]
 
     completed_at = utc_now()
     status = "PARTIAL" if errors else "COMPLETE"
@@ -321,8 +355,7 @@ def collect_tm1_metadata(
         "started_at": collected_at,
         "completed_at": completed_at.isoformat(),
         "duration_seconds": round(
-            (completed_at - started_at).total_seconds(),
-            6,
+            (completed_at - started_at).total_seconds(), 6
         ),
         "tm1_version": tm1_version,
         "object_count": len(objects),
@@ -331,12 +364,12 @@ def collect_tm1_metadata(
         "object_counts": object_counts,
         "regular_object_counts": regular_object_counts,
         "control_object_counts": control_object_counts,
+        "collections": collections,
         "collection_results": collection_results,
         "error_count": len(errors),
         "errors": errors,
     }
 
-    # Snapshot output is always retained, including partial runs.
     write_catalog_files(
         snapshot_directory,
         objects=objects,
@@ -345,61 +378,89 @@ def collect_tm1_metadata(
         manifest=manifest,
         errors=errors,
     )
-
-    # Current output is published only when every collection succeeds.
     if status == "COMPLETE":
         write_catalog_files(
-            current_root,
+            publication_root,
             objects=objects,
             regular_objects=regular_objects,
             control_objects=control_objects,
             manifest=manifest,
             errors=errors,
         )
-
     return manifest
 
 
 def print_manifest(manifest: dict[str, Any]) -> None:
+    object_count = int(manifest.get("object_count", 0) or 0)
+    regular_object_count = int(
+        manifest.get("regular_object_count", object_count) or 0
+    )
+    control_object_count = int(
+        manifest.get(
+            "control_object_count",
+            max(object_count - regular_object_count, 0),
+        )
+        or 0
+    )
+    collection_results = manifest.get("collection_results") or {}
+    legacy_collections = manifest.get("collections") or []
+    if not collection_results and isinstance(legacy_collections, list):
+        collection_results = {
+            str(item.get("object_type", "")): item
+            for item in legacy_collections
+            if isinstance(item, dict)
+        }
+
     print()
     print("=" * 70)
     print("TM1 METADATA COLLECTION")
     print("=" * 70)
-    print(f"Snapshot ID     : {manifest['snapshot_id']}")
-    print(f"TM1 Version     : {manifest['tm1_version']}")
-    print(f"Status          : {manifest['status']}")
-    print(f"Objects         : {manifest['object_count']:,}")
-    print(f"Regular objects : {manifest['regular_object_count']:,}")
-    print(f"Control objects : {manifest['control_object_count']:,}")
+    print(f"Snapshot ID     : {manifest.get('snapshot_id', 'UNKNOWN')}")
+    print(f"TM1 Version     : {manifest.get('tm1_version', 'UNKNOWN')}")
+    print(f"Status          : {manifest.get('status', 'UNKNOWN')}")
+    print(f"Objects         : {object_count:,}")
+    print(f"Regular objects : {regular_object_count:,}")
+    print(f"Control objects : {control_object_count:,}")
     print()
     print("Collections:")
     for object_type, _ in OBJECT_SERVICES:
-        result = manifest["collection_results"].get(
+        result = collection_results.get(
             object_type,
-            {"status": "MISSING", "count": 0, "duration_seconds": 0.0},
+            {
+                "status": "MISSING",
+                "record_count": 0,
+                "count": 0,
+                "duration_seconds": 0.0,
+            },
         )
+        count = result.get("record_count", result.get("count", 0))
         print(
             f"  {object_type:<12} "
-            f"{result['status']:<8} "
-            f"{result['count']:>8,} "
-            f"{result['duration_seconds']:>8.3f}s"
+            f"{str(result.get('status', 'MISSING')):<8} "
+            f"{int(count or 0):>8,} "
+            f"{float(result.get('duration_seconds', 0.0) or 0.0):>8.3f}s"
         )
-    print()
-    print("Regular objects by type:")
-    for object_type, count in manifest["regular_object_counts"].items():
-        print(f"  {object_type:<12} {count:>8,}")
-    print()
-    print("Control objects by type:")
-    for object_type, count in manifest["control_object_counts"].items():
-        print(f"  {object_type:<12} {count:>8,}")
-    print(f"Errors          : {manifest['error_count']:,}")
+
+    regular_counts = manifest.get("regular_object_counts") or {}
+    control_counts = manifest.get("control_object_counts") or {}
+    if regular_counts:
+        print()
+        print("Regular objects by type:")
+        for object_type, count in sorted(regular_counts.items()):
+            print(f"  {object_type:<12} {int(count):>8,}")
+    if control_counts:
+        print()
+        print("Control objects by type:")
+        for object_type, count in sorted(control_counts.items()):
+            print(f"  {object_type:<12} {int(count):>8,}")
+    print(f"Errors          : {int(manifest.get('error_count', 0) or 0):,}")
 
 
 def main() -> int:
     try:
         manifest = collect_tm1_metadata()
         print_manifest(manifest)
-        return 0 if manifest["status"] == "COMPLETE" else 1
+        return 0 if manifest.get("status") == "COMPLETE" else 1
     except Exception as error:
         print(
             "TM1 metadata collection failed: "

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Iterable
 
 DEPENDABLE_CONFIDENCES = {"CONFIRMED", "RESOLVED", "HIGH"}
 DYNAMIC_STATUS_BY_TARGET_TYPE = {
@@ -51,23 +51,27 @@ def build_catalog_index(object_catalog: Any) -> dict[tuple[str, str], dict[str, 
         object_catalog,
         ("objects", "items", "records", "data", "results"),
     ):
-        object_type = normalized_key(first_value(record, "object_type", "ObjectType", "type"))
-        object_name = normalized_key(first_value(record, "object_name", "ObjectName", "name"))
+        object_type = normalized_key(
+            first_value(record, "object_type", "ObjectType", "type")
+        )
+        object_name = normalized_key(
+            first_value(record, "object_name", "ObjectName", "name")
+        )
         if object_type and object_name:
             index.setdefault((object_type, object_name), record)
     return index
 
 
 def build_exception_index(exception_payload: Any) -> dict[tuple[str, str], dict[str, Any]]:
-    """Index only exceptions that currently apply to published validations."""
     index: dict[tuple[str, str], dict[str, Any]] = {}
     for record in records_from_payload(
         exception_payload,
         ("exceptions", "items", "records", "data", "results"),
     ):
-        if normalized_key(record.get("exception_status")) not in {"registered", "active"}:
-            continue
-        if record.get("applies_to_validation_records", True) is not True:
+        if normalized_key(record.get("exception_status")) not in {
+            "registered",
+            "active",
+        }:
             continue
         target_type = normalized_key(record.get("target_type"))
         target_name = normalized_key(record.get("target_name"))
@@ -81,26 +85,18 @@ class ValidationDecision:
     status: str
     reason: str
     catalog_match_name: str = ""
-    catalog_match_scope: str = ""
-    catalog_match_is_control: bool | None = None
     exception_id: str = ""
     exception_status: str = ""
-    exception_type: str = ""
-    exception_application_scope: str = ""
     exclude_from_quality_score: bool = False
     required_for_holistic_success: bool = True
 
     def to_dict(self) -> dict[str, Any]:
         return {
             "catalog_match_name": self.catalog_match_name,
-            "catalog_match_scope": self.catalog_match_scope,
-            "catalog_match_is_control": self.catalog_match_is_control,
             "validation_status": self.status,
             "reason": self.reason,
             "exception_id": self.exception_id,
             "exception_status": self.exception_status,
-            "exception_type": self.exception_type,
-            "exception_application_scope": self.exception_application_scope,
             "exclude_from_quality_score": self.exclude_from_quality_score,
             "required_for_holistic_success": self.required_for_holistic_success,
         }
@@ -121,7 +117,10 @@ def classify_target(
     dependable = bool(name_text) and confidence_key in DEPENDABLE_CONFIDENCES
 
     if not dependable:
-        status = DYNAMIC_STATUS_BY_TARGET_TYPE.get(type_key, "UNRESOLVED_DYNAMIC_REFERENCE")
+        status = DYNAMIC_STATUS_BY_TARGET_TYPE.get(
+            type_key,
+            "UNRESOLVED_DYNAMIC_REFERENCE",
+        )
         reason = {
             "RUNTIME_VIEW_REFERENCE": "The view name is computed at runtime.",
             "RUNTIME_SUBSET_REFERENCE": "The subset name is computed at runtime.",
@@ -132,22 +131,21 @@ def classify_target(
         return ValidationDecision(status=status, reason=reason)
 
     if type_key in DEFERRED_STATUS_BY_TARGET_TYPE:
-        return ValidationDecision(
-            status=DEFERRED_STATUS_BY_TARGET_TYPE[type_key],
-            reason="The target was resolved, but this target type is outside the current object catalog scope.",
+        status = DEFERRED_STATUS_BY_TARGET_TYPE[type_key]
+        reason = (
+            "The target was resolved, but this target type is outside the current object catalog scope."
         )
+        return ValidationDecision(status=status, reason=reason)
 
     match = catalog_index.get((type_key, name_key))
     if match is not None:
-        canonical_name = str(first_value(match, "object_name", "ObjectName", "name") or name_text)
-        is_control = bool(match.get("is_control", canonical_name.startswith("}")))
-        scope = str(match.get("catalog_scope") or ("CONTROL" if is_control else "REGULAR"))
+        canonical_name = str(
+            first_value(match, "object_name", "ObjectName", "name") or name_text
+        )
         return ValidationDecision(
             status="VALID",
             reason="The resolved target matched an object in objects.json.",
             catalog_match_name=canonical_name,
-            catalog_match_scope=scope,
-            catalog_match_is_control=is_control,
         )
 
     if confidence_key in {"CONFIRMED", "HIGH"}:
@@ -155,7 +153,9 @@ def classify_target(
         reason = "The confirmed literal target does not exist in objects.json."
     else:
         status = "RESOLVED_TARGET_NOT_IN_CATALOG"
-        reason = "The variable-backed target was resolved, but the resolved name does not exist in objects.json."
+        reason = (
+            "The variable-backed target was resolved, but the resolved name does not exist in objects.json."
+        )
 
     exception = (exception_index or {}).get((type_key, name_key))
     if exception is None:
@@ -166,8 +166,10 @@ def classify_target(
         reason=reason,
         exception_id=str(exception.get("exception_id") or ""),
         exception_status=str(exception.get("exception_status") or ""),
-        exception_type=str(exception.get("exception_type") or ""),
-        exception_application_scope=str(exception.get("application_scope") or ""),
-        exclude_from_quality_score=bool(exception.get("exclude_from_quality_score", False)),
-        required_for_holistic_success=bool(exception.get("required_for_holistic_success", True)),
+        exclude_from_quality_score=bool(
+            exception.get("exclude_from_quality_score", False)
+        ),
+        required_for_holistic_success=bool(
+            exception.get("required_for_holistic_success", True)
+        ),
     )
