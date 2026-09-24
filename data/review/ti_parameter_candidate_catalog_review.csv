@@ -1,0 +1,22 @@
+"ProcessName","RelationshipType","TargetType","TargetExpression","CandidateValue","ResolutionStatus","CatalogMatch","CatalogMatchName","CatalogScope","IsControl"
+"DataUpdate - Scenario Archive - Numeric","CLEARS_CUBE","cube","sCube","Profit and Loss","SINGLE_STATIC_CANDIDATE","True","Profit and Loss","REGULAR","False"
+"DataUpdate - Scenario Archive - Numeric","INCREMENTS_CUBE","cube","pCube","Profit and Loss","SINGLE_STATIC_CANDIDATE","True","Profit and Loss","REGULAR","False"
+"DataUpdate - Scenario Archive - Numeric","WRITES_TO_CUBE","cube","pCube","Profit and Loss","SINGLE_STATIC_CANDIDATE","True","Profit and Loss","REGULAR","False"
+"Sys_Dim_Create_Derived_Dim_FromAttribute","UPDATES_DIMENSION","dimension","pDim","Validation","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Create_Derived_Dim_FromAttributeList","UPDATES_DIMENSION","dimension","pDim","Validation","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Create_Derived_Dim_FromMDX","UPDATES_DIMENSION","dimension","pDim","Sys_Check_Cost Center","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Hierarchy_Clone","UPDATES_DIMENSION","dimension","pDim","Cost Center","SINGLE_STATIC_CANDIDATE","True","Cost Center","REGULAR","False"
+"Sys_Dim_Hierarchy_Create_FromAttribute","UPDATES_DIMENSION","dimension","pDimension","Cost Centre","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Hierarchy_Create_FromAttribute_v2","UPDATES_DIMENSION","dimension","pDimension","Account","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Hierarchy_Create_FromMDXSubset","UPDATES_DIMENSION","dimension","pDim","Account Test","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes","UPDATES_DIMENSION","dimension","pDim","Account Test","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes","UPDATES_DIMENSION","dimension","pdim","Account Test","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Hierarchy_Create_Orphans","UPDATES_DIMENSION","dimension","pDim","Account Test","SINGLE_STATIC_CANDIDATE","False",,,
+"SYS_Dim_Hierarchy_CreateFromConsolidations","UPDATES_DIMENSION","dimension","pDim","Account Test","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Hierarchy_Unwind_Consolidation_Large","READS_FROM_CUBE","cube","sAttrCube","}ElementAttributes_Material","SINGLE_STATIC_CANDIDATE","True","}ElementAttributes_Material","CONTROL","True"
+"Sys_Dim_Hierarchy_Unwind_Consolidation_Large","UPDATES_DIMENSION","dimension","pDimension","Glenn Springs Order","FINITE_CANDIDATE_SET","True","Glenn Springs Order","REGULAR","False"
+"Sys_Dim_Hierarchy_Unwind_Consolidation_Large","UPDATES_DIMENSION","dimension","pDimension","Material","FINITE_CANDIDATE_SET","True","Material","REGULAR","False"
+"Sys_Dim_Hierarchy_Unwind_Consolidation_Large","UPDATES_DIMENSION","dimension","pDimension","Production Order","FINITE_CANDIDATE_SET","True","Production Order","REGULAR","False"
+"Sys_Dim_Hierarchy_Unwind_Consolidation_Large","WRITES_TO_CUBE","cube","sAttrCube","}ElementAttributes_Material","SINGLE_STATIC_CANDIDATE","True","}ElementAttributes_Material","CONTROL","True"
+"Sys_Dim_Import_From_File","CLEARS_CUBE","cube","sAttrCube","}ElementAttributes_Account","SINGLE_STATIC_CANDIDATE","False",,,
+"Sys_Dim_Import_From_File","UPDATES_DIMENSION","dimension","pDim","Account","SINGLE_STATIC_CANDIDATE","False",,,

@@ -1,0 +1,21 @@
+﻿count,expression_pattern,relationship_type,example_expression,distinct_processes,example_processes,candidate_action
+10,SIMPLE_VARIABLE,UPDATES_DIMENSION,pDim,9,SYS_Dim_Hierarchy_CreateFromConsolidations; Sys_Dim_Create_Derived_Dim_FromAttribute; Sys_Dim_Create_Derived_Dim_FromAttributeList; Sys_Dim_Create_Derived_Dim_FromMDX; Sys_Dim_Hierarchy_Clone,"Trace assignment, process parameter, or caller argument"
+8,SIMPLE_VARIABLE,UPDATES_DIMENSION,pDimension,8,Sys_Attribute Hierarchy; Sys_Dim_AllConsols_Delete; Sys_Dim_Element_Delete.FromSubset; Sys_Dim_Hierarchy_Create_FromAttribute; Sys_Dim_Hierarchy_Create_FromAttribute_v2,"Trace assignment, process parameter, or caller argument"
+3,SIMPLE_VARIABLE,READS_FROM_CUBE,sAttrCube,3,Sys_Attribute Hierarchy; Sys_Dim_Hierarchy_Unwind_Consolidation_Large; Sys_Virtual Dimension,"Trace assignment, process parameter, or caller argument"
+2,SIMPLE_VARIABLE,INCREMENTS_CUBE,pCube,2,DataUpdate - Scenario Archive - Numeric; DataUpdate - Scenario Archive - String,"Trace assignment, process parameter, or caller argument"
+2,SIMPLE_VARIABLE,WRITES_TO_CUBE,pCube,2,DataUpdate - Scenario Archive - Numeric; DataUpdate - Scenario Archive - String,"Trace assignment, process parameter, or caller argument"
+2,SIMPLE_VARIABLE,CLEARS_CUBE,pCube,2,Sys_Cube_Clear_Data; sys_cube_clear,"Trace assignment, process parameter, or caller argument"
+2,SIMPLE_VARIABLE,WRITES_TO_CUBE,sAttrCube,2,Sys_Attribute Hierarchy; Sys_Dim_Hierarchy_Unwind_Consolidation_Large,"Trace assignment, process parameter, or caller argument"
+2,SIMPLE_VARIABLE,CLEARS_CUBE,sCube,2,DataUpdate - Scenario Archive - Numeric; DataUpdate - Scenario Archive - String,"Trace assignment, process parameter, or caller argument"
+2,SIMPLE_VARIABLE,CLEARS_CUBE,sTgtCube,2,SecurityUpdate - Element Security; SecurityUpdate - Element Security - Hierarchy Archive,"Trace assignment, process parameter, or caller argument"
+2,SIMPLE_VARIABLE,WRITES_TO_CUBE,sTgtCube,2,SecurityUpdate - Element Security; SecurityUpdate - Element Security - Hierarchy Archive,"Trace assignment, process parameter, or caller argument"
+1,STRUCTURED_EXPRESSION,REFERENCES_DIMENSION,!}Dimensions,1,SYS Legacy Elements,Review parser extraction and nested syntax
+1,CONCATENATION,READS_FROM_CUBE,'}ElementAttributes_' | pSrcDim,1,Sys_Generic_Alternate Dimension Hierarchies,Attempt constant folding and partial-symbol propagation
+1,CONCATENATION,WRITES_TO_CUBE,'}ElementAttributes_' | pTgtDim,1,Sys_Generic_Alternate Dimension Hierarchies,Attempt constant folding and partial-symbol propagation
+1,SIMPLE_VARIABLE,UPDATES_HIERARCHY,pDimension,1,Sys_Virtual Dimension,"Trace assignment, process parameter, or caller argument"
+1,SIMPLE_VARIABLE,UPDATES_DIMENSION,pDimName,1,Sys_Dim_Sort_Import,"Trace assignment, process parameter, or caller argument"
+1,SIMPLE_VARIABLE,UPDATES_DIMENSION,pTargetDim,1,Sys_Dim_Clone,"Trace assignment, process parameter, or caller argument"
+1,SIMPLE_VARIABLE,UPDATES_DIMENSION,pTgtDim,1,Sys_Generic_Alternate Dimension Hierarchies,"Trace assignment, process parameter, or caller argument"
+1,SIMPLE_VARIABLE,CLEARS_CUBE,sAttrCube,1,Sys_Dim_Import_From_File,"Trace assignment, process parameter, or caller argument"
+1,SIMPLE_VARIABLE,WRITES_TO_CUBE,scube,1,DataUpdate - ML Stage,"Trace assignment, process parameter, or caller argument"
+1,SIMPLE_VARIABLE,UPDATES_DIMENSION,sTgtDim,1,Sys_Generic_Parent Child Dimension,"Trace assignment, process parameter, or caller argument"

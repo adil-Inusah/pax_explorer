@@ -17,6 +17,10 @@ CATALOG_FILES = {
     "rule_validations": "rule_relationship_validations.json",
     "ti_relationships": "ti_relationships.json",
     "ti_validations": "ti_relationship_validations.json",
+    "attributes": "attributes.json",
+    "attribute_manifest": "attribute_manifest.json",
+    "attribute_metrics": "attribute_collection_metrics.json",
+    "attribute_errors": "attribute_collection_errors.json",
 }
 
 OPTIONAL_FILES = (
@@ -88,8 +92,8 @@ class SmokeTestError(RuntimeError):
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Validate the multi-file holistic TM1 catalog under data/current. "
-            "The deferred attribute collector is not run."
+            "Validate the multi-file holistic TM1 catalog under data/current, "
+            "including the governed attribute-definition inventory."
         )
     )
     parser.add_argument(
@@ -683,6 +687,216 @@ def validate_exception_application(
     }
 
 
+def attribute_identity(record: dict[str, Any]) -> tuple[str, str, str]:
+    return (
+        normalize_key(record.get("dimension_name")),
+        normalize_key(record.get("hierarchy_name")),
+        normalize_key(record.get("attribute_name")),
+    )
+
+
+def validate_attribute_inventory(
+    *,
+    attributes: list[dict[str, Any]],
+    manifest: Any,
+    metrics: Any,
+    errors: list[dict[str, Any]],
+    object_dimensions: set[str],
+    failures: list[str],
+    warnings: list[str],
+) -> dict[str, Any]:
+    if not isinstance(manifest, dict):
+        failures.append("attribute_manifest.json root must be a JSON object")
+        manifest = {}
+    if not isinstance(metrics, dict):
+        failures.append(
+            "attribute_collection_metrics.json root must be a JSON object"
+        )
+        metrics = {}
+
+    status = normalize_token(manifest.get("status"))
+    if status not in {"COMPLETE", "COMPLETED", "SUCCESS"}:
+        failures.append(
+            f"attribute_manifest.json status is {manifest.get('status')!r}"
+        )
+
+    scope = normalize_key(manifest.get("scope"))
+    if scope != "all":
+        failures.append(
+            "attribute_manifest.json scope must be 'all' for governed current output"
+        )
+
+    if manifest.get("published_current") is not True:
+        failures.append(
+            "attribute_manifest.json published_current must be true"
+        )
+    if manifest.get("publish_current_requested") is not True:
+        failures.append(
+            "attribute_manifest.json publish_current_requested must be true"
+        )
+
+    scalar_checks = {
+        "attribute_count": len(attributes),
+        "error_count": len(errors),
+    }
+    for field, actual in scalar_checks.items():
+        if manifest.get(field) != actual:
+            failures.append(
+                f"attribute manifest {field}={manifest.get(field)!r}, "
+                f"expected {actual}"
+            )
+
+    metric_checks = {
+        "attribute_count": len(attributes),
+        "dimension_count": manifest.get("dimension_count"),
+        "hierarchy_count": manifest.get("hierarchy_count"),
+    }
+    for field, expected in metric_checks.items():
+        if metrics.get(field) != expected:
+            failures.append(
+                f"attribute metrics {field}={metrics.get(field)!r}, "
+                f"expected {expected!r}"
+            )
+
+    hierarchy_count = metrics.get("hierarchy_count")
+    completed_hierarchy_count = metrics.get("completed_hierarchy_count")
+    if hierarchy_count != completed_hierarchy_count:
+        failures.append(
+            "attribute hierarchy counts do not reconcile: "
+            f"attempted={hierarchy_count!r}, "
+            f"completed={completed_hierarchy_count!r}"
+        )
+
+    if errors:
+        failures.append(
+            f"attribute_collection_errors.json contains {len(errors)} records"
+        )
+
+    identities: list[tuple[str, str, str]] = []
+    missing_required = 0
+    invalid_qualified_names = 0
+    invalid_object_types = 0
+    invalid_types = 0
+    invalid_alias_flags = 0
+    invalid_control_flags = 0
+    unknown_parent_dimensions: set[str] = set()
+
+    allowed_types = {"STRING", "NUMERIC", "ALIAS"}
+    for record in attributes:
+        identity = attribute_identity(record)
+        identities.append(identity)
+        if not all(identity):
+            missing_required += 1
+
+        expected_qualified_name = "::".join(
+            (
+                str(record.get("dimension_name") or ""),
+                str(record.get("hierarchy_name") or ""),
+                str(record.get("attribute_name") or ""),
+            )
+        )
+        if str(record.get("qualified_name") or "") != expected_qualified_name:
+            invalid_qualified_names += 1
+        if str(record.get("object_name") or "") != expected_qualified_name:
+            invalid_qualified_names += 1
+        if normalize_token(record.get("object_type")) != "ATTRIBUTE":
+            invalid_object_types += 1
+
+        data_type = normalize_token(record.get("attribute_data_type"))
+        if data_type not in allowed_types:
+            invalid_types += 1
+        if (data_type == "ALIAS") != (record.get("is_alias") is True):
+            invalid_alias_flags += 1
+
+        dimension_name = str(record.get("dimension_name") or "").strip()
+        expected_control = (
+            dimension_name.startswith("}")
+            or str(record.get("hierarchy_name") or "").strip().startswith("}")
+            or str(record.get("attribute_name") or "").strip().startswith("}")
+        )
+        if record.get("is_control") is not expected_control:
+            invalid_control_flags += 1
+        dimension_key = normalize_key(dimension_name)
+        if dimension_key and dimension_key not in object_dimensions:
+            unknown_parent_dimensions.add(dimension_name)
+
+    duplicate_count = len(identities) - len(set(identities))
+    checks = (
+        (missing_required, "attribute records have missing identity fields"),
+        (duplicate_count, "duplicate normalized attribute identities"),
+        (invalid_qualified_names, "invalid attribute qualified/object names"),
+        (invalid_object_types, "attribute records have invalid object_type"),
+        (invalid_types, "attribute records have unknown data types"),
+        (invalid_alias_flags, "attribute records have inconsistent alias flags"),
+        (invalid_control_flags, "attribute records have inconsistent control flags"),
+    )
+    for count, message in checks:
+        if count:
+            failures.append(f"{count} {message}")
+    if unknown_parent_dimensions:
+        failures.append(
+            "attribute records reference dimensions absent from objects.json: "
+            f"{sorted(unknown_parent_dimensions)[:20]}"
+        )
+
+    regular_attributes = sum(
+        record.get("is_control") is False for record in attributes
+    )
+    control_attributes = sum(
+        record.get("is_control") is True for record in attributes
+    )
+    if regular_attributes + control_attributes != len(attributes):
+        failures.append(
+            "regular and control attribute counts do not reconcile to attributes.json"
+        )
+
+    type_counts = Counter(
+        normalize_token(record.get("attribute_data_type"))
+        for record in attributes
+    )
+    declared_type_counts = normalized_count_mapping(
+        metrics.get("attribute_type_counts")
+    )
+    if declared_type_counts != dict(type_counts):
+        failures.append(
+            "attribute metrics attribute_type_counts do not match attributes.json"
+        )
+
+    if not attributes:
+        failures.append("attributes.json contains no attribute definitions")
+
+    return {
+        "attribute_collection": "COMPLETE" if not errors else "PARTIAL",
+        "attributes": len(attributes),
+        "regular_attributes": regular_attributes,
+        "control_attributes": control_attributes,
+        "attribute_dimensions": manifest.get("dimension_count", 0),
+        "attribute_hierarchies": manifest.get("hierarchy_count", 0),
+        "completed_attribute_hierarchies": metrics.get(
+            "completed_hierarchy_count", 0
+        ),
+        "attribute_collection_errors": len(errors),
+        "attribute_identity_duplicates": duplicate_count,
+        "attribute_unknown_types": invalid_types,
+        "attribute_alias_flag_errors": invalid_alias_flags,
+        "attribute_inventory_reconciles": (
+            not errors
+            and duplicate_count == 0
+            and missing_required == 0
+            and invalid_qualified_names == 0
+            and invalid_object_types == 0
+            and invalid_types == 0
+            and invalid_alias_flags == 0
+            and invalid_control_flags == 0
+            and not unknown_parent_dimensions
+            and manifest.get("attribute_count") == len(attributes)
+            and metrics.get("attribute_count") == len(attributes)
+            and hierarchy_count == completed_hierarchy_count
+        ),
+        "attribute_type_counts": dict(sorted(type_counts.items())),
+    }
+
+
 def validate_lineage_manifest(
     path: Path,
     *,
@@ -725,7 +939,6 @@ def run_smoke_test(
     print("HOLISTIC TM1 CATALOG SMOKE TEST")
     print("=" * 72)
     print(f"catalog_directory={current_dir.resolve()}")
-    print("attribute_collection=DEFERRED")
 
     if not current_dir.is_dir():
         print(f"FAILURE: catalog directory not found: {current_dir}")
@@ -756,6 +969,8 @@ def run_smoke_test(
         "rule_validations",
         "ti_relationships",
         "ti_validations",
+        "attributes",
+        "attribute_errors",
     ):
         source = current_dir / CATALOG_FILES[logical_name]
         try:
@@ -774,6 +989,10 @@ def run_smoke_test(
     rule_validations = record_sets["rule_validations"]
     ti_relationships = record_sets["ti_relationships"]
     ti_validations = record_sets["ti_validations"]
+    attributes = record_sets["attributes"]
+    attribute_errors = record_sets["attribute_errors"]
+    attribute_metrics = payloads["attribute_metrics"]
+    attribute_manifest = payloads["attribute_manifest"]
 
     if not objects:
         failures.append("objects.json contains no object records")
@@ -817,6 +1036,21 @@ def run_smoke_test(
         regular_counts=regular_object_counts,
         control_counts=control_object_counts,
         failures=failures,
+    )
+
+    object_dimensions = {
+        object_name
+        for object_type, object_name in all_keys
+        if object_type == "dimension"
+    }
+    attribute_metrics = validate_attribute_inventory(
+        attributes=attributes,
+        manifest=attribute_manifest,
+        metrics=attribute_metrics,
+        errors=attribute_errors,
+        object_dimensions=object_dimensions,
+        failures=failures,
+        warnings=warnings,
     )
 
     expected_object_types = {"CHORE", "CUBE", "DIMENSION", "PROCESS"}
@@ -932,6 +1166,7 @@ def run_smoke_test(
         **exception_metrics,
         "quality_exception_register_keys": len(exception_by_id),
         "quality_exception_register_loaded": bool(exception_payload),
+        **attribute_metrics,
     }
     return print_summary(summary, failures, warnings)
 
@@ -964,6 +1199,18 @@ def print_summary(
         "raw_missing_target_records",
         "unregistered_missing_target_records",
         "quality_exception_register_loaded",
+        "attribute_collection",
+        "attributes",
+        "regular_attributes",
+        "control_attributes",
+        "attribute_dimensions",
+        "attribute_hierarchies",
+        "completed_attribute_hierarchies",
+        "attribute_collection_errors",
+        "attribute_identity_duplicates",
+        "attribute_unknown_types",
+        "attribute_alias_flag_errors",
+        "attribute_inventory_reconciles",
     )
     for key in scalar_keys:
         if key in summary:
@@ -976,6 +1223,7 @@ def print_summary(
         "relationship_counts",
         "validation_counts",
         "informational_validation_counts",
+        "attribute_type_counts",
     )
     for key in mapping_keys:
         values = summary.get(key, {})
