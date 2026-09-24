@@ -2,10 +2,10 @@ from __future__ import annotations
 
 """Collect public TM1 native and MDX view definitions as first-class entities.
 
-The collector performs one selective REST request per cube. It does not expand
-private views, cell data, or evaluated MDX results. Native view axis selections
-are converted into structural relationships to dimensions, hierarchies, and
-named public subsets when those details are present in the REST response.
+The collector performs one selective REST request per cube and retrieves public
+view names only. It does not expand private views, cell data, evaluated MDX
+results, or subtype-specific view definitions. Definition enrichment is a
+separate follow-up stage.
 """
 
 import argparse
@@ -33,11 +33,6 @@ OBJECTS_FILE = CURRENT_ROOT / "objects.json"
 SLOW_REQUEST_WARNING_SECONDS = 1.0
 VIEW_SELECT_FIELDS = (
     "Name",
-    "@odata.type",
-    "MDX",
-    "SuppressEmptyRows",
-    "SuppressEmptyColumns",
-    "FormatString",
 )
 
 
@@ -259,7 +254,7 @@ def view_kind_of(view: Any) -> str:
         return "NATIVE"
     if mdx_of(view):
         return "MDX"
-    return "NATIVE"
+    return "UNKNOWN"
 
 
 def bool_value(value: Any) -> bool | None:
@@ -366,7 +361,14 @@ def collect_views(
                         "format_string": clean(
                             property_value(view, "FormatString", "format_string")
                         ) or None,
-                        "retrieval_mode": retrieval_mode,
+                        "definition_loaded": (
+                            retrieval_mode == "COMPATIBILITY_FULL_GET"
+                        ),
+                        "retrieval_mode": (
+                            "SELECTIVE_NAME_ONLY"
+                            if retrieval_mode == "SELECTIVE_REST"
+                            else retrieval_mode
+                        ),
                         "is_control": is_control_name(cube_name) or is_control_name(view_name),
                     },
                 )
@@ -400,7 +402,11 @@ def collect_views(
                     "cube_name": cube_name,
                     "public_view_count": cube_view_count,
                     "request_seconds": round(request_seconds, 6),
-                    "retrieval_mode": retrieval_mode,
+                    "retrieval_mode": (
+                        "SELECTIVE_NAME_ONLY"
+                        if retrieval_mode == "SELECTIVE_REST"
+                        else retrieval_mode
+                    ),
                     "slow_request": request_seconds > SLOW_REQUEST_WARNING_SECONDS,
                 }
             )
