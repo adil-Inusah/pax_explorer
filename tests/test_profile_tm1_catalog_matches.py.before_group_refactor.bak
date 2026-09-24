@@ -1,0 +1,259 @@
+from __future__ import annotations
+
+from datetime import datetime, timezone
+from pathlib import Path
+
+import scripts.profile_tm1_catalog_matches as module
+
+
+def when() -> datetime:
+    return datetime(2026, 9, 24, 22, 0, tzinfo=timezone.utc)
+
+
+def write_inputs(root: Path) -> dict[str, Path]:
+    paths = {name: root / f"{name}.json" for name in (
+        "ti_relationships", "ti_validations", "rule_relationships",
+        "rule_validations", "hierarchies", "views", "subsets", "attributes",
+    )}
+    module.write_json(paths["rule_relationships"], [])
+    module.write_json(paths["rule_validations"], [])
+    module.write_json(paths["hierarchies"], [
+        {"node_id": "hierarchy::Dim::Dim", "dimension_name": "Dim", "hierarchy_name": "Dim"},
+        {"node_id": "hierarchy::Dim::Alt", "dimension_name": "Dim", "hierarchy_name": "Alt"},
+    ])
+    module.write_json(paths["views"], [
+        {"node_id": "view::Cube::PUBLIC::<none>::V", "cube_name": "Cube", "view_name": "V"},
+    ])
+    module.write_json(paths["subsets"], [
+        {"node_id": "subset::Dim::Dim::PUBLIC::<none>::S", "dimension_name": "Dim", "hierarchy_name": "Dim", "subset_name": "S"},
+    ])
+    module.write_json(paths["attributes"], [
+        {"dimension_name": "Dim", "hierarchy_name": "Dim", "attribute_name": "Caption", "is_default_hierarchy": True},
+        {"dimension_name": "Dim", "hierarchy_name": "Alt", "attribute_name": "Code", "is_default_hierarchy": False},
+    ])
+    return paths
+
+
+def run_profile(tmp_path: Path, relationships: list[dict], validations: list[dict]):
+    paths = write_inputs(tmp_path)
+    module.write_json(paths["ti_relationships"], relationships)
+    module.write_json(paths["ti_validations"], validations)
+    manifest = module.profile_catalog_matches(
+        ti_relationships_path=paths["ti_relationships"],
+        ti_validations_path=paths["ti_validations"],
+        rule_relationships_path=paths["rule_relationships"],
+        rule_validations_path=paths["rule_validations"],
+        hierarchies_path=paths["hierarchies"],
+        views_path=paths["views"],
+        subsets_path=paths["subsets"],
+        attributes_path=paths["attributes"],
+        snapshot_root=tmp_path / "snapshots",
+        current_root=tmp_path / "current",
+        timestamp=when(),
+    )
+    detail = module.read_json(tmp_path / "current" / "catalog_match_profile_detail.json")
+    return manifest, detail
+
+
+def test_profiles_exact_view_match(tmp_path: Path) -> None:
+    manifest, detail = run_profile(
+        tmp_path,
+        [{"relationship_id": "r1", "relationship_type": "USES_VIEW", "cube_name": "Cube", "view_name": "V"}],
+        [{"relationship_id": "r1", "validation_status": "RUNTIME_VIEW_REFERENCE"}],
+    )
+    assert manifest["status"] == "COMPLETE"
+    assert detail[0]["match_classification"] == "EXACT_MATCH"
+
+
+def test_profiles_default_hierarchy_attribute_match(tmp_path: Path) -> None:
+    _, detail = run_profile(
+        tmp_path,
+        [{"relationship_id": "r1", "relationship_type": "READS_ATTRIBUTE", "dimension_name": "Dim", "attribute_name": "Caption"}],
+        [{"relationship_id": "r1", "validation_status": "ATTRIBUTE_CATALOG_DEFERRED"}],
+    )
+    assert detail[0]["match_classification"] == "DEFAULT_HIERARCHY_MATCH"
+
+
+def test_profiles_unique_hierarchy_attribute_match(tmp_path: Path) -> None:
+    _, detail = run_profile(
+        tmp_path,
+        [{"relationship_id": "r1", "relationship_type": "READS_ATTRIBUTE", "dimension_name": "Dim", "attribute_name": "Code"}],
+        [{"relationship_id": "r1", "validation_status": "ATTRIBUTE_CATALOG_DEFERRED"}],
+    )
+    assert detail[0]["match_classification"] == "UNIQUE_HIERARCHY_MATCH"
+
+
+def test_absent_create_target_is_valid(tmp_path: Path) -> None:
+    _, detail = run_profile(
+        tmp_path,
+        [{"relationship_id": "r1", "relationship_type": "CREATES_SUBSET", "dimension_name": "Dim", "subset_name": "New"}],
+        [{"relationship_id": "r1", "validation_status": "RUNTIME_SUBSET_REFERENCE"}],
+    )
+    assert detail[0]["match_classification"] == "VALID_CREATE_TARGET"
+
+
+def test_missing_relationship_makes_partial(tmp_path: Path) -> None:
+    paths = write_inputs(tmp_path)
+    module.write_json(paths["ti_relationships"], [])
+    module.write_json(
+        paths["ti_validations"],
+        [
+            {
+                "relationship_id": "missing",
+                "validation_status": "RUNTIME_VIEW_REFERENCE",
+            }
+        ],
+    )
+
+    current_root = tmp_path / "current"
+    current_root.mkdir(parents=True, exist_ok=True)
+    module.write_json(
+        current_root / "catalog_match_profile_detail.json",
+        [{"sentinel": True}],
+    )
+
+    manifest = module.profile_catalog_matches(
+        ti_relationships_path=paths["ti_relationships"],
+        ti_validations_path=paths["ti_validations"],
+        rule_relationships_path=paths["rule_relationships"],
+        rule_validations_path=paths["rule_validations"],
+        hierarchies_path=paths["hierarchies"],
+        views_path=paths["views"],
+        subsets_path=paths["subsets"],
+        attributes_path=paths["attributes"],
+        snapshot_root=tmp_path / "snapshots",
+        current_root=current_root,
+        timestamp=when(),
+    )
+
+    assert manifest["status"] == "PARTIAL"
+    assert manifest["error_count"] == 1
+    assert manifest["published_current"] is False
+
+    snapshot_root = tmp_path / "snapshots" / "20260924T220000Z"
+    detail = module.read_json(
+        snapshot_root / "catalog_match_profile_detail.json"
+    )
+    errors = module.read_json(snapshot_root / "catalog_match_errors.json")
+
+    assert detail == []
+    assert errors == [
+    {
+        "origin": "TI",
+        "relationship_id": "missing",
+        "stage": (
+            "JOIN_VALIDATION_TO_RELATIONSHIP"
+        ),
+        "error": (
+            "Deferred validation has no unique "
+            "matching relationship; "
+            "semantic_candidate_count=0"
+        ),
+    }
+]
+    assert module.read_json(
+        current_root / "catalog_match_profile_detail.json"
+    ) == [{"sentinel": True}]
+
+
+def test_joins_rule_validation_by_cube_semantic_key(
+    tmp_path: Path,
+) -> None:
+    paths = write_inputs(tmp_path)
+
+    module.write_json(
+        paths["ti_relationships"],
+        [],
+    )
+
+    module.write_json(
+        paths["ti_validations"],
+        [],
+    )
+
+    module.write_json(
+        paths["rule_relationships"],
+        [
+            {
+                "cube_name": "Cube",
+                "relationship_type": (
+                    "REFERENCES_HIERARCHY"
+                ),
+                "target_type": "hierarchy",
+                "target_name": "Dim::Dim",
+                "dimension_name": "Dim",
+                "hierarchy_name": "Dim",
+            }
+        ],
+    )
+
+    module.write_json(
+        paths["rule_validations"],
+        [
+            {
+                "cube_name": "Cube",
+                "relationship_type": (
+                    "REFERENCES_HIERARCHY"
+                ),
+                "target_type": "hierarchy",
+                "target_name": "Dim::Dim",
+                "validation_status": (
+                    "HIERARCHY_CATALOG_DEFERRED"
+                ),
+            }
+        ],
+    )
+
+    manifest = module.profile_catalog_matches(
+        ti_relationships_path=(
+            paths["ti_relationships"]
+        ),
+        ti_validations_path=(
+            paths["ti_validations"]
+        ),
+        rule_relationships_path=(
+            paths["rule_relationships"]
+        ),
+        rule_validations_path=(
+            paths["rule_validations"]
+        ),
+        hierarchies_path=(
+            paths["hierarchies"]
+        ),
+        views_path=paths["views"],
+        subsets_path=paths["subsets"],
+        attributes_path=paths["attributes"],
+        snapshot_root=(
+            tmp_path / "snapshots"
+        ),
+        current_root=(
+            tmp_path / "current"
+        ),
+        timestamp=when(),
+    )
+
+    assert manifest["status"] == "COMPLETE"
+    assert manifest["error_count"] == 0
+    assert (
+        manifest["deferred_reference_count"]
+        == 1
+    )
+
+    detail = module.read_json(
+        tmp_path
+        / "current"
+        / "catalog_match_profile_detail.json"
+    )
+
+    assert len(detail) == 1
+    assert detail[0]["origin"] == "RULE"
+
+    assert (
+        detail[0]["join_method"]
+        == "SEMANTIC_KEY"
+    )
+
+    assert (
+        detail[0]["match_classification"]
+        == "EXACT_MATCH"
+    )
