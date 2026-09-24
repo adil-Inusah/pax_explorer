@@ -1,7 +1,5 @@
 import json
-
 from utilities.tm1_connection import get_tm1_connection
-
 
 TEST_ENDPOINTS = [
     "/rolemgmt/v1/profiles/",
