@@ -398,24 +398,23 @@ def resolve_collection_scope(
     *,
     scope: str,
     dimensions: list[str] | None,
-    object_catalog_path: Path | None,
+    object_catalog_path: Path,
 ) -> tuple[list[str], str]:
     if dimensions:
         return sorted_unique_names(dimensions), "EXPLICIT_DIMENSIONS"
 
-    if object_catalog_path is not None and object_catalog_path.is_file():
+    if object_catalog_path.is_file():
         names = object_catalog_dimension_names(
             read_json(object_catalog_path),
             scope=scope,
         )
         return names, "OBJECT_CATALOG"
 
-    # Direct function calls without an object catalog are used by isolated
-    # tests and compatibility clients. Preserve the supplied TM1 inventory
-    # exactly in that mode. Production CLI calls explicitly pass OBJECTS_FILE,
-    # where regular/control scope filtering is applied by
-    # object_catalog_dimension_names().
     names = get_dimension_names_from_tm1(tm1)
+    if scope == "regular":
+        names = [name for name in names if not is_control_name(name)]
+    elif scope == "control":
+        names = [name for name in names if is_control_name(name)]
     return names, "TM1_DIMENSION_SERVICE"
 
 
@@ -426,10 +425,10 @@ def collect_attributes(
     dimensions: list[str] | None = None,
     snapshot_root: Path = SNAPSHOT_ROOT,
     current_root: Path = CURRENT_ROOT,
-    object_catalog_path: Path | None = None,
+    object_catalog_path: Path = OBJECTS_FILE,
     timestamp: datetime | None = None,
     publish_current: bool = True,
-    progress: bool = False,
+    progress: bool = True,
 ) -> dict[str, Any]:
     if scope not in VALID_SCOPES:
         raise ValueError(f"Unsupported scope: {scope}")
@@ -438,9 +437,7 @@ def collect_attributes(
     started_clock = perf_counter()
     run_snapshot_id = build_snapshot_id(started)
     collected_at = started.isoformat()
-    # Preserve the established attribute snapshot contract. Attribute files
-    # live directly under the timestamped snapshot directory.
-    snapshot_dir = snapshot_root / run_snapshot_id
+    snapshot_dir = snapshot_root / run_snapshot_id / "attributes"
 
     records_by_key: dict[tuple[str, str, str], dict[str, Any]] = {}
     errors: list[dict[str, Any]] = []
@@ -700,7 +697,6 @@ def main(argv: list[str] | None = None) -> int:
                     tm1,
                     scope=args.scope,
                     dimensions=args.dimensions,
-                    object_catalog_path=OBJECTS_FILE,
                     publish_current=not args.no_publish,
                     progress=not args.quiet,
                 )

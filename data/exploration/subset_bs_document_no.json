@@ -1,0 +1,15 @@
+[
+  {
+    "snapshot_id": "20260924T160750Z",
+    "collected_at": "2026-09-24T11:07:50.624918-05:00",
+    "node_id": "hierarchy::BS Document No::BS Document No",
+    "node_type": "HIERARCHY",
+    "object_type": "hierarchy",
+    "object_name": "BS Document No::BS Document No",
+    "qualified_name": "BS Document No::BS Document No",
+    "dimension_name": "BS Document No",
+    "hierarchy_name": "BS Document No",
+    "is_default_hierarchy": true,
+    "is_control": false
+  }
+]
