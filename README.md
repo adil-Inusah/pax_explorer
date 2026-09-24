@@ -1,77 +1,154 @@
 # Pax Explorer
 
-Pax Explorer is a metadata discovery and lineage analysis framework for IBM Planning Analytics / TM1. The project collects TM1 object inventory, parses TurboIntegrator process code and cube rules, validates discovered references, and converts the results into a unified catalog model for documentation, dependency analysis, and future visualization.
+Pax Explorer is a governed metadata discovery, lineage analysis, and semantic catalog framework for IBM Planning Analytics / TM1. It inventories TM1 objects and structural definitions, parses TurboIntegrator processes and cube rules, validates discovered references, catalogs operational dependencies, and prepares graph-ready relationships for documentation and impact analysis.
 
-## Current Capabilities
+The project separates source collection from semantic resolution. Collectors preserve evidence and publish stable current outputs only after complete runs. Profilers and future resolvers build derived meaning without overwriting the original parser artifacts.
 
-Pax Explorer currently supports three collection layers:
+## Current Project Status
 
-1. **Metadata inventory**: discovers TM1 cubes, dimensions, processes, and chores.
-2. **TurboIntegrator lineage**: analyzes TI procedure code to identify process-driven relationships.
-3. **Cube rule lineage**: analyzes cube rules and feeders to identify calculation-driven relationships.
+The collection and structural-catalog foundation is complete.
 
-The collected data can be adapted into a unified catalog model through the existing catalog adapter.
+| Domain | Verified inventory |
+|---|---:|
+| Core objects | 1,685 |
+| Cubes | 379 |
+| Dimensions | 902 |
+| Processes | 386 |
+| Chores | 18 |
+| Attributes | 2,719 |
+| Hierarchies | 927 |
+| Public subsets | 10,201 |
+| Public views | 2,059 |
+| Chore tasks | 67 |
+| Chore parameter bindings | 148 |
+| Cube-dimension relationships | 1,154 |
+| TI relationships | 4,019 |
+| Rule relationships | 267 |
+
+The corrected process data-source inventory covers all 386 processes, including 280 processes with configured sources and 107 unique source definitions.
+
+The catalog-matching profiler currently evaluates 2,933 deferred references with full reconciliation and zero profiler errors. The latest verified classification distribution is:
+
+```text
+AMBIGUOUS_MATCH                 1
+DEFAULT_HIERARCHY_MATCH     1,625
+DYNAMIC_REFERENCE            557
+EXACT_MATCH                   50
+EXISTING_CREATE_TARGET       599
+INSUFFICIENT_CONTEXT           1
+MISSING_DELETE_TARGET         33
+TARGET_NOT_IN_CATALOG         22
+VALID_CREATE_TARGET           45
+```
+
+The profiler identifies 1,720 initial automatic-resolution candidates and 1,213 review or unresolved records.
+
+## Capabilities
+
+Pax Explorer currently supports:
+
+- Core TM1 object inventory for cubes, dimensions, processes, and chores
+- Regular and control object classification
+- TurboIntegrator relationship parsing across Prolog, Metadata, Data, and Epilog
+- Cube rule and feeder relationship parsing
+- TI process parameter inventory and parameter-resolution provenance
+- Attribute inventory across regular, control, default, and alternate hierarchies
+- First-class hierarchy inventory
+- Public static and MDX subset definition inventory using selective REST retrieval
+- Public view identity inventory using selective REST retrieval
+- Ordered cube-to-dimension structural relationships
+- Ordered chore-task lineage and process parameter bindings
+- Process data-source classification and credential-safe publication
+- Operational file, command, executable, and script dependencies
+- Quality exception governance
+- Catalog match profiling for attributes, hierarchies, subsets, and views
+- Complete-run publication protection and timestamped diagnostic snapshots
+- Holistic smoke testing and automated regression testing
 
 ## Architecture
 
 ```text
 TM1 Server
-    |
-    +-- Metadata Collector
-    |       +-- Cubes
-    |       +-- Dimensions
-    |       +-- Processes
-    |       +-- Chores
-    |
-    +-- TI Lineage Collector
-    |       +-- Prolog
-    |       +-- Metadata
-    |       +-- Data
-    |       +-- Epilog
-    |
-    +-- Rule Lineage Collector
-            +-- Cube rules
-            +-- Cross-cube references
-            +-- Dimension references
-            +-- Hierarchy references
-            +-- Attribute references
-            +-- Feeders
-
-Collected JSON
-    |
-    +-- Snapshot history
-    +-- Current published results
-    +-- Unified catalog adapter
+|
++-- Core Metadata
+|   +-- Cubes
+|   +-- Dimensions
+|   +-- Processes
+|   +-- Chores
+|
++-- Structural Metadata
+|   +-- Cube -> Dimension
+|   +-- Dimension -> Hierarchy
+|   +-- Hierarchy -> Attribute
+|   +-- Hierarchy -> Public Subset
+|   +-- Cube -> Public View
+|
++-- TI Lineage
+|   +-- Process procedures
+|   +-- Direct relationships
+|   +-- Parameter-derived relationships
+|   +-- Relationship evidence
+|
++-- Rule Lineage
+|   +-- Rules
+|   +-- Cross-cube references
+|   +-- Hierarchy and attribute references
+|   +-- Feeders
+|
++-- Operational Lineage
+|   +-- Chore tasks
+|   +-- Process data sources
+|   +-- Files
+|   +-- Commands
+|   +-- Executables and scripts
+|
++-- Semantic Analysis
+    +-- Catalog match profiles
+    +-- Review queue
+    +-- Future semantic validation plan
+    +-- Future unified graph projection
 ```
 
-The inventory layer answers **what objects exist**. The lineage layers answer **how those objects are related**.
+The inventory layers answer **what exists**. Structural relationships answer **how TM1 objects are assembled**. TI, rule, chore, source, and operational relationships answer **how objects are used**. The semantic layer determines which references resolve safely to canonical catalog nodes.
 
 ## Repository Structure
 
 ```text
 Pax_explorer/
-├── config/                         # Application configuration
-├── credentials/                    # Local credential resources, not committed
-├── data/                           # Generated snapshots and current outputs
+├── config/
+│   └── catalog_quality_exceptions.json
+├── credentials/                         # Local only, never commit
+├── data/
+│   ├── current/                         # Latest complete governed outputs
+│   ├── snapshots/                       # Timestamped run artifacts
+│   └── review/                          # Optional local review exports
 ├── models/
-│   ├── __init__.py
-│   ├── catalog.py                  # Unified catalog domain model
-│   └── catalog_adapter.py          # Existing JSON-to-catalog adapter
+│   ├── catalog.py
+│   └── catalog_adapter.py
 ├── parsers/
-│   ├── __init__.py
-│   ├── rule_parser.py              # TM1 cube rule and feeder parser
-│   └── ti_parser.py                # TurboIntegrator code parser
+│   ├── rule_parser.py
+│   ├── ti_parameter_resolver.py
+│   └── ti_parser.py
 ├── scripts/
-│   ├── __init__.py
-│   ├── adapt_existing_catalog.py   # Builds unified catalog output
-│   ├── check_tm1_connection.py     # Tests the TM1 connection
-│   ├── collect_tm1_metadata.py     # Collects TM1 object inventory
-│   ├── collect_tm1_rule_lineage.py # Collects cube rule lineage
-│   └── collect_tm1_ti_lineage.py   # Collects TI process lineage
-├── tests/                          # Automated tests
-├── utilities/                      # Shared TM1 connection utilities
-├── .env                            # Local environment values, not committed
-├── .env.example                    # Environment variable template
+│   ├── adapt_existing_catalog.py
+│   ├── build_operational_dependencies.py
+│   ├── check_tm1_connection.py
+│   ├── collect_tm1_attributes.py
+│   ├── collect_tm1_chore_tasks.py
+│   ├── collect_tm1_cube_dimensions.py
+│   ├── collect_tm1_hierarchies.py
+│   ├── collect_tm1_metadata.py
+│   ├── collect_tm1_process_data_sources.py
+│   ├── collect_tm1_rule_lineage.py
+│   ├── collect_tm1_subsets.py
+│   ├── collect_tm1_ti_lineage.py
+│   ├── collect_tm1_views.py
+│   └── profile_tm1_catalog_matches.py
+├── tests/
+├── utilities/
+│   └── tm1_connection.py
+├── holistic_smoke_test.py
+├── .env.example
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -79,20 +156,16 @@ Pax_explorer/
 
 ## Prerequisites
 
-- Windows, Linux, or macOS with network access to the TM1 REST API
+- Windows, Linux, or macOS with access to the TM1 REST API
 - Python 3.12 recommended
-- A TM1 account with sufficient permission to read:
-  - Cubes and cube rules
-  - Dimensions
-  - Processes and TI procedure text
-  - Chores
-- A configured TM1 REST API connection
+- A TM1 account allowed to read the required cubes, dimensions, hierarchies, attributes, processes, procedures, rules, chores, views, and subsets
+- A configured TM1 REST connection
 
-The current verified development environment uses Python 3.12.10.
+The verified development environment uses Python 3.12.
 
 ## Installation
 
-### 1. Clone the repository
+### 1. Clone and enter the repository
 
 ```powershell
 git clone <repository-url>
@@ -105,7 +178,7 @@ cd Pax_explorer
 python -m venv .venv
 ```
 
-### 3. Activate the virtual environment
+### 3. Activate it
 
 PowerShell:
 
@@ -115,7 +188,7 @@ PowerShell:
 
 Command Prompt:
 
-```cmd
+```bat
 .venv\Scripts\activate.bat
 ```
 
@@ -132,581 +205,622 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-## Configuration
+## Configuration and Security
 
-Copy the environment template and populate the local values:
+Copy the environment template:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-Use the variable names already defined in `.env.example`. Do not commit `.env` or credential files.
-
-The connection implementation is located in:
+Populate the variables defined in `.env.example`. The connection implementation is in:
 
 ```text
 utilities/tm1_connection.py
 ```
 
-Confirm that `.gitignore` protects at least:
+Never commit:
 
-```gitignore
+```text
 .env
+credentials/
 .venv/
 __pycache__/
-*.py[cod]
 .pytest_cache/
-credentials/*
 data/current/
 data/snapshots/
 ```
 
-Generated TM1 metadata can contain object names, process source code, cube rules, and environment-specific details. Treat generated lineage data as potentially sensitive.
+Generated metadata can contain object names, rule text, process code, file paths, SQL information, operational commands, and environment-specific details. Treat published catalog data as sensitive unless explicitly approved for version control.
+
+The data-source and operational collectors redact likely credential values. Do not weaken these controls, and review generated outputs before external distribution.
 
 ## Verify the TM1 Connection
 
-Run the connection check before starting collection:
+Run the connection test before collection:
 
 ```powershell
-python .\scripts\check_tm1_connection.py
+python -m scripts.check_tm1_connection
 ```
 
-Resolve authentication, SSL, host, port, namespace, or permission errors before running the collectors.
+Resolve authentication, SSL, host, namespace, permission, and connectivity errors before running the governed pipeline.
 
-## Collection Workflow
+## Governed Collection Workflow
 
-Run the metadata collector first. The TI and rule lineage collectors require the current object catalog for relationship validation.
+Run collectors in dependency order.
 
-```text
-1. Connection check
-2. Metadata collection
-3. TI lineage collection
-4. Rule lineage collection
-5. Catalog adaptation
-```
-
-### Step 1: Collect TM1 Metadata
+### Phase A: Core catalogs
 
 ```powershell
-python .\scripts\collect_tm1_metadata.py
+python -m scripts.collect_tm1_metadata
+python -m scripts.collect_tm1_ti_lineage
+python -m scripts.collect_tm1_rule_lineage
 ```
 
-The metadata collector retrieves object names for:
-
-- Cubes
-- Dimensions
-- Processes
-- Chores
-
-The collector publishes a current object inventory only when the collection completes successfully.
-
-Primary output:
-
-```text
-data/current/objects.json
-```
-
-### Step 2: Collect TI Process Lineage
+### Phase B: First-class structure
 
 ```powershell
-python .\scripts\collect_tm1_ti_lineage.py
+python -m scripts.collect_tm1_attributes
+python -m scripts.collect_tm1_hierarchies --scope all
+python -m scripts.collect_tm1_subsets
+python -m scripts.collect_tm1_views
+python -m scripts.collect_tm1_cube_dimensions --scope all
 ```
 
-The TI collector:
-
-1. Retrieves all TM1 processes.
-2. Reads the Prolog, Metadata, Data, and Epilog procedures.
-3. Passes the procedure text to `parsers/ti_parser.py`.
-4. Creates detailed evidence records.
-5. Summarizes repeated relationships.
-6. Validates referenced objects against `data/current/objects.json`.
-7. Preserves errors by process.
-
-Typical TI relationships include:
-
-```text
-Process -> Cube
-Process -> Dimension
-Process -> View
-Process -> Subset
-Process -> Process
-```
-
-### Step 3: Collect Cube Rule Lineage
+### Phase C: Operational lineage
 
 ```powershell
-python .\scripts\collect_tm1_rule_lineage.py
+python -m scripts.collect_tm1_chore_tasks
+python -m scripts.collect_tm1_process_data_sources
+python -m scripts.build_operational_dependencies
 ```
 
-The rule collector:
-
-1. Retrieves all TM1 cubes.
-2. Reads the available cube rule text.
-3. Passes the rule text to `parsers/rule_parser.py`.
-4. Separates detailed evidence from summarized relationships.
-5. Identifies ordinary rule references and feeder relationships.
-6. Validates target references against the current object catalog.
-7. Preserves errors by cube.
-
-Typical rule relationships include:
-
-```text
-Cube -> Cube
-Cube -> Dimension
-Cube -> Hierarchy
-Cube -> Attribute
-Cube -> Feeder target
-```
-
-### Step 4: Adapt Existing Results into the Unified Catalog
-
-After current metadata and lineage files are available, run:
+### Phase D: Semantic profiling
 
 ```powershell
-python .\scripts\adapt_existing_catalog.py `
-    --environment <environment-name> `
-    --database <tm1-database-name>
+python -m scripts.profile_tm1_catalog_matches
+```
+
+For a diagnostic run that must not update `data/current`, add:
+
+```powershell
+--no-publish
 ```
 
 Example:
 
 ```powershell
-python .\scripts\adapt_existing_catalog.py `
-    --environment STAGING `
-    --database Finance
+python -m scripts.profile_tm1_catalog_matches --no-publish
 ```
 
-By default, the adapter reads from:
+## Collector Details
 
-```text
-data/current/
-```
-
-and writes unified catalog files under:
-
-```text
-data/catalog/
-```
-
-Use the optional arguments when different folders are required:
+### Core Metadata
 
 ```powershell
-python .\scripts\adapt_existing_catalog.py `
-    --environment STAGING `
-    --database Finance `
-    --current-root .\data\current `
-    --output-root .\data\catalog
+python -m scripts.collect_tm1_metadata
+```
+
+Publishes the canonical object inventory, including regular and control object splits.
+
+Primary files include:
+
+```text
+objects.json
+regular_objects.json
+control_objects.json
+manifest.json
+metadata_errors.json
+```
+
+### TI Lineage
+
+```powershell
+python -m scripts.collect_tm1_ti_lineage
+```
+
+The TI collector:
+
+- Retrieves every process definition
+- Reads Prolog, Metadata, Data, and Epilog
+- Parses relationship evidence
+- Summarizes repeated references
+- Resolves parameter-derived relationships
+- Validates references against the object catalog
+- Publishes parameter definitions, bindings, aliases, rejection inventories, and metrics
+
+Typical relationships include:
+
+```text
+Process -> Process
+Process -> Cube
+Process -> Dimension
+Process -> Hierarchy
+Process -> Attribute
+Process -> Subset
+Process -> View
+Process -> File
+Process -> Command
+```
+
+### Rule Lineage
+
+```powershell
+python -m scripts.collect_tm1_rule_lineage
+```
+
+The rule collector parses rules and feeders, preserves evidence, summarizes graph-ready relationships, and validates references against the current catalog.
+
+### Attributes
+
+```powershell
+python -m scripts.collect_tm1_attributes
+```
+
+The verified inventory contains 2,719 attributes across 902 dimensions and 927 hierarchies.
+
+### Hierarchies
+
+```powershell
+python -m scripts.collect_tm1_hierarchies --scope all
+```
+
+Publishes one first-class hierarchy node and one `BELONGS_TO_DIMENSION` relationship per hierarchy.
+
+### Public Subsets
+
+```powershell
+python -m scripts.collect_tm1_subsets
+```
+
+The collector uses selective REST retrieval and does not expand static subset members during routine catalog collection. It classifies static and MDX subsets and publishes hierarchy and dimension ownership relationships.
+
+Verified inventory:
+
+```text
+Public subsets: 10,201
+Relationships:  20,402
+Validations:    20,402
+```
+
+### Public Views
+
+```powershell
+python -m scripts.collect_tm1_views
+```
+
+The current view collector performs a selective public identity inventory. Subtype-specific native and MDX definition enrichment is intentionally deferred.
+
+Verified inventory:
+
+```text
+Public views:  2,059
+Relationships: 2,059
+Validations:   2,059
+```
+
+### Cube Dimensions
+
+```powershell
+python -m scripts.collect_tm1_cube_dimensions --scope all
+```
+
+Publishes ordered structural edges:
+
+```text
+Cube -> USES_DIMENSION -> Dimension
+```
+
+Each edge retains `dimension_position`.
+
+Verified inventory:
+
+```text
+Cubes:         379
+Relationships: 1,154
+Validations:   1,154
+```
+
+### Chore Tasks
+
+```powershell
+python -m scripts.collect_tm1_chore_tasks
+```
+
+Publishes:
+
+```text
+Chore -> HAS_TASK -> ChoreTask
+ChoreTask -> CALLS_PROCESS -> Process
+ChoreTask -> PASSES_PARAMETER -> ProcessParameter
+```
+
+Verified inventory:
+
+```text
+Chores:         18
+Tasks:          67
+Bindings:      148
+Relationships: 282
+Validations:   282
+```
+
+### Process Data Sources
+
+```powershell
+python -m scripts.collect_tm1_process_data_sources
+```
+
+The collector reads flattened TM1py `datasource_*` fields and classifies sources such as ASCII/file, ODBC, cube view, dimension subset, JSON, none, or unknown.
+
+Verified inventory:
+
+```text
+Processes:          386
+Configured:         280
+Unique data sources:107
+Relationships:      375
+Validations:        375
+```
+
+Plaintext passwords are never published. Usernames are represented by presence flags and hashes where applicable.
+
+### Operational Dependencies
+
+```powershell
+python -m scripts.build_operational_dependencies
+```
+
+Normalizes files, scripts, commands, and executables without executing commands or accessing external paths.
+
+Relationship examples:
+
+```text
+Process -> WRITES_FILE -> File
+Process -> EXECUTES_COMMAND -> Command
+Command -> INVOKES_EXECUTABLE -> Executable
+Command -> REFERENCES_SCRIPT -> Script
+```
+
+### Catalog Match Profiler
+
+```powershell
+python -m scripts.profile_tm1_catalog_matches
+```
+
+The profiler is analytical and non-destructive. It does not overwrite TI or rule validations. It evaluates deferred attribute, hierarchy, subset, and view references against the governed catalogs.
+
+Supported join methods:
+
+```text
+RELATIONSHIP_ID
+SEMANTIC_KEY
+SEMANTIC_GROUP_ORDINAL
+```
+
+Supported classifications:
+
+```text
+EXACT_MATCH
+DEFAULT_HIERARCHY_MATCH
+UNIQUE_HIERARCHY_MATCH
+UNIQUE_GLOBAL_MATCH
+AMBIGUOUS_MATCH
+DYNAMIC_REFERENCE
+TARGET_NOT_IN_CATALOG
+VALID_CREATE_TARGET
+EXISTING_CREATE_TARGET
+MISSING_DELETE_TARGET
+INSUFFICIENT_CONTEXT
+```
+
+The profiler understands compact parser targets such as:
+
+```text
+Employee.Caption
+}Processes.Source File
+Fiscal Period.sSrcView
+Balance Sheet.sTgtView
+```
+
+## Publication Contract
+
+Collectors and builders use these states:
+
+- `COMPLETE`: all requested records were processed successfully
+- `PARTIAL`: diagnostic snapshot written, current known-good output preserved
+- `FAILED`: primary workflow failed
+- `RUNNING`: collector started but has not completed, where supported
+
+Only `COMPLETE` runs replace governed files under `data/current`.
+
+A typical safe workflow is:
+
+```powershell
+python -m scripts.collect_tm1_subsets --no-publish
+# Review snapshot outputs
+python -m scripts.collect_tm1_subsets
 ```
 
 ## Generated Data
 
-### Snapshot Data
+### Snapshot outputs
 
-Each collection run creates timestamped output under `data/snapshots`.
+Every run writes timestamped diagnostics under:
 
 ```text
 data/snapshots/<snapshot-id>/
-├── ti_lineage/
-│   ├── process_definitions.json
-│   ├── relationship_evidence.json
-│   ├── relationships.json
-│   ├── relationship_validations.json
-│   ├── errors.json
-│   └── manifest.json
-└── rule_lineage/
-    ├── cube_rule_definitions.json
-    ├── relationship_evidence.json
-    ├── relationships.json
-    ├── relationship_validations.json
-    ├── errors.json
-    └── manifest.json
 ```
 
-Metadata inventory files are stored at the applicable snapshot root created by `collect_tm1_metadata.py`.
+TI and rule collectors retain source-specific subdirectories. Newer first-class collectors publish their domain artifacts at the snapshot root.
 
-### Current Published Data
+### Current outputs
 
-A complete run publishes its latest usable output under `data/current`.
-
-Expected structure:
+A complete run publishes the latest governed artifacts under:
 
 ```text
 data/current/
-├── objects.json
-├── manifest.json
-├── ti_process_definitions.json
-├── ti_relationship_evidence.json
-├── ti_relationships.json
-├── ti_relationship_validations.json
-├── ti_lineage_manifest.json
-├── cube_rule_definitions.json
-├── rule_relationship_evidence.json
-├── rule_relationships.json
-├── rule_relationship_validations.json
-└── rule_lineage_manifest.json
 ```
 
-The TI and rule prefixes prevent one lineage source from overwriting another in the shared current directory.
-
-## Snapshot and Publication Behavior
-
-Collector manifests use the following status values:
-
-- `COMPLETE`: all requested objects were collected and processed successfully.
-- `PARTIAL`: one or more objects failed, but diagnostic snapshot files were produced.
-- `FAILED`: the collection could not complete its primary workflow.
-- `RUNNING`: the metadata collector has started but has not finished.
-
-Only complete lineage runs should replace files under `data/current`. Partial results remain in the timestamped snapshot folder for diagnosis.
-
-This publication model protects the latest known-good result from incomplete collection runs.
-
-## Rule Parser Coverage
-
-The initial rule parser recognizes the following TM1 functions:
-
-### Cross-cube data references
+Major current artifact groups include:
 
 ```text
-DB
+Core metadata
+TI and rule lineage
+Attributes
+Hierarchies
+Public subsets
+Public views
+Cube dimensions
+Chore tasks
+Process data sources
+Operational dependencies
+Catalog match profiles
 ```
 
-A normal `DB` reference produces a `READS_FROM` relationship. A `DB` call found in a feeder statement produces a `FEEDS` relationship.
+Source-specific prefixes prevent collectors from overwriting one another.
 
-### Attribute references
+## Evidence, Relationships, and Validations
 
-```text
-ATTRS
-ATTRN
-```
+Pax Explorer preserves three levels of meaning:
 
-These functions produce `USES_ATTRIBUTE` evidence and retain the referenced dimension and attribute when those arguments are string literals.
+### Evidence
 
-### Dimension references
-
-```text
-DIMIX
-DIMNM
-DIMSIZ
-```
-
-These functions produce `REFERENCES_DIMENSION` evidence.
-
-### Element and hierarchy references
-
-```text
-ELPAR
-ELCOMP
-ELISANC
-ELLEV
-```
-
-These functions currently produce `REFERENCES_HIERARCHY` evidence.
-
-### Parser behavior
-
-The parser currently supports:
-
-- Case-insensitive TM1 function matching
-- Multiline function calls
-- Nested function calls
-- Balanced-parenthesis extraction
-- String-aware argument splitting
-- `#`, `//`, and `/* ... */` comment masking
-- Source line numbers
-- Detailed source expressions
-- Feeder detection
-- Literal target extraction
-- Dynamic target preservation
-- Relationship summarization
-
-Dynamic targets are preserved rather than discarded. For example:
-
-```text
-DB(IF(condition, 'Actual Cube', 'Plan Cube'), ...)
-```
-
-produces a relationship with the original target expression and a target name that remains unresolved until static-expression analysis is added.
-
-## Relationship Evidence and Summaries
-
-Pax Explorer intentionally stores information at two levels.
-
-### Evidence records
-
-Evidence records preserve where and how a relationship was discovered, including:
-
-- Source object
-- Target object or expression
-- TM1 function
-- Relationship type
-- Source line number
-- Original expression
-- Feeder status
-- Confidence level
+Evidence records retain discovery context such as source procedure, line, expression, TM1 function, feeder state, and confidence.
 
 ### Summarized relationships
 
-Summary records collapse repeated evidence into graph-ready relationships while retaining an evidence count and first observed line.
+Summary records collapse repeated evidence into graph-ready relationships while retaining counts and provenance.
 
-For example, 15 references from one cube to another can be represented as:
+### Validations
 
-```text
-15 evidence records
-1 summarized relationship
-```
+Validation records preserve whether the reference is valid, deferred, dynamic, missing, ambiguous, external, or accepted through a governed exception.
 
-This supports both detailed auditability and simplified dependency diagrams.
-
-## Validation
-
-Lineage relationships are evaluated against the current metadata inventory.
-
-The rule parser currently distinguishes between:
-
-- Literal targets ready for catalog lookup
-- Dynamic targets requiring additional resolution
-
-Initial rule validation statuses include:
+Every published relationship domain must reconcile:
 
 ```text
-PENDING_CATALOG_LOOKUP
-PENDING_DYNAMIC_RESOLUTION
+relationship count = validation count
 ```
 
-Catalog-aware existence checks and normalized lookup behavior remain an active implementation area.
+## Quality Exceptions
 
-## Running Tests
+Governed exceptions are stored in:
 
-Run the complete test suite from the repository root:
+```text
+config/catalog_quality_exceptions.json
+```
+
+Exceptions must be explicit and traceable. They must not silently hide unregistered missing targets.
+
+## Testing
+
+Run the complete suite:
 
 ```powershell
-python -m pytest
+python -m pytest -q
 ```
 
-Run with verbose test names:
+The latest verified baseline before this README update was 173 passing tests, subject to the exact checked-out test set.
+
+Run profiler tests:
+
+```powershell
+python -m pytest \
+    .\tests\test_profile_tm1_catalog_matches.py \
+    .\tests\test_profile_tm1_catalog_context.py \
+    -q
+```
+
+Run verbose tests:
 
 ```powershell
 python -m pytest -v
 ```
 
-Run an individual parser test module:
+Run coverage when `pytest-cov` is installed:
 
 ```powershell
-python -m pytest .\tests\test_rule_parser.py -v
-python -m pytest .\tests\test_ti_parser.py -v
+python -m pytest \
+    --cov=models \
+    --cov=parsers \
+    --cov=scripts \
+    --cov=utilities \
+    --cov-report=term-missing
 ```
 
-Run coverage if `pytest-cov` is installed:
+## Holistic Smoke Test
+
+Run:
 
 ```powershell
-python -m pytest --cov=models --cov=parsers --cov=scripts --cov=utilities --cov-report=term-missing
+python .\holistic_smoke_test.py \
+    .\data\current \
+    --exceptions .\config\catalog_quality_exceptions.json
 ```
 
-Current verified baseline:
-
-```text
-56 tests passed
-```
-
-The existing suite covers the catalog, catalog adapter, TM1 connection checks, metadata collector, rule parser, and TI parser. Dedicated tests for the TI and rule lineage collectors should be added next.
+The smoke test validates parseability, catalog counts, relationship-validation reconciliation, exception governance, and selected structural invariants. Extend the smoke test whenever a new governed domain is added.
 
 ## Syntax Validation
 
-Compile the primary scripts and parsers without executing a TM1 collection:
+Compile changed modules before collection:
 
 ```powershell
-python -m py_compile .\scripts\collect_tm1_metadata.py
-python -m py_compile .\scripts\collect_tm1_ti_lineage.py
-python -m py_compile .\scripts\collect_tm1_rule_lineage.py
-python -m py_compile .\parsers\ti_parser.py
-python -m py_compile .\parsers\rule_parser.py
+python -m py_compile \
+    .\scripts\profile_tm1_catalog_matches.py \
+    .\tests\test_profile_tm1_catalog_matches.py \
+    .\tests\test_profile_tm1_catalog_context.py
 ```
 
-No console output indicates a successful compilation.
+No output indicates successful compilation.
 
 ## Troubleshooting
 
-### Python cannot open a collector file
+### A run is `PARTIAL`
 
-Run collectors from the repository root and use the `scripts` directory:
+Inspect the timestamped snapshot. Partial runs intentionally do not replace `data/current`.
 
-```powershell
-python .\scripts\collect_tm1_ti_lineage.py
-python .\scripts\collect_tm1_rule_lineage.py
-```
+### The process data-source inventory reports zero configured sources
 
-Do not use `collectors` unless the project structure is intentionally changed.
-
-### Current object catalog was not found
-
-Run the metadata collector first:
-
-```powershell
-python .\scripts\collect_tm1_metadata.py
-```
-
-Confirm that this file exists:
+Confirm that the collector reads flattened TM1py process properties such as:
 
 ```text
-data/current/objects.json
+datasource_type
+datasource_query
+datasource_view
+datasource_subset
+datasource_data_source_name_for_server
 ```
 
-### A lineage run is marked PARTIAL
+### A selective REST request returns HTTP 400
 
-Inspect the run-specific error file:
+Use only server-supported structural fields in `$select`. For public views, the current identity collector requests `Name` only because `@odata.type` is an annotation and is not accepted in the `$select` list by the verified environment.
 
-```text
-data/snapshots/<snapshot-id>/ti_lineage/errors.json
-data/snapshots/<snapshot-id>/rule_lineage/errors.json
-```
+### Profiler returns join errors
 
-A partial run is retained for diagnosis but should not replace the latest complete output.
-
-### Rule text is not detected
-
-Review the TM1py cube object returned by the connected environment. The rule collector normalizes several likely properties, but TM1py version differences or mocked objects may expose rule text differently.
-
-Add a new property mapping in `get_cube_rule_text()` only after confirming the actual cube object shape.
+Inspect `catalog_match_errors.json`. The profiler supports explicit IDs, unique semantic keys, and duplicate semantic groups. Group-size mismatches remain errors by design.
 
 ### Import errors
 
-Run commands from the project root so the scripts can establish the correct root path and resolve imports from `models`, `parsers`, and `utilities`.
-
-Also confirm that the virtual environment is active and dependencies are installed:
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
-## Git Workflow
-
-After renaming or adding collectors, review Git's interpretation of the changes:
-
-```powershell
-git status
-git diff --stat
-git diff
-```
-
-Stage all intended changes:
-
-```powershell
-git add -A
-```
-
-Review the staged result:
-
-```powershell
-git status
-git diff --cached --stat
-git diff --cached
-```
-
-Git may display a manually renamed file as a deletion and addition until staging and similarity detection are applied.
+Run commands from the repository root with the project virtual environment active.
 
 ## Current Limitations
 
-- Rule parser function coverage is not yet complete.
-- Dynamic cube and dimension expressions are preserved but not fully resolved.
-- Rule validation is not yet fully connected to a canonical catalog lookup contract.
-- Chore execution lineage is not yet collected as a separate relationship source.
-- View and subset definitions are not yet independently cataloged.
-- Rule relationships currently focus on recognized function calls.
-- Dedicated collector-level tests for TI and rule collection are still needed.
-- Rule retrieval must be validated against the specific TM1py version used by the target environment.
+- Dynamic TI references remain unresolved unless existing parameter provenance can determine a safe value.
+- Public view collection currently inventories identities only; native-axis and MDX definition enrichment remain future work.
+- Private subsets and views are intentionally excluded from the governed public catalogs.
+- Element-level hierarchy membership is not cataloged as first-class graph structure.
+- External files, commands, and ODBC sources are identified but not physically cross-checked.
+- Existing create targets and missing delete targets require procedure-aware review.
+- The semantic resolution plan and unified graph projection are not yet published.
+- Rule and TI parser coverage can continue to expand as additional TM1 functions are identified.
 
-## Planned Development
+## Next Development Phase
 
-Recommended implementation order:
+The next phase is semantic resolution and unified graph construction.
 
-1. Validate rule collection against a live TM1 environment.
-2. Add tests for `collect_tm1_ti_lineage.py`.
-3. Add tests for `collect_tm1_rule_lineage.py`.
-4. Complete catalog-aware rule relationship validation.
-5. Review all TM1 rule functions that can expose dependencies.
-6. Add hierarchy-specific function coverage.
-7. Add static analysis for dynamic target expressions.
-8. Add chore-to-process lineage.
-9. Add view and subset lineage.
-10. Merge source-specific relationships into a unified graph.
-11. Generate cube, process, and dependency documentation.
-12. Add dependency diagrams and impact-analysis queries.
+Recommended order:
 
-The formal rule-function review should confirm every available path for detecting:
+1. Publish the completed catalog match profile
+2. Generate a non-destructive semantic validation resolution plan
+3. Apply only approved automatic resolutions to derived semantic validation files
+4. Preserve original parser validations unchanged
+5. Build unified graph nodes
+6. Build unified graph relationships and validations
+7. Add graph integrity and secret-scanning controls
+8. Add direct and transitive impact-analysis queries
+9. Add source-snapshot comparison and change detection
+10. Add searchable documentation and visualization
 
-- Cube reads
-- Cube feeders
-- Dimension use
-- Hierarchy use
-- Element relationships
-- Attribute reads
-- Dynamic object references
-- Conditional target references
+Planned semantic resolution outputs:
+
+```text
+catalog_validation_resolution_plan.json
+catalog_validation_resolution_summary.json
+catalog_validation_resolution_review.csv
+catalog_validation_resolution_manifest.json
+catalog_validation_resolution_errors.json
+```
+
+Initial automatic mappings:
+
+```text
+EXACT_MATCH
+    -> VALID
+
+DEFAULT_HIERARCHY_MATCH
+    -> VALID_DEFAULT_HIERARCHY_MATCH
+
+VALID_CREATE_TARGET
+    -> VALID_CREATE_TARGET
+```
+
+Review-required classifications include dynamic references, existing create targets, missing delete targets, catalog misses, ambiguous references, and insufficient context.
 
 ## Definition of Lineage Completeness
 
-Pax Explorer will be considered lineage-complete when the catalog can trace all relationships discoverable from available TM1 metadata across:
+Pax Explorer is lineage-complete when the governed graph can trace discoverable relationships across:
 
 ```text
 Cubes
 Dimensions
 Hierarchies
-Elements
 Attributes
-TI processes
-Cube rules
+Processes
+Rules
 Feeders
 Chores
+Chore tasks
 Views
 Subsets
+Data sources
+Files
+Commands
+Executables
+Scripts
 ```
 
-The target outcome is a graph that supports:
+The target graph must support:
 
 - Object documentation
 - Upstream and downstream dependency analysis
 - Change impact assessment
 - Operational flow analysis
-- Simplified architecture diagrams
 - Catalog search and navigation
+- Traceable validation and review decisions
+- Snapshot comparison
+- Simplified architecture diagrams
 
-## Security Considerations
+## Git Workflow
 
-Do not commit:
+Review changes:
 
-- `.env`
-- Passwords or API credentials
-- Authentication tokens
-- Private certificates or keys
-- Generated rule source from controlled environments
-- Generated process source from controlled environments
-- Production metadata snapshots unless explicitly approved
+```powershell
+git status --short
+git diff --stat
+git diff
+```
 
-Use `.env.example` to document required variable names without including secret values.
+Stage intended files:
+
+```powershell
+git add -A
+git status
+git diff --cached --stat
+```
+
+Do not stage generated current or snapshot outputs unless repository policy explicitly requires versioning them.
 
 ## Contributing
 
 Before submitting a change:
 
-1. Activate the virtual environment.
-2. Install the current requirements.
-3. Run syntax validation.
-4. Run the complete test suite.
-5. Inspect generated JSON when collector behavior changes.
-6. Update parser coverage documentation when adding TM1 functions.
-7. Update this README when commands, filenames, or output contracts change.
-
-Suggested validation sequence:
-
-```powershell
-python -m py_compile .\parsers\rule_parser.py
-python -m py_compile .\parsers\ti_parser.py
-python -m py_compile .\scripts\collect_tm1_rule_lineage.py
-python -m py_compile .\scripts\collect_tm1_ti_lineage.py
-python -m pytest
-```
-
-## Project Status
-
-Pax Explorer is under active development. The metadata inventory, catalog model, TI parser, rule parser, and source-specific lineage collection structure are established. The next milestone is validating the rule collector against live TM1 rules and completing the review of all TM1 functions that can reveal object relationships.
+1. Activate the virtual environment
+2. Install the current requirements
+3. Compile changed Python files
+4. Run focused tests
+5. Run the complete suite
+6. Run the holistic smoke test
+7. Inspect generated JSON and review queues
+8. Confirm relationship-validation reconciliation
+9. Confirm no secrets appear in generated artifacts
+10. Update this README when commands, files, outputs, or contracts change
