@@ -10,7 +10,6 @@ references so matching policy can be reviewed before validation statuses change.
 import argparse
 import csv
 import json
-import re
 import sys
 from collections import Counter, defaultdict
 from collections.abc import Mapping
@@ -271,35 +270,17 @@ def field(record: Mapping[str, Any], *names: str) -> str:
 
 
 def dynamic_value(value: str) -> bool:
-    """Identify expressions and conventional TI variable references.
-
-    TM1 TI string variables commonly use prefixes such as sSrcView, sTgtView,
-    pYear, vFile, and nCount. A bare catalog name containing spaces is not
-    treated as dynamic.
-    """
-    text = clean(value)
-    if not text:
+    if not value:
         return False
     markers = ("|", "${", "@{", "%", "&", "[", "]", "??")
-    if any(marker in text for marker in markers):
-        return True
-    return bool(re.fullmatch(r"[snpv][A-Z_][A-Za-z0-9_]*", text))
+    return any(marker in value for marker in markers)
 
 
 def split_qualified(value: str) -> list[str]:
     return [part.strip() for part in value.split("::") if part.strip()]
 
 
-def split_parent_leaf(value: str) -> tuple[str, str]:
-    """Split parser targets such as Employee.Caption at the rightmost dot."""
-    text = clean(value)
-    if "." not in text:
-        return "", text
-    parent, leaf = text.rsplit(".", 1)
-    return parent.strip(), leaf.strip()
-
-
-def generic_context(record: Mapping[str, Any]) -> dict[str, str]:
+def extract_context(record: Mapping[str, Any], domain: str) -> dict[str, str]:
     target_name = field(
         record,
         "target_name",
@@ -307,13 +288,9 @@ def generic_context(record: Mapping[str, Any]) -> dict[str, str]:
         "target_expression",
         "object_name",
     )
-    return {
-        "cube_name": field(
-            record,
-            "cube_name",
-            "target_cube",
-            "source_cube",
-        ),
+    parts = split_qualified(target_name)
+    context = {
+        "cube_name": field(record, "cube_name", "target_cube", "source_cube"),
         "dimension_name": field(
             record,
             "dimension_name",
@@ -332,98 +309,31 @@ def generic_context(record: Mapping[str, Any]) -> dict[str, str]:
         "target_name": target_name,
     }
 
-
-def extract_attribute_context(record: Mapping[str, Any]) -> dict[str, str]:
-    context = generic_context(record)
-    parts = split_qualified(context["target_name"])
-    parent, leaf = split_parent_leaf(context["target_name"])
-    if not context["attribute_name"]:
-        context["attribute_name"] = leaf
-    if not context["dimension_name"]:
-        if len(parts) >= 3:
-            context["dimension_name"] = parts[-3]
-        elif parent:
-            context["dimension_name"] = parent
-    if not context["hierarchy_name"] and len(parts) >= 2:
-        context["hierarchy_name"] = parts[-2]
-    return context
-
-
-def extract_subset_context(record: Mapping[str, Any]) -> dict[str, str]:
-    context = generic_context(record)
-    parts = split_qualified(context["target_name"])
-    parent, leaf = split_parent_leaf(context["target_name"])
-    if not context["subset_name"]:
-        context["subset_name"] = leaf
-    if not context["dimension_name"]:
-        if len(parts) >= 3:
-            context["dimension_name"] = parts[-3]
-        elif parent:
-            context["dimension_name"] = parent
-    if not context["hierarchy_name"] and len(parts) >= 2:
-        context["hierarchy_name"] = parts[-2]
-    return context
-
-
-def extract_view_context(record: Mapping[str, Any]) -> dict[str, str]:
-    context = generic_context(record)
-    parts = split_qualified(context["target_name"])
-    parent, leaf = split_parent_leaf(context["target_name"])
-    if not context["view_name"]:
-        context["view_name"] = leaf
-    if not context["cube_name"]:
-        if len(parts) >= 2:
-            context["cube_name"] = parts[-2]
-        elif parent:
-            context["cube_name"] = parent
-    return context
-
-
-def extract_hierarchy_context(record: Mapping[str, Any]) -> dict[str, str]:
-    context = generic_context(record)
-    parts = split_qualified(context["target_name"])
-    parent, leaf = split_parent_leaf(context["target_name"])
-    if not context["hierarchy_name"]:
-        context["hierarchy_name"] = leaf
-    if not context["dimension_name"]:
-        if len(parts) >= 2:
-            context["dimension_name"] = parts[-2]
-        elif parent:
-            context["dimension_name"] = parent
-    return context
-
-
-def extract_context(record: Mapping[str, Any], domain: str) -> dict[str, str]:
-    rel_type = relationship_type(record)
-    if rel_type in {
-        "READS_ATTRIBUTE",
-        "WRITES_ATTRIBUTE",
-        "USES_ATTRIBUTE",
-        "CREATES_ATTRIBUTE",
-        "DELETES_ATTRIBUTE",
-    }:
-        return extract_attribute_context(record)
-    if rel_type in {
-        "CREATES_SUBSET",
-        "UPDATES_SUBSET",
-        "DELETES_SUBSET",
-    }:
-        return extract_subset_context(record)
-    if rel_type in {"CREATES_VIEW", "USES_VIEW", "DELETES_VIEW"}:
-        return extract_view_context(record)
-    if rel_type in {"REFERENCES_HIERARCHY", "UPDATES_HIERARCHY"}:
-        return extract_hierarchy_context(record)
-
-    # Domain fallback for future relationship types.
-    if domain == "ATTRIBUTE":
-        return extract_attribute_context(record)
-    if domain == "SUBSET":
-        return extract_subset_context(record)
     if domain == "VIEW":
-        return extract_view_context(record)
-    if domain == "HIERARCHY":
-        return extract_hierarchy_context(record)
-    return generic_context(record)
+        if not context["view_name"]:
+            context["view_name"] = parts[-1] if parts else target_name
+        if not context["cube_name"] and len(parts) >= 2:
+            context["cube_name"] = parts[-2]
+    elif domain == "HIERARCHY":
+        if not context["hierarchy_name"]:
+            context["hierarchy_name"] = parts[-1] if parts else target_name
+        if not context["dimension_name"] and len(parts) >= 2:
+            context["dimension_name"] = parts[-2]
+    elif domain == "SUBSET":
+        if not context["subset_name"]:
+            context["subset_name"] = parts[-1] if parts else target_name
+        if not context["hierarchy_name"] and len(parts) >= 2:
+            context["hierarchy_name"] = parts[-2]
+        if not context["dimension_name"] and len(parts) >= 3:
+            context["dimension_name"] = parts[-3]
+    elif domain == "ATTRIBUTE":
+        if not context["attribute_name"]:
+            context["attribute_name"] = parts[-1] if parts else target_name
+        if not context["hierarchy_name"] and len(parts) >= 2:
+            context["hierarchy_name"] = parts[-2]
+        if not context["dimension_name"] and len(parts) >= 3:
+            context["dimension_name"] = parts[-3]
+    return context
 
 
 class CatalogIndexes:
