@@ -1,0 +1,289 @@
+{
+  "benchmark_type": "SINGLE_DIMENSION_ATTRIBUTE_DEFINITIONS",
+  "collected_at": "2026-09-24T14:43:08.879843+00:00",
+  "dimension_name": "plant",
+  "warmup": {
+    "dimension_name": "plant",
+    "hierarchy_count": 1,
+    "attribute_count": 29,
+    "hierarchy_list_seconds": 0.054822,
+    "total_seconds": 0.267475,
+    "hierarchy_name_source": "tm1.hierarchies.get_all_names",
+    "hierarchies": [
+      {
+        "hierarchy_name": "Plant",
+        "attribute_count": 29,
+        "hierarchy_get_seconds": 0.212533,
+        "attribute_parse_seconds": 0.000106,
+        "hierarchy_get_source": "tm1.hierarchies.get",
+        "attribute_source": "hierarchy.element_attributes",
+        "attributes": [
+          {
+            "attribute_name": "Address",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Alt Description",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "C/R",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "CAPTION",
+            "attribute_type": "Alias"
+          },
+          {
+            "attribute_name": "City",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Company",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Company Description",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Company Rollup 1",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Company Rollup 1 Description",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Company Rollup 2",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Company Rollup 2 Description",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Country",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "CustNoPlnt",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "DAC Plants",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "DAC Plants Description",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Description",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Legacy",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Name",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Order Adj",
+            "attribute_type": "Numeric"
+          },
+          {
+            "attribute_name": "OXY-CCA2 Rollup",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "OXY-CCA2 Rollup Description",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Plant Division",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Plant Name",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "PO Box",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Postal Code",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Rg",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "State",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Static Hierarchy",
+            "attribute_type": "String"
+          },
+          {
+            "attribute_name": "Tax Jurisdiction",
+            "attribute_type": "String"
+          }
+        ]
+      }
+    ]
+  },
+  "runs": [
+    {
+      "dimension_name": "plant",
+      "hierarchy_count": 1,
+      "attribute_count": 29,
+      "hierarchy_list_seconds": 0.052655,
+      "total_seconds": 0.229649,
+      "hierarchy_name_source": "tm1.hierarchies.get_all_names",
+      "hierarchies": [
+        {
+          "hierarchy_name": "Plant",
+          "attribute_count": 29,
+          "hierarchy_get_seconds": 0.176913,
+          "attribute_parse_seconds": 6.5e-05,
+          "hierarchy_get_source": "tm1.hierarchies.get",
+          "attribute_source": "hierarchy.element_attributes",
+          "attributes": [
+            {
+              "attribute_name": "Address",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Alt Description",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "C/R",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "CAPTION",
+              "attribute_type": "Alias"
+            },
+            {
+              "attribute_name": "City",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Company",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Company Description",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Company Rollup 1",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Company Rollup 1 Description",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Company Rollup 2",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Company Rollup 2 Description",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Country",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "CustNoPlnt",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "DAC Plants",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "DAC Plants Description",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Description",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Legacy",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Name",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Order Adj",
+              "attribute_type": "Numeric"
+            },
+            {
+              "attribute_name": "OXY-CCA2 Rollup",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "OXY-CCA2 Rollup Description",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Plant Division",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Plant Name",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "PO Box",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Postal Code",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Rg",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "State",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Static Hierarchy",
+              "attribute_type": "String"
+            },
+            {
+              "attribute_name": "Tax Jurisdiction",
+              "attribute_type": "String"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "run_count": 1,
+    "hierarchy_count": 1,
+    "attribute_count": 29,
+    "minimum_seconds": 0.229649,
+    "median_seconds": 0.229649,
+    "maximum_seconds": 0.229649,
+    "mean_seconds": 0.229649,
+    "estimated_902_dimension_seconds_at_mean": 207.14
+  }
+}
