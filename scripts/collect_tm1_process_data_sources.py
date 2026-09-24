@@ -142,7 +142,13 @@ def process_name_of(process: Any) -> str:
 
 
 def process_data_source_of(process: Any) -> Any:
-    return property_value(process, "data_source", "DataSource", "datasource")
+    """Return a nested REST source or the flattened TM1py Process object.
+
+    TM1py models data-source fields directly on Process as ``datasource_*``
+    properties. Raw REST dictionaries may instead expose a nested DataSource.
+    """
+    nested = property_value(process, "data_source", "DataSource", "datasource")
+    return nested if nested is not None else process
 
 
 def source_field(source: Any, *names: str) -> str:
@@ -155,6 +161,7 @@ def source_type_of(source: Any) -> str:
     raw_type = clean(
         property_value(
             source,
+            "datasource_type",
             "data_source_type",
             "dataSourceType",
             "type",
@@ -164,6 +171,14 @@ def source_type_of(source: Any) -> str:
         or type(source).__name__
     ).upper()
     compact = re.sub(r"[^A-Z0-9]", "", raw_type)
+
+    if compact in {"", "NONE", "PROCESS", "DICT", "MAPPING"}:
+        # A flattened Process still needs its datasource_type inspected.
+        flattened_type = clean(property_value(source, "datasource_type"))
+        flattened_compact = re.sub(r"[^A-Z0-9]", "", flattened_type.upper())
+        if flattened_compact in {"", "NONE"}:
+            return "NONE"
+        compact = flattened_compact
 
     if any(token in compact for token in ("ODBC", "SQL", "DATABASE")):
         return "ODBC"
@@ -176,18 +191,20 @@ def source_type_of(source: Any) -> str:
     if any(token in compact for token in ("ASCII", "CHARACTERDELIMITED", "FILE")):
         return "ASCII_FILE"
 
-    if source_field(source, "query", "Query"):
+    if source_field(source, "datasource_query", "query", "Query"):
         return "ODBC"
-    if source_field(source, "view", "View"):
+    if source_field(source, "datasource_view", "view", "View"):
         return "TM1_CUBE_VIEW"
-    if source_field(source, "subset", "Subset"):
+    if source_field(source, "datasource_subset", "subset", "Subset"):
         return "TM1_DIMENSION_SUBSET"
-    if source_field(source, "jsonRootPointer", "json_root_pointer"):
+    if source_field(source, "datasource_json_root_pointer", "jsonRootPointer", "json_root_pointer"):
         return "JSON"
     if source_field(
         source,
+        "datasource_data_source_name_for_server",
         "dataSourceNameForServer",
         "data_source_name_for_server",
+        "datasource_data_source_name_for_client",
         "dataSourceNameForClient",
         "data_source_name_for_client",
     ):
@@ -221,30 +238,23 @@ def get_process_service(tm1: Any) -> Any:
 
 
 def get_processes(service: Any) -> list[Any]:
-    get_all = getattr(service, "get_all", None)
-    if callable(get_all):
-        values = iterable_items(get_all(), description="TM1 process collection")
-        # Some TM1py versions return shallow objects from get_all(). Refresh only
-        # processes whose DataSource property is absent from the object entirely.
-        get_one = getattr(service, "get", None)
-        if callable(get_one):
-            refreshed: list[Any] = []
-            for process in values:
-                name = process_name_of(process)
-                has_field = (
-                    isinstance(process, Mapping)
-                    and ("DataSource" in process or "data_source" in process)
-                ) or hasattr(process, "data_source") or hasattr(process, "DataSource")
-                refreshed.append(process if has_field or not name else get_one(name))
-            return refreshed
-        return values
-
+    """Retrieve full process definitions so flattened datasource fields exist."""
     get_all_names = getattr(service, "get_all_names", None)
     get_one = getattr(service, "get", None)
-    if not callable(get_all_names) or not callable(get_one):
-        raise AttributeError("Process service supports neither get_all() nor names/get().")
-    names = iterable_items(get_all_names(), description="TM1 process-name collection")
-    return [get_one(clean(name)) for name in names if clean(name)]
+    if callable(get_all_names) and callable(get_one):
+        names = iterable_items(
+            get_all_names(),
+            description="TM1 process-name collection",
+        )
+        return [get_one(clean(name)) for name in names if clean(name)]
+
+    get_all = getattr(service, "get_all", None)
+    if callable(get_all):
+        return iterable_items(get_all(), description="TM1 process collection")
+
+    raise AttributeError(
+        "Process service supports neither get_all_names()/get() nor get_all()."
+    )
 
 
 def process_node_id(name: str) -> str:
@@ -280,20 +290,20 @@ def build_source_record(
 ) -> tuple[dict[str, Any], str]:
     source_type = source_type_of(source)
     server_name = source_field(
-        source, "dataSourceNameForServer", "data_source_name_for_server"
+        source, "datasource_data_source_name_for_server", "dataSourceNameForServer", "data_source_name_for_server"
     )
     client_name = source_field(
-        source, "dataSourceNameForClient", "data_source_name_for_client"
+        source, "datasource_data_source_name_for_client", "dataSourceNameForClient", "data_source_name_for_client"
     )
     cube_name = source_field(source, "cube", "Cube", "cube_name")
-    view_name = source_field(source, "view", "View", "view_name")
+    view_name = source_field(source, "datasource_view", "view", "View", "view_name")
     dimension_name = source_field(source, "dimension", "Dimension", "dimension_name")
     hierarchy_name = source_field(source, "hierarchy", "Hierarchy", "hierarchy_name")
-    subset_name = source_field(source, "subset", "Subset", "subset_name")
-    query = source_field(source, "query", "Query")
-    username = source_field(source, "userName", "username", "user_name")
-    password = source_field(source, "password", "Password")
-    json_root = source_field(source, "jsonRootPointer", "json_root_pointer")
+    subset_name = source_field(source, "datasource_subset", "subset", "Subset", "subset_name")
+    query = source_field(source, "datasource_query", "query", "Query")
+    username = source_field(source, "datasource_user_name", "userName", "username", "user_name")
+    password = source_field(source, "datasource_password", "password", "Password")
+    json_root = source_field(source, "datasource_json_root_pointer", "jsonRootPointer", "json_root_pointer")
 
     if source_type == "TM1_CUBE_VIEW":
         identity = f"{source_type}::{cube_name}::{view_name}"
