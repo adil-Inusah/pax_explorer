@@ -12,6 +12,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+"""Deferred full attribute collector.
+
+The full scan is not part of the production pipeline because hierarchy
+retrieval averages approximately 4.8 seconds per sampled dimension.
+Use tools/explore_tm1_dimension.py for on-demand inspection.
+"""
+
 ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
