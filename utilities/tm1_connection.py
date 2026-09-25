@@ -9,7 +9,7 @@ from TM1py import TM1Service
 
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-CONFIG_FILE = ROOT_DIR / "config" / "tm1_config.json"
+CONFIG_FILE = ROOT_DIR / "config" / "tm1_config.stg.json"
 
 DEFAULT_KEYRING_SERVICE = "OXYChem"
 
