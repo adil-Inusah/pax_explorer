@@ -25,7 +25,11 @@ def test_pipeline_dependency_order() -> None:
     assert names.index("semantic_resolution_plan") < names.index(
         "semantic_validations"
     )
-    assert names[-1] == "holistic_acceptance"
+    assert names[-3:] == [
+        "semantic_validations",
+        "unified_graph",
+        "holistic_acceptance",
+    ]
 
 
 def test_select_stages_supports_range() -> None:
@@ -82,7 +86,13 @@ def test_failure_restores_previous_current(tmp_path: Path, monkeypatch: Any) -> 
     monkeypatch.setattr(module, "REVIEW_ROOT", tmp_path / "data" / "review")
     monkeypatch.setattr(module, "BACKUP_ROOT", tmp_path / "data" / "pipeline_backups")
 
-    def fake_run(stage: module.Stage, *, dry_run: bool) -> dict[str, Any]:
+    def fake_run(
+        stage: module.Stage,
+        *,
+        dry_run: bool,
+        pipeline_run_id: str,
+    ) -> dict[str, Any]:
+        assert pipeline_run_id == "20260925T160000Z"
         if stage.category == "PREFLIGHT":
             return {
                 "name": stage.name,
@@ -178,3 +188,23 @@ def test_attribute_stage_uses_all_scope() -> None:
         "--scope",
         "all",
     )
+
+
+def test_unified_graph_stage_uses_active_pipeline_run_id() -> None:
+    stage = next(item for item in module.PIPELINE if item.name == "unified_graph")
+    assert stage.module == "scripts.build_unified_graph"
+    assert stage.category == "DERIVE"
+    assert module.stage_arguments(stage, pipeline_run_id="RUN123") == (
+        "--pipeline-run-id", "RUN123",
+    )
+    assert module.stage_command(stage, pipeline_run_id="RUN123")[-2:] == [
+        "--pipeline-run-id", "RUN123",
+    ]
+
+
+def test_graph_run_id_is_not_forwarded_to_other_stages() -> None:
+    for name in ("semantic_validations", "holistic_acceptance"):
+        stage = next(item for item in module.PIPELINE if item.name == name)
+        assert "--pipeline-run-id" not in module.stage_command(
+            stage, pipeline_run_id="RUN123"
+        )

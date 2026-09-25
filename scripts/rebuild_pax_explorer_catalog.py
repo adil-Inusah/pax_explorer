@@ -73,6 +73,7 @@ PIPELINE: tuple[Stage, ...] = (
     Stage(
         "unified_graph",
         "scripts.build_unified_graph",
+        category="DERIVE",
     ),
     Stage(
         "holistic_acceptance",
@@ -129,12 +130,37 @@ def render_text(report: dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def stage_command(stage: Stage) -> list[str]:
-    return [sys.executable, "-m", stage.module, *stage.arguments]
+def stage_arguments(
+    stage: Stage,
+    *,
+    pipeline_run_id: str,
+) -> tuple[str, ...]:
+    arguments = tuple(stage.arguments)
+    if stage.name == "unified_graph":
+        arguments += ("--pipeline-run-id", pipeline_run_id)
+    return arguments
 
 
-def run_stage(stage: Stage, *, dry_run: bool) -> dict[str, Any]:
-    command = stage_command(stage)
+def stage_command(
+    stage: Stage,
+    *,
+    pipeline_run_id: str,
+) -> list[str]:
+    return [
+        sys.executable,
+        "-m",
+        stage.module,
+        *stage_arguments(stage, pipeline_run_id=pipeline_run_id),
+    ]
+
+
+def run_stage(
+    stage: Stage,
+    *,
+    dry_run: bool,
+    pipeline_run_id: str,
+) -> dict[str, Any]:
+    command = stage_command(stage, pipeline_run_id=pipeline_run_id)
     if dry_run:
         return {
             "name": stage.name,
@@ -147,7 +173,6 @@ def run_stage(stage: Stage, *, dry_run: bool) -> dict[str, Any]:
             "stdout": "",
             "stderr": "",
         }
-
     started = perf_counter()
     completed = subprocess.run(
         command,
@@ -173,7 +198,6 @@ def run_stage(stage: Stage, *, dry_run: bool) -> dict[str, Any]:
         "stdout": completed.stdout,
         "stderr": completed.stderr,
     }
-
 
 def backup_current(identifier: str) -> Path | None:
     if not CURRENT_ROOT.exists():
@@ -255,7 +279,7 @@ def rebuild_catalog(
     remaining = selected
     if preflight is not None:
         print(f"\n>>> {preflight.name}")
-        result = run_stage(preflight, dry_run=dry_run)
+        result = run_stage(preflight, dry_run=dry_run, pipeline_run_id=identifier)
         stage_results.append(result)
         if result["return_code"] != 0:
             failed_stage = preflight.name
@@ -271,7 +295,7 @@ def rebuild_catalog(
     if failed_stage is None:
         for stage in remaining:
             print(f"\n>>> {stage.name}")
-            result = run_stage(stage, dry_run=dry_run)
+            result = run_stage(stage, dry_run=dry_run, pipeline_run_id=identifier)
             stage_results.append(result)
             if result["return_code"] != 0:
                 failed_stage = stage.name

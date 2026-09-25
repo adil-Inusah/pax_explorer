@@ -1,31 +1,31 @@
 ========================================================================
 PAX EXPLORER FULL CATALOG REBUILD
 ========================================================================
-Run ID:       20260925T191856Z
+Run ID:       20260925T200127Z
 Status:       COMPLETE
 From scratch: True
-Started:      2026-09-25T19:18:56.446050+00:00
-Completed:    2026-09-25T19:25:50.874211+00:00
+Started:      2026-09-25T20:01:27.703728+00:00
+Completed:    2026-09-25T20:08:28.284068+00:00
 
-[PASS] connection_check (4.64s, rc=0)
-[PASS] core_metadata (4.29s, rc=0)
-[PASS] ti_lineage (33.89s, rc=0)
-[PASS] rule_lineage (27.94s, rc=0)
-[PASS] attributes (108.23s, rc=0)
-[PASS] hierarchies (56.94s, rc=0)
-[PASS] public_subsets (60.05s, rc=0)
-[PASS] public_views (24.38s, rc=0)
-[PASS] cube_dimensions (26.92s, rc=0)
-[PASS] chore_tasks (3.94s, rc=0)
-[PASS] process_data_sources (27.96s, rc=0)
+[PASS] connection_check (4.01s, rc=0)
+[PASS] core_metadata (3.81s, rc=0)
+[PASS] ti_lineage (30.90s, rc=0)
+[PASS] rule_lineage (25.12s, rc=0)
+[PASS] attributes (112.15s, rc=0)
+[PASS] hierarchies (55.90s, rc=0)
+[PASS] public_subsets (58.25s, rc=0)
+[PASS] public_views (26.47s, rc=0)
+[PASS] cube_dimensions (29.12s, rc=0)
+[PASS] chore_tasks (3.83s, rc=0)
+[PASS] process_data_sources (31.37s, rc=0)
 [PASS] operational_dependencies (1.05s, rc=0)
-[PASS] catalog_match_profile (1.31s, rc=0)
-[PASS] semantic_resolution_plan (1.17s, rc=0)
-[PASS] semantic_validations (1.19s, rc=0)
-[PASS] unified_graph (18.18s, rc=0)
-[PASS] holistic_acceptance (11.77s, rc=0)
+[PASS] catalog_match_profile (1.22s, rc=0)
+[PASS] semantic_resolution_plan (1.09s, rc=0)
+[PASS] semantic_validations (1.31s, rc=0)
+[PASS] unified_graph (24.21s, rc=0)
+[PASS] holistic_acceptance (10.41s, rc=0)
 
 Failed stage: <none>
-Backup:       C:\Users\inusaad\Pax_explorer\data\pipeline_backups\20260925T191856Z\current
+Backup:       C:\Users\inusaad\Pax_explorer\data\pipeline_backups\20260925T200127Z\current
 Restored:     False
 Decision:     CATALOG_REBUILD_COMPLETE
