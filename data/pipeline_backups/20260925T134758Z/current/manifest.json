@@ -1,0 +1,98 @@
+{
+  "snapshot_id": "20260923T231311Z",
+  "status": "COMPLETE",
+  "started_at": "2026-09-23T23:13:11.185439+00:00",
+  "completed_at": "2026-09-23T23:13:13.957232+00:00",
+  "duration_seconds": 2.771793,
+  "tm1_version": "11.8.03500.4",
+  "object_count": 1685,
+  "regular_object_count": 709,
+  "control_object_count": 976,
+  "object_counts": {
+    "chore": 18,
+    "cube": 379,
+    "dimension": 902,
+    "process": 386
+  },
+  "regular_object_counts": {
+    "chore": 18,
+    "cube": 84,
+    "dimension": 232,
+    "process": 375
+  },
+  "control_object_counts": {
+    "cube": 295,
+    "dimension": 670,
+    "process": 11
+  },
+  "collections": [
+    {
+      "object_type": "cube",
+      "status": "PASS",
+      "record_count": 379,
+      "count": 379,
+      "duration_seconds": 0.062273,
+      "error": null
+    },
+    {
+      "object_type": "dimension",
+      "status": "PASS",
+      "record_count": 902,
+      "count": 902,
+      "duration_seconds": 0.070034,
+      "error": null
+    },
+    {
+      "object_type": "process",
+      "status": "PASS",
+      "record_count": 386,
+      "count": 386,
+      "duration_seconds": 0.063431,
+      "error": null
+    },
+    {
+      "object_type": "chore",
+      "status": "PASS",
+      "record_count": 18,
+      "count": 18,
+      "duration_seconds": 0.057362,
+      "error": null
+    }
+  ],
+  "collection_results": {
+    "cube": {
+      "object_type": "cube",
+      "status": "PASS",
+      "record_count": 379,
+      "count": 379,
+      "duration_seconds": 0.062273,
+      "error": null
+    },
+    "dimension": {
+      "object_type": "dimension",
+      "status": "PASS",
+      "record_count": 902,
+      "count": 902,
+      "duration_seconds": 0.070034,
+      "error": null
+    },
+    "process": {
+      "object_type": "process",
+      "status": "PASS",
+      "record_count": 386,
+      "count": 386,
+      "duration_seconds": 0.063431,
+      "error": null
+    },
+    "chore": {
+      "object_type": "chore",
+      "status": "PASS",
+      "record_count": 18,
+      "count": 18,
+      "duration_seconds": 0.057362,
+      "error": null
+    }
+  },
+  "error_count": 0,
+  "errors": []
+}

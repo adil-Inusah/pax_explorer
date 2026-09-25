@@ -1,0 +1,21 @@
+{
+  "snapshot_id": "20260924T174521Z",
+  "status": "COMPLETE",
+  "started_at": "2026-09-24T17:45:21.472991+00:00",
+  "completed_at": "2026-09-24T17:45:49.157320+00:00",
+  "process_count": 386,
+  "configured_process_count": 280,
+  "data_source_count": 107,
+  "relationship_count": 375,
+  "validation_count": 375,
+  "error_count": 0,
+  "total_seconds": 27.684065,
+  "source_type_counts": {
+    "ASCII_FILE": 96,
+    "NONE": 106,
+    "TM1_CUBE_VIEW": 133,
+    "TM1_DIMENSION_SUBSET": 51
+  },
+  "publish_current_requested": true,
+  "published_current": true
+}

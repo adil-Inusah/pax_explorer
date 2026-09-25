@@ -1,0 +1,14 @@
+{
+  "snapshot_id": "20260924T161006Z",
+  "status": "COMPLETE",
+  "visibility_scope": "PUBLIC",
+  "started_at": "2026-09-24T16:10:06.775110+00:00",
+  "completed_at": "2026-09-24T16:33:00.524788+00:00",
+  "hierarchy_count": 927,
+  "subset_count": 10201,
+  "relationship_count": 20402,
+  "validation_count": 20402,
+  "error_count": 0,
+  "publish_current_requested": true,
+  "published_current": true
+}

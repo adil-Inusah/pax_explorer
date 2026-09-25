@@ -1,0 +1,16 @@
+{
+  "snapshot_id": "20260924T180355Z",
+  "status": "COMPLETE",
+  "scope": "all",
+  "started_at": "2026-09-24T18:03:55.170529+00:00",
+  "completed_at": "2026-09-24T18:04:22.081030+00:00",
+  "cube_source": "OBJECT_CATALOG",
+  "cube_count": 379,
+  "completed_cube_count": 379,
+  "relationship_count": 1154,
+  "validation_count": 1154,
+  "error_count": 0,
+  "total_seconds": 26.909683,
+  "publish_current_requested": true,
+  "published_current": true
+}

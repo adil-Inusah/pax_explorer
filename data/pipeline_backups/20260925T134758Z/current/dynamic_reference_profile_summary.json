@@ -1,0 +1,225 @@
+{
+  "catalog_directory": "C:\\Users\\inusaad\\Pax_explorer\\data\\current",
+  "dynamic_reference_count": 45,
+  "source_counts": {
+    "TI": 44,
+    "RULE": 1
+  },
+  "status_counts": {
+    "UNRESOLVED_DYNAMIC_REFERENCE": 45
+  },
+  "pattern_counts": {
+    "SIMPLE_VARIABLE": 42,
+    "CONCATENATION": 2,
+    "STRUCTURED_EXPRESSION": 1
+  },
+  "relationship_type_counts": {
+    "WRITES_TO_CUBE": 8,
+    "CLEARS_CUBE": 7,
+    "INCREMENTS_CUBE": 2,
+    "READS_FROM_CUBE": 4,
+    "UPDATES_DIMENSION": 22,
+    "UPDATES_HIERARCHY": 1,
+    "REFERENCES_DIMENSION": 1
+  },
+  "target_type_counts": {
+    "cube": 21,
+    "dimension": 22,
+    "hierarchy": 1,
+    "DIMENSION": 1
+  },
+  "confidence_counts": {
+    "UNRESOLVED": 44,
+    "MEDIUM": 1
+  },
+  "distinct_expressions": 15,
+  "distinct_sources": 30,
+  "top_expressions": [
+    [
+      "pDimension",
+      9
+    ],
+    [
+      "pDim",
+      9
+    ],
+    [
+      "pCube",
+      6
+    ],
+    [
+      "sAttrCube",
+      6
+    ],
+    [
+      "sTgtCube",
+      4
+    ],
+    [
+      "sCube",
+      2
+    ],
+    [
+      "scube",
+      1
+    ],
+    [
+      "pTargetDim",
+      1
+    ],
+    [
+      "pdim",
+      1
+    ],
+    [
+      "pDimName",
+      1
+    ],
+    [
+      "'}ElementAttributes_' | pSrcDim",
+      1
+    ],
+    [
+      "pTgtDim",
+      1
+    ],
+    [
+      "'}ElementAttributes_' | pTgtDim",
+      1
+    ],
+    [
+      "sTgtDim",
+      1
+    ],
+    [
+      "!}Dimensions",
+      1
+    ]
+  ],
+  "top_sources": [
+    [
+      "DataUpdate - Scenario Archive - Numeric",
+      3
+    ],
+    [
+      "DataUpdate - Scenario Archive - String",
+      3
+    ],
+    [
+      "Sys_Attribute Hierarchy",
+      3
+    ],
+    [
+      "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+      3
+    ],
+    [
+      "Sys_Generic_Alternate Dimension Hierarchies",
+      3
+    ],
+    [
+      "SecurityUpdate - Element Security",
+      2
+    ],
+    [
+      "SecurityUpdate - Element Security - Hierarchy Archive",
+      2
+    ],
+    [
+      "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+      2
+    ],
+    [
+      "Sys_Dim_Import_From_File",
+      2
+    ],
+    [
+      "Sys_Virtual Dimension",
+      2
+    ],
+    [
+      "DataUpdate - ML Stage",
+      1
+    ],
+    [
+      "sys_cube_clear",
+      1
+    ],
+    [
+      "Sys_Cube_Clear_Data",
+      1
+    ],
+    [
+      "Sys_Dim_AllConsols_Delete",
+      1
+    ],
+    [
+      "Sys_Dim_Clone",
+      1
+    ],
+    [
+      "Sys_Dim_Create_Derived_Dim_FromAttribute",
+      1
+    ],
+    [
+      "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+      1
+    ],
+    [
+      "Sys_Dim_Create_Derived_Dim_FromMDX",
+      1
+    ],
+    [
+      "Sys_Dim_Element_Delete.FromSubset",
+      1
+    ],
+    [
+      "Sys_Dim_Hierarchy_Clone",
+      1
+    ],
+    [
+      "Sys_Dim_Hierarchy_Create_FromAttribute",
+      1
+    ],
+    [
+      "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+      1
+    ],
+    [
+      "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+      1
+    ],
+    [
+      "Sys_Dim_Hierarchy_Create_Orphans",
+      1
+    ],
+    [
+      "SYS_Dim_Hierarchy_CreateFromConsolidations",
+      1
+    ],
+    [
+      "Sys_Dim_Hierarchy_Unwind_All",
+      1
+    ],
+    [
+      "Sys_Dim_Sort_Import",
+      1
+    ],
+    [
+      "Sys_Generic_Parent Child Dimension",
+      1
+    ],
+    [
+      "Sys_Legacy Element",
+      1
+    ],
+    [
+      "SYS Legacy Elements",
+      1
+    ]
+  ],
+  "output_files": [
+    "data\\current\\dynamic_reference_profile_detail.csv",
+    "data\\current\\dynamic_reference_profile_patterns.csv"
+  ]
+}

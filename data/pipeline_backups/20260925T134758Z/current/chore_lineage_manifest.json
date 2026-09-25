@@ -1,0 +1,15 @@
+{
+  "snapshot_id": "20260924T171214Z",
+  "status": "COMPLETE",
+  "started_at": "2026-09-24T17:12:14.093912+00:00",
+  "completed_at": "2026-09-24T17:12:14.174443+00:00",
+  "chore_count": 18,
+  "task_count": 67,
+  "binding_count": 148,
+  "relationship_count": 282,
+  "validation_count": 282,
+  "error_count": 0,
+  "total_seconds": 0.080244,
+  "publish_current_requested": true,
+  "published_current": true
+}

@@ -1,0 +1,54 @@
+{
+  "snapshot_id": "20260924T140439Z",
+  "started_at": "2026-09-24T14:04:39.961952+00:00",
+  "completed_at": "2026-09-24T14:05:15.772618+00:00",
+  "status": "COMPLETE",
+  "process_count": 386,
+  "parameter_count": 694,
+  "parameter_binding_count": 4945,
+  "parameter_alias_count": 2175,
+  "parameter_rejection_count": 63,
+  "missing_object_candidate_count": 11,
+  "deferred_reference_count": 52,
+  "parameter_resolution_metrics": {
+    "input_summary_count": 4010,
+    "output_summary_count": 4019,
+    "replaced_unresolved_count": 1,
+    "derived_relationship_count": 10,
+    "rejection_count": 63,
+    "missing_object_candidate_count": 11,
+    "deferred_reference_count": 52,
+    "missing_object_target_count": 5,
+    "deferred_reference_target_count": 17,
+    "missing_object_counts_by_type": {
+      "dimension": 11
+    },
+    "deferred_reference_counts_by_type": {
+      "attribute": 44,
+      "subset": 6,
+      "view": 2
+    },
+    "parameter_count": 694,
+    "binding_count": 4945,
+    "alias_count": 2175
+  },
+  "evidence_count": 7852,
+  "direct_relationship_count": 4010,
+  "relationship_count": 4019,
+  "validation_count": 4019,
+  "validation_counts": {
+    "ATTRIBUTE_CATALOG_DEFERRED": 2313,
+    "BROKEN_REFERENCE": 1,
+    "DYNAMIC_EXTERNAL_COMMAND": 34,
+    "DYNAMIC_EXTERNAL_FILE": 43,
+    "NOT_CROSS_CHECKED": 33,
+    "RESOLVED_TARGET_NOT_IN_CATALOG": 28,
+    "RUNTIME_SUBSET_REFERENCE": 297,
+    "RUNTIME_VIEW_REFERENCE": 171,
+    "UNRESOLVED_DYNAMIC_REFERENCE": 44,
+    "VALID": 1055
+  },
+  "registered_exception_count": 29,
+  "excluded_relationship_count": 29,
+  "error_count": 0
+}

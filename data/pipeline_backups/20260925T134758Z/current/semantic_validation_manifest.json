@@ -1,0 +1,60 @@
+{
+  "snapshot_id": "20260925T132949Z",
+  "status": "COMPLETE",
+  "started_at": "2026-09-25T13:29:49.111594+00:00",
+  "completed_at": "2026-09-25T13:29:49.202214+00:00",
+  "resolution_plan_snapshot_id": "20260925T132420Z",
+  "source_snapshots": {
+    "TI": "20260924T140439Z",
+    "RULE": "20260923T231346Z"
+  },
+  "ti_source_validation_count": 4019,
+  "rule_source_validation_count": 267,
+  "ti_semantic_validation_count": 4019,
+  "rule_semantic_validation_count": 267,
+  "semantic_validation_count": 4286,
+  "plan_record_count": 2933,
+  "automatic_plan_count": 1720,
+  "review_plan_count": 1213,
+  "review_required_count": 1213,
+  "non_deferred_counts": {
+    "TI": 1238,
+    "RULE": 115
+  },
+  "deferred_source_counts": {
+    "TI": 2781,
+    "RULE": 152
+  },
+  "plan_origin_counts": {
+    "RULE": 152,
+    "TI": 2781
+  },
+  "semantic_status_counts": {
+    "AMBIGUOUS_REFERENCE": 1,
+    "ATTRIBUTE_NOT_IN_CATALOG": 20,
+    "BROKEN_REFERENCE": 1,
+    "DYNAMIC_EXTERNAL_COMMAND": 34,
+    "DYNAMIC_EXTERNAL_FILE": 43,
+    "INSUFFICIENT_REFERENCE_CONTEXT": 1,
+    "NOT_CROSS_CHECKED": 33,
+    "RESOLVED_TARGET_NOT_IN_CATALOG": 28,
+    "REVIEW_EXISTING_CREATE_TARGET": 599,
+    "REVIEW_MISSING_DELETE_TARGET": 33,
+    "UNRESOLVED_DYNAMIC_REFERENCE": 602,
+    "VALID": 1219,
+    "VALID_CREATE_TARGET": 45,
+    "VALID_DEFAULT_HIERARCHY_MATCH": 1625,
+    "VIEW_NOT_IN_CATALOG": 2
+  },
+  "decision_counts": {
+    "AUTOMATIC": 1720,
+    "PARSER_PRESERVED": 1353,
+    "REVIEW": 1213
+  },
+  "duplicate_semantic_validation_id_count": 0,
+  "duplicate_plan_id_count": 0,
+  "error_count": 0,
+  "publish_current_requested": true,
+  "published_current": true,
+  "source_artifacts_modified": false
+}

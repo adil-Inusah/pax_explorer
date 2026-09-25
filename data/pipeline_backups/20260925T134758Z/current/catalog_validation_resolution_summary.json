@@ -1,0 +1,47 @@
+{
+  "snapshot_id": "20260925T132420Z",
+  "profile_record_count": 2933,
+  "plan_record_count": 2933,
+  "automatic_count": 1720,
+  "review_count": 1213,
+  "classification_counts": {
+    "AMBIGUOUS_MATCH": 1,
+    "DEFAULT_HIERARCHY_MATCH": 1625,
+    "DYNAMIC_REFERENCE": 557,
+    "EXACT_MATCH": 50,
+    "EXISTING_CREATE_TARGET": 599,
+    "INSUFFICIENT_CONTEXT": 1,
+    "MISSING_DELETE_TARGET": 33,
+    "TARGET_NOT_IN_CATALOG": 22,
+    "VALID_CREATE_TARGET": 45
+  },
+  "proposed_status_counts": {
+    "AMBIGUOUS_REFERENCE": 1,
+    "ATTRIBUTE_NOT_IN_CATALOG": 20,
+    "INSUFFICIENT_REFERENCE_CONTEXT": 1,
+    "REVIEW_EXISTING_CREATE_TARGET": 599,
+    "REVIEW_MISSING_DELETE_TARGET": 33,
+    "UNRESOLVED_DYNAMIC_REFERENCE": 557,
+    "VALID": 50,
+    "VALID_CREATE_TARGET": 45,
+    "VALID_DEFAULT_HIERARCHY_MATCH": 1625,
+    "VIEW_NOT_IN_CATALOG": 2
+  },
+  "decision_counts": {
+    "AUTOMATIC": 1720,
+    "REVIEW": 1213
+  },
+  "domain_counts": {
+    "ATTRIBUTE": 2415,
+    "HIERARCHY": 50,
+    "SUBSET": 297,
+    "VIEW": 171
+  },
+  "origin_counts": {
+    "RULE": 152,
+    "TI": 2781
+  },
+  "duplicate_plan_id_count": 0,
+  "duplicate_relationship_key_count": 0,
+  "error_count": 0
+}

@@ -1,0 +1,1904 @@
+{
+  "cube_source": "OBJECT_CATALOG",
+  "cube_count": 379,
+  "completed_cube_count": 379,
+  "relationship_count": 1154,
+  "total_seconds": 26.909683,
+  "cubes": [
+    {
+      "cube_name": "aaq2mmck",
+      "dimension_count": 4,
+      "request_seconds": 0.061027
+    },
+    {
+      "cube_name": "Aaqdata",
+      "dimension_count": 6,
+      "request_seconds": 0.057227
+    },
+    {
+      "cube_name": "Balance Sheet",
+      "dimension_count": 9,
+      "request_seconds": 0.060793
+    },
+    {
+      "cube_name": "Balance Sheet Detail",
+      "dimension_count": 5,
+      "request_seconds": 0.05741
+    },
+    {
+      "cube_name": "Below the Line",
+      "dimension_count": 6,
+      "request_seconds": 0.058806
+    },
+    {
+      "cube_name": "Below the Line Assessment",
+      "dimension_count": 7,
+      "request_seconds": 0.056584
+    },
+    {
+      "cube_name": "Below the Line Report",
+      "dimension_count": 7,
+      "request_seconds": 0.057858
+    },
+    {
+      "cube_name": "BudInc",
+      "dimension_count": 4,
+      "request_seconds": 0.054324
+    },
+    {
+      "cube_name": "Corporate Headcount",
+      "dimension_count": 8,
+      "request_seconds": 0.285984
+    },
+    {
+      "cube_name": "Cost Center",
+      "dimension_count": 7,
+      "request_seconds": 0.059074
+    },
+    {
+      "cube_name": "Cost Estimate",
+      "dimension_count": 8,
+      "request_seconds": 0.053566
+    },
+    {
+      "cube_name": "Cost Standards",
+      "dimension_count": 7,
+      "request_seconds": 0.053305
+    },
+    {
+      "cube_name": "Customer Profitability",
+      "dimension_count": 12,
+      "request_seconds": 0.054862
+    },
+    {
+      "cube_name": "Environmental Report",
+      "dimension_count": 4,
+      "request_seconds": 0.056817
+    },
+    {
+      "cube_name": "Ethylene Cost",
+      "dimension_count": 6,
+      "request_seconds": 0.060766
+    },
+    {
+      "cube_name": "Fixed Manufacturing Cost",
+      "dimension_count": 5,
+      "request_seconds": 0.055335
+    },
+    {
+      "cube_name": "Fixed Manufacturing Cost Assessment",
+      "dimension_count": 7,
+      "request_seconds": 0.054859
+    },
+    {
+      "cube_name": "Fund Flow",
+      "dimension_count": 5,
+      "request_seconds": 0.054324
+    },
+    {
+      "cube_name": "Glenn Springs Outlook",
+      "dimension_count": 8,
+      "request_seconds": 0.057832
+    },
+    {
+      "cube_name": "Glenn Springs Project",
+      "dimension_count": 8,
+      "request_seconds": 0.058731
+    },
+    {
+      "cube_name": "Groupid",
+      "dimension_count": 2,
+      "request_seconds": 0.061228
+    },
+    {
+      "cube_name": "Headcnt",
+      "dimension_count": 3,
+      "request_seconds": 0.064371
+    },
+    {
+      "cube_name": "Intercompany",
+      "dimension_count": 11,
+      "request_seconds": 0.059608
+    },
+    {
+      "cube_name": "Intercompany Sandbox",
+      "dimension_count": 11,
+      "request_seconds": 0.061004
+    },
+    {
+      "cube_name": "Inventory Walk",
+      "dimension_count": 7,
+      "request_seconds": 0.056289
+    },
+    {
+      "cube_name": "Inventory Walk Detail",
+      "dimension_count": 12,
+      "request_seconds": 0.27506
+    },
+    {
+      "cube_name": "Locdesc",
+      "dimension_count": 2,
+      "request_seconds": 0.280073
+    },
+    {
+      "cube_name": "Manual Input",
+      "dimension_count": 4,
+      "request_seconds": 0.06442
+    },
+    {
+      "cube_name": "Manual Input Balance Sheet",
+      "dimension_count": 4,
+      "request_seconds": 0.053505
+    },
+    {
+      "cube_name": "Manual Input Below the Line",
+      "dimension_count": 4,
+      "request_seconds": 0.057659
+    },
+    {
+      "cube_name": "Manual Upload",
+      "dimension_count": 4,
+      "request_seconds": 0.05747
+    },
+    {
+      "cube_name": "Manual Upload Balance Sheet",
+      "dimension_count": 4,
+      "request_seconds": 0.062572
+    },
+    {
+      "cube_name": "Manual Upload Below the Line",
+      "dimension_count": 4,
+      "request_seconds": 0.073543
+    },
+    {
+      "cube_name": "Manufacturing Cost",
+      "dimension_count": 9,
+      "request_seconds": 0.069709
+    },
+    {
+      "cube_name": "Manufacturing Cost Balancing",
+      "dimension_count": 8,
+      "request_seconds": 0.278188
+    },
+    {
+      "cube_name": "Material Ledger",
+      "dimension_count": 13,
+      "request_seconds": 0.065302
+    },
+    {
+      "cube_name": "Mfg Key Stats",
+      "dimension_count": 5,
+      "request_seconds": 0.055767
+    },
+    {
+      "cube_name": "ML Stage",
+      "dimension_count": 3,
+      "request_seconds": 0.056888
+    },
+    {
+      "cube_name": "MLDOCCCS",
+      "dimension_count": 5,
+      "request_seconds": 0.058222
+    },
+    {
+      "cube_name": "OtherMfg",
+      "dimension_count": 4,
+      "request_seconds": 0.055203
+    },
+    {
+      "cube_name": "Plant Assessment",
+      "dimension_count": 7,
+      "request_seconds": 0.054092
+    },
+    {
+      "cube_name": "Plant Variance",
+      "dimension_count": 4,
+      "request_seconds": 0.063303
+    },
+    {
+      "cube_name": "Power Group",
+      "dimension_count": 5,
+      "request_seconds": 0.052315
+    },
+    {
+      "cube_name": "Profit and Loss",
+      "dimension_count": 9,
+      "request_seconds": 0.053637
+    },
+    {
+      "cube_name": "Profit and Loss Detail",
+      "dimension_count": 8,
+      "request_seconds": 0.059894
+    },
+    {
+      "cube_name": "Profit Center Variance",
+      "dimension_count": 5,
+      "request_seconds": 0.068103
+    },
+    {
+      "cube_name": "Project Spending",
+      "dimension_count": 5,
+      "request_seconds": 0.053183
+    },
+    {
+      "cube_name": "readata",
+      "dimension_count": 2,
+      "request_seconds": 0.054795
+    },
+    {
+      "cube_name": "Sustainability",
+      "dimension_count": 4,
+      "request_seconds": 0.059388
+    },
+    {
+      "cube_name": "SYS Attribute Hierarchy Control",
+      "dimension_count": 3,
+      "request_seconds": 0.052827
+    },
+    {
+      "cube_name": "SYS BS Account Hierarchy",
+      "dimension_count": 3,
+      "request_seconds": 0.054342
+    },
+    {
+      "cube_name": "SYS Control",
+      "dimension_count": 2,
+      "request_seconds": 0.054734
+    },
+    {
+      "cube_name": "SYS Corporate Headcount Map",
+      "dimension_count": 3,
+      "request_seconds": 0.057637
+    },
+    {
+      "cube_name": "SYS Cost Center Hierarchy",
+      "dimension_count": 3,
+      "request_seconds": 0.056442
+    },
+    {
+      "cube_name": "SYS Cubes Dims",
+      "dimension_count": 3,
+      "request_seconds": 0.057774
+    },
+    {
+      "cube_name": "SYS Data Access Group",
+      "dimension_count": 3,
+      "request_seconds": 0.054388
+    },
+    {
+      "cube_name": "SYS Fund Flow",
+      "dimension_count": 3,
+      "request_seconds": 0.057757
+    },
+    {
+      "cube_name": "SYS Glenn Springs Assignment",
+      "dimension_count": 2,
+      "request_seconds": 0.055499
+    },
+    {
+      "cube_name": "SYS Hierarchy Control",
+      "dimension_count": 3,
+      "request_seconds": 0.053409
+    },
+    {
+      "cube_name": "SYS Hierarchy Validation",
+      "dimension_count": 4,
+      "request_seconds": 0.062521
+    },
+    {
+      "cube_name": "SYS Intercompany Elim",
+      "dimension_count": 6,
+      "request_seconds": 0.056859
+    },
+    {
+      "cube_name": "SYS Inventory Walk",
+      "dimension_count": 3,
+      "request_seconds": 0.056482
+    },
+    {
+      "cube_name": "SYS Inventory Walk Manual Entries",
+      "dimension_count": 3,
+      "request_seconds": 0.061871
+    },
+    {
+      "cube_name": "SYS Legacy Elements",
+      "dimension_count": 3,
+      "request_seconds": 0.057669
+    },
+    {
+      "cube_name": "SYS Material by Profit Center",
+      "dimension_count": 4,
+      "request_seconds": 0.060072
+    },
+    {
+      "cube_name": "SYS ML Classification",
+      "dimension_count": 8,
+      "request_seconds": 0.053031
+    },
+    {
+      "cube_name": "SYS Parent Child",
+      "dimension_count": 4,
+      "request_seconds": 0.054388
+    },
+    {
+      "cube_name": "SYS PL Account Hierarchy",
+      "dimension_count": 3,
+      "request_seconds": 0.054849
+    },
+    {
+      "cube_name": "SYS PNL Valid Condition",
+      "dimension_count": 3,
+      "request_seconds": 0.052988
+    },
+    {
+      "cube_name": "SYS PNL Valid Fields",
+      "dimension_count": 2,
+      "request_seconds": 0.052805
+    },
+    {
+      "cube_name": "SYS Process Control",
+      "dimension_count": 3,
+      "request_seconds": 0.054875
+    },
+    {
+      "cube_name": "SYS Process History",
+      "dimension_count": 3,
+      "request_seconds": 0.053831
+    },
+    {
+      "cube_name": "SYS Production Order",
+      "dimension_count": 6,
+      "request_seconds": 0.05363
+    },
+    {
+      "cube_name": "SYS Production Volume Filter",
+      "dimension_count": 3,
+      "request_seconds": 0.058013
+    },
+    {
+      "cube_name": "SYS Profit Center Hierarchy",
+      "dimension_count": 3,
+      "request_seconds": 0.053441
+    },
+    {
+      "cube_name": "SYS Profit Center Sales Responsibility",
+      "dimension_count": 4,
+      "request_seconds": 0.052406
+    },
+    {
+      "cube_name": "SYS SAP File History",
+      "dimension_count": 3,
+      "request_seconds": 0.053983
+    },
+    {
+      "cube_name": "SYS Scenario Control",
+      "dimension_count": 2,
+      "request_seconds": 0.066336
+    },
+    {
+      "cube_name": "SYS Sustainability Reference",
+      "dimension_count": 2,
+      "request_seconds": 0.057837
+    },
+    {
+      "cube_name": "SYS Turnaround and Other Asset Assignment",
+      "dimension_count": 3,
+      "request_seconds": 0.054366
+    },
+    {
+      "cube_name": "SYS UOM Conversion Factor",
+      "dimension_count": 3,
+      "request_seconds": 0.052726
+    },
+    {
+      "cube_name": "SYS WBS Element Settlement Rule",
+      "dimension_count": 3,
+      "request_seconds": 0.056079
+    },
+    {
+      "cube_name": "TRANSCAT",
+      "dimension_count": 2,
+      "request_seconds": 0.056323
+    },
+    {
+      "cube_name": "Turnaround and Other Asset",
+      "dimension_count": 5,
+      "request_seconds": 0.054183
+    },
+    {
+      "cube_name": "}Capabilities",
+      "dimension_count": 3,
+      "request_seconds": 0.055171
+    },
+    {
+      "cube_name": "}CellAnnotations_Manual Input Below the Line",
+      "dimension_count": 6,
+      "request_seconds": 0.055964
+    },
+    {
+      "cube_name": "}CellAnnotations_SYS Process Control",
+      "dimension_count": 5,
+      "request_seconds": 0.052459
+    },
+    {
+      "cube_name": "}CellSecurity_Balance Sheet",
+      "dimension_count": 8,
+      "request_seconds": 0.057337
+    },
+    {
+      "cube_name": "}CellSecurity_Below the Line",
+      "dimension_count": 7,
+      "request_seconds": 0.053968
+    },
+    {
+      "cube_name": "}CellSecurity_Below the Line Assessment",
+      "dimension_count": 8,
+      "request_seconds": 0.05372
+    },
+    {
+      "cube_name": "}CellSecurity_BudInc",
+      "dimension_count": 5,
+      "request_seconds": 0.05341
+    },
+    {
+      "cube_name": "}CellSecurity_Corporate Headcount",
+      "dimension_count": 8,
+      "request_seconds": 0.052065
+    },
+    {
+      "cube_name": "}CellSecurity_Customer Profitability",
+      "dimension_count": 13,
+      "request_seconds": 0.052603
+    },
+    {
+      "cube_name": "}CellSecurity_Environmental Report",
+      "dimension_count": 5,
+      "request_seconds": 0.053819
+    },
+    {
+      "cube_name": "}CellSecurity_Fixed Manufacturing Cost",
+      "dimension_count": 6,
+      "request_seconds": 0.052327
+    },
+    {
+      "cube_name": "}CellSecurity_Glenn Springs Outlook",
+      "dimension_count": 8,
+      "request_seconds": 0.055109
+    },
+    {
+      "cube_name": "}CellSecurity_Inventory Walk",
+      "dimension_count": 8,
+      "request_seconds": 0.05194
+    },
+    {
+      "cube_name": "}CellSecurity_Manufacturing Cost",
+      "dimension_count": 10,
+      "request_seconds": 0.054834
+    },
+    {
+      "cube_name": "}CellSecurity_Mfg Key Stats",
+      "dimension_count": 4,
+      "request_seconds": 0.055911
+    },
+    {
+      "cube_name": "}CellSecurity_OtherMfg",
+      "dimension_count": 5,
+      "request_seconds": 0.052945
+    },
+    {
+      "cube_name": "}CellSecurity_Plant Assessment",
+      "dimension_count": 8,
+      "request_seconds": 0.171631
+    },
+    {
+      "cube_name": "}CellSecurity_Plant Variance",
+      "dimension_count": 3,
+      "request_seconds": 0.059293
+    },
+    {
+      "cube_name": "}CellSecurity_Profit and Loss",
+      "dimension_count": 10,
+      "request_seconds": 0.291132
+    },
+    {
+      "cube_name": "}CellSecurity_Profit Center Variance",
+      "dimension_count": 6,
+      "request_seconds": 0.055561
+    },
+    {
+      "cube_name": "}CellSecurity_Project Spending",
+      "dimension_count": 6,
+      "request_seconds": 0.058522
+    },
+    {
+      "cube_name": "}CellSecurity_Turnaround and Other Asset",
+      "dimension_count": 6,
+      "request_seconds": 0.057654
+    },
+    {
+      "cube_name": "}ClientCAMAssociatedGroups",
+      "dimension_count": 2,
+      "request_seconds": 0.058976
+    },
+    {
+      "cube_name": "}ClientGroups",
+      "dimension_count": 2,
+      "request_seconds": 0.060394
+    },
+    {
+      "cube_name": "}ClientProperties",
+      "dimension_count": 2,
+      "request_seconds": 0.058614
+    },
+    {
+      "cube_name": "}ClientSettings",
+      "dimension_count": 2,
+      "request_seconds": 0.058639
+    },
+    {
+      "cube_name": "}CubeDrill_Balance Sheet",
+      "dimension_count": 10,
+      "request_seconds": 0.06407
+    },
+    {
+      "cube_name": "}CubeDrill_Below the Line",
+      "dimension_count": 7,
+      "request_seconds": 0.056626
+    },
+    {
+      "cube_name": "}CubeDrill_Below the Line Report",
+      "dimension_count": 8,
+      "request_seconds": 0.060753
+    },
+    {
+      "cube_name": "}CubeProperties",
+      "dimension_count": 2,
+      "request_seconds": 0.056238
+    },
+    {
+      "cube_name": "}CubeSecurity",
+      "dimension_count": 2,
+      "request_seconds": 0.058541
+    },
+    {
+      "cube_name": "}CubeSecurityProperties",
+      "dimension_count": 2,
+      "request_seconds": 0.061419
+    },
+    {
+      "cube_name": "}DimensionProperties",
+      "dimension_count": 2,
+      "request_seconds": 0.289156
+    },
+    {
+      "cube_name": "}ElementAttributes_AFE Category",
+      "dimension_count": 2,
+      "request_seconds": 0.062484
+    },
+    {
+      "cube_name": "}ElementAttributes_AFE Number",
+      "dimension_count": 2,
+      "request_seconds": 0.062443
+    },
+    {
+      "cube_name": "}ElementAttributes_afecatgy",
+      "dimension_count": 2,
+      "request_seconds": 0.061189
+    },
+    {
+      "cube_name": "}ElementAttributes_afedata",
+      "dimension_count": 2,
+      "request_seconds": 0.057748
+    },
+    {
+      "cube_name": "}ElementAttributes_afedesc",
+      "dimension_count": 2,
+      "request_seconds": 0.057429
+    },
+    {
+      "cube_name": "}ElementAttributes_afemonth",
+      "dimension_count": 2,
+      "request_seconds": 0.074808
+    },
+    {
+      "cube_name": "}ElementAttributes_afeyear",
+      "dimension_count": 2,
+      "request_seconds": 0.059407
+    },
+    {
+      "cube_name": "}ElementAttributes_Assessment Segment",
+      "dimension_count": 2,
+      "request_seconds": 0.059836
+    },
+    {
+      "cube_name": "}ElementAttributes_AWTYP",
+      "dimension_count": 2,
+      "request_seconds": 0.059702
+    },
+    {
+      "cube_name": "}ElementAttributes_Balance Sheet Source",
+      "dimension_count": 2,
+      "request_seconds": 0.057082
+    },
+    {
+      "cube_name": "}ElementAttributes_Below the Line Source",
+      "dimension_count": 2,
+      "request_seconds": 0.060332
+    },
+    {
+      "cube_name": "}ElementAttributes_BS Account",
+      "dimension_count": 2,
+      "request_seconds": 0.058759
+    },
+    {
+      "cube_name": "}ElementAttributes_BS Document No",
+      "dimension_count": 2,
+      "request_seconds": 0.056482
+    },
+    {
+      "cube_name": "}ElementAttributes_BudCalc",
+      "dimension_count": 2,
+      "request_seconds": 0.059909
+    },
+    {
+      "cube_name": "}ElementAttributes_BudYr",
+      "dimension_count": 2,
+      "request_seconds": 0.055937
+    },
+    {
+      "cube_name": "}ElementAttributes_BWART",
+      "dimension_count": 2,
+      "request_seconds": 0.05935
+    },
+    {
+      "cube_name": "}ElementAttributes_CATEG",
+      "dimension_count": 2,
+      "request_seconds": 0.057818
+    },
+    {
+      "cube_name": "}ElementAttributes_Company",
+      "dimension_count": 2,
+      "request_seconds": 0.057703
+    },
+    {
+      "cube_name": "}ElementAttributes_Compare",
+      "dimension_count": 2,
+      "request_seconds": 0.059591
+    },
+    {
+      "cube_name": "}ElementAttributes_Component",
+      "dimension_count": 2,
+      "request_seconds": 0.058355
+    },
+    {
+      "cube_name": "}ElementAttributes_Consumed",
+      "dimension_count": 2,
+      "request_seconds": 0.05818
+    },
+    {
+      "cube_name": "}ElementAttributes_Cost Center",
+      "dimension_count": 2,
+      "request_seconds": 0.058502
+    },
+    {
+      "cube_name": "}ElementAttributes_Cost Center Source",
+      "dimension_count": 2,
+      "request_seconds": 0.057127
+    },
+    {
+      "cube_name": "}ElementAttributes_Currency Type",
+      "dimension_count": 2,
+      "request_seconds": 0.060919
+    },
+    {
+      "cube_name": "}ElementAttributes_CURTP",
+      "dimension_count": 2,
+      "request_seconds": 0.057841
+    },
+    {
+      "cube_name": "}ElementAttributes_Customer",
+      "dimension_count": 2,
+      "request_seconds": 0.281376
+    },
+    {
+      "cube_name": "}ElementAttributes_DOCREF",
+      "dimension_count": 2,
+      "request_seconds": 0.06225
+    },
+    {
+      "cube_name": "}ElementAttributes_Document No",
+      "dimension_count": 2,
+      "request_seconds": 0.058698
+    },
+    {
+      "cube_name": "}ElementAttributes_ELEMENT",
+      "dimension_count": 2,
+      "request_seconds": 0.059498
+    },
+    {
+      "cube_name": "}ElementAttributes_Employee",
+      "dimension_count": 2,
+      "request_seconds": 0.061297
+    },
+    {
+      "cube_name": "}ElementAttributes_Employee Type",
+      "dimension_count": 2,
+      "request_seconds": 0.288819
+    },
+    {
+      "cube_name": "}ElementAttributes_ENVYRS",
+      "dimension_count": 2,
+      "request_seconds": 0.055866
+    },
+    {
+      "cube_name": "}ElementAttributes_Fees",
+      "dimension_count": 2,
+      "request_seconds": 0.055793
+    },
+    {
+      "cube_name": "}ElementAttributes_Fiscal Period",
+      "dimension_count": 2,
+      "request_seconds": 0.05581
+    },
+    {
+      "cube_name": "}ElementAttributes_Fiscal Year",
+      "dimension_count": 2,
+      "request_seconds": 0.057477
+    },
+    {
+      "cube_name": "}ElementAttributes_Fixed Manufacturing Cost Assessment Source",
+      "dimension_count": 2,
+      "request_seconds": 0.054958
+    },
+    {
+      "cube_name": "}ElementAttributes_Flow Code",
+      "dimension_count": 2,
+      "request_seconds": 0.054975
+    },
+    {
+      "cube_name": "}ElementAttributes_Functional Area",
+      "dimension_count": 2,
+      "request_seconds": 0.055887
+    },
+    {
+      "cube_name": "}ElementAttributes_Fund Flow",
+      "dimension_count": 2,
+      "request_seconds": 0.057287
+    },
+    {
+      "cube_name": "}ElementAttributes_GL Account",
+      "dimension_count": 2,
+      "request_seconds": 0.057894
+    },
+    {
+      "cube_name": "}ElementAttributes_GL_Account",
+      "dimension_count": 2,
+      "request_seconds": 0.055164
+    },
+    {
+      "cube_name": "}ElementAttributes_Glenn Springs Account",
+      "dimension_count": 2,
+      "request_seconds": 0.055579
+    },
+    {
+      "cube_name": "}ElementAttributes_Glenn Springs Order",
+      "dimension_count": 2,
+      "request_seconds": 0.056269
+    },
+    {
+      "cube_name": "}ElementAttributes_Glenn Springs Phase",
+      "dimension_count": 2,
+      "request_seconds": 0.054225
+    },
+    {
+      "cube_name": "}ElementAttributes_Glenn Springs Task",
+      "dimension_count": 2,
+      "request_seconds": 0.05583
+    },
+    {
+      "cube_name": "}ElementAttributes_Glenn Springs Transaction Code",
+      "dimension_count": 2,
+      "request_seconds": 0.055024
+    },
+    {
+      "cube_name": "}ElementAttributes_GLVOR",
+      "dimension_count": 2,
+      "request_seconds": 0.058742
+    },
+    {
+      "cube_name": "}ElementAttributes_HCPeriod",
+      "dimension_count": 2,
+      "request_seconds": 0.057217
+    },
+    {
+      "cube_name": "}ElementAttributes_HCType",
+      "dimension_count": 2,
+      "request_seconds": 0.054369
+    },
+    {
+      "cube_name": "}ElementAttributes_Inventory Walk",
+      "dimension_count": 2,
+      "request_seconds": 0.055326
+    },
+    {
+      "cube_name": "}ElementAttributes_Job Family",
+      "dimension_count": 2,
+      "request_seconds": 0.055327
+    },
+    {
+      "cube_name": "}ElementAttributes_KALNR",
+      "dimension_count": 2,
+      "request_seconds": 0.061401
+    },
+    {
+      "cube_name": "}ElementAttributes_Manual Input LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.276221
+    },
+    {
+      "cube_name": "}ElementAttributes_Manual Upload LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.284266
+    },
+    {
+      "cube_name": "}ElementAttributes_Manufacturing Cost Object",
+      "dimension_count": 2,
+      "request_seconds": 0.057655
+    },
+    {
+      "cube_name": "}ElementAttributes_Manufacturing Cost Type",
+      "dimension_count": 2,
+      "request_seconds": 0.058999
+    },
+    {
+      "cube_name": "}ElementAttributes_Market Segment",
+      "dimension_count": 2,
+      "request_seconds": 0.057076
+    },
+    {
+      "cube_name": "}ElementAttributes_Material",
+      "dimension_count": 2,
+      "request_seconds": 0.05572
+    },
+    {
+      "cube_name": "}ElementAttributes_Material Ledger Classification",
+      "dimension_count": 2,
+      "request_seconds": 0.055951
+    },
+    {
+      "cube_name": "}ElementAttributes_Material Ledger Data Source",
+      "dimension_count": 2,
+      "request_seconds": 0.057855
+    },
+    {
+      "cube_name": "}ElementAttributes_Material Ledger Document",
+      "dimension_count": 2,
+      "request_seconds": 0.056977
+    },
+    {
+      "cube_name": "}ElementAttributes_mBalance Sheet",
+      "dimension_count": 2,
+      "request_seconds": 0.059775
+    },
+    {
+      "cube_name": "}ElementAttributes_mBalance Sheet Detail",
+      "dimension_count": 2,
+      "request_seconds": 0.0592
+    },
+    {
+      "cube_name": "}ElementAttributes_mBelow The Line",
+      "dimension_count": 2,
+      "request_seconds": 0.056684
+    },
+    {
+      "cube_name": "}ElementAttributes_mBelow the Line Assessment",
+      "dimension_count": 2,
+      "request_seconds": 0.056837
+    },
+    {
+      "cube_name": "}ElementAttributes_mCorporate Headcount",
+      "dimension_count": 2,
+      "request_seconds": 0.057792
+    },
+    {
+      "cube_name": "}ElementAttributes_mCost Center",
+      "dimension_count": 2,
+      "request_seconds": 0.057546
+    },
+    {
+      "cube_name": "}ElementAttributes_mCost Estimate",
+      "dimension_count": 2,
+      "request_seconds": 0.058354
+    },
+    {
+      "cube_name": "}ElementAttributes_mCost Standards",
+      "dimension_count": 2,
+      "request_seconds": 0.057527
+    },
+    {
+      "cube_name": "}ElementAttributes_mCustomer Profitability",
+      "dimension_count": 2,
+      "request_seconds": 0.060486
+    },
+    {
+      "cube_name": "}ElementAttributes_mEnvironmenal",
+      "dimension_count": 2,
+      "request_seconds": 0.057514
+    },
+    {
+      "cube_name": "}ElementAttributes_mFigures",
+      "dimension_count": 2,
+      "request_seconds": 0.054986
+    },
+    {
+      "cube_name": "}ElementAttributes_mFixed Manufacturing Cost",
+      "dimension_count": 2,
+      "request_seconds": 0.058041
+    },
+    {
+      "cube_name": "}ElementAttributes_mFixed Manufacturing Cost Assessment",
+      "dimension_count": 2,
+      "request_seconds": 0.064528
+    },
+    {
+      "cube_name": "}ElementAttributes_mFund Flow",
+      "dimension_count": 2,
+      "request_seconds": 0.05601
+    },
+    {
+      "cube_name": "}ElementAttributes_mGlenn Springs Outlook",
+      "dimension_count": 2,
+      "request_seconds": 0.056457
+    },
+    {
+      "cube_name": "}ElementAttributes_mGlenn Springs Project",
+      "dimension_count": 2,
+      "request_seconds": 0.055674
+    },
+    {
+      "cube_name": "}ElementAttributes_mIntercompany",
+      "dimension_count": 2,
+      "request_seconds": 0.060656
+    },
+    {
+      "cube_name": "}ElementAttributes_mInventory Walk",
+      "dimension_count": 2,
+      "request_seconds": 0.059452
+    },
+    {
+      "cube_name": "}ElementAttributes_ML Cost Component",
+      "dimension_count": 2,
+      "request_seconds": 0.058947
+    },
+    {
+      "cube_name": "}ElementAttributes_ML Document",
+      "dimension_count": 2,
+      "request_seconds": 0.058969
+    },
+    {
+      "cube_name": "}ElementAttributes_MLCCT",
+      "dimension_count": 2,
+      "request_seconds": 0.057423
+    },
+    {
+      "cube_name": "}ElementAttributes_mManual Input",
+      "dimension_count": 2,
+      "request_seconds": 0.06053
+    },
+    {
+      "cube_name": "}ElementAttributes_mManual Input Balance Sheet",
+      "dimension_count": 2,
+      "request_seconds": 0.058981
+    },
+    {
+      "cube_name": "}ElementAttributes_mManual Input Below the Line",
+      "dimension_count": 2,
+      "request_seconds": 0.171717
+    },
+    {
+      "cube_name": "}ElementAttributes_mManual Input Upload",
+      "dimension_count": 2,
+      "request_seconds": 0.062456
+    },
+    {
+      "cube_name": "}ElementAttributes_mManual Upload",
+      "dimension_count": 2,
+      "request_seconds": 0.06573
+    },
+    {
+      "cube_name": "}ElementAttributes_mManual Upload Balance Sheet",
+      "dimension_count": 2,
+      "request_seconds": 0.062648
+    },
+    {
+      "cube_name": "}ElementAttributes_mManual Upload Below the Line",
+      "dimension_count": 2,
+      "request_seconds": 0.060655
+    },
+    {
+      "cube_name": "}ElementAttributes_mManufacturing Cost",
+      "dimension_count": 2,
+      "request_seconds": 0.066163
+    },
+    {
+      "cube_name": "}ElementAttributes_mManufacturing Cost Balancing",
+      "dimension_count": 2,
+      "request_seconds": 0.056181
+    },
+    {
+      "cube_name": "}ElementAttributes_mMaterial Ledger",
+      "dimension_count": 2,
+      "request_seconds": 0.058213
+    },
+    {
+      "cube_name": "}ElementAttributes_mML Stage",
+      "dimension_count": 2,
+      "request_seconds": 0.055143
+    },
+    {
+      "cube_name": "}ElementAttributes_mMLDOCCCS",
+      "dimension_count": 2,
+      "request_seconds": 0.281504
+    },
+    {
+      "cube_name": "}ElementAttributes_mPlant Assessment",
+      "dimension_count": 2,
+      "request_seconds": 0.0548
+    },
+    {
+      "cube_name": "}ElementAttributes_mPowerGroup",
+      "dimension_count": 2,
+      "request_seconds": 0.059167
+    },
+    {
+      "cube_name": "}ElementAttributes_mProfit and Loss",
+      "dimension_count": 2,
+      "request_seconds": 0.058776
+    },
+    {
+      "cube_name": "}ElementAttributes_mProfit and Loss Detail",
+      "dimension_count": 2,
+      "request_seconds": 0.059345
+    },
+    {
+      "cube_name": "}ElementAttributes_mProject Spending",
+      "dimension_count": 2,
+      "request_seconds": 0.054625
+    },
+    {
+      "cube_name": "}ElementAttributes_mSustainability",
+      "dimension_count": 2,
+      "request_seconds": 0.056493
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Attribute Hierarchy Control",
+      "dimension_count": 2,
+      "request_seconds": 0.056478
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS BS Account Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.06188
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Control",
+      "dimension_count": 2,
+      "request_seconds": 0.056481
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Corporate Headcount Map",
+      "dimension_count": 2,
+      "request_seconds": 0.057974
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Cost Center Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.059332
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Cubes Dims",
+      "dimension_count": 2,
+      "request_seconds": 0.056445
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Data Access Group",
+      "dimension_count": 2,
+      "request_seconds": 0.05827
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Fund Flow",
+      "dimension_count": 2,
+      "request_seconds": 0.053737
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Glenn Springs Assignment",
+      "dimension_count": 2,
+      "request_seconds": 0.058331
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Hierarchy Control",
+      "dimension_count": 2,
+      "request_seconds": 0.05611
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Hierarchy Validation",
+      "dimension_count": 2,
+      "request_seconds": 0.057511
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Intercompany Elim",
+      "dimension_count": 2,
+      "request_seconds": 0.056568
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Inventory Walk",
+      "dimension_count": 2,
+      "request_seconds": 0.058732
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Inventory Walk Manual Entries",
+      "dimension_count": 2,
+      "request_seconds": 0.058863
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Legacy Elements",
+      "dimension_count": 2,
+      "request_seconds": 0.057513
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Material by Profit Center",
+      "dimension_count": 2,
+      "request_seconds": 0.062326
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS ML Classification",
+      "dimension_count": 2,
+      "request_seconds": 0.059681
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Parent Child",
+      "dimension_count": 2,
+      "request_seconds": 0.05741
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS PL Account Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.062442
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS PNL Valid Condition",
+      "dimension_count": 2,
+      "request_seconds": 0.059183
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS PNL Valid Fields",
+      "dimension_count": 2,
+      "request_seconds": 0.060776
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Process Control",
+      "dimension_count": 2,
+      "request_seconds": 0.060242
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Process History",
+      "dimension_count": 2,
+      "request_seconds": 0.059839
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Production Order",
+      "dimension_count": 2,
+      "request_seconds": 0.062519
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Profit Center Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.054162
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Profit Center Sales Responsibility",
+      "dimension_count": 2,
+      "request_seconds": 0.057669
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS SAP File History",
+      "dimension_count": 2,
+      "request_seconds": 0.058721
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Scenario Control",
+      "dimension_count": 2,
+      "request_seconds": 0.063256
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS Turnaround and Other Asset Assignment",
+      "dimension_count": 2,
+      "request_seconds": 0.0605
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS UOM Conversion Factor",
+      "dimension_count": 2,
+      "request_seconds": 0.060434
+    },
+    {
+      "cube_name": "}ElementAttributes_mSYS WBS Element Settlement Rule",
+      "dimension_count": 2,
+      "request_seconds": 0.064301
+    },
+    {
+      "cube_name": "}ElementAttributes_mTurnaround and Other Asset",
+      "dimension_count": 2,
+      "request_seconds": 0.058582
+    },
+    {
+      "cube_name": "}ElementAttributes_Order",
+      "dimension_count": 2,
+      "request_seconds": 0.058477
+    },
+    {
+      "cube_name": "}ElementAttributes_OtherMfgCat",
+      "dimension_count": 2,
+      "request_seconds": 0.054253
+    },
+    {
+      "cube_name": "}ElementAttributes_Partner Profit Center",
+      "dimension_count": 2,
+      "request_seconds": 0.060923
+    },
+    {
+      "cube_name": "}ElementAttributes_Pay Group",
+      "dimension_count": 2,
+      "request_seconds": 0.057354
+    },
+    {
+      "cube_name": "}ElementAttributes_PL Account",
+      "dimension_count": 2,
+      "request_seconds": 0.286487
+    },
+    {
+      "cube_name": "}ElementAttributes_Plant",
+      "dimension_count": 2,
+      "request_seconds": 0.059125
+    },
+    {
+      "cube_name": "}ElementAttributes_Plant Assessment Cost Object",
+      "dimension_count": 2,
+      "request_seconds": 0.055854
+    },
+    {
+      "cube_name": "}ElementAttributes_POSART",
+      "dimension_count": 2,
+      "request_seconds": 0.059115
+    },
+    {
+      "cube_name": "}ElementAttributes_Position",
+      "dimension_count": 2,
+      "request_seconds": 0.062467
+    },
+    {
+      "cube_name": "}ElementAttributes_Power Categories",
+      "dimension_count": 2,
+      "request_seconds": 0.068271
+    },
+    {
+      "cube_name": "}ElementAttributes_Power Organization",
+      "dimension_count": 2,
+      "request_seconds": 0.062547
+    },
+    {
+      "cube_name": "}ElementAttributes_Production Filter",
+      "dimension_count": 2,
+      "request_seconds": 0.056805
+    },
+    {
+      "cube_name": "}ElementAttributes_Production Order",
+      "dimension_count": 2,
+      "request_seconds": 0.061678
+    },
+    {
+      "cube_name": "}ElementAttributes_Production UOM",
+      "dimension_count": 2,
+      "request_seconds": 0.059137
+    },
+    {
+      "cube_name": "}ElementAttributes_Profit and Loss Source",
+      "dimension_count": 2,
+      "request_seconds": 0.058988
+    },
+    {
+      "cube_name": "}ElementAttributes_Profit Center",
+      "dimension_count": 2,
+      "request_seconds": 0.063279
+    },
+    {
+      "cube_name": "}ElementAttributes_Project Funding",
+      "dimension_count": 2,
+      "request_seconds": 0.061401
+    },
+    {
+      "cube_name": "}ElementAttributes_PTYP",
+      "dimension_count": 2,
+      "request_seconds": 0.05825
+    },
+    {
+      "cube_name": "}ElementAttributes_REANUMBR",
+      "dimension_count": 2,
+      "request_seconds": 0.062888
+    },
+    {
+      "cube_name": "}ElementAttributes_Reports",
+      "dimension_count": 2,
+      "request_seconds": 0.058999
+    },
+    {
+      "cube_name": "}ElementAttributes_Salary or Hourly",
+      "dimension_count": 2,
+      "request_seconds": 0.060294
+    },
+    {
+      "cube_name": "}ElementAttributes_Sales Area",
+      "dimension_count": 2,
+      "request_seconds": 0.281259
+    },
+    {
+      "cube_name": "}ElementAttributes_Sales Responsibility",
+      "dimension_count": 2,
+      "request_seconds": 0.054441
+    },
+    {
+      "cube_name": "}ElementAttributes_Scenario",
+      "dimension_count": 2,
+      "request_seconds": 0.056345
+    },
+    {
+      "cube_name": "}ElementAttributes_Sending or Receiving Material",
+      "dimension_count": 2,
+      "request_seconds": 0.05849
+    },
+    {
+      "cube_name": "}ElementAttributes_Ship To",
+      "dimension_count": 2,
+      "request_seconds": 0.058385
+    },
+    {
+      "cube_name": "}ElementAttributes_Shipping Condition",
+      "dimension_count": 2,
+      "request_seconds": 0.05902
+    },
+    {
+      "cube_name": "}ElementAttributes_Source",
+      "dimension_count": 2,
+      "request_seconds": 0.273508
+    },
+    {
+      "cube_name": "}ElementAttributes_Sustain_Categories",
+      "dimension_count": 2,
+      "request_seconds": 0.056653
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS AFE Validation",
+      "dimension_count": 2,
+      "request_seconds": 0.055234
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Attribute Hierarchy Control",
+      "dimension_count": 2,
+      "request_seconds": 0.058616
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS BS Account Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.055975
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS BS Account Hierarchy LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.056307
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Company Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.058162
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Control",
+      "dimension_count": 2,
+      "request_seconds": 0.058704
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Corporate Headcount",
+      "dimension_count": 2,
+      "request_seconds": 0.055465
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Cost Center Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.065628
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Cost Center Hierarchy LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.055965
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Data Access Group LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.058936
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Func Area Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.055811
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Functional Area Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.05555
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Glenn Springs Assignment",
+      "dimension_count": 2,
+      "request_seconds": 0.055196
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Headcount Cost Center",
+      "dimension_count": 2,
+      "request_seconds": 0.055795
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.058383
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Hierarchy Control",
+      "dimension_count": 2,
+      "request_seconds": 0.06427
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Hierarchy Validation",
+      "dimension_count": 2,
+      "request_seconds": 0.056765
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Inventory Walk Account",
+      "dimension_count": 2,
+      "request_seconds": 0.059434
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Inventory Walk LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.055662
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Inventory Walk Manual Entries LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.055119
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Legacy Element",
+      "dimension_count": 2,
+      "request_seconds": 0.053768
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Material Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.056547
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Mfg Cost Account",
+      "dimension_count": 2,
+      "request_seconds": 0.05789
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Order Filter",
+      "dimension_count": 2,
+      "request_seconds": 0.058603
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Parent Child",
+      "dimension_count": 2,
+      "request_seconds": 0.188189
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Parent Child Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.061806
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS PL Account Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.05944
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS PL Account Hierarchy LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.060984
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS PNL Valid",
+      "dimension_count": 2,
+      "request_seconds": 0.061066
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS PNL Valid Line No",
+      "dimension_count": 2,
+      "request_seconds": 0.061858
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Process",
+      "dimension_count": 2,
+      "request_seconds": 0.061753
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Process Line No",
+      "dimension_count": 2,
+      "request_seconds": 0.059743
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Process Schedule",
+      "dimension_count": 2,
+      "request_seconds": 0.058163
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Production Order LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.060275
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Profit Center Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.060629
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Profit Center Hierarchy LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.061552
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS SAP Fields",
+      "dimension_count": 2,
+      "request_seconds": 0.063488
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS SAP File",
+      "dimension_count": 2,
+      "request_seconds": 0.062515
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Sustainability References",
+      "dimension_count": 2,
+      "request_seconds": 0.062109
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS SustainabilityMaterials",
+      "dimension_count": 2,
+      "request_seconds": 0.063944
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS TI Process",
+      "dimension_count": 2,
+      "request_seconds": 0.062793
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS Turnaround and Other Asset Assignment Line No",
+      "dimension_count": 2,
+      "request_seconds": 0.061165
+    },
+    {
+      "cube_name": "}ElementAttributes_SYS WBS Validation",
+      "dimension_count": 2,
+      "request_seconds": 0.061249
+    },
+    {
+      "cube_name": "}ElementAttributes_Trading Partner",
+      "dimension_count": 2,
+      "request_seconds": 0.06297
+    },
+    {
+      "cube_name": "}ElementAttributes_Transaction Type",
+      "dimension_count": 2,
+      "request_seconds": 0.061941
+    },
+    {
+      "cube_name": "}ElementAttributes_Translate Material",
+      "dimension_count": 2,
+      "request_seconds": 0.067153
+    },
+    {
+      "cube_name": "}ElementAttributes_Translate Profit Center",
+      "dimension_count": 2,
+      "request_seconds": 0.06457
+    },
+    {
+      "cube_name": "}ElementAttributes_Turnaround and Other Asset Account",
+      "dimension_count": 2,
+      "request_seconds": 0.061405
+    },
+    {
+      "cube_name": "}ElementAttributes_Turnaround and Other Project",
+      "dimension_count": 2,
+      "request_seconds": 0.061328
+    },
+    {
+      "cube_name": "}ElementAttributes_UOM",
+      "dimension_count": 2,
+      "request_seconds": 0.062636
+    },
+    {
+      "cube_name": "}ElementAttributes_Valuation Type",
+      "dimension_count": 2,
+      "request_seconds": 0.061896
+    },
+    {
+      "cube_name": "}ElementAttributes_Value Class",
+      "dimension_count": 2,
+      "request_seconds": 0.068361
+    },
+    {
+      "cube_name": "}ElementAttributes_Variance",
+      "dimension_count": 2,
+      "request_seconds": 0.0689
+    },
+    {
+      "cube_name": "}ElementAttributes_Variance Profit Center",
+      "dimension_count": 2,
+      "request_seconds": 0.063218
+    },
+    {
+      "cube_name": "}ElementAttributes_Vendor",
+      "dimension_count": 2,
+      "request_seconds": 0.277977
+    },
+    {
+      "cube_name": "}ElementAttributes_VGART",
+      "dimension_count": 2,
+      "request_seconds": 0.061747
+    },
+    {
+      "cube_name": "}ElementAttributes_WBS Element",
+      "dimension_count": 2,
+      "request_seconds": 0.063292
+    },
+    {
+      "cube_name": "}ElementAttributes_WBS Element LineNo",
+      "dimension_count": 2,
+      "request_seconds": 0.064558
+    },
+    {
+      "cube_name": "}ElementAttributes_}CAMAssociatedGroups",
+      "dimension_count": 2,
+      "request_seconds": 0.062067
+    },
+    {
+      "cube_name": "}ElementAttributes_}Clients",
+      "dimension_count": 2,
+      "request_seconds": 0.063966
+    },
+    {
+      "cube_name": "}ElementAttributes_}CubeProperties",
+      "dimension_count": 2,
+      "request_seconds": 0.064419
+    },
+    {
+      "cube_name": "}ElementAttributes_}Cubes",
+      "dimension_count": 2,
+      "request_seconds": 0.062274
+    },
+    {
+      "cube_name": "}ElementAttributes_}CubeSecurityProperties",
+      "dimension_count": 2,
+      "request_seconds": 0.065552
+    },
+    {
+      "cube_name": "}ElementAttributes_}Cultures",
+      "dimension_count": 2,
+      "request_seconds": 0.065376
+    },
+    {
+      "cube_name": "}ElementAttributes_}DimensionProperties",
+      "dimension_count": 2,
+      "request_seconds": 0.06568
+    },
+    {
+      "cube_name": "}ElementAttributes_}Dimensions",
+      "dimension_count": 2,
+      "request_seconds": 0.064392
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_Balance Sheet Source",
+      "dimension_count": 2,
+      "request_seconds": 0.065401
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_Compare",
+      "dimension_count": 2,
+      "request_seconds": 0.063801
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_ELEMENT",
+      "dimension_count": 2,
+      "request_seconds": 0.065308
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_Functional Area",
+      "dimension_count": 2,
+      "request_seconds": 0.085785
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_Glenn Springs Account",
+      "dimension_count": 2,
+      "request_seconds": 0.060153
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_Material",
+      "dimension_count": 2,
+      "request_seconds": 0.060635
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_mBalance Sheet",
+      "dimension_count": 2,
+      "request_seconds": 0.061698
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_Plant",
+      "dimension_count": 2,
+      "request_seconds": 0.064894
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_SYS Functional Area Hierarchy",
+      "dimension_count": 2,
+      "request_seconds": 0.286784
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_SYS SustainabilityMaterials",
+      "dimension_count": 2,
+      "request_seconds": 0.06346
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_Turnaround and Other Project",
+      "dimension_count": 2,
+      "request_seconds": 0.065083
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_WBS Element",
+      "dimension_count": 2,
+      "request_seconds": 0.290459
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_}ElementAttributes_Turnaround and Other Project",
+      "dimension_count": 2,
+      "request_seconds": 0.063436
+    },
+    {
+      "cube_name": "}ElementAttributes_}ElementAttributes_}Processes",
+      "dimension_count": 2,
+      "request_seconds": 0.06275
+    },
+    {
+      "cube_name": "}ElementAttributes_}Groups",
+      "dimension_count": 2,
+      "request_seconds": 0.068583
+    },
+    {
+      "cube_name": "}ElementAttributes_}Hierarchies_Glenn Springs Order",
+      "dimension_count": 2,
+      "request_seconds": 0.060772
+    },
+    {
+      "cube_name": "}ElementAttributes_}Processes",
+      "dimension_count": 2,
+      "request_seconds": 0.065416
+    },
+    {
+      "cube_name": "}ElementSecurity_Cost Center",
+      "dimension_count": 2,
+      "request_seconds": 0.06414
+    },
+    {
+      "cube_name": "}ElementSecurity_Plant",
+      "dimension_count": 2,
+      "request_seconds": 0.062443
+    },
+    {
+      "cube_name": "}ElementSecurity_Profit Center",
+      "dimension_count": 2,
+      "request_seconds": 0.06288
+    },
+    {
+      "cube_name": "}HierarchyProperties",
+      "dimension_count": 3,
+      "request_seconds": 0.064233
+    },
+    {
+      "cube_name": "}PickList_Manual Upload",
+      "dimension_count": 5,
+      "request_seconds": 0.062973
+    },
+    {
+      "cube_name": "}PickList_Manual Upload Balance Sheet",
+      "dimension_count": 5,
+      "request_seconds": 0.062935
+    },
+    {
+      "cube_name": "}PickList_Manual Upload Below the Line",
+      "dimension_count": 5,
+      "request_seconds": 0.072956
+    },
+    {
+      "cube_name": "}PickList_SYS Attribute Hierarchy Control",
+      "dimension_count": 4,
+      "request_seconds": 0.288831
+    },
+    {
+      "cube_name": "}PickList_SYS Data Access Group",
+      "dimension_count": 4,
+      "request_seconds": 0.074451
+    },
+    {
+      "cube_name": "}PickList_SYS Turnaround and Other Asset Assignment",
+      "dimension_count": 4,
+      "request_seconds": 0.063979
+    },
+    {
+      "cube_name": "}ProcessSecurity",
+      "dimension_count": 2,
+      "request_seconds": 0.064148
+    },
+    {
+      "cube_name": "}StatsByChore",
+      "dimension_count": 3,
+      "request_seconds": 0.064065
+    },
+    {
+      "cube_name": "}StatsByClient",
+      "dimension_count": 3,
+      "request_seconds": 0.065809
+    },
+    {
+      "cube_name": "}StatsByCube",
+      "dimension_count": 3,
+      "request_seconds": 0.06163
+    },
+    {
+      "cube_name": "}StatsByCubeByClient",
+      "dimension_count": 5,
+      "request_seconds": 0.062812
+    },
+    {
+      "cube_name": "}StatsByProcess",
+      "dimension_count": 3,
+      "request_seconds": 0.068569
+    },
+    {
+      "cube_name": "}StatsByRule",
+      "dimension_count": 3,
+      "request_seconds": 0.060712
+    },
+    {
+      "cube_name": "}StatsForServer",
+      "dimension_count": 2,
+      "request_seconds": 0.063779
+    }
+  ]
+}

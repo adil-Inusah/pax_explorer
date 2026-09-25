@@ -1,0 +1,14 @@
+{
+  "snapshot_id": "20260924T164130Z",
+  "status": "COMPLETE",
+  "visibility_scope": "PUBLIC",
+  "started_at": "2026-09-24T16:41:30.974739+00:00",
+  "completed_at": "2026-09-24T16:41:55.804216+00:00",
+  "cube_count": 379,
+  "view_count": 2059,
+  "relationship_count": 2059,
+  "validation_count": 2059,
+  "error_count": 0,
+  "publish_current_requested": true,
+  "published_current": true
+}

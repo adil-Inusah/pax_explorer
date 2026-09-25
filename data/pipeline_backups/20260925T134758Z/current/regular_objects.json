@@ -1,0 +1,5674 @@
+[
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Daily",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Fixed Mfg Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Fixed MFG Cost Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Glenn Springs",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Hourly 0630",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Hourly 0830",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Hourly 1030",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Hourly 1230",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Hourly 1430",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Hourly 1630",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Hourly 1830",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - Hourly 2030",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - SUSTAINABILITY",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DATAUPDATE - TVARVC (Daily)",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "DIMUPDATE - SAP Dimensions",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "MAINTENANCE - Backup Data Directory",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "MAINTENANCE - File Cleanup",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "chore",
+    "object_name": "MAINTENANCE - Save Data",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "aaq2mmck",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Aaqdata",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Balance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Balance Sheet Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Below the Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Below the Line Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Below the Line Report",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "BudInc",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Corporate Headcount",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Cost Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Cost Estimate",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Cost Standards",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Customer Profitability",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Environmental Report",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Ethylene Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Fixed Manufacturing Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Fixed Manufacturing Cost Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Fund Flow",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Glenn Springs Outlook",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Glenn Springs Project",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Groupid",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Headcnt",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Intercompany",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Intercompany Sandbox",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Inventory Walk",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Inventory Walk Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Locdesc",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Manual Input",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Manual Input Balance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Manual Input Below the Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Manual Upload",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Manual Upload Balance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Manual Upload Below the Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Manufacturing Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Manufacturing Cost Balancing",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Material Ledger",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Mfg Key Stats",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "ML Stage",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "MLDOCCCS",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "OtherMfg",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Plant Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Plant Variance",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Power Group",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Profit and Loss",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Profit and Loss Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Profit Center Variance",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Project Spending",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "readata",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Sustainability",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Attribute Hierarchy Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS BS Account Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Corporate Headcount Map",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Cost Center Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Cubes Dims",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Data Access Group",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Fund Flow",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Glenn Springs Assignment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Hierarchy Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Hierarchy Validation",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Intercompany Elim",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Inventory Walk",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Inventory Walk Manual Entries",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Legacy Elements",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Material by Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS ML Classification",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Parent Child",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS PL Account Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS PNL Valid Condition",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS PNL Valid Fields",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Process Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Process History",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Production Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Production Volume Filter",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Profit Center Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Profit Center Sales Responsibility",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS SAP File History",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Scenario Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Sustainability Reference",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS Turnaround and Other Asset Assignment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS UOM Conversion Factor",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "SYS WBS Element Settlement Rule",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "TRANSCAT",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "cube",
+    "object_name": "Turnaround and Other Asset",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "AFE Category",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "AFE Number",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "afecatgy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "afedata",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "afedesc",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "afemonth",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "afeyear",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Assessment Segment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "AWTYP",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Balance Sheet Source",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Below the Line Source",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "BS Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "BS Document No",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "BudCalc",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "BudYr",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "BWART",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "CATEG",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "catname",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "CATnumbr",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Company",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Compare",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Component",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Consumed",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Contra Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Cost Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Cost Center Source",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Currency Type",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "CURTP",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Customer",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "DemoInclude",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "DOCREF",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Document No",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "ELEMENT",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Employee",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Employee Type",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "ENVYRS",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Fees",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Fiscal Period",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Fiscal Year",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Fixed Manufacturing Cost Assessment Source",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Flow Code",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Functional Area",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Fund Flow",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "funding",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "GL Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "GL_Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Glenn Springs Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Glenn Springs Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Glenn Springs Phase",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Glenn Springs Task",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Glenn Springs Transaction Code",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "GLVOR",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "GRPDESC",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "HCPeriod",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "HCType",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Inventory Walk",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Inventory Walk Text",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Job Family",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "KALNR",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "LOCDESC",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "LOCNO",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Manual Input LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Manual Upload LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Manufacturing Cost Object",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Manufacturing Cost Type",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Market Segment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Material",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Material Ledger Classification",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Material Ledger Data Source",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Material Ledger Document",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mBalance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mBalance Sheet Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mBelow The Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mBelow the Line Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mCorporate Headcount",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mCost Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mCost Estimate",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mCost Standards",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mCustomer Profitability",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mEnvironmenal",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mFigures",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mFixed Manufacturing Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mFixed Manufacturing Cost Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mFund Flow",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mGlenn Springs Outlook",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mGlenn Springs Project",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mIntercompany",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mInventory Walk",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "ML Cost Component",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "ML Document",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "MLCCT",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mManual Input",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mManual Input Balance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mManual Input Below the Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mManual Input Upload",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mManual Upload",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mManual Upload Balance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mManual Upload Below the Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mManufacturing Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mManufacturing Cost Balancing",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mMaterial Ledger",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mML Stage",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mMLDOCCCS",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Movement Type",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mPlant Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mPowerGroup",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mProfit and Loss",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mProfit and Loss Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mProject Spending",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSustainability",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Attribute Hierarchy Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS BS Account Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Corporate Headcount Map",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Cost Center Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Cubes Dims",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Data Access Group",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Fund Flow",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Glenn Springs Assignment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Hierarchy Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Hierarchy Validation",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Intercompany Elim",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Inventory Walk",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Inventory Walk Manual Entries",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Legacy Elements",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Material by Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS ML Classification",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Parent Child",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS PL Account Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS PNL Valid Condition",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS PNL Valid Fields",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Process Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Process History",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Production Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Production Volume Filter",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Profit Center Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Profit Center Sales Responsibility",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS SAP File History",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Scenario Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS Turnaround and Other Asset Assignment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS UOM Conversion Factor",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mSYS WBS Element Settlement Rule",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "mTurnaround and Other Asset",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "OtherMfgCat",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Partner Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Pay Group",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "PL Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Plant",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Plant Assessment Cost Object",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "POSART",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Position",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Power Categories",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Power Organization",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Production Filter",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Production Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Production UOM",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Profit and Loss Source",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Project Funding",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "PTYP",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "READESC",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "REANUMBR",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Reports",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Salary or Hourly",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Sales Area",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Sales Responsibility",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Sandboxes",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Scenario",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Sending or Receiving Material",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Ship To",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Shipping Condition",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Source",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Sustain_Categories",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS AFE Validation",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Attribute Hierarchy Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS BS Account Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS BS Account Hierarchy LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Company Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Corporate Headcount",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Cost Center Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Cost Center Hierarchy LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Data Access Group LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Func Area Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Functional Area Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Glenn Springs Assignment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Headcount Cost Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Hierarchy Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Hierarchy Validation",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Inventory Walk Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Inventory Walk LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Inventory Walk Manual Entries LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Legacy Element",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Material Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Mfg Cost Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Order Filter",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Parent Child",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Parent Child Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS PL Account Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS PL Account Hierarchy LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS PNL Valid",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS PNL Valid Line No",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Process",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Process Line No",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Process Schedule",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Production Order LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Profit Center Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Profit Center Hierarchy LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS SAP Fields",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS SAP File",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Sustainability References",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS SustainabilityMaterials",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS TI Process",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS Turnaround and Other Asset Assignment Line No",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "SYS WBS Validation",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Trading Partner",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Transaction Type",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Translate Material",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Translate Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Turnaround and Other Asset Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Turnaround and Other Project",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "UOM",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Valuation Type",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Value Class",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Variance",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Variance Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "Vendor",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "VGART",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "WBS Element",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "dimension",
+    "object_name": "WBS Element LineNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_Add REA#",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_BUILD AFE ROLLUP_V2",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_Clear Process Descrip",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_Delete Rollups",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_PROCESS REA DATA_V5",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_Process2000MCHK_V3",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_ProcessAAQ_V3",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_RecreateTotalOxyChem",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_Zero 200MCHK",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "AAQ_ZeroAAQ",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Balance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Balance Sheet - Manual Entry",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Balance Sheet - Manual Entry - Clear Out",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Balance Sheet - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Balance Sheet - Period 13",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Balance Sheet Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line - Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line - Corporate Headcount",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line - Load Outlook to BudInc",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line - Manual Entry",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line Assessment - Actual - Assessment Offset Postings",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line Assessment - Actual - Assessment Postings",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line Assessment - Actual - Manual Entry",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below The Line Assessment - Copy Assess % Override",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below The Line Assessment - Copy Assess % Override - Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line Assessments - Outlook",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line Assessments - Outlook - Period Range",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line Assessments - Outlook Assessment Percentage",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line Assessments - Outlook Assessment Percentage - Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line Assessments - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Below the Line Assessments - Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Corporate Headcount",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Corporate Headcount - Contingent Workers",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Corporate Headcount - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Cost Estimate",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Cost Standards - KEPH",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Customer Profitability",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Customer Profitability - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Fixed Manufacturing Cost - Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Fixed Manufacturing Cost - Load Outlook to BudInc",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Fixed Manufacturing Cost - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Fixed Manufacturing Cost - Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Fixed Manufacturing Cost Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Fixed Manufacturing Cost Assessment - Copy Assess % Override",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Fixed Manufacturing Cost Assessment - Copy Assess % Override - Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Fixed Manufacturing Cost Assessment - T Account Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Fund Flow",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Glenn Springs Project - Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Glenn Springs Project - Remaining Unassigned",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Intercompany",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Intercompany - Manual Entry",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Intercompany - Manual Entry - Clear Out",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Intercompany Sandbox",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Intercompany Sandbox - COS Elim",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Intercompany Sandbox - Internal Markup",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Intercompany Sandbox - Sales Elim",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Inventory Walk",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Inventory Walk - Manual Entries",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Inventory Walk - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Inventory Walk - Production Adjustment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Manual Input",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Manual Input Balance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Manual Input Below the Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Manufacturing Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Manufacturing Cost - BW",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Manufacturing Cost - Exclude",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Manufacturing Cost - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Manufacturing Cost - Transferred Costs",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Manufacturing Cost Balancing",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Beginning and Ending Inventory",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Beginning and Ending Inventory - Average Price Materials",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Consumption - All Other",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Consumption - Production",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Consumption - Production - Materials Produced - Price Diff",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Consumption - Production - Materials Produced - Std",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Consumption - Sales",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Consumption - Transfers",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Consumption - Transfers - Receiving Material and Plant",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Receipts - All other",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Receipts - External Procured Receipts",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Receipts - Production",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Receipts - Production - Components Consumed",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Receipts - Transfer Posting",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Receipts - Transfer Posting - Components Consumed",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Revaluation - All Other",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Revaluation - Change in Material Price",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Revaluation - External Procured Receipts",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Revaluation - Production",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Revaluation - Production Consumption",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Revaluation - Sales",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Revaluation - Transfer Posting",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Material Ledger - Revaluation - Transfers Out",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - ML Stage",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - ML Stage - ACDOCA",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - ML Stage - ACDOCA_Temp",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - MLDOCCCS",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Plant Assessment - Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Period Range",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Period Range - Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Freight Reclass",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Freight Reclass with Material Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Intercompany",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Intercompany Sandbox",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Manual Entry",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Manual Entry - Clear Out",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Profit and Loss Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Project Spend Outlook Equal YTD",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Project Spending",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Project Spending - Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Project Spending - Manual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Project Spending - Validation",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Project Spending - Validation - Manual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Project Spending - Validation EMail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Scenario Archive - Numeric",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Scenario Archive - String",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Sustainability - Fixed",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Sustainability - Hydrogen",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Sustainability - NaturalGasREV",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Sustainability Download",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Sustainability Email File",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Sustainability Variable",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Sustainability Variable V2",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Sustainability Variable_V2",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS BS Account Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Control - Period Variable",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Cost Center Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS GL Account Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Hierarchy Validation",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Hierarchy Validation - Duplicate Rollups",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Intercompany Elim",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Intercompany Elim - Cost of Sales",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Material by Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS PL Account Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Production Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Profit Center Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Profit Center Sales Responsibility",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS Profit Center Sales Responsibility - Actual Net Sales",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - SYS UOM Conversion Factor",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Turnaround and Other Asset - Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Turnaround and Other Asset - Actual - Manual Assignments",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Turnaround and Other Asset - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Turnaround and Other Asset - Roll Dates",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Turnaround Reserve - Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Turnaround Reserve - Outlook Seed Actual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataUpdate - Turnaround Reserve - Roll Dates",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - Balance Sheet Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - Balance Sheet Detail and Profit and Loss Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - Fixed Manufacturing Cost - Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - Glenn Springs Project",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - Manufacturing Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - Profit and Loss Detail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - Project Spending",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - Project Spending - Manual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - Scenario Archive",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - SYS Hierarchy Validation",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper - SYS UOM Conversion Factor",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DataWrapper- SYS Control - Period Variable",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Delete_FixedCostPlanReload",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Delete_InventoryAnalysis",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Delete_InventoryBalanceLoad",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Delete_ProcessInventory",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - AFE Number - Rollups",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - BS Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - BS Account - Hierarchies",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - BS Account - Hierarchies - Leaf Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Company",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Company - SAP Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Cost Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Cost Center - SAP Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Customer",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Customer - Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Dimension - Hierarchy Archive",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Document No",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Fiscal Period",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Fiscal Period - Relative Hierarchies",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Functional Area",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Functional Area - SAP Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Functional Area - SAP Hierarchy Import",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Fund Flow - Cash Flow Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Fund Flow - Fund Flow Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - GL_Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Glenn Springs Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - KALNR",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - KALNR - CKMLPR",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - KALNR - KEKO",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Material",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Material - Sales Responsibility - Production UOM",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Material - Sales Responsibility - Reporting UOM",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - PL Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - PL Account - SAP Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Plant",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Plant Assessment Cost Object",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Plant Assessment Cost Object - Plant Orders",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Plant Assessment Cost Object - SAP Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Production Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Profit Center - SAP Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - SYS Company Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - SYS Func Area Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - SYS Functional Area Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - SYS Material Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - SYS Mfg Cost Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - SYS Mfg Cost Account - BW",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Turnaround and Other Project",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Turnaround and Other Project - ANLA",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Turnaround and Other Project - ANLB",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Turnaround and Other Project - PRPS",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - Vendor",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate - WBS Element",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdate_KALNR",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  Company",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  Functional Area",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  Glenn Springs Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  Material",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  Plant",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  Production Order",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  Turnaround and Other Project",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  Vendor",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper -  WBS Element",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper - BS Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper - Cost Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper - Customer",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper - PL Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper - Plant Assessment Cost Object",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "DimUpdateWrapper - Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "LegacyUpdate - Fixed Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "LegacyUpdate - Import Consumed Dimension From Legacy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "LegacyUpdate - Mfg Key Stats",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Non Interactive Account",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Notification - Below the Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Notification - Intercompany - Sales Elim Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Notification - Plant and Profit Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Notification - Profit and Loss",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Notification - Profit and Loss - Clearing Accounts",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SecurityUpdate - Element Security",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SecurityUpdate - Element Security - Hierarchy Archive",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SecurityUpdate - Element Security - Plant",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SecurityUpdate - Element Security - Plant - Hierarchy Archive",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "sys_ACDOCA_Period Check",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Attribute Hierarchy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Attribute Hierarchy_Create",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "sys_Chore Frequency Check",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SYS_Combine_HTML",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SYS_Convert_User",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Create_Html",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "sys_cube_clear",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Cube_Clear_Data",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Cube_View_Create",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Cube_View_Create_MDX",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Cube_View_Delete",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Cube_ViewAndSubsets.Create",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Cube_ViewAndSubsets_Delete",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "sys_Cubes Dims",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Data Directory_Backup",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SYS_Delete_Views_and_Subsets_By_Pattern",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_AllConsols_Delete",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_AllElements_Delete",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Clone",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Copy_Attributes",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Create_Standard_Alias",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Element_Delete.FromSubset",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Export_To_File",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_Clone",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_Create_Orphans",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_CreateFromConfig",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_Unwind_All",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Import_From_File",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sort",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sort_Export",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sort_Import",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sort_Seed",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sort_Seed_TopLevel",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sub_Clone",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sub_Create",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sub_Create_ByMDX",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sub_Create_ByMDX_Full",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Dim_Sub_Delete",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SYS_Dim_Sub_Delete_All_Control",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "SYS_Dim_Update_All_Subsets_Wrapper",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_File_Archive",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_File_Cleanup",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "sys_File_DateStamp Check",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_File_Lookup",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Generic_Alternate Dimension Hierarchies",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Generic_Parent Child Dimension",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Generic_Rollup Undefined",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Legacy Element",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_PAxLoader",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_PAxLoader_Archive",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_PAxLoader_FileCheck",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_PAxLoader_RecordCount",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_PAxValidator",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Process_Feeders",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Process_Rule Feeders",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Save_Data",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Security_Refresh",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Send_EMail",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Send_EMail_Html",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Virtual Dimension",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Virtual Dimension_Create",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Virtual Dimension_Destroy",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "Sys_Wrapper_PAxLoader_FileCheck",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zImport_Profit and Loss_Plan",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp - Admin",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp - Profit and Loss - Correct Legacy Qty",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Count",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp DATAUPDATE - Fixed Manufacturing Cost Plan Manual",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp DATAUPDATE - PLANT ASSESSMENTS PLAN",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - Balance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - Below the Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - Below the Line Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - Customer Profitability",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - Glenn Springs Outlook",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - Glenn Springs Project",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - Inventory Walk",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - Manufacturing Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - Profit and Loss",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Export - SYS Production Volume Filter",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Balance Sheet",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Below the Line",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Below the Line Assessment",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Cost Center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Customer Profitability",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Glenn Springs Outlook",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Glenn Springs Project",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Inventory Walk",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Manufacturing Cost",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - Profit and Loss",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp Import - SYS Production Volume Filter",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_ Intercompany - Export Profit Centers",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Actual Project Spend",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Attrs_ BS Doc No",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Clear Cube",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Clear Permissions",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Clear PNL Manual Entry",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_DataUpdate - Below the Line Assessments - Outlook - Period Range",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_DataUpdate - Manufacturing Cost - BW",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Delete all Document Numbers",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Delete Attrs",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Delete DocNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_dimupdate_DocNo",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Document No",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Document No_Index",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Export Intercompany Sandbox Issues",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_File",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Fixed MFG_Cost center",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Insert Attr",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Intercompany",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Intercompany Sandbox Clear",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Project Spending Opening Balances",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_ProjectSpend_OB",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTemp_Test",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTest_Record Count",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "ztest_Records",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "zTestHtml",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  },
+  {
+    "snapshot_id": "20260923T231311Z",
+    "object_type": "process",
+    "object_name": "{e990acac-8a5c-425d-9aa4-6fe0d591f04c}",
+    "is_control": false,
+    "catalog_scope": "REGULAR",
+    "collected_at": "2026-09-23T23:13:11.185439+00:00"
+  }
+]

@@ -1,0 +1,974 @@
+[
+  {
+    "function_name": "ATTRN",
+    "occurrence_count": 6,
+    "cube_count": 1,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "ATTRN",
+        "line_number": 57,
+        "expression": "ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CM APPR AMT')"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "ATTRN",
+        "line_number": 57,
+        "expression": "ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CY PLAN AMT')"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "ATTRN",
+        "line_number": 59,
+        "expression": "ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'Max ( CM APPR AMT vs CY PLAN AMT )')"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "ATTRN",
+        "line_number": 59,
+        "expression": "ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CM TOT SPD EST')"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "ATTRN",
+        "line_number": 62,
+        "expression": "ATTRN ('AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CM APPR AMT')"
+      }
+    ]
+  },
+  {
+    "function_name": "ATTRS",
+    "occurrence_count": 229,
+    "cube_count": 31,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ATTRS",
+        "line_number": 25,
+        "expression": "ATTRS ( 'Fiscal Period', !Fiscal Period, 'Prior Period')"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ATTRS",
+        "line_number": 31,
+        "expression": "ATTRS ( 'Fiscal Period', !Fiscal Period, 'Prior Period')"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ATTRS",
+        "line_number": 60,
+        "expression": "ATTRS ( 'Fiscal Period', !Fiscal Period, 'Prior Period')"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ATTRS",
+        "line_number": 67,
+        "expression": "ATTRS ( 'Fiscal Period', !Fiscal Period, 'Prior Period')"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ATTRS",
+        "line_number": 99,
+        "expression": "ATTRS ( 'Fiscal Period', !Fiscal Period, 'Next Period')"
+      }
+    ]
+  },
+  {
+    "function_name": "CONSOLIDATECHILDREN",
+    "occurrence_count": 3,
+    "cube_count": 2,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "CONTEXTUAL",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Parent Child",
+        "function_name": "CONSOLIDATECHILDREN",
+        "line_number": 12,
+        "expression": "ConsolidateChildren('SYS Parent Child Hierarchy')"
+      },
+      {
+        "cube_name": "SYS Profit Center Sales Responsibility",
+        "function_name": "CONSOLIDATECHILDREN",
+        "line_number": 4,
+        "expression": "ConsolidateChildren ('UOM')"
+      },
+      {
+        "cube_name": "SYS Profit Center Sales Responsibility",
+        "function_name": "CONSOLIDATECHILDREN",
+        "line_number": 13,
+        "expression": "ConsolidateChildren ('UOM')"
+      }
+    ]
+  },
+  {
+    "function_name": "CONSOLIDATEDAVG",
+    "occurrence_count": 1,
+    "cube_count": 1,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Cost Estimate",
+        "function_name": "CONSOLIDATEDAVG",
+        "line_number": 5,
+        "expression": "ConsolidatedAvg( 2, 'Cost Estimate', !Currency Type, !Fiscal Period, !Plant, !Profit Center, !Material, !Component, !ELEMENT, !mCost Estimate )"
+      }
+    ]
+  },
+  {
+    "function_name": "CONSOLIDATEDMAX",
+    "occurrence_count": 7,
+    "cube_count": 6,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Manual Input",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 20,
+        "expression": "ConsolidatedMax( 3,'Manual Input', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input )"
+      },
+      {
+        "cube_name": "Manual Input",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 24,
+        "expression": "ConsolidatedMax( 3,'Manual Input', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input )"
+      },
+      {
+        "cube_name": "Manual Input Balance Sheet",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 19,
+        "expression": "ConsolidatedMax( 3,'Manual Input Balance Sheet', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input Balance Sheet )"
+      },
+      {
+        "cube_name": "Manual Input Below the Line",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 20,
+        "expression": "ConsolidatedMax( 3,'Manual Input Below the Line', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input Below the Line )"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 19,
+        "expression": "ConsolidatedMax( 3, 'Manual Upload', !}Clients, !Fiscal Period, 'All Lines', 'Upload (System)' )"
+      }
+    ]
+  },
+  {
+    "function_name": "DAYNO",
+    "occurrence_count": 4,
+    "cube_count": 1,
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "lineage_category": "NON_LINEAGE",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DAYNO",
+        "line_number": 88,
+        "expression": "DAYNO( DB ( 'SYS Control', 'Close Month - Start Date', 'String'))"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DAYNO",
+        "line_number": 91,
+        "expression": "DAYNO( DB ( 'SYS Control', 'Close Month - End Date', 'String'))"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DAYNO",
+        "line_number": 97,
+        "expression": "DAYNO( TIMST( Now() - (['GMT Offset','Numeric']/24), '\\Y-\\m-\\d'))"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DAYNO",
+        "line_number": 100,
+        "expression": "Dayno ( DB ('SYS Control', !SYS Control, 'String' ))"
+      }
+    ]
+  },
+  {
+    "function_name": "DB",
+    "occurrence_count": 695,
+    "cube_count": 55,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "DB",
+        "line_number": 24,
+        "expression": "DB('Balance Sheet', !Scenario, \n      ATTRS ( 'Fiscal Period', !Fiscal Period, 'Prior Period'), \n     !Company, !Profit Center, !Trading Partner, !BS Account, 'F99', !Balance Sheet Source ,!mBalance Sheet )"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "DB",
+        "line_number": 30,
+        "expression": "DB('Balance Sheet', !Scenario, \n      ATTRS ( 'Fiscal Period', !Fiscal Period, 'Prior Period'), \n     !Company, !Profit Center, !Trading Partner, !BS Account, 'F99', !Balance Sheet Source ,!mBalance Sheet )"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "DB",
+        "line_number": 59,
+        "expression": "DB('Balance Sheet', !Scenario, \n      ATTRS ( 'Fiscal Period', !Fiscal Period, 'Prior Period'), \n     !Company, !Profit Center, !Trading Partner, !BS Account, 'F99', !Balance Sheet Source ,!mBalance Sheet )"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "DB",
+        "line_number": 66,
+        "expression": "DB('Balance Sheet', !Scenario, \n      ATTRS ( 'Fiscal Period', !Fiscal Period, 'Prior Period'), \n     !Company, !Profit Center, !Trading Partner, !BS Account, 'F99', !Balance Sheet Source ,!mBalance Sheet )"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "DB",
+        "line_number": 76,
+        "expression": "DB('Balance Sheet', !Scenario, \n      ELCOMP ( 'Fiscal Period', !Fiscal Period, 1), \n      !Company, !Profit Center, !Trading Partner, !BS Account, 'F00', !Balance Sheet Source ,!mBalance Sheet )"
+      }
+    ]
+  },
+  {
+    "function_name": "DIMIX",
+    "occurrence_count": 26,
+    "cube_count": 20,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Below the Line Assessment",
+        "function_name": "DIMIX",
+        "line_number": 6,
+        "expression": "DIMIX ( 'PL Account', !PL Account)"
+      },
+      {
+        "cube_name": "Intercompany",
+        "function_name": "DIMIX",
+        "line_number": 166,
+        "expression": "DIMIX ( 'Profit Center', DB('Intercompany', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, !PL Account, 'Sales Elim Profit Center' ))"
+      },
+      {
+        "cube_name": "Intercompany",
+        "function_name": "DIMIX",
+        "line_number": 173,
+        "expression": "DIMIX ( 'Profit Center', DB('Intercompany', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, !PL Account, 'COS Elim Profit Center' ))"
+      },
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "DIMIX",
+        "line_number": 186,
+        "expression": "DIMIX ( 'Profit Center', DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, !PL Account, 'Sales Elim Profit Center' ))"
+      },
+      {
+        "cube_name": "Manual Input",
+        "function_name": "DIMIX",
+        "line_number": 15,
+        "expression": "DIMIX ('Manual Input LineNo' , !Manual Input LineNo)"
+      }
+    ]
+  },
+  {
+    "function_name": "DIMNM",
+    "occurrence_count": 13,
+    "cube_count": 10,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Below the Line Assessment",
+        "function_name": "DIMNM",
+        "line_number": 6,
+        "expression": "DIMNM ( 'PL Account', DIMIX ( 'PL Account', !PL Account))"
+      },
+      {
+        "cube_name": "Manual Input",
+        "function_name": "DIMNM",
+        "line_number": 15,
+        "expression": "DIMNM ( 'Manual Input LineNo' , DIMIX ('Manual Input LineNo' , !Manual Input LineNo))"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DIMNM",
+        "line_number": 38,
+        "expression": "DIMNM( 'Fiscal Period', DIMIX ( 'Fiscal Period',  STR( NUMBR( ATTRS ( 'Fiscal Period', DB('SYS Control', 'Close Period','String'), 'Period Index' )) +\n  NUMBR( DB('SYS Control', 'OL Effective Input Periods','String')),3,0)))"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DIMNM",
+        "line_number": 77,
+        "expression": "DIMNM( 'Fiscal Period', DIMIX ( 'Fiscal Period',  STR( NUMBR( ATTRS ( 'Fiscal Period', DB('SYS Control', 'Close Period','String'), 'Period Index' )) +\n  NUMBR( DB('SYS Control', 'MFG OL Effective Input Periods','String')),3,0)))"
+      },
+      {
+        "cube_name": "}CellSecurity_Fixed Manufacturing Cost",
+        "function_name": "DIMNM",
+        "line_number": 13,
+        "expression": "DIMNM ( 'Fiscal Period', DIMIX ( 'Fiscal Period', !Fiscal Period))"
+      }
+    ]
+  },
+  {
+    "function_name": "ELCOMP",
+    "occurrence_count": 23,
+    "cube_count": 8,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELCOMP",
+        "line_number": 77,
+        "expression": "ELCOMP ( 'Fiscal Period', !Fiscal Period, 1)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELCOMP",
+        "line_number": 87,
+        "expression": "ELCOMP ( 'Fiscal Period', !Fiscal Period, ELCOMPN ( 'Fiscal Period', !Fiscal Period ))"
+      },
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ELCOMP",
+        "line_number": 29,
+        "expression": "ELCOMP('Fiscal Period', 'Plan Update Periods',1)"
+      },
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ELCOMP",
+        "line_number": 42,
+        "expression": "ELCOMP('Fiscal Period', 'Plan Update Periods',1)"
+      },
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ELCOMP",
+        "line_number": 75,
+        "expression": "ELCOMP('Fiscal Period', 'Plan Update Periods',1)"
+      }
+    ]
+  },
+  {
+    "function_name": "ELCOMPN",
+    "occurrence_count": 7,
+    "cube_count": 6,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELCOMPN",
+        "line_number": 87,
+        "expression": "ELCOMPN ( 'Fiscal Period', !Fiscal Period )"
+      },
+      {
+        "cube_name": "Corporate Headcount",
+        "function_name": "ELCOMPN",
+        "line_number": 12,
+        "expression": "ELCOMPN ('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Corporate Headcount",
+        "function_name": "ELCOMPN",
+        "line_number": 19,
+        "expression": "ELCOMPN ('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Glenn Springs Project",
+        "function_name": "ELCOMPN",
+        "line_number": 15,
+        "expression": "ELCOMPN('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Inventory Walk",
+        "function_name": "ELCOMPN",
+        "line_number": 71,
+        "expression": "ELCOMPN ( 'Fiscal Period', !Fiscal Period )"
+      }
+    ]
+  },
+  {
+    "function_name": "ELISANC",
+    "occurrence_count": 97,
+    "cube_count": 29,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELISANC",
+        "line_number": 5,
+        "expression": "ELISANC ( 'Flow Code', 'TOTACTIVITIES', !Flow Code)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELISANC",
+        "line_number": 9,
+        "expression": "ELISANC ( 'Flow Code', 'TOTACTIVITIES', !Flow Code)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELISANC",
+        "line_number": 36,
+        "expression": "ELISANC ( 'Fiscal Period', 'Outlook Periods', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELISANC",
+        "line_number": 39,
+        "expression": "ELISANC ( 'Flow Code', 'TOTACTIVITIES', !Flow Code)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELISANC",
+        "line_number": 43,
+        "expression": "ELISANC ( 'Flow Code', 'TOTACTIVITIES', !Flow Code)"
+      }
+    ]
+  },
+  {
+    "function_name": "ELLEV",
+    "occurrence_count": 16,
+    "cube_count": 9,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELLEV",
+        "line_number": 74,
+        "expression": "ELLEV ('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELLEV",
+        "line_number": 84,
+        "expression": "ELLEV ('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Corporate Headcount",
+        "function_name": "ELLEV",
+        "line_number": 5,
+        "expression": "ELLEV ('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Corporate Headcount",
+        "function_name": "ELLEV",
+        "line_number": 10,
+        "expression": "ELLEV ('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Corporate Headcount",
+        "function_name": "ELLEV",
+        "line_number": 17,
+        "expression": "ELLEV ('Fiscal Period', !Fiscal Period)"
+      }
+    ]
+  },
+  {
+    "function_name": "ELPAR",
+    "occurrence_count": 15,
+    "cube_count": 1,
+    "parser_status": "SUPPORTED",
+    "lineage_category": "DIRECT",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "}ElementAttributes_Cost Center",
+        "function_name": "ELPAR",
+        "line_number": 6,
+        "expression": "ELPAR ( 'Profit Center', ATTRS ( 'Cost Center', !Cost Center, 'Profit Center Area'), 1 )"
+      },
+      {
+        "cube_name": "}ElementAttributes_Cost Center",
+        "function_name": "ELPAR",
+        "line_number": 8,
+        "expression": "ELPAR ( 'Profit Center', ATTRS ( 'Cost Center', !Cost Center, 'Profit Center Area'), 1 )"
+      },
+      {
+        "cube_name": "}ElementAttributes_Cost Center",
+        "function_name": "ELPAR",
+        "line_number": 10,
+        "expression": "ELPAR ( 'Profit Center', ATTRS ( 'Cost Center', !Cost Center, 'Profit Center Area'), 2 )"
+      },
+      {
+        "cube_name": "}ElementAttributes_Cost Center",
+        "function_name": "ELPAR",
+        "line_number": 18,
+        "expression": "ELPAR ( 'Profit Center', ATTRS ( 'Cost Center', !Cost Center, 'Profit Center L1'), 1 )"
+      },
+      {
+        "cube_name": "}ElementAttributes_Cost Center",
+        "function_name": "ELPAR",
+        "line_number": 20,
+        "expression": "ELPAR ( 'Profit Center', ATTRS ( 'Cost Center', !Cost Center, 'Profit Center L1'), 1 )"
+      }
+    ]
+  },
+  {
+    "function_name": "IF",
+    "occurrence_count": 473,
+    "cube_count": 77,
+    "parser_status": "PARTIALLY_SUPPORTED",
+    "lineage_category": "DYNAMIC",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "IF",
+        "line_number": 5,
+        "expression": "IF ( ELISANC ( 'Flow Code', 'TOTACTIVITIES', !Flow Code) = 1 & !BS Account @<> '55000099',\n  ['Local'], STET)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "IF",
+        "line_number": 9,
+        "expression": "IF ( ELISANC ( 'Flow Code', 'TOTACTIVITIES', !Flow Code) = 1 & !BS Account @<> '55000099',\n  ['USD'], STET)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "IF",
+        "line_number": 23,
+        "expression": "IF ( SUBST( !Fiscal Period, 5,3)@= '001', stet,\n  DB('Balance Sheet', !Scenario, \n      ATTRS ( 'Fiscal Period', !Fiscal Period, 'Prior Period'), \n     !Company, !Profit Center, !Trading Partner, !BS Account, 'F99', !Balance Sheet Source ,!mBalance Sheet ))"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "IF",
+        "line_number": 36,
+        "expression": "IF ( ELISANC ( 'Fiscal Period', 'Outlook Periods', !Fiscal Period) = 1 , CONTINUE, STET )"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "IF",
+        "line_number": 39,
+        "expression": "IF ( ELISANC ( 'Flow Code', 'TOTACTIVITIES', !Flow Code) = 1 & !BS Account @<> '55000099',\n  ['Local'], STET)"
+      }
+    ]
+  },
+  {
+    "function_name": "ISLEAF",
+    "occurrence_count": 130,
+    "cube_count": 47,
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "lineage_category": "NON_LINEAGE",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ISLEAF",
+        "line_number": 6,
+        "expression": "ISLEAF ()"
+      },
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ISLEAF",
+        "line_number": 18,
+        "expression": "ISLEAF ()"
+      },
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ISLEAF",
+        "line_number": 29,
+        "expression": "ISLEAF()"
+      },
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ISLEAF",
+        "line_number": 42,
+        "expression": "ISLEAF()"
+      },
+      {
+        "cube_name": "Intercompany",
+        "function_name": "ISLEAF",
+        "line_number": 164,
+        "expression": "ISLEAF()"
+      }
+    ]
+  },
+  {
+    "function_name": "LONG",
+    "occurrence_count": 81,
+    "cube_count": 7,
+    "parser_status": "NOT_SUPPORTED",
+    "lineage_category": "DYNAMIC",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "LONG",
+        "line_number": 18,
+        "expression": "long(!Valuation Type)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "LONG",
+        "line_number": 18,
+        "expression": "long(!Valuation Type)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "LONG",
+        "line_number": 30,
+        "expression": "long(!Valuation Type)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "LONG",
+        "line_number": 30,
+        "expression": "long(!Valuation Type)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "LONG",
+        "line_number": 42,
+        "expression": "long(!Valuation Type)"
+      }
+    ]
+  },
+  {
+    "function_name": "MAX",
+    "occurrence_count": 2,
+    "cube_count": 1,
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "lineage_category": "NON_LINEAGE",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "MAX",
+        "line_number": 57,
+        "expression": "MAX ( ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CM APPR AMT') , ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CY PLAN AMT') )"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "MAX",
+        "line_number": 59,
+        "expression": "MAX ( ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'Max ( CM APPR AMT vs CY PLAN AMT )') , ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CM TOT SPD EST') )"
+      }
+    ]
+  },
+  {
+    "function_name": "NOW",
+    "occurrence_count": 2,
+    "cube_count": 1,
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "lineage_category": "NON_LINEAGE",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Control",
+        "function_name": "NOW",
+        "line_number": 94,
+        "expression": "Now()"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "NOW",
+        "line_number": 97,
+        "expression": "Now()"
+      }
+    ]
+  },
+  {
+    "function_name": "NUMBR",
+    "occurrence_count": 62,
+    "cube_count": 8,
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "lineage_category": "NON_LINEAGE",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Manual Input",
+        "function_name": "NUMBR",
+        "line_number": 15,
+        "expression": "NUMBR ( DIMNM ( 'Manual Input LineNo' , DIMIX ('Manual Input LineNo' , !Manual Input LineNo)))"
+      },
+      {
+        "cube_name": "Project Spending",
+        "function_name": "NUMBR",
+        "line_number": 4,
+        "expression": "NUMBR( ATTRS ( 'Fiscal Period', !Fiscal Period, 'Period Index'))"
+      },
+      {
+        "cube_name": "Project Spending",
+        "function_name": "NUMBR",
+        "line_number": 7,
+        "expression": "NUMBR (ATTRS ( 'Fiscal Period', ATTRS ( 'AFE Number', ATTRS( 'AFE Number', !AFE Number, 'AFE Number'), 'Purge Month'), 'Period Index') )"
+      },
+      {
+        "cube_name": "SYS BS Account Hierarchy",
+        "function_name": "NUMBR",
+        "line_number": 61,
+        "expression": "NUMBR( DB('SYS BS Account Hierarchy', !SYS BS Account Hierarchy, !SYS BS Account Hierarchy LineNo, 'From Alpha Position 1')  )"
+      },
+      {
+        "cube_name": "SYS BS Account Hierarchy",
+        "function_name": "NUMBR",
+        "line_number": 66,
+        "expression": "NUMBR( DB('SYS BS Account Hierarchy', !SYS BS Account Hierarchy, !SYS BS Account Hierarchy LineNo, 'From Alpha Position 1') )"
+      }
+    ]
+  },
+  {
+    "function_name": "ROUNDP",
+    "occurrence_count": 30,
+    "cube_count": 2,
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "lineage_category": "NON_LINEAGE",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 440,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'SALES', 'USD Adjusted' ),2)"
+      },
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 441,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'COSTOFSALE', 'USD Adjusted' ),2)"
+      },
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 446,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'SALES', 'Reporting Qty Adjusted' ),2)"
+      },
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 447,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'COSTOFSALE', 'Reporting Qty Adjusted' ),2)"
+      },
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 452,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'SALES', 'USD Adjusted' ),2)"
+      }
+    ]
+  },
+  {
+    "function_name": "SCAN",
+    "occurrence_count": 1,
+    "cube_count": 1,
+    "parser_status": "NOT_SUPPORTED",
+    "lineage_category": "DYNAMIC",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "SCAN",
+        "line_number": 48,
+        "expression": "SCAN ('< 500', ATTRS ('AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CAPTION'))"
+      }
+    ]
+  },
+  {
+    "function_name": "STR",
+    "occurrence_count": 10,
+    "cube_count": 2,
+    "parser_status": "NOT_SUPPORTED",
+    "lineage_category": "DYNAMIC",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Control",
+        "function_name": "STR",
+        "line_number": 28,
+        "expression": "STR( 12 -  ['Close Period', 'Numeric'],  2, 0)"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "STR",
+        "line_number": 38,
+        "expression": "STR( NUMBR( ATTRS ( 'Fiscal Period', DB('SYS Control', 'Close Period','String'), 'Period Index' )) +\n  NUMBR( DB('SYS Control', 'OL Effective Input Periods','String')),3,0)"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "STR",
+        "line_number": 67,
+        "expression": "STR( 12 -  ['Close Period', 'Numeric'],  2, 0)"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "STR",
+        "line_number": 77,
+        "expression": "STR( NUMBR( ATTRS ( 'Fiscal Period', DB('SYS Control', 'Close Period','String'), 'Period Index' )) +\n  NUMBR( DB('SYS Control', 'MFG OL Effective Input Periods','String')),3,0)"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "STR",
+        "line_number": 127,
+        "expression": "STR( NUMBR( SUBST( DB('SYS Control', 'Current Fiscal Year','String'),1,4) ) + 1,4,0)"
+      }
+    ]
+  },
+  {
+    "function_name": "SUBST",
+    "occurrence_count": 164,
+    "cube_count": 14,
+    "parser_status": "NOT_SUPPORTED",
+    "lineage_category": "DYNAMIC",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "SUBST",
+        "line_number": 23,
+        "expression": "SUBST( !Fiscal Period, 5,3)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "SUBST",
+        "line_number": 58,
+        "expression": "SUBST( !Fiscal Period, 5,3)"
+      },
+      {
+        "cube_name": "Corporate Headcount",
+        "function_name": "SUBST",
+        "line_number": 6,
+        "expression": "SUBST ( !Fiscal Period, 1, 4)"
+      },
+      {
+        "cube_name": "Corporate Headcount",
+        "function_name": "SUBST",
+        "line_number": 11,
+        "expression": "SUBST ( !Fiscal Period, 1, 4)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "SUBST",
+        "line_number": 14,
+        "expression": "SUBST(!Valuation Type,1,1)"
+      }
+    ]
+  },
+  {
+    "function_name": "TIMST",
+    "occurrence_count": 2,
+    "cube_count": 1,
+    "parser_status": "INTENTIONALLY_IGNORED",
+    "lineage_category": "NON_LINEAGE",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Control",
+        "function_name": "TIMST",
+        "line_number": 94,
+        "expression": "TIMST( Now() - (['GMT Offset','Numeric']/24), '\\Y-\\m-\\d \\H:\\i \\p')"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "TIMST",
+        "line_number": 97,
+        "expression": "TIMST( Now() - (['GMT Offset','Numeric']/24), '\\Y-\\m-\\d')"
+      }
+    ]
+  },
+  {
+    "function_name": "TRIM",
+    "occurrence_count": 5,
+    "cube_count": 1,
+    "parser_status": "NOT_SUPPORTED",
+    "lineage_category": "DYNAMIC",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "CLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 50,
+        "expression": "TRIM(STR ( DB ('Project Spending', DB('SYS Control', 'Close Period', 'String' ), 'Total', 'All AFE Category', !AFE Number, 'APPR AMT'), 20,0))"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 52,
+        "expression": "TRIM(STR ( DB ('Project Spending', DB('SYS Control', 'Close Period', 'String' ), 'Total', 'All AFE Category', !AFE Number, 'TOT SPD EST'), 20,0))"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 54,
+        "expression": "TRIM(STR ( DB ('Project Spending', DB('SYS Control', 'Close Period', 'String' ), 'Total', 'All AFE Category', !AFE Number, 'PLAN ' | SUBST (DB('SYS Control', 'Close Period', 'String' ),1,4) ), 20,0))"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 57,
+        "expression": "TRIM( STR (  MAX ( ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CM APPR AMT') , ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CY PLAN AMT') ), 20,0))"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 59,
+        "expression": "TRIM( STR (  MAX ( ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'Max ( CM APPR AMT vs CY PLAN AMT )') , ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CM TOT SPD EST') ), 20,0))"
+      }
+    ]
+  }
+]

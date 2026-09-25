@@ -1,0 +1,1262 @@
+[
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "relationship_type": "WRITES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pCube",
+    "candidate_value": "Profit and Loss",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Profit and Loss",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pCube",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "relationship_type": "WRITES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pCube",
+    "candidate_value": "Profit and Loss",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Profit and Loss",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pCube",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "relationship_type": "CREATES_SUBSET",
+    "target_type": "subset",
+    "target_expression": "sSubset",
+    "candidate_value": "Sys_Test_View",
+    "rejection_reason": "SUBSET_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "SUBSET_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_ALIAS",
+      "value": "Sys_Test_View",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pView",
+      "alias_expression": "pView"
+    }
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "relationship_type": "CREATES_VIEW",
+    "target_type": "view",
+    "target_expression": "pView",
+    "candidate_value": "Sys_Test_View",
+    "rejection_reason": "VIEW_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "VIEW_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Sys_Test_View",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pView",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "relationship_type": "UPDATES_SUBSET",
+    "target_type": "subset",
+    "target_expression": "sSubset",
+    "candidate_value": "Sys_Test_View",
+    "rejection_reason": "SUBSET_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "SUBSET_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_ALIAS",
+      "value": "Sys_Test_View",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pView",
+      "alias_expression": "pView"
+    }
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "relationship_type": "USES_VIEW",
+    "target_type": "view",
+    "target_expression": "pView",
+    "candidate_value": "Sys_Test_View",
+    "rejection_reason": "VIEW_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "VIEW_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Sys_Test_View",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pView",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Copy_Attributes",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Copy_Attributes",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pSrcDim",
+    "candidate_value": "Account Base",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Base",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pSrcDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Copy_Attributes",
+    "relationship_type": "WRITES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pSrcDim",
+    "candidate_value": "Cost Center Test",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Cost Center Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pSrcDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Validation",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Validation",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pSrcDim",
+    "candidate_value": "Cost Center Test",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Cost Center Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pSrcDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Validation",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Validation",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Sys_Check_Cost Center",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Sys_Check_Cost Center",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Standard_Alias",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Standard_Alias",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Standard_Alias",
+    "relationship_type": "WRITES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Export_To_File",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "sDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_ALIAS",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": "pDim"
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_value": "Cost Centre",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Cost Centre",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Account",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_value": "Account",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pdim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pdim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_Orphans",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DataUpdate - Project Spending - Manual",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 90,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DataWrapper - Project Spending",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 71,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Turnaround and Other Project",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Turnaround and Other Project",
+      "calling_process": "DimUpdate - Turnaround and Other Project",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 55,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DataUpdate - Project Spending - Manual",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 90,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DataWrapper - Project Spending",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 71,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Turnaround and Other Project",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Turnaround and Other Project",
+      "calling_process": "DimUpdate - Turnaround and Other Project",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 55,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DataUpdate - Project Spending - Manual",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 90,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DataWrapper - Project Spending",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 71,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "READS_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Turnaround and Other Project",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Turnaround and Other Project",
+      "calling_process": "DimUpdate - Turnaround and Other Project",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 55,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "WRITES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DataUpdate - Project Spending - Manual",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 90,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "WRITES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DataWrapper - Project Spending",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 71,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "relationship_type": "WRITES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Turnaround and Other Project",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Turnaround and Other Project",
+      "calling_process": "DimUpdate - Turnaround and Other Project",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 55,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Glenn Springs Order",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Glenn Springs Order",
+      "calling_process": "DimUpdate - Glenn Springs Order",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 75,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Production Order",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Production Order",
+      "calling_process": "DimUpdate - Production Order",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 76,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Glenn Springs Order",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Glenn Springs Order",
+      "calling_process": "DimUpdate - Glenn Springs Order",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 75,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Production Order",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Production Order",
+      "calling_process": "DimUpdate - Production Order",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 76,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Import_From_File",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDim",
+    "candidate_value": "Account",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Import_From_File",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDim",
+    "candidate_value": "Account",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Import_From_File",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Import_From_File",
+    "relationship_type": "WRITES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDim",
+    "candidate_value": "Account",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DimUpdate - AFE Number - Rollups",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 17,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "SYS BS Account Hierarchy",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "SYS BS Account Hierarchy",
+      "calling_process": "DimUpdate - BS Account - Hierarchies - Leaf Account",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 33,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Order",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Order",
+      "calling_process": "DimUpdate - Glenn Springs Order",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 23,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Plant Assessment Cost Object",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Plant Assessment Cost Object",
+      "calling_process": "DimUpdate - Plant Assessment Cost Object - Plant Orders",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 17,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Order",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Order",
+      "calling_process": "DimUpdate - Production Order",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 24,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "CREATES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "WBS Element",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "WBS Element",
+      "calling_process": "DimUpdate - Turnaround and Other Project",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 19,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "CREATES_SUBSET",
+    "target_type": "subset",
+    "target_expression": "pSubset",
+    "candidate_value": "LB Test",
+    "rejection_reason": "SUBSET_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "SUBSET_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "LB Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pSubset",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "AFE Number",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "AFE Number",
+      "calling_process": "DimUpdate - AFE Number - Rollups",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 17,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "SYS BS Account Hierarchy",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "SYS BS Account Hierarchy",
+      "calling_process": "DimUpdate - BS Account - Hierarchies - Leaf Account",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 33,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Order",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Order",
+      "calling_process": "DimUpdate - Glenn Springs Order",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 23,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Plant Assessment Cost Object",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Plant Assessment Cost Object",
+      "calling_process": "DimUpdate - Plant Assessment Cost Object - Plant Orders",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 17,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "Order",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "Order",
+      "calling_process": "DimUpdate - Production Order",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 24,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "DELETES_ATTRIBUTE",
+    "target_type": "attribute",
+    "target_expression": "pDimension",
+    "candidate_value": "WBS Element",
+    "rejection_reason": "ATTRIBUTE_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "ATTRIBUTE_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+      "value": "WBS Element",
+      "calling_process": "DimUpdate - Turnaround and Other Project",
+      "calling_procedure": "Prolog",
+      "calling_line_number": 19,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "relationship_type": "DELETES_SUBSET",
+    "target_type": "subset",
+    "target_expression": "pSubset",
+    "candidate_value": "LB Test",
+    "rejection_reason": "SUBSET_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "SUBSET_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "LB Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pSubset",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "relationship_type": "CREATES_SUBSET",
+    "target_type": "subset",
+    "target_expression": "pSubset",
+    "candidate_value": "Testers91827",
+    "rejection_reason": "SUBSET_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "SUBSET_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Testers91827",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pSubset",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "relationship_type": "UPDATES_SUBSET",
+    "target_type": "subset",
+    "target_expression": "pSubset",
+    "candidate_value": "Testers91827",
+    "rejection_reason": "SUBSET_CATALOG_DEFERRED",
+    "reference_class": "DEFERRED_NONCORE",
+    "catalog_status": "SUBSET_CATALOG_DEFERRED",
+    "requires_quality_exception": false,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Testers91827",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pSubset",
+      "alias_expression": null
+    }
+  }
+]

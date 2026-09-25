@@ -1,0 +1,222 @@
+[
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Validation",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Validation",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Validation",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Validation",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Sys_Check_Cost Center",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Sys_Check_Cost Center",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_value": "Cost Centre",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Cost Centre",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_value": "Account",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDimension",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pdim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pdim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_Orphans",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account Test",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account Test",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  },
+  {
+    "process_name": "Sys_Dim_Import_From_File",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_value": "Account",
+    "rejection_reason": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "reference_class": "CORE_OBJECT",
+    "catalog_status": "CANDIDATE_NOT_IN_OBJECT_CATALOG",
+    "requires_quality_exception": true,
+    "provenance": {
+      "source_kind": "PARAMETER_DEFAULT",
+      "value": "Account",
+      "calling_process": null,
+      "calling_procedure": null,
+      "calling_line_number": null,
+      "parameter_name": "pDim",
+      "alias_expression": null
+    }
+  }
+]

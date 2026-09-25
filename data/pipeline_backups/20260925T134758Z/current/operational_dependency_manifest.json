@@ -1,0 +1,32 @@
+{
+  "snapshot_id": "20260924T173657Z",
+  "status": "COMPLETE",
+  "started_at": "2026-09-24T17:36:57.726661+00:00",
+  "completed_at": "2026-09-24T17:36:57.784199+00:00",
+  "input_ti_relationship_count": 4019,
+  "input_ti_evidence_count": 7852,
+  "input_process_source_relationship_count": 0,
+  "input_process_source_count": 0,
+  "dependency_count": 34,
+  "relationship_count": 101,
+  "validation_count": 101,
+  "error_count": 0,
+  "dependency_type_counts": {
+    "COMMAND": 5,
+    "EXECUTABLE": 1,
+    "FILE": 27,
+    "SCRIPT": 1
+  },
+  "relationship_type_counts": {
+    "EXECUTES_COMMAND": 35,
+    "INVOKES_EXECUTABLE": 1,
+    "WRITES_FILE": 65
+  },
+  "validation_counts": {
+    "DYNAMIC_EXTERNAL_COMMAND": 3,
+    "DYNAMIC_EXTERNAL_FILE": 24,
+    "EXTERNAL_DEPENDENCY_NOT_CROSS_CHECKED": 74
+  },
+  "publish_current_requested": true,
+  "published_current": true
+}

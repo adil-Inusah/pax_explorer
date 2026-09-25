@@ -1,0 +1,26 @@
+========================================================================
+PAX EXPLORER FULL CATALOG REBUILD
+========================================================================
+Run ID:       20260925T134758Z
+Status:       FAILED
+From scratch: True
+Started:      2026-09-25T13:47:58.302318+00:00
+Completed:    2026-09-25T13:54:15.621018+00:00
+
+[PASS] connection_check (4.37s, rc=0)
+[PASS] core_metadata (3.93s, rc=0)
+[PASS] ti_lineage (29.60s, rc=0)
+[PASS] rule_lineage (26.91s, rc=0)
+[PASS] attributes (115.92s, rc=0)
+[PASS] hierarchies (59.29s, rc=0)
+[PASS] public_subsets (56.05s, rc=0)
+[PASS] public_views (24.30s, rc=0)
+[PASS] cube_dimensions (24.57s, rc=0)
+[PASS] chore_tasks (3.89s, rc=0)
+[PASS] process_data_sources (27.03s, rc=0)
+[FAIL] operational_dependencies (0.92s, rc=1)
+
+Failed stage: operational_dependencies
+Backup:       C:\Users\inusaad\Pax_explorer\data\pipeline_backups\20260925T134758Z\current
+Restored:     True
+Decision:     CATALOG_REBUILD_FAILED

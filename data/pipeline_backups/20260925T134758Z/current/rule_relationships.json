@@ -1,0 +1,4541 @@
+[
+  {
+    "source_cube": "Balance Sheet",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Flow Code",
+    "function_name": "ELISANC",
+    "evidence_count": 4,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Flow Code'",
+    "target_expressions": [
+      "'Flow Code'"
+    ],
+    "dimension_name": "Flow Code",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Balance Sheet",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Balance Sheet",
+    "function_name": "DB",
+    "evidence_count": 6,
+    "first_line": 24,
+    "confidence": "HIGH",
+    "target_expression": "'Balance Sheet'",
+    "target_expressions": [
+      "'Balance Sheet'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Balance Sheet",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 4,
+    "first_line": 25,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Prior Period"
+  },
+  {
+    "source_cube": "Balance Sheet",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 3,
+    "first_line": 36,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Balance Sheet",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELLEV",
+    "evidence_count": 2,
+    "first_line": 74,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Balance Sheet",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMP",
+    "evidence_count": 2,
+    "first_line": 77,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Balance Sheet",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMPN",
+    "evidence_count": 1,
+    "first_line": 87,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Balance Sheet",
+    "relationship_type": "FEEDS",
+    "target_object_type": "CUBE",
+    "target_name": "Balance Sheet",
+    "function_name": "DB",
+    "evidence_count": 5,
+    "first_line": 98,
+    "confidence": "HIGH",
+    "target_expression": "'Balance Sheet'",
+    "target_expressions": [
+      "'Balance Sheet'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Balance Sheet",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 5,
+    "first_line": 99,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Next Period"
+  },
+  {
+    "source_cube": "Below the Line",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 4,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Below the Line",
+    "function_name": "DB",
+    "evidence_count": 11,
+    "first_line": 11,
+    "confidence": "HIGH",
+    "target_expression": "'Below the Line'",
+    "target_expressions": [
+      "'Below the Line'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "PL Account",
+    "function_name": "ELISANC",
+    "evidence_count": 3,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "PL Account",
+    "function_name": "ATTRS",
+    "evidence_count": 6,
+    "first_line": 21,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": "Functional Area"
+  },
+  {
+    "source_cube": "Below the Line",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 10,
+    "first_line": 23,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "Functional Area"
+  },
+  {
+    "source_cube": "Below the Line",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMP",
+    "evidence_count": 4,
+    "first_line": 29,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Below the Line Report",
+    "function_name": "DB",
+    "evidence_count": 3,
+    "first_line": 95,
+    "confidence": "HIGH",
+    "target_expression": "'Below the Line Report'",
+    "target_expressions": [
+      "'Below the Line Report'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Cost Center",
+    "function_name": "DB",
+    "evidence_count": 4,
+    "first_line": 104,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line Assessment",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "PL Account",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line Assessment",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "PL Account",
+    "function_name": "DIMNM",
+    "evidence_count": 1,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line Assessment",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "PL Account",
+    "function_name": "ELISANC",
+    "evidence_count": 4,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line Assessment",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Below the Line Assessment",
+    "function_name": "DB",
+    "evidence_count": 6,
+    "first_line": 41,
+    "confidence": "HIGH",
+    "target_expression": "'Below the Line Assessment'",
+    "target_expressions": [
+      "'Below the Line Assessment'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Below the Line Report",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 3,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "Functional Area"
+  },
+  {
+    "source_cube": "Below the Line Report",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Below the Line",
+    "function_name": "DB",
+    "evidence_count": 3,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Below the Line'",
+    "target_expressions": [
+      "'Below the Line'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Corporate Headcount",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELLEV",
+    "evidence_count": 3,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Corporate Headcount",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 3,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Corporate Headcount",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Corporate Headcount",
+    "function_name": "DB",
+    "evidence_count": 3,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'Corporate Headcount'",
+    "target_expressions": [
+      "'Corporate Headcount'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Corporate Headcount",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMP",
+    "evidence_count": 2,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Corporate Headcount",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMPN",
+    "evidence_count": 2,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Cost Center",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 4,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "Functional Area"
+  },
+  {
+    "source_cube": "Cost Center",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Below the Line",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Below the Line'",
+    "target_expressions": [
+      "'Below the Line'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Cost Center",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Fixed Manufacturing Cost",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 16,
+    "confidence": "HIGH",
+    "target_expression": "'Fixed Manufacturing Cost'",
+    "target_expressions": [
+      "'Fixed Manufacturing Cost'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Cost Estimate",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Cost Estimate",
+    "function_name": "CONSOLIDATEDAVG",
+    "evidence_count": 1,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Estimate'",
+    "target_expressions": [
+      "'Cost Estimate'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Fixed Manufacturing Cost",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 4,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "Functional Area"
+  },
+  {
+    "source_cube": "Fixed Manufacturing Cost",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Cost Center",
+    "function_name": "DB",
+    "evidence_count": 4,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Fixed Manufacturing Cost Assessment",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "PL Account",
+    "function_name": "ELISANC",
+    "evidence_count": 1,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Fixed Manufacturing Cost Assessment",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Fixed Manufacturing Cost Assessment",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'Fixed Manufacturing Cost Assessment'",
+    "target_expressions": [
+      "'Fixed Manufacturing Cost Assessment'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Glenn Springs Project",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Prior Period"
+  },
+  {
+    "source_cube": "Glenn Springs Project",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Glenn Springs Project",
+    "function_name": "DB",
+    "evidence_count": 4,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Glenn Springs Project'",
+    "target_expressions": [
+      "'Glenn Springs Project'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Glenn Springs Project",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELLEV",
+    "evidence_count": 2,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Glenn Springs Project",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMP",
+    "evidence_count": 2,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Glenn Springs Project",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMPN",
+    "evidence_count": 1,
+    "first_line": 15,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Glenn Springs Project",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 20,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Next Period"
+  },
+  {
+    "source_cube": "Intercompany",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Intercompany",
+    "function_name": "DB",
+    "evidence_count": 26,
+    "first_line": 34,
+    "confidence": "HIGH",
+    "target_expression": "'Intercompany'",
+    "target_expressions": [
+      "'Intercompany'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Intercompany",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "PL Account",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 146,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": "Sales Area"
+  },
+  {
+    "source_cube": "Intercompany",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Profit Center",
+    "function_name": "DIMIX",
+    "evidence_count": 2,
+    "first_line": 166,
+    "confidence": "HIGH",
+    "target_expression": "'Profit Center'",
+    "target_expressions": [
+      "'Profit Center'"
+    ],
+    "dimension_name": "Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Intercompany Sandbox",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "PL Account",
+    "function_name": "ELISANC",
+    "evidence_count": 7,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Intercompany Sandbox",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Intercompany Sandbox",
+    "function_name": "DB",
+    "evidence_count": 43,
+    "first_line": 37,
+    "confidence": "HIGH",
+    "target_expression": "'Intercompany Sandbox'",
+    "target_expressions": [
+      "'Intercompany Sandbox'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Intercompany Sandbox",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Profit Center",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 186,
+    "confidence": "HIGH",
+    "target_expression": "'Profit Center'",
+    "target_expressions": [
+      "'Profit Center'"
+    ],
+    "dimension_name": "Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Inventory Walk",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Inventory Walk",
+    "function_name": "DB",
+    "evidence_count": 26,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Inventory Walk'",
+    "target_expressions": [
+      "'Inventory Walk'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Inventory Walk",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 8,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Prior Period"
+  },
+  {
+    "source_cube": "Inventory Walk",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELLEV",
+    "evidence_count": 2,
+    "first_line": 53,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Inventory Walk",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMP",
+    "evidence_count": 2,
+    "first_line": 55,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Inventory Walk",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMPN",
+    "evidence_count": 1,
+    "first_line": 71,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Inventory Walk",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 16,
+    "first_line": 80,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Next Period"
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Input",
+    "function_name": "DB",
+    "evidence_count": 13,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input'",
+    "target_expressions": [
+      "'Manual Input'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Manual Input LineNo",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 15,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input LineNo'",
+    "target_expressions": [
+      "'Manual Input LineNo'"
+    ],
+    "dimension_name": "Manual Input LineNo",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Manual Input LineNo",
+    "function_name": "DIMNM",
+    "evidence_count": 1,
+    "first_line": 15,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input LineNo'",
+    "target_expressions": [
+      "'Manual Input LineNo'"
+    ],
+    "dimension_name": "Manual Input LineNo",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Input",
+    "function_name": "CONSOLIDATEDMAX",
+    "evidence_count": 2,
+    "first_line": 20,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input'",
+    "target_expressions": [
+      "'Manual Input'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 28,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Functional Area",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 32,
+    "confidence": "HIGH",
+    "target_expression": "'Functional Area'",
+    "target_expressions": [
+      "'Functional Area'"
+    ],
+    "dimension_name": "Functional Area",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Profit Center",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 36,
+    "confidence": "HIGH",
+    "target_expression": "'Profit Center'",
+    "target_expressions": [
+      "'Profit Center'"
+    ],
+    "dimension_name": "Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Material",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 40,
+    "confidence": "HIGH",
+    "target_expression": "'Material'",
+    "target_expressions": [
+      "'Material'"
+    ],
+    "dimension_name": "Material",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "PL Account",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 44,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Customer",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 49,
+    "confidence": "HIGH",
+    "target_expression": "'Customer'",
+    "target_expressions": [
+      "'Customer'"
+    ],
+    "dimension_name": "Customer",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Ship To",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 53,
+    "confidence": "HIGH",
+    "target_expression": "'Ship To'",
+    "target_expressions": [
+      "'Ship To'"
+    ],
+    "dimension_name": "Ship To",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Partner Profit Center",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 57,
+    "confidence": "HIGH",
+    "target_expression": "'Partner Profit Center'",
+    "target_expressions": [
+      "'Partner Profit Center'"
+    ],
+    "dimension_name": "Partner Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input Balance Sheet",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Input Balance Sheet",
+    "function_name": "DB",
+    "evidence_count": 10,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input Balance Sheet'",
+    "target_expressions": [
+      "'Manual Input Balance Sheet'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input Balance Sheet",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Manual Input LineNo",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 14,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input LineNo'",
+    "target_expressions": [
+      "'Manual Input LineNo'"
+    ],
+    "dimension_name": "Manual Input LineNo",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input Balance Sheet",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Input Balance Sheet",
+    "function_name": "CONSOLIDATEDMAX",
+    "evidence_count": 1,
+    "first_line": 19,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input Balance Sheet'",
+    "target_expressions": [
+      "'Manual Input Balance Sheet'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input Balance Sheet",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Profit Center",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 23,
+    "confidence": "HIGH",
+    "target_expression": "'Profit Center'",
+    "target_expressions": [
+      "'Profit Center'"
+    ],
+    "dimension_name": "Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input Balance Sheet",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Company",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 27,
+    "confidence": "HIGH",
+    "target_expression": "'Company'",
+    "target_expressions": [
+      "'Company'"
+    ],
+    "dimension_name": "Company",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input Balance Sheet",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "BS Account",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 31,
+    "confidence": "HIGH",
+    "target_expression": "'BS Account'",
+    "target_expressions": [
+      "'BS Account'"
+    ],
+    "dimension_name": "BS Account",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input Balance Sheet",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Trading Partner",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 35,
+    "confidence": "HIGH",
+    "target_expression": "'Trading Partner'",
+    "target_expressions": [
+      "'Trading Partner'"
+    ],
+    "dimension_name": "Trading Partner",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input Balance Sheet",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Flow Code",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 39,
+    "confidence": "HIGH",
+    "target_expression": "'Flow Code'",
+    "target_expressions": [
+      "'Flow Code'"
+    ],
+    "dimension_name": "Flow Code",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input Below the Line",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Input Below the Line",
+    "function_name": "DB",
+    "evidence_count": 4,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input Below the Line'",
+    "target_expressions": [
+      "'Manual Input Below the Line'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input Below the Line",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Manual Input LineNo",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 14,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input LineNo'",
+    "target_expressions": [
+      "'Manual Input LineNo'"
+    ],
+    "dimension_name": "Manual Input LineNo",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input Below the Line",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Input Below the Line",
+    "function_name": "CONSOLIDATEDMAX",
+    "evidence_count": 1,
+    "first_line": 20,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Input Below the Line'",
+    "target_expressions": [
+      "'Manual Input Below the Line'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Input Below the Line",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 25,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Input Below the Line",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "PL Account",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 30,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "Manual Upload",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Upload",
+    "function_name": "DB",
+    "evidence_count": 23,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Upload'",
+    "target_expressions": [
+      "'Manual Upload'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Manual Upload LineNo",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 14,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Upload LineNo'",
+    "target_expressions": [
+      "'Manual Upload LineNo'"
+    ],
+    "dimension_name": "Manual Upload LineNo",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Upload",
+    "function_name": "CONSOLIDATEDMAX",
+    "evidence_count": 1,
+    "first_line": 19,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Upload'",
+    "target_expressions": [
+      "'Manual Upload'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Profit and Loss",
+    "function_name": "DB",
+    "evidence_count": 3,
+    "first_line": 22,
+    "confidence": "HIGH",
+    "target_expression": "'Profit and Loss'",
+    "target_expressions": [
+      "'Profit and Loss'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload Balance Sheet",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Upload Balance Sheet",
+    "function_name": "DB",
+    "evidence_count": 17,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Upload Balance Sheet'",
+    "target_expressions": [
+      "'Manual Upload Balance Sheet'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload Balance Sheet",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Manual Upload LineNo",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 14,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Upload LineNo'",
+    "target_expressions": [
+      "'Manual Upload LineNo'"
+    ],
+    "dimension_name": "Manual Upload LineNo",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload Balance Sheet",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Upload",
+    "function_name": "CONSOLIDATEDMAX",
+    "evidence_count": 1,
+    "first_line": 19,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Upload'",
+    "target_expressions": [
+      "'Manual Upload'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload Balance Sheet",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Balance Sheet",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 23,
+    "confidence": "HIGH",
+    "target_expression": "'Balance Sheet'",
+    "target_expressions": [
+      "'Balance Sheet'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload Below the Line",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Upload Below the Line",
+    "function_name": "DB",
+    "evidence_count": 8,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Upload Below the Line'",
+    "target_expressions": [
+      "'Manual Upload Below the Line'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload Below the Line",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Manual Upload LineNo",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 15,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Upload LineNo'",
+    "target_expressions": [
+      "'Manual Upload LineNo'"
+    ],
+    "dimension_name": "Manual Upload LineNo",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload Below the Line",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Manual Upload Below the Line",
+    "function_name": "CONSOLIDATEDMAX",
+    "evidence_count": 1,
+    "first_line": 20,
+    "confidence": "HIGH",
+    "target_expression": "'Manual Upload Below the Line'",
+    "target_expressions": [
+      "'Manual Upload Below the Line'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manual Upload Below the Line",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Below the Line",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 23,
+    "confidence": "HIGH",
+    "target_expression": "'Below the Line'",
+    "target_expressions": [
+      "'Below the Line'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Manufacturing Cost",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Material",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Material'",
+    "target_expressions": [
+      "'Material'"
+    ],
+    "dimension_name": "Material",
+    "hierarchy_name": null,
+    "attribute_name": "Reporting UOM"
+  },
+  {
+    "source_cube": "Manufacturing Cost",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS UOM Conversion Factor",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'SYS UOM Conversion Factor'",
+    "target_expressions": [
+      "'SYS UOM Conversion Factor'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Material Ledger",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 6,
+    "first_line": 18,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Prior Period"
+  },
+  {
+    "source_cube": "Material Ledger",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Cost Standards",
+    "function_name": "DB",
+    "evidence_count": 18,
+    "first_line": 18,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Standards'",
+    "target_expressions": [
+      "'Cost Standards'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Material Ledger",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "mMaterial Ledger",
+    "function_name": "ELISANC",
+    "evidence_count": 24,
+    "first_line": 63,
+    "confidence": "HIGH",
+    "target_expression": "'mMaterial Ledger'",
+    "target_expressions": [
+      "'mMaterial Ledger'"
+    ],
+    "dimension_name": "mMaterial Ledger",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Material Ledger",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Material",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 263,
+    "confidence": "HIGH",
+    "target_expression": "'Material'",
+    "target_expressions": [
+      "'Material'"
+    ],
+    "dimension_name": "Material",
+    "hierarchy_name": null,
+    "attribute_name": "Base UOM"
+  },
+  {
+    "source_cube": "Material Ledger",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Material",
+    "function_name": "ELLEV",
+    "evidence_count": 2,
+    "first_line": 263,
+    "confidence": "HIGH",
+    "target_expression": "'Material'",
+    "target_expressions": [
+      "'Material'"
+    ],
+    "dimension_name": "Material",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Material Ledger",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Sending or Receiving Material",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 266,
+    "confidence": "HIGH",
+    "target_expression": "'Sending or Receiving Material'",
+    "target_expressions": [
+      "'Sending or Receiving Material'"
+    ],
+    "dimension_name": "Sending or Receiving Material",
+    "hierarchy_name": null,
+    "attribute_name": "Material"
+  },
+  {
+    "source_cube": "Material Ledger",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Sending or Receiving Material",
+    "function_name": "ELISANC",
+    "evidence_count": 1,
+    "first_line": 266,
+    "confidence": "HIGH",
+    "target_expression": "'Sending or Receiving Material'",
+    "target_expressions": [
+      "'Sending or Receiving Material'"
+    ],
+    "dimension_name": "Sending or Receiving Material",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Profit and Loss",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Profit Center Sales Responsibility",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Profit Center Sales Responsibility'",
+    "target_expressions": [
+      "'SYS Profit Center Sales Responsibility'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Profit and Loss",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Profit Center",
+    "function_name": "ELLEV",
+    "evidence_count": 1,
+    "first_line": 14,
+    "confidence": "HIGH",
+    "target_expression": "'Profit Center'",
+    "target_expressions": [
+      "'Profit Center'"
+    ],
+    "dimension_name": "Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Project Spending",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 3,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "Purge Month"
+  },
+  {
+    "source_cube": "Project Spending",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 3,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "AFE Number"
+  },
+  {
+    "source_cube": "Project Spending",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Period Index"
+  },
+  {
+    "source_cube": "Project Spending",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 14,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Fiscal Month"
+  },
+  {
+    "source_cube": "Project Spending",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 15,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Prior Period"
+  },
+  {
+    "source_cube": "Project Spending",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Project Spending",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 15,
+    "confidence": "HIGH",
+    "target_expression": "'Project Spending'",
+    "target_expressions": [
+      "'Project Spending'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Project Spending",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 29,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Next Period"
+  },
+  {
+    "source_cube": "Project Spending",
+    "relationship_type": "FEEDS",
+    "target_object_type": "CUBE",
+    "target_name": "Project Spending",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 29,
+    "confidence": "HIGH",
+    "target_expression": "'Project Spending'",
+    "target_expressions": [
+      "'Project Spending'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Attribute Hierarchy Control",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Attribute Hierarchy Control",
+    "function_name": "DB",
+    "evidence_count": 4,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Attribute Hierarchy Control'",
+    "target_expressions": [
+      "'SYS Attribute Hierarchy Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS BS Account Hierarchy",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS BS Account Hierarchy",
+    "function_name": "DB",
+    "evidence_count": 139,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'SYS BS Account Hierarchy'",
+    "target_expressions": [
+      "'SYS BS Account Hierarchy'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Control",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Next Period"
+  },
+  {
+    "source_cube": "SYS Control",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 39,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Control",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 14,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Fiscal Quarter"
+  },
+  {
+    "source_cube": "SYS Control",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMP",
+    "evidence_count": 8,
+    "first_line": 20,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Control",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 38,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Period Index"
+  },
+  {
+    "source_cube": "SYS Control",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMIX",
+    "evidence_count": 2,
+    "first_line": 38,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Control",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMNM",
+    "evidence_count": 2,
+    "first_line": 38,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Control",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 43,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Fiscal Year"
+  },
+  {
+    "source_cube": "SYS Cost Center Hierarchy",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Cost Center Hierarchy",
+    "function_name": "DB",
+    "evidence_count": 14,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Cost Center Hierarchy'",
+    "target_expressions": [
+      "'SYS Cost Center Hierarchy'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Glenn Springs Assignment",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Glenn Springs Assignment",
+    "function_name": "DB",
+    "evidence_count": 3,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Glenn Springs Assignment'",
+    "target_expressions": [
+      "'SYS Glenn Springs Assignment'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Hierarchy Control",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Hierarchy Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Hierarchy Control'",
+    "target_expressions": [
+      "'SYS Hierarchy Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Hierarchy Validation",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Profit and Loss Detail",
+    "function_name": "DB",
+    "evidence_count": 4,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'Profit and Loss Detail'",
+    "target_expressions": [
+      "'Profit and Loss Detail'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Hierarchy Validation",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Hierarchy Validation",
+    "function_name": "DB",
+    "evidence_count": 10,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Hierarchy Validation'",
+    "target_expressions": [
+      "'SYS Hierarchy Validation'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Hierarchy Validation",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Functional Area",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 19,
+    "confidence": "HIGH",
+    "target_expression": "'Functional Area'",
+    "target_expressions": [
+      "'Functional Area'"
+    ],
+    "dimension_name": "Functional Area",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "SYS Hierarchy Validation",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "PL Account",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 36,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "SYS Hierarchy Validation",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Profit Center",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 53,
+    "confidence": "HIGH",
+    "target_expression": "'Profit Center'",
+    "target_expressions": [
+      "'Profit Center'"
+    ],
+    "dimension_name": "Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "SYS Hierarchy Validation",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 71,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "SYS Hierarchy Validation",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "BS Account",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 76,
+    "confidence": "HIGH",
+    "target_expression": "'BS Account'",
+    "target_expressions": [
+      "'BS Account'"
+    ],
+    "dimension_name": "BS Account",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "SYS Hierarchy Validation",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Company",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 81,
+    "confidence": "HIGH",
+    "target_expression": "'Company'",
+    "target_expressions": [
+      "'Company'"
+    ],
+    "dimension_name": "Company",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "SYS Inventory Walk",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Inventory Walk",
+    "function_name": "DB",
+    "evidence_count": 3,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Inventory Walk'",
+    "target_expressions": [
+      "'SYS Inventory Walk'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Inventory Walk Manual Entries",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Inventory Walk Manual Entries",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Inventory Walk Manual Entries'",
+    "target_expressions": [
+      "'SYS Inventory Walk Manual Entries'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Legacy Elements",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Legacy Elements",
+    "function_name": "DB",
+    "evidence_count": 9,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Legacy Elements'",
+    "target_expressions": [
+      "'SYS Legacy Elements'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Legacy Elements",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": null,
+    "function_name": "DIMIX",
+    "evidence_count": 3,
+    "first_line": 16,
+    "confidence": "MEDIUM",
+    "target_expression": "!}Dimensions",
+    "target_expressions": [
+      "!}Dimensions"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Legacy Elements",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": null,
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 17,
+    "confidence": "MEDIUM",
+    "target_expression": "!}Dimensions",
+    "target_expressions": [
+      "!}Dimensions"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": "Legacy"
+  },
+  {
+    "source_cube": "SYS Parent Child",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Parent Child",
+    "function_name": "DB",
+    "evidence_count": 3,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Parent Child'",
+    "target_expressions": [
+      "'SYS Parent Child'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Parent Child",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "SYS Parent Child Hierarchy",
+    "function_name": "CONSOLIDATECHILDREN",
+    "evidence_count": 1,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Parent Child Hierarchy'",
+    "target_expressions": [
+      "'SYS Parent Child Hierarchy'"
+    ],
+    "dimension_name": "SYS Parent Child Hierarchy",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS PL Account Hierarchy",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS PL Account Hierarchy",
+    "function_name": "DB",
+    "evidence_count": 14,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'SYS PL Account Hierarchy'",
+    "target_expressions": [
+      "'SYS PL Account Hierarchy'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS PNL Valid Fields",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "SYS SAP Fields",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'SYS SAP Fields'",
+    "target_expressions": [
+      "'SYS SAP Fields'"
+    ],
+    "dimension_name": "SYS SAP Fields",
+    "hierarchy_name": null,
+    "attribute_name": "Description"
+  },
+  {
+    "source_cube": "SYS PNL Valid Fields",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS PNL Valid Fields",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'SYS PNL Valid Fields'",
+    "target_expressions": [
+      "'SYS PNL Valid Fields'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Process Control",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Process Control",
+    "function_name": "DB",
+    "evidence_count": 109,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Process Control'",
+    "target_expressions": [
+      "'SYS Process Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Process Control",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS SAP File History",
+    "function_name": "DB",
+    "evidence_count": 24,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'SYS SAP File History'",
+    "target_expressions": [
+      "'SYS SAP File History'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Process Control",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 8,
+    "first_line": 211,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Production Order",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Production Order",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Production Order'",
+    "target_expressions": [
+      "'SYS Production Order'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Profit Center Hierarchy",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Profit Center Hierarchy",
+    "function_name": "DB",
+    "evidence_count": 14,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Profit Center Hierarchy'",
+    "target_expressions": [
+      "'SYS Profit Center Hierarchy'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Profit Center Sales Responsibility",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "UOM",
+    "function_name": "CONSOLIDATECHILDREN",
+    "evidence_count": 2,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'UOM'",
+    "target_expressions": [
+      "'UOM'"
+    ],
+    "dimension_name": "UOM",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS Turnaround and Other Asset Assignment",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Turnaround and Other Asset Assignment",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Turnaround and Other Asset Assignment'",
+    "target_expressions": [
+      "'SYS Turnaround and Other Asset Assignment'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "SYS WBS Element Settlement Rule",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS WBS Element Settlement Rule",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'SYS WBS Element Settlement Rule'",
+    "target_expressions": [
+      "'SYS WBS Element Settlement Rule'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Turnaround and Other Asset",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Prior Period"
+  },
+  {
+    "source_cube": "Turnaround and Other Asset",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Turnaround and Other Asset",
+    "function_name": "DB",
+    "evidence_count": 4,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Turnaround and Other Asset'",
+    "target_expressions": [
+      "'Turnaround and Other Asset'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Turnaround and Other Asset",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELLEV",
+    "evidence_count": 2,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Turnaround and Other Asset",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMP",
+    "evidence_count": 2,
+    "first_line": 10,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Turnaround and Other Asset",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMPN",
+    "evidence_count": 1,
+    "first_line": 16,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "Turnaround and Other Asset",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 22,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Next Period"
+  },
+  {
+    "source_cube": "}CellSecurity_Balance Sheet",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Below the Line",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Below the Line Assessment",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 18,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Below the Line Assessment",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 30,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Corporate Headcount",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Customer Profitability",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Fixed Manufacturing Cost",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 13,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Fixed Manufacturing Cost",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 13,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Fixed Manufacturing Cost",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMNM",
+    "evidence_count": 1,
+    "first_line": 13,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Fixed Manufacturing Cost",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 1,
+    "first_line": 20,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Inventory Walk",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Manufacturing Cost",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Manufacturing Cost",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 20,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Manufacturing Cost",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 20,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Manufacturing Cost",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMNM",
+    "evidence_count": 1,
+    "first_line": 20,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Mfg Key Stats",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Mfg Key Stats",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 21,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Mfg Key Stats",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 21,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Mfg Key Stats",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMNM",
+    "evidence_count": 1,
+    "first_line": 21,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_OtherMfg",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_OtherMfg",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 28,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_OtherMfg",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 28,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_OtherMfg",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMNM",
+    "evidence_count": 1,
+    "first_line": 28,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Plant Assessment",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 1,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Plant Variance",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Reports",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'Reports'",
+    "target_expressions": [
+      "'Reports'"
+    ],
+    "dimension_name": "Reports",
+    "hierarchy_name": null,
+    "attribute_name": "Report Period"
+  },
+  {
+    "source_cube": "}CellSecurity_Plant Variance",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Plant Variance",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Reports",
+    "function_name": "DIMIX",
+    "evidence_count": 2,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'Reports'",
+    "target_expressions": [
+      "'Reports'"
+    ],
+    "dimension_name": "Reports",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Plant Variance",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Reports",
+    "function_name": "DIMNM",
+    "evidence_count": 2,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'Reports'",
+    "target_expressions": [
+      "'Reports'"
+    ],
+    "dimension_name": "Reports",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Plant Variance",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Compare",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 17,
+    "confidence": "HIGH",
+    "target_expression": "'Compare'",
+    "target_expressions": [
+      "'Compare'"
+    ],
+    "dimension_name": "Compare",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Profit and Loss",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Profit Center Variance",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Reports",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 11,
+    "confidence": "HIGH",
+    "target_expression": "'Reports'",
+    "target_expressions": [
+      "'Reports'"
+    ],
+    "dimension_name": "Reports",
+    "hierarchy_name": null,
+    "attribute_name": "Report Period"
+  },
+  {
+    "source_cube": "}CellSecurity_Profit Center Variance",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 2,
+    "first_line": 11,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Profit Center Variance",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Reports",
+    "function_name": "DIMIX",
+    "evidence_count": 2,
+    "first_line": 11,
+    "confidence": "HIGH",
+    "target_expression": "'Reports'",
+    "target_expressions": [
+      "'Reports'"
+    ],
+    "dimension_name": "Reports",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Profit Center Variance",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Reports",
+    "function_name": "DIMNM",
+    "evidence_count": 2,
+    "first_line": 11,
+    "confidence": "HIGH",
+    "target_expression": "'Reports'",
+    "target_expressions": [
+      "'Reports'"
+    ],
+    "dimension_name": "Reports",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Profit Center Variance",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Compare",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 16,
+    "confidence": "HIGH",
+    "target_expression": "'Compare'",
+    "target_expressions": [
+      "'Compare'"
+    ],
+    "dimension_name": "Compare",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Project Spending",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "mProject Spending",
+    "function_name": "ELISANC",
+    "evidence_count": 1,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'mProject Spending'",
+    "target_expressions": [
+      "'mProject Spending'"
+    ],
+    "dimension_name": "mProject Spending",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Project Spending",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 9,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Turnaround and Other Asset",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 3,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Turnaround and Other Asset",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 15,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Turnaround and Other Asset",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 15,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CellSecurity_Turnaround and Other Asset",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "DIMNM",
+    "evidence_count": 1,
+    "first_line": 15,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CubeDrill_Balance Sheet",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Balance Sheet Source",
+    "function_name": "ELLEV",
+    "evidence_count": 1,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Balance Sheet Source'",
+    "target_expressions": [
+      "'Balance Sheet Source'"
+    ],
+    "dimension_name": "Balance Sheet Source",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CubeDrill_Balance Sheet",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Flow Code",
+    "function_name": "ELISANC",
+    "evidence_count": 1,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'Flow Code'",
+    "target_expressions": [
+      "'Flow Code'"
+    ],
+    "dimension_name": "Flow Code",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CubeDrill_Below the Line",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 4,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}CubeDrill_Below the Line Report",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELISANC",
+    "evidence_count": 4,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 3,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "OXY-CCA2 Rollup"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 8,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "Plant"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 14,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "OXY-CCA2 Rollup Description"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 48,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 7,
+    "first_line": 48,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "AFE Number"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "Project Spending",
+    "function_name": "DB",
+    "evidence_count": 3,
+    "first_line": 50,
+    "confidence": "HIGH",
+    "target_expression": "'Project Spending'",
+    "target_expressions": [
+      "'Project Spending'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 4,
+    "first_line": 50,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRN",
+    "evidence_count": 2,
+    "first_line": 57,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "CM APPR AMT"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRN",
+    "evidence_count": 1,
+    "first_line": 57,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "CY PLAN AMT"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRN",
+    "evidence_count": 1,
+    "first_line": 59,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "Max ( CM APPR AMT vs CY PLAN AMT )"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRN",
+    "evidence_count": 1,
+    "first_line": 59,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "CM TOT SPD EST"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRN",
+    "evidence_count": 1,
+    "first_line": 62,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "Max ( CM TOT SPD EST vs Max ( CM APPR AMT vs CY PLAN AMT ) )"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 64,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "AFE Description Check"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 66,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "Rollup Threshold 1"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 66,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "Rollup Threshold 2"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 73,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 78,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "AFE 5"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 81,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "AFE 4"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 84,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "AFE 3"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 87,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "AFE 2"
+  },
+  {
+    "source_cube": "}ElementAttributes_AFE Number",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "AFE Number",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 90,
+    "confidence": "HIGH",
+    "target_expression": "'AFE Number'",
+    "target_expressions": [
+      "'AFE Number'"
+    ],
+    "dimension_name": "AFE Number",
+    "hierarchy_name": null,
+    "attribute_name": "AFE 1"
+  },
+  {
+    "source_cube": "}ElementAttributes_Compare",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Compare",
+    "function_name": "ELISANC",
+    "evidence_count": 1,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'Compare'",
+    "target_expressions": [
+      "'Compare'"
+    ],
+    "dimension_name": "Compare",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Compare",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Compare",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Compare'",
+    "target_expressions": [
+      "'Compare'"
+    ],
+    "dimension_name": "Compare",
+    "hierarchy_name": null,
+    "attribute_name": "Month"
+  },
+  {
+    "source_cube": "}ElementAttributes_Compare",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Cost Center",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Profit Center",
+    "function_name": "ELISANC",
+    "evidence_count": 5,
+    "first_line": 5,
+    "confidence": "HIGH",
+    "target_expression": "'Profit Center'",
+    "target_expressions": [
+      "'Profit Center'"
+    ],
+    "dimension_name": "Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Cost Center",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 3,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "Profit Center Area"
+  },
+  {
+    "source_cube": "}ElementAttributes_Cost Center",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Profit Center",
+    "function_name": "ELPAR",
+    "evidence_count": 15,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'Profit Center'",
+    "target_expressions": [
+      "'Profit Center'"
+    ],
+    "dimension_name": "Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Cost Center",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 3,
+    "first_line": 18,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "Profit Center L1"
+  },
+  {
+    "source_cube": "}ElementAttributes_Cost Center",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 3,
+    "first_line": 29,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "Profit Center L2"
+  },
+  {
+    "source_cube": "}ElementAttributes_Cost Center",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 3,
+    "first_line": 41,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "Profit Center L3"
+  },
+  {
+    "source_cube": "}ElementAttributes_Cost Center",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 3,
+    "first_line": 53,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "Profit Center L4"
+  },
+  {
+    "source_cube": "}ElementAttributes_Employee",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Employee",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Employee'",
+    "target_expressions": [
+      "'Employee'"
+    ],
+    "dimension_name": "Employee",
+    "hierarchy_name": null,
+    "attribute_name": "Salary / Hourly"
+  },
+  {
+    "source_cube": "}ElementAttributes_Employee",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Employee",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'Employee'",
+    "target_expressions": [
+      "'Employee'"
+    ],
+    "dimension_name": "Employee",
+    "hierarchy_name": null,
+    "attribute_name": "Job Family"
+  },
+  {
+    "source_cube": "}ElementAttributes_Employee",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Corporate Headcount Map",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 4,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Corporate Headcount Map'",
+    "target_expressions": [
+      "'SYS Corporate Headcount Map'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Fiscal Period",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Fiscal Period",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": "Period Index"
+  },
+  {
+    "source_cube": "}ElementAttributes_Fiscal Period",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Fiscal Period",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELLEV",
+    "evidence_count": 1,
+    "first_line": 10,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Fiscal Period",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "}ElementAttributes_Fiscal Period",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 11,
+    "confidence": "HIGH",
+    "target_expression": "'}ElementAttributes_Fiscal Period'",
+    "target_expressions": [
+      "'}ElementAttributes_Fiscal Period'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Fiscal Period",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMP",
+    "evidence_count": 1,
+    "first_line": 11,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Fiscal Period",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Fiscal Period",
+    "function_name": "ELCOMPN",
+    "evidence_count": 1,
+    "first_line": 11,
+    "confidence": "HIGH",
+    "target_expression": "'Fiscal Period'",
+    "target_expressions": [
+      "'Fiscal Period'"
+    ],
+    "dimension_name": "Fiscal Period",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Material",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Material",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'Material'",
+    "target_expressions": [
+      "'Material'"
+    ],
+    "dimension_name": "Material",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Material",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "MATERIAL",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'MATERIAL'",
+    "target_expressions": [
+      "'MATERIAL'"
+    ],
+    "dimension_name": "MATERIAL",
+    "hierarchy_name": null,
+    "attribute_name": "Production UOM"
+  },
+  {
+    "source_cube": "}ElementAttributes_Material",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "material",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 7,
+    "confidence": "HIGH",
+    "target_expression": "'material'",
+    "target_expressions": [
+      "'material'"
+    ],
+    "dimension_name": "material",
+    "hierarchy_name": null,
+    "attribute_name": "Sales Responsibility"
+  },
+  {
+    "source_cube": "}ElementAttributes_Material",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "MATERIAL",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'MATERIAL'",
+    "target_expressions": [
+      "'MATERIAL'"
+    ],
+    "dimension_name": "MATERIAL",
+    "hierarchy_name": null,
+    "attribute_name": "Reporting UOM"
+  },
+  {
+    "source_cube": "}ElementAttributes_Material",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Material",
+    "function_name": "ATTRS",
+    "evidence_count": 5,
+    "first_line": 17,
+    "confidence": "HIGH",
+    "target_expression": "'Material'",
+    "target_expressions": [
+      "'Material'"
+    ],
+    "dimension_name": "Material",
+    "hierarchy_name": null,
+    "attribute_name": "Sales Responsibility"
+  },
+  {
+    "source_cube": "}ElementAttributes_Material",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Material",
+    "function_name": "ATTRS",
+    "evidence_count": 4,
+    "first_line": 23,
+    "confidence": "HIGH",
+    "target_expression": "'Material'",
+    "target_expressions": [
+      "'Material'"
+    ],
+    "dimension_name": "Material",
+    "hierarchy_name": null,
+    "attribute_name": "M Type"
+  },
+  {
+    "source_cube": "}ElementAttributes_Material",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Material",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 33,
+    "confidence": "HIGH",
+    "target_expression": "'Material'",
+    "target_expressions": [
+      "'Material'"
+    ],
+    "dimension_name": "Material",
+    "hierarchy_name": null,
+    "attribute_name": "Sales Responsibility Description"
+  },
+  {
+    "source_cube": "}ElementAttributes_PL Account",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Sales Area",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'Sales Area'",
+    "target_expressions": [
+      "'Sales Area'"
+    ],
+    "dimension_name": "Sales Area",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "}ElementAttributes_PL Account",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "PL Account",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'PL Account'",
+    "target_expressions": [
+      "'PL Account'"
+    ],
+    "dimension_name": "PL Account",
+    "hierarchy_name": null,
+    "attribute_name": "Sales Area"
+  },
+  {
+    "source_cube": "}ElementAttributes_PL Account",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "SYS Mfg Cost Account",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 10,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Mfg Cost Account'",
+    "target_expressions": [
+      "'SYS Mfg Cost Account'"
+    ],
+    "dimension_name": "SYS Mfg Cost Account",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_PL Account",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "SYS Mfg Cost Account",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 11,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Mfg Cost Account'",
+    "target_expressions": [
+      "'SYS Mfg Cost Account'"
+    ],
+    "dimension_name": "SYS Mfg Cost Account",
+    "hierarchy_name": null,
+    "attribute_name": "Manufacturing Cost Type"
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "OXY-CCA2 Parent"
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Cost Center",
+    "function_name": "ELISANC",
+    "evidence_count": 1,
+    "first_line": 6,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 12,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "OXY-CCA2 Rollup"
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Cost Center",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 13,
+    "confidence": "HIGH",
+    "target_expression": "'Cost Center'",
+    "target_expressions": [
+      "'Cost Center'"
+    ],
+    "dimension_name": "Cost Center",
+    "hierarchy_name": null,
+    "attribute_name": "CAPTION"
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 17,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "CustNoPlnt"
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 6,
+    "first_line": 21,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "Company"
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Company",
+    "function_name": "ATTRS",
+    "evidence_count": 3,
+    "first_line": 21,
+    "confidence": "HIGH",
+    "target_expression": "'Company'",
+    "target_expressions": [
+      "'Company'"
+    ],
+    "dimension_name": "Company",
+    "hierarchy_name": null,
+    "attribute_name": "Description"
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Company",
+    "function_name": "ATTRS",
+    "evidence_count": 4,
+    "first_line": 24,
+    "confidence": "HIGH",
+    "target_expression": "'Company'",
+    "target_expressions": [
+      "'Company'"
+    ],
+    "dimension_name": "Company",
+    "hierarchy_name": null,
+    "attribute_name": "Parent"
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "REFERENCES_HIERARCHY",
+    "target_object_type": "HIERARCHY",
+    "target_name": "Company",
+    "function_name": "ELISANC",
+    "evidence_count": 2,
+    "first_line": 24,
+    "confidence": "HIGH",
+    "target_expression": "'Company'",
+    "target_expressions": [
+      "'Company'"
+    ],
+    "dimension_name": "Company",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 10,
+    "first_line": 28,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "Company Rollup 1"
+  },
+  {
+    "source_cube": "}ElementAttributes_Plant",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 4,
+    "first_line": 38,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "Company Rollup 2"
+  },
+  {
+    "source_cube": "}ElementAttributes_Profit Center",
+    "relationship_type": "REFERENCES_DIMENSION",
+    "target_object_type": "DIMENSION",
+    "target_name": "Plant",
+    "function_name": "DIMIX",
+    "evidence_count": 1,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": null
+  },
+  {
+    "source_cube": "}ElementAttributes_Profit Center",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Profit Center",
+    "function_name": "ATTRS",
+    "evidence_count": 2,
+    "first_line": 17,
+    "confidence": "HIGH",
+    "target_expression": "'Profit Center'",
+    "target_expressions": [
+      "'Profit Center'"
+    ],
+    "dimension_name": "Profit Center",
+    "hierarchy_name": null,
+    "attribute_name": "Plant"
+  },
+  {
+    "source_cube": "}ElementAttributes_Profit Center",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Plant",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 18,
+    "confidence": "HIGH",
+    "target_expression": "'Plant'",
+    "target_expressions": [
+      "'Plant'"
+    ],
+    "dimension_name": "Plant",
+    "hierarchy_name": null,
+    "attribute_name": "Plant Division"
+  },
+  {
+    "source_cube": "}ElementAttributes_Reports",
+    "relationship_type": "USES_ATTRIBUTE",
+    "target_object_type": "ATTRIBUTE",
+    "target_name": "Reports",
+    "function_name": "ATTRS",
+    "evidence_count": 1,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'Reports'",
+    "target_expressions": [
+      "'Reports'"
+    ],
+    "dimension_name": "Reports",
+    "hierarchy_name": null,
+    "attribute_name": "Report Month"
+  },
+  {
+    "source_cube": "}ElementAttributes_Reports",
+    "relationship_type": "READS_FROM",
+    "target_object_type": "CUBE",
+    "target_name": "SYS Control",
+    "function_name": "DB",
+    "evidence_count": 1,
+    "first_line": 8,
+    "confidence": "HIGH",
+    "target_expression": "'SYS Control'",
+    "target_expressions": [
+      "'SYS Control'"
+    ],
+    "dimension_name": null,
+    "hierarchy_name": null,
+    "attribute_name": null
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "20260923T231346Z",
+  "started_at": "2026-09-23T23:13:46.092253+00:00",
+  "completed_at": "2026-09-23T23:14:12.498733+00:00",
+  "status": "COMPLETE",
+  "cube_count": 379,
+  "cube_with_rules_count": 92,
+  "evidence_count": 1138,
+  "relationship_count": 267,
+  "validation_count": 267,
+  "validation_counts": {
+    "ATTRIBUTE_CATALOG_DEFERRED": 102,
+    "HIERARCHY_CATALOG_DEFERRED": 50,
+    "UNRESOLVED_DYNAMIC_REFERENCE": 1,
+    "VALID": 114
+  },
+  "registered_exception_count": 0,
+  "excluded_relationship_count": 0,
+  "error_count": 0
+}

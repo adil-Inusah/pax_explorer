@@ -1,0 +1,6248 @@
+[
+  {
+    "process_name": "DataUpdate - Balance Sheet",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet - Manual Entry",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet - Manual Entry - Clear Out",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet - Outlook Seed Actual",
+    "parameter_name": "pTgtScenario",
+    "parameter_type": "String",
+    "prompt": "Target Scenario (Required)",
+    "default_value": "O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet - Period 13",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet - Period 13",
+    "parameter_name": "pFiscalYear",
+    "parameter_type": "String",
+    "prompt": "Fiscal Year <<YYYY>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet Detail",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet Detail",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Balance Sheet Detail",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Below the Line - Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below the Line - Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Below the Line - Corporate Headcount",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below the Line - Corporate Headcount",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Below the Line - Manual Entry",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below the Line - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below the Line - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessment - Actual - Assessment Offset Postings",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessment - Actual - Assessment Offset Postings",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessment - Actual - Assessment Postings",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessment - Actual - Assessment Postings",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessment - Actual - Manual Entry",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period << YYYY0MM>> (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below The Line Assessment - Copy Assess % Override",
+    "parameter_name": "pFromPeriod",
+    "parameter_type": "String",
+    "prompt": "From Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below The Line Assessment - Copy Assess % Override",
+    "parameter_name": "pToPeriod",
+    "parameter_type": "String",
+    "prompt": "To Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Below The Line Assessment - Copy Assess % Override",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Below The Line Assessment - Copy Assess % Override - Plan",
+    "parameter_name": "pFromPeriod",
+    "parameter_type": "String",
+    "prompt": "From Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below The Line Assessment - Copy Assess % Override - Plan",
+    "parameter_name": "pFromScenario",
+    "parameter_type": "String",
+    "prompt": "From Scenario",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Below The Line Assessment - Copy Assess % Override - Plan",
+    "parameter_name": "pToPeriod",
+    "parameter_type": "String",
+    "prompt": "To Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Below The Line Assessment - Copy Assess % Override - Plan",
+    "parameter_name": "pToScenario",
+    "parameter_type": "String",
+    "prompt": "To Scenario",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessments - Outlook - Period Range",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessments - Outlook - Period Range",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessments - Outlook Assessment Percentage",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessments - Outlook Assessment Percentage",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario (Optional) << Blank defaults to O/L>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessments - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Below the Line Assessments - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Corporate Headcount",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Corporate Headcount - Contingent Workers",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Corporate Headcount - Outlook Seed Actual",
+    "parameter_name": "pTgtScenario",
+    "parameter_type": "String",
+    "prompt": "Target Scenario (Required)",
+    "default_value": "O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Corporate Headcount - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Corporate Headcount - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Cost Standards - KEPH",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026006",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Customer Profitability",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Customer Profitability",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Customer Profitability - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Customer Profitability - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost - Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost - Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost - Load Outlook to BudInc",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario to be Copied (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost - Load Outlook to BudInc",
+    "parameter_name": "pPlanPeriod",
+    "parameter_type": "String",
+    "prompt": "Year to be Copied (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost - Load Outlook to BudInc",
+    "parameter_name": "pBudCalc",
+    "parameter_type": "String",
+    "prompt": "Budinc Scenario (Actual or Outlook - Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost - Plan",
+    "parameter_name": "pFileName",
+    "parameter_type": "String",
+    "prompt": "FileName (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost - Plan",
+    "parameter_name": "pFiscalYear",
+    "parameter_type": "String",
+    "prompt": "Fiscal Year (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - Copy Assess % Override",
+    "parameter_name": "pFromPeriod",
+    "parameter_type": "String",
+    "prompt": "From Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - Copy Assess % Override",
+    "parameter_name": "pToPeriod",
+    "parameter_type": "String",
+    "prompt": "To Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - Copy Assess % Override",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - Copy Assess % Override - Plan",
+    "parameter_name": "pFromPeriod",
+    "parameter_type": "String",
+    "prompt": "From Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - Copy Assess % Override - Plan",
+    "parameter_name": "pToPeriod",
+    "parameter_type": "String",
+    "prompt": "To Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - Copy Assess % Override - Plan",
+    "parameter_name": "pFromScenario",
+    "parameter_type": "String",
+    "prompt": "From Scenario",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - Copy Assess % Override - Plan",
+    "parameter_name": "pToScenario",
+    "parameter_type": "String",
+    "prompt": "To Scenario",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - T Account Assessment",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - T Account Assessment",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fixed Manufacturing Cost Assessment - T Account Assessment",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Fund Flow",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Fund Flow",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Fund Flow",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Remaining Unassigned",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Remaining Unassigned",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "parameter_name": "pVendor",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "parameter_name": "pOrder",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "parameter_name": "pAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "parameter_name": "pTask",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "parameter_name": "pPhase",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 5
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "parameter_name": "pAssignedTask",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 6
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "parameter_name": "pAssignedPhase",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 7
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 8
+  },
+  {
+    "process_name": "DataUpdate - Glenn Springs Project - Unassigned",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 9
+  },
+  {
+    "process_name": "DataUpdate - Intercompany",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Intercompany",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Intercompany - Manual Entry",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Intercompany - Manual Entry - Clear Out",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Intercompany Sandbox",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Intercompany Sandbox",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Intercompany Sandbox - COS Elim",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Intercompany Sandbox - COS Elim",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Intercompany Sandbox - Internal Markup",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Intercompany Sandbox - Internal Markup",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Intercompany Sandbox - Sales Elim",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Intercompany Sandbox - Sales Elim",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Inventory Walk",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Inventory Walk",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Inventory Walk - Manual Entries",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Inventory Walk - Manual Entries",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Inventory Walk - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Inventory Walk - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Inventory Walk - Production Adjustment",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Inventory Walk - Production Adjustment",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Inventory Walk - Production Adjustment",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Manual Input",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Manual Input Balance Sheet",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Manual Input Balance Sheet",
+    "parameter_name": "pReverse",
+    "parameter_type": "String",
+    "prompt": "Reverse Next Period << Y/N>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Manual Input Below the Line",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "MFGCost_10282024.csv",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost - BW",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025001",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost - Exclude",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost - Exclude",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost - Exclude",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost - Transferred Costs",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "FileName (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost - Transferred Costs",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost - Transferred Costs",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost Balancing",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "2025001",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Manufacturing Cost Balancing",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "2025001",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Beginning and Ending Inventory",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026006",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Beginning and Ending Inventory - Average Price Materials",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026006",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Consumption - All Other",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Consumption - Production",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Consumption - Production - Materials Produced - Price Diff",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Consumption - Production - Materials Produced - Std",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Consumption - Sales",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Consumption - Transfers",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Consumption - Transfers - Receiving Material and Plant",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026004",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Receipts - All other",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Receipts - External Procured Receipts",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Receipts - Production",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026006",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Receipts - Production - Components Consumed",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Receipts - Transfer Posting",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026004",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Receipts - Transfer Posting - Components Consumed",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Revaluation - All Other",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Revaluation - Change in Material Price",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Revaluation - External Procured Receipts",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Revaluation - Production",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Revaluation - Production Consumption",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Revaluation - Sales",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Revaluation - Transfer Posting",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Material Ledger - Revaluation - Transfers Out",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Plant Assessment - Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Plant Assessment - Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario",
+    "default_value": "Outlook",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Period Range",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario",
+    "default_value": "Outlook",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Period Range",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Period Range",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Period Range - Plan",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario",
+    "default_value": "Outlook",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Period Range - Plan",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Period Range - Plan",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Plan",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario",
+    "default_value": "Outlook",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Plan",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Fixed Manufacturing Cost Assessment - Plan",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Freight Reclass",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Freight Reclass",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Freight Reclass with Material Detail",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Freight Reclass with Material Detail",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Intercompany",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Intercompany",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Intercompany Sandbox",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Intercompany Sandbox",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Manual Entry",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Manual Entry - Clear Out",
+    "parameter_name": "pFiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "Fiscal Period (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss Detail",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss Detail",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Profit and Loss Detail",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Project Spend Outlook Equal YTD",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Project Spending",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Project Spending",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Project Spending - Actual",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Project Spending - Manual",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Project Spending - Manual",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Project Spending - Validation",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Project Spending - Validation",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Project Spending - Validation - Manual",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Project Spending - Validation - Manual",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "parameter_name": "pSrcVersion",
+    "parameter_type": "String",
+    "prompt": "Source Scenario",
+    "default_value": "Outlook",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "parameter_name": "pTgtVersion",
+    "parameter_type": "String",
+    "prompt": "Archive Scenario",
+    "default_value": "Aug TY O/L",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "Cube",
+    "default_value": "Profit and Loss",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - String",
+    "parameter_name": "pSrcVersion",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - String",
+    "parameter_name": "pTgtVersion",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - String",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - String",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "0",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - String",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 5
+  },
+  {
+    "process_name": "DataUpdate - SYS BS Account Hierarchy",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "PAx_FSV_20241026040137.txt",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Control - Period Variable",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename: (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Cost Center Hierarchy",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Hierarchy Validation",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Cost Center",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Hierarchy Validation",
+    "parameter_name": "pHierarchy",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - SYS Hierarchy Validation - Duplicate Rollups",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "PL Account",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Hierarchy Validation - Duplicate Rollups",
+    "parameter_name": "pHierarchy",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "1",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - SYS Intercompany Elim",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Intercompany Elim",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - SYS Intercompany Elim - Cost of Sales",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Intercompany Elim - Cost of Sales",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - SYS Material by Profit Center",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS PL Account Hierarchy",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Production Order",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Production Order",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - SYS Profit Center Hierarchy",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Profit Center Sales Responsibility",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Profit Center Sales Responsibility - Actual Net Sales",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "2025",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - SYS Profit Center Sales Responsibility - Actual Net Sales",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - SYS UOM Conversion Factor",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Turnaround and Other Asset - Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Turnaround and Other Asset - Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Turnaround and Other Asset - Actual - Manual Assignments",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Turnaround and Other Asset - Actual - Manual Assignments",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Turnaround and Other Asset - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Turnaround and Other Asset - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Turnaround and Other Asset - Roll Dates",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Turnaround Reserve - Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Turnaround Reserve - Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Turnaround Reserve - Outlook Seed Actual",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataUpdate - Turnaround Reserve - Outlook Seed Actual",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataUpdate - Turnaround Reserve - Roll Dates",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Balance Sheet Detail",
+    "parameter_name": "pFileName",
+    "parameter_type": "String",
+    "prompt": "FileName (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Balance Sheet Detail",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataWrapper - Balance Sheet Detail",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataWrapper - Balance Sheet Detail and Profit and Loss Detail",
+    "parameter_name": "pDateCheck",
+    "parameter_type": "String",
+    "prompt": "Check file datestamp = today << N / Y >>",
+    "default_value": "Y",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Balance Sheet Detail and Profit and Loss Detail",
+    "parameter_name": "pPeriodCheck",
+    "parameter_type": "String",
+    "prompt": "Check file Period = Loadfile Period << N / Y >>",
+    "default_value": "Y",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "DataWrapper - Fixed Manufacturing Cost - Plan",
+    "parameter_name": "pFileName",
+    "parameter_type": "String",
+    "prompt": "FileName (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Fixed Manufacturing Cost - Plan",
+    "parameter_name": "pFiscalYear",
+    "parameter_type": "String",
+    "prompt": "Fiscal Year (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataWrapper - Glenn Springs Project",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Glenn Springs Project",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataWrapper - Manufacturing Cost",
+    "parameter_name": "pFileName",
+    "parameter_type": "String",
+    "prompt": "FileName (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Manufacturing Cost",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataWrapper - Manufacturing Cost",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataWrapper - Profit and Loss Detail",
+    "parameter_name": "pFileName",
+    "parameter_type": "String",
+    "prompt": "FileName (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Profit and Loss Detail",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataWrapper - Profit and Loss Detail",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "DataWrapper - Project Spending",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Project Spending",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataWrapper - Project Spending - Manual",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Project Spending - Manual",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>> (optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DataWrapper - Scenario Archive",
+    "parameter_name": "pSrcVersion",
+    "parameter_type": "String",
+    "prompt": "Source Scenario",
+    "default_value": "O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - Scenario Archive",
+    "parameter_name": "pTgtVersion",
+    "parameter_type": "String",
+    "prompt": "Archive Scenario",
+    "default_value": "JUN TY O/L",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "DataWrapper - Scenario Archive",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period (Optional)",
+    "default_value": "2026003",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "DataWrapper - Scenario Archive",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period (Optional)",
+    "default_value": "2026003",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "DataWrapper - Scenario Archive",
+    "parameter_name": "pCycle",
+    "parameter_type": "String",
+    "prompt": "Cycle",
+    "default_value": "Cost Center",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "DataWrapper - SYS Hierarchy Validation",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension Name (Leave Blank to run all dimensions)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper - SYS UOM Conversion Factor",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DataWrapper- SYS Control - Period Variable",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename: (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - BS Account",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - BS Account - Hierarchies",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Company",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Cost Center",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Customer",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Customer - Hierarchy",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Dimension - Hierarchy Archive",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension:",
+    "default_value": "Cost Center",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Dimension - Hierarchy Archive",
+    "parameter_name": "pYear",
+    "parameter_type": "String",
+    "prompt": "Fiscal Year:",
+    "default_value": "2025",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "DimUpdate - Document No",
+    "parameter_name": "pFileName",
+    "parameter_type": "String",
+    "prompt": "Filename: (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Fiscal Period",
+    "parameter_name": "pFiscalYear",
+    "parameter_type": "String",
+    "prompt": "Fiscal Year to add: <<YYYY>> (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Fiscal Period",
+    "parameter_name": "pIndex",
+    "parameter_type": "String",
+    "prompt": "Starting period index for adding historical Years. Leave Blank for adding future Fiscal Years!",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "DimUpdate - Functional Area",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Functional Area - SAP Hierarchy Import",
+    "parameter_name": "pHierarchy",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - GL_Account",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.csv",
+    "default_value": "COA SKA1.csv",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - KALNR - KEKO",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026006",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Material",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Material - Sales Responsibility - Production UOM",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Material - Sales Responsibility - Reporting UOM",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Order",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - PL Account",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Plant",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Plant Assessment Cost Object",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Profit Center",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - SYS Company Hierarchy",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - SYS Func Area Hierarchy",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - SYS Functional Area Hierarchy",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - SYS Material Hierarchy",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - SYS Mfg Cost Account",
+    "parameter_name": "pFileName",
+    "parameter_type": "String",
+    "prompt": "FileName (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Turnaround and Other Project - ANLA",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File Name:",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - Vendor",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.txt",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "DimUpdate - WBS Element",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "File name: << File Name>>.csv",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Notification - Below the Line",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Notification - Below the Line",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Notification - Intercompany - Sales Elim Profit Center",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Notification - Intercompany - Sales Elim Profit Center",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Notification - Intercompany - Sales Elim Profit Center",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "Cube: Intercompany / Intercompany Sandbox (Required)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Notification - Plant and Profit Center",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Notification - Profit and Loss",
+    "parameter_name": "pInputFile",
+    "parameter_type": "String",
+    "prompt": "Input File (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Notification - Profit and Loss",
+    "parameter_name": "pOutputFile",
+    "parameter_type": "String",
+    "prompt": "Output File (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Notification - Profit and Loss",
+    "parameter_name": "pProcessGroup",
+    "parameter_type": "String",
+    "prompt": "Process Group",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Notification - Profit and Loss",
+    "parameter_name": "pAccount",
+    "parameter_type": "String",
+    "prompt": "Account",
+    "default_value": "oxyprd01_tm1_automation",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Notification - Profit and Loss",
+    "parameter_name": "pPW",
+    "parameter_type": "String",
+    "prompt": "Password",
+    "default_value": "3nC0H8Z4dG79 ",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Notification - Profit and Loss",
+    "parameter_name": "pEnvironment",
+    "parameter_type": "String",
+    "prompt": "Environment",
+    "default_value": "oxyprd",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Notification - Profit and Loss",
+    "parameter_name": "pInstance",
+    "parameter_type": "String",
+    "prompt": "Instance",
+    "default_value": "OXYChem",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "Notification - Profit and Loss",
+    "parameter_name": "pKeepCorrected",
+    "parameter_type": "String",
+    "prompt": "Keep Correction Entries (Y/N)",
+    "default_value": "N",
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "Notification - Profit and Loss - Clearing Accounts",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period: <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "SecurityUpdate - Element Security",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "SecurityUpdate - Element Security - Hierarchy Archive",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "SecurityUpdate - Element Security - Hierarchy Archive",
+    "parameter_name": "pYear",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "SecurityUpdate - Element Security - Plant - Hierarchy Archive",
+    "parameter_name": "pYear",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "sys_ACDOCA_Period Check",
+    "parameter_name": "pACDOCAFile",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "sys_ACDOCA_Period Check",
+    "parameter_name": "pOutputFile",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Attribute Hierarchy",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Attribute Hierarchy",
+    "parameter_name": "pLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Attribute Hierarchy_Create",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "sys_Chore Frequency Check",
+    "parameter_name": "pFrequency",
+    "parameter_type": "String",
+    "prompt": "Frequency <<Daily / 2 Hourly>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "SYS_Combine_HTML",
+    "parameter_name": "pFile1",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "SYS_Combine_HTML",
+    "parameter_name": "pFile2",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "SYS_Combine_HTML",
+    "parameter_name": "pOutputFile",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Create_Html",
+    "parameter_name": "pcsvFile",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Create_Html",
+    "parameter_name": "pIssue",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "sys_cube_clear",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "Cube Name",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Cube_Clear_Data",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "Cube",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "Cube Name",
+    "default_value": "Stage_SST",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pView",
+    "parameter_type": "String",
+    "prompt": "Name of the View",
+    "default_value": "Sys_Test_View",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pFilter",
+    "parameter_type": "String",
+    "prompt": "Filter: Year: 2006 + 2007 & Scenario: Actual + Budget & Organization: North America Operations",
+    "default_value": "Stage_Sold_To: ALL PLANNING GROUPS",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pSuppressZero",
+    "parameter_type": "Numeric",
+    "prompt": "Suppress Zero Data (Skip = 1)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pSuppressConsol",
+    "parameter_type": "Numeric",
+    "prompt": "Suppress Consolidations (Skip = 1)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pSuppressRules",
+    "parameter_type": "Numeric",
+    "prompt": "Suppress Rules (Skip = 1)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pDimensionDelim",
+    "parameter_type": "String",
+    "prompt": "Delimiter for start of Dimension/Element set",
+    "default_value": "&",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pElementStartDelim",
+    "parameter_type": "String",
+    "prompt": "Delimiter for start of element list",
+    "default_value": ":",
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pElementDelim",
+    "parameter_type": "String",
+    "prompt": "Delimiter between elements",
+    "default_value": "+",
+    "has_nonempty_default": true,
+    "position": 9
+  },
+  {
+    "process_name": "Sys_Cube_View_Create",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug: 0",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 10
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "Cube Name",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pView",
+    "parameter_type": "String",
+    "prompt": "Name of the View",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pFilter",
+    "parameter_type": "String",
+    "prompt": "Filter: Year: 2006 + 2007 & Scenario: Actual + Budget & Organization: North America Operations",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pSuppressZero",
+    "parameter_type": "Numeric",
+    "prompt": "Suppress Zero Data (Skip = 1)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pSuppressConsol",
+    "parameter_type": "Numeric",
+    "prompt": "Suppress Consolidations (Skip = 1)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pSuppressRules",
+    "parameter_type": "Numeric",
+    "prompt": "Suppress Rules (Skip = 1)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pDimensionDelim",
+    "parameter_type": "String",
+    "prompt": "Delimiter for start of Dimension/Element set",
+    "default_value": "&",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pElementStartDelim",
+    "parameter_type": "String",
+    "prompt": "Delimiter for start of element list",
+    "default_value": ":",
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pElementDelim",
+    "parameter_type": "String",
+    "prompt": "Delimiter between elements",
+    "default_value": "+",
+    "has_nonempty_default": true,
+    "position": 9
+  },
+  {
+    "process_name": "Sys_Cube_View_Create_MDX",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug: 0",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 10
+  },
+  {
+    "process_name": "Sys_Cube_View_Delete",
+    "parameter_name": "pCubes",
+    "parameter_type": "String",
+    "prompt": "List of Cubes Separated by Delimiter (Blank = All Cubes)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Cube_View_Delete",
+    "parameter_name": "pViews",
+    "parameter_type": "String",
+    "prompt": "List of Views Separated by Delimiter. Wildcards Permitted on View Names.",
+    "default_value": "}SYS*",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Cube_View_Delete",
+    "parameter_name": "pDelimiter",
+    "parameter_type": "String",
+    "prompt": "Delimiter Character",
+    "default_value": "&",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Cube_View_Delete",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets.Create",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "Cube",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets.Create",
+    "parameter_name": "pSuppressZero",
+    "parameter_type": "Numeric",
+    "prompt": "Suppress Zeros (Boolean Yes = 1)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets.Create",
+    "parameter_name": "pSuppressConsol",
+    "parameter_type": "Numeric",
+    "prompt": "Suppress Calcs (Boolean Yes = 1)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets.Create",
+    "parameter_name": "pSuppressRules",
+    "parameter_type": "Numeric",
+    "prompt": "Suppress Rules (Boolean Yes = 1)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets.Create",
+    "parameter_name": "pDimensions",
+    "parameter_type": "String",
+    "prompt": "Dimension(s) to create empty processing subsets for",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets.Create",
+    "parameter_name": "pDelimiter",
+    "parameter_type": "String",
+    "prompt": "Delimiter",
+    "default_value": "&",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets.Create",
+    "parameter_name": "pView",
+    "parameter_type": "String",
+    "prompt": "View",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets.Create",
+    "parameter_name": "pSubset",
+    "parameter_type": "String",
+    "prompt": "Subset",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 8
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets.Create",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 9
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets_Delete",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "Cube Name",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets_Delete",
+    "parameter_name": "pView",
+    "parameter_type": "String",
+    "prompt": "View Name",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets_Delete",
+    "parameter_name": "pSubset",
+    "parameter_type": "String",
+    "prompt": "Subset Name",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets_Delete",
+    "parameter_name": "pMode",
+    "parameter_type": "Numeric",
+    "prompt": "Delete temporary view and Subset ( 0 = Retain View and Subsets 1 = Delete View and Subsets 2 = Delete View only )",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Cube_ViewAndSubsets_Delete",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "SYS_Delete_Views_and_Subsets_By_Pattern",
+    "parameter_name": "pPattern",
+    "parameter_type": "String",
+    "prompt": "What starting pattern do you wish to search for?",
+    "default_value": "zSYS_",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "SYS_Delete_Views_and_Subsets_By_Pattern",
+    "parameter_name": "pDeleteViews",
+    "parameter_type": "Numeric",
+    "prompt": "Do you wish to delete views matching this pattern? (1 = True)",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "SYS_Delete_Views_and_Subsets_By_Pattern",
+    "parameter_name": "pDeleteSubsets",
+    "parameter_type": "Numeric",
+    "prompt": "Do you wish to delete subsets matching this pattern? (1 = True)",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "SYS_Delete_Views_and_Subsets_By_Pattern",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug the process?",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_AllConsols_Delete",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Target Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_AllConsols_Delete",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_AllElements_Delete",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension to delete all elements",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_AllElements_Delete",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Clone",
+    "parameter_name": "pSourceDim",
+    "parameter_type": "String",
+    "prompt": "Source Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Clone",
+    "parameter_name": "pTargetDim",
+    "parameter_type": "String",
+    "prompt": "Target Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Clone",
+    "parameter_name": "pAttr",
+    "parameter_type": "Numeric",
+    "prompt": "Include Attributes? (Boolean 1=True)",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Clone",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Copy_Attributes",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "What dimension attributes are to be added to?",
+    "default_value": "Account Test",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Copy_Attributes",
+    "parameter_name": "pSrcDim",
+    "parameter_type": "String",
+    "prompt": "What is the dimension that attributes are to be copied from?",
+    "default_value": "Account Base",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Copy_Attributes",
+    "parameter_name": "pAttributeList",
+    "parameter_type": "String",
+    "prompt": "Enter the list of attributes used to create the hierarchy separated by the delimiter",
+    "default_value": "Legacy Account Description&Legacy Account",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Copy_Attributes",
+    "parameter_name": "pDelimiter",
+    "parameter_type": "String",
+    "prompt": "Enter the delimiter used to separate the attribute list",
+    "default_value": "&",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "What is the name of the derived dimension to be created or updated?",
+    "default_value": "Validation",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "parameter_name": "pSrcDim",
+    "parameter_type": "String",
+    "prompt": "What is the source dimension that this derived dimension is being created from?",
+    "default_value": "Cost Center Test",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "parameter_name": "pAttribute",
+    "parameter_type": "String",
+    "prompt": "What is the attribute used to select the elements for this derived dimension",
+    "default_value": "TB Source",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "parameter_name": "pTop",
+    "parameter_type": "String",
+    "prompt": "What is the top level consolidation of this flat hierarchy to be called? (optional, blank creates a flat dimension)",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "parameter_name": "pAttributeValue",
+    "parameter_type": "String",
+    "prompt": "What is the attribute value to match to include in the derived dimension?",
+    "default_value": "1",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "What is the name of the derived dimension to be created or updated?",
+    "default_value": "Validation",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "parameter_name": "pSrcDim",
+    "parameter_type": "String",
+    "prompt": "What is the source dimension that this derived dimension is being created from?",
+    "default_value": "Cost Center Test",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "parameter_name": "pAttribute",
+    "parameter_type": "String",
+    "prompt": "What is the attribute used to select the elements for this derived dimension",
+    "default_value": "TB Source",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "parameter_name": "pTop",
+    "parameter_type": "String",
+    "prompt": "What is the top level consolidation of this flat hierarchy to be called (optional)?",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "What is the name of the derived dimension to be created or updated?",
+    "default_value": "Sys_Check_Cost Center",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "parameter_name": "pSrcDim",
+    "parameter_type": "String",
+    "prompt": "What is the source dimension that this derived dimension is being created from?",
+    "default_value": "Cost Center",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "parameter_name": "pMDX",
+    "parameter_type": "String",
+    "prompt": "What is the attribute used to select the elements for this derived dimension",
+    "default_value": "{ tm1filterbylevel ( descendants ( [Cost Center].[ALL COST CENTERS] ) , 0 ) }",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "parameter_name": "pTop",
+    "parameter_type": "String",
+    "prompt": "What is the top level consolidation of this flat hierarchy to be called (optional)?",
+    "default_value": "All Cost Centers",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Create_Standard_Alias",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "What dimension that this statndard alias attribute is to be added to?",
+    "default_value": "Account Test",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Create_Standard_Alias",
+    "parameter_name": "pAliasAttr",
+    "parameter_type": "String",
+    "prompt": "What is the name of this standard alias attribute?",
+    "default_value": "Code - Description",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Create_Standard_Alias",
+    "parameter_name": "pAttributeList",
+    "parameter_type": "String",
+    "prompt": "What attributes are to be used to create this standard Alias?",
+    "default_value": "Description",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Create_Standard_Alias",
+    "parameter_name": "pDelimiter",
+    "parameter_type": "String",
+    "prompt": "What is the character used to separate the fields in the Alias?",
+    "default_value": "-",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Create_Standard_Alias",
+    "parameter_name": "pIncludeElement",
+    "parameter_type": "Numeric",
+    "prompt": "Include the element name in the attribute value?",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Dim_Element_Delete.FromSubset",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Element_Delete.FromSubset",
+    "parameter_name": "pSubset",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Element_Delete.FromSubset",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Export_To_File",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "Which Dimension do you wish to export?",
+    "default_value": "Account Test",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Export_To_File",
+    "parameter_name": "pHeader",
+    "parameter_type": "Numeric",
+    "prompt": "Include a header row?  (0 or 1 where 1 means yes include a header row)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Clone",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "Source Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Clone",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Clone",
+    "parameter_name": "pYear",
+    "parameter_type": "String",
+    "prompt": "Enter the Year for the hierarchy",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Clone",
+    "parameter_name": "pTop",
+    "parameter_type": "String",
+    "prompt": "Enter the Top Level Parent from the Existing hierarchy to copy from",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "Cost Centre",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "parameter_name": "pAttribute",
+    "parameter_type": "String",
+    "prompt": "Attribute",
+    "default_value": "Finance",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "parameter_name": "pTopNode",
+    "parameter_type": "String",
+    "prompt": "Optional: The name of the consolidation top element",
+    "default_value": "Total Finance",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "parameter_name": "pPrefix",
+    "parameter_type": "String",
+    "prompt": "Optional: Prefix before the attribute value",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "parameter_name": "pSuffix",
+    "parameter_type": "String",
+    "prompt": "Optional: Suffix after the attribute value",
+    "default_value": "( Finance )",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "parameter_name": "pUnwind",
+    "parameter_type": "Numeric",
+    "prompt": "Boolean: 1 = True unwind current hierarchy.",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "parameter_name": "pEmptyConsol",
+    "parameter_type": "Numeric",
+    "prompt": "Optional: 1 = Remove empty consoldation from dimension.",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "pDebug",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "Account",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pAttribute",
+    "parameter_type": "String",
+    "prompt": "Attribute",
+    "default_value": "Stat Acct Hry",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pTopNode",
+    "parameter_type": "String",
+    "prompt": "Optional: The name of the consolidation top element",
+    "default_value": "Stat Accounts",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pPrefix",
+    "parameter_type": "String",
+    "prompt": "Optional: Prefix before the attribute value",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pSuffix",
+    "parameter_type": "String",
+    "prompt": "Optional: Suffix after the attribute value",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pUnwind",
+    "parameter_type": "Numeric",
+    "prompt": "Boolean: 1 = True unwind current hierarchy.",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pEmptyConsol",
+    "parameter_type": "Numeric",
+    "prompt": "Optional: 1 = Remove empty consoldation from dimension.",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "pDebug",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pRecursive",
+    "parameter_type": "Numeric",
+    "prompt": "Boolan: 1 = Perform recursive unwind",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 9
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "parameter_name": "pWeightAttr",
+    "parameter_type": "String",
+    "prompt": "What attribute specifies the element component weight to use (optional)?",
+    "default_value": "Stat Acct Weight",
+    "has_nonempty_default": true,
+    "position": 10
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "What dimension is the hierarchy to be added to?",
+    "default_value": "Account Test",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "parameter_name": "PTop",
+    "parameter_type": "String",
+    "prompt": "Enter the top level node of this hierarchy (optional)",
+    "default_value": "Balance Sheet Accounts",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "parameter_name": "pMDX",
+    "parameter_type": "String",
+    "prompt": "Enter the MDX used to create the subset",
+    "default_value": "{ tm1filterbylevel ( Descendants ( [Account Test].[Balance Sheet] ) , 0 ) }",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "parameter_name": "pInsertPoint",
+    "parameter_type": "String",
+    "prompt": "Enter the element to insert the top element before.",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "What dimension is the hierarchy to be added to?",
+    "default_value": "Account Test",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "parameter_name": "PTop",
+    "parameter_type": "String",
+    "prompt": "Enter the top level node of this hierarchy (optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "parameter_name": "pAttributeList",
+    "parameter_type": "String",
+    "prompt": "Enter the list of attributes used to create the hierarchy separated by the delimiter",
+    "default_value": "Level 1 Rollup&Level 2 Rollup&Level 3 Rollup&Level 4 Rollup&Level 5 Rollup&Level 6 Rollup&Level 7 Rollup&Level 8 Rollup&Level 9 Rollup&Level 10 Rollup&Level 11 Rollup",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "parameter_name": "pDelimiter",
+    "parameter_type": "String",
+    "prompt": "Enter the delimiter used to separate the attribute list",
+    "default_value": "&",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_Orphans",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "What dimension is the hierarchy to be added to?",
+    "default_value": "Account Test",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_Orphans",
+    "parameter_name": "PTop",
+    "parameter_type": "String",
+    "prompt": "What is the name of the Orphan top level element?",
+    "default_value": "Orphans",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_Orphans",
+    "parameter_name": "pInsertPoint",
+    "parameter_type": "String",
+    "prompt": "Enter the element to insert the top element before.",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_CreateFromConfig",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "Which Dimension do you wish to build alternate hierarchies for?",
+    "default_value": "Cost Center",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_CreateFromConfig",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug? ( 1 = True)",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "What dimension is the hierarchy to be added to?",
+    "default_value": "Account Test",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "parameter_name": "PTop",
+    "parameter_type": "String",
+    "prompt": "Enter the top level node of this hierarchy",
+    "default_value": "Selling Profit",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "parameter_name": "pElementList",
+    "parameter_type": "String",
+    "prompt": "Enter the list of attributes used to create the hierarchy separated by the delimiter",
+    "default_value": "Total Trade Sales^Cost of Products & Adj.",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "parameter_name": "pDelimiter",
+    "parameter_type": "String",
+    "prompt": "Enter the delimiter used to separate the attribute list",
+    "default_value": "^",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "parameter_name": "pWeightList",
+    "parameter_type": "String",
+    "prompt": "Enter the weights to be used with each consoldation separted by the delimiter (optional with default being 1 )",
+    "default_value": "1^1",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "parameter_name": "pInsertPoint",
+    "parameter_type": "String",
+    "prompt": "Enter the element to insert the pTop element before (optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 6
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "parameter_name": "pUnwind",
+    "parameter_type": "Numeric",
+    "prompt": "Do you want to remove existing consolidations from the pTop element before adding these? (0 - False; 1 - True)",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_All",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_All",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "Material",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "parameter_name": "pConsol",
+    "parameter_type": "String",
+    "prompt": "Consolidated value",
+    "default_value": "Material Hierarchy",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "parameter_name": "pRecursive",
+    "parameter_type": "Numeric",
+    "prompt": "",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Material",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "parameter_name": "pHierarchy",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Material by Sales Responsibility",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Import_From_File",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "Which Dimension do you wish to import?",
+    "default_value": "Account",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Import_From_File",
+    "parameter_name": "pHeader",
+    "parameter_type": "Numeric",
+    "prompt": "How many header rows does the file Include?",
+    "default_value": 2,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sort",
+    "parameter_name": "pDimName",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sort",
+    "parameter_name": "pNAlpha",
+    "parameter_type": "String",
+    "prompt": "Sort N level elements alphabetically (1=Yes / 0=No)",
+    "default_value": "0",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sort_Export",
+    "parameter_name": "pDimName",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sort_Export",
+    "parameter_name": "pNAlpha",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sort_Import",
+    "parameter_name": "pDimName",
+    "parameter_type": "String",
+    "prompt": "Dimension Name",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sort_Seed",
+    "parameter_name": "pDimName",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sort_Seed",
+    "parameter_name": "pConsol",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sort_Seed_TopLevel",
+    "parameter_name": "pDimName",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Clone",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Clone",
+    "parameter_name": "pSourceSub",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Clone",
+    "parameter_name": "pTargetSub",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Clone",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Clone",
+    "parameter_name": "pAlias",
+    "parameter_type": "String",
+    "prompt": "Use Subset Alias",
+    "default_value": "No",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Clone",
+    "parameter_name": "pAliasName",
+    "parameter_type": "String",
+    "prompt": "Alias Name",
+    "default_value": "Name",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pSubset",
+    "parameter_type": "String",
+    "prompt": "Subset",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pConsol",
+    "parameter_type": "String",
+    "prompt": "Consolidated Element (Blank Equals All)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pAttribute",
+    "parameter_type": "String",
+    "prompt": "Attribute (Blank Equals All)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pAttributeValue",
+    "parameter_type": "String",
+    "prompt": "Attribute Value",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pLevelFrom",
+    "parameter_type": "Numeric",
+    "prompt": "From Element Level",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pLevelTo",
+    "parameter_type": "Numeric",
+    "prompt": "To Element Level",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pExclusions",
+    "parameter_type": "String",
+    "prompt": "Elements to Exclude From Subset (Seperated by Delimiter)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 8
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pDelimiter",
+    "parameter_type": "String",
+    "prompt": "Delimiter",
+    "default_value": "+",
+    "has_nonempty_default": true,
+    "position": 9
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pAddToSubset",
+    "parameter_type": "Numeric",
+    "prompt": "Add to Subset if it Already Exists (0=No 1=Yes)",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 10
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pAlias",
+    "parameter_type": "String",
+    "prompt": "Set Alias for Subset",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 11
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 12
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "Consolidated Customer Account",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "parameter_name": "pSubset",
+    "parameter_type": "String",
+    "prompt": "Subset",
+    "default_value": "LB Test",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "parameter_name": "pMDXExpr",
+    "parameter_type": "String",
+    "prompt": "Valid MDX Expression for Specified Dimension",
+    "default_value": "{ ORDER( {BOTTOMCOUNT( {{TM1FILTERBYLEVEL( {TM1SUBSETALL( [Consolidated Customer Account] )}, 0)} }, 5.000000, [Consolidated Customer].([Consolidated Customer ID].[All Customer IDs],[Cost Center].CurrentMember,[Year].CurrentMember,[Month].CurrentMember,[mConsolidated Customer].[YOY Sales Difference]))}, [Consolidated Customer].([Consolidated Customer ID].[All Customer IDs],[Cost Center].CurrentMember,[Year].CurrentMember,[Month].CurrentMember,[mConsolidated Customer].[YOY Sales Difference]), BASC) }",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "parameter_name": "pConvertToStatic",
+    "parameter_type": "Numeric",
+    "prompt": "Bolean: 1 = True (convert to static subset)",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 1,
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "parameter_name": "pAlias",
+    "parameter_type": "String",
+    "prompt": "Use subset Alias",
+    "default_value": "No",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX",
+    "parameter_name": "pAliasName",
+    "parameter_type": "String",
+    "prompt": "Alias Name",
+    "default_value": "Description",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX_Full",
+    "parameter_name": "pSubset",
+    "parameter_type": "String",
+    "prompt": "Subset",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_ByMDX_Full",
+    "parameter_name": "pMDXExpr",
+    "parameter_type": "String",
+    "prompt": "Valid MDX Expression",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "parameter_name": "pString",
+    "parameter_type": "String",
+    "prompt": "Element1 | Element2 | Element3",
+    "default_value": "1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+401+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "parameter_name": "pDelimiter",
+    "parameter_type": "String",
+    "prompt": "Delimiter used to Separate Elements",
+    "default_value": "+",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Valid Dimension Name",
+    "default_value": "Line_Number",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "parameter_name": "pSubset",
+    "parameter_type": "String",
+    "prompt": "Subset Name",
+    "default_value": "Testers91827",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "parameter_name": "pAlias",
+    "parameter_type": "String",
+    "prompt": "Use Alias",
+    "default_value": "No",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Create_From_Delimited_String",
+    "parameter_name": "pAliasName",
+    "parameter_type": "String",
+    "prompt": "Alias Name",
+    "default_value": "Name",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Delete",
+    "parameter_name": "pDimensions",
+    "parameter_type": "String",
+    "prompt": "List of Dimensions Seperated by Delimiter (Blank = All Dimensions)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Delete",
+    "parameter_name": "pSubsets",
+    "parameter_type": "String",
+    "prompt": "List of Subsets Seperated by Delimiter. Wildcards Permitted on Subset Names.",
+    "default_value": "}SYS*",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Delete",
+    "parameter_name": "pDelimiter",
+    "parameter_type": "String",
+    "prompt": "Delimiter Character",
+    "default_value": "&",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Dim_Sub_Delete",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "Debug Mode",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "SYS_Dim_Sub_Delete_All_Control",
+    "parameter_name": "pDim",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Staam",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "SYS_Dim_Update_All_Subsets_Wrapper",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "(Optional) Dimension to create subsets",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "SYS_Dim_Update_All_Subsets_Wrapper",
+    "parameter_name": "pDebug",
+    "parameter_type": "Numeric",
+    "prompt": "",
+    "default_value": 0,
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_File_Archive",
+    "parameter_name": "pFileName",
+    "parameter_type": "String",
+    "prompt": "FileName (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_File_Cleanup",
+    "parameter_name": "pFolder",
+    "parameter_type": "String",
+    "prompt": "Folder to clean",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_File_Cleanup",
+    "parameter_name": "pDays",
+    "parameter_type": "String",
+    "prompt": "File older than x days",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_File_Cleanup",
+    "parameter_name": "pFileType",
+    "parameter_type": "String",
+    "prompt": "File types to delete <<*.txt>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_File_Cleanup",
+    "parameter_name": "pRecurse",
+    "parameter_type": "String",
+    "prompt": "Delete files in subfolders << Y / N>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_File_Cleanup",
+    "parameter_name": "pLogFile",
+    "parameter_type": "String",
+    "prompt": "Log file tracking files deleted",
+    "default_value": "s:\\prod\\oxychem\\logs\\FileCleanup.txt",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "sys_File_DateStamp Check",
+    "parameter_name": "pProcess",
+    "parameter_type": "String",
+    "prompt": "Process",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "sys_File_DateStamp Check",
+    "parameter_name": "pFileName",
+    "parameter_type": "String",
+    "prompt": "FileName",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_File_Lookup",
+    "parameter_name": "pProc",
+    "parameter_type": "String",
+    "prompt": "TI Process Name:",
+    "default_value": "DimUpdate - Cost Center",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Generic_Alternate Dimension Hierarchies",
+    "parameter_name": "pSrcDim",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Generic_Alternate Dimension Hierarchies",
+    "parameter_name": "pSrcHierarchy",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Generic_Alternate Dimension Hierarchies",
+    "parameter_name": "pSrcHierarchyMDX",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Generic_Alternate Dimension Hierarchies",
+    "parameter_name": "pTgtDim",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Generic_Parent Child Dimension",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Generic_Rollup Undefined",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension Name",
+    "default_value": "Profit_Ctr",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Legacy Element",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "Dimension",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_PAxLoader",
+    "parameter_name": "pProcessGroup",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_PAxLoader",
+    "parameter_name": "pAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_PAxLoader",
+    "parameter_name": "pPW",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_PAxLoader",
+    "parameter_name": "pEnvironment",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "oxyprd",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_PAxLoader",
+    "parameter_name": "pInstance",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXYChem",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_PAxLoader_Archive",
+    "parameter_name": "pProcessGroup",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_PAxLoader_FileCheck",
+    "parameter_name": "pProcessGroup",
+    "parameter_type": "String",
+    "prompt": "ProcessGroup",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_PAxLoader_FileCheck",
+    "parameter_name": "pLine",
+    "parameter_type": "String",
+    "prompt": "Process Control Line",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_PAxLoader_FileCheck",
+    "parameter_name": "pMeasure",
+    "parameter_type": "String",
+    "prompt": "Process Control Measure",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_PAxLoader_FileCheck",
+    "parameter_name": "pMask",
+    "parameter_type": "String",
+    "prompt": "File Mask",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_PAxLoader_FileCheck",
+    "parameter_name": "pDateTime",
+    "parameter_type": "String",
+    "prompt": "File Date Time",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_PAxLoader_RecordCount",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_PAxLoader_RecordCount",
+    "parameter_name": "pProcessGroup",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_PAxLoader_RecordCount",
+    "parameter_name": "pLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_PAxLoader_RecordCount",
+    "parameter_name": "pMeasure",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_PAxLoader_RecordCount",
+    "parameter_name": "pDateTime",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_PAxLoader_RecordCount",
+    "parameter_name": "pMask",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_PAxValidator",
+    "parameter_name": "pInputFile",
+    "parameter_type": "String",
+    "prompt": "Input File (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_PAxValidator",
+    "parameter_name": "pOutputFile",
+    "parameter_type": "String",
+    "prompt": "Output File (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_PAxValidator",
+    "parameter_name": "pProcessGroup",
+    "parameter_type": "String",
+    "prompt": "Process Group",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_PAxValidator",
+    "parameter_name": "pAccount",
+    "parameter_type": "String",
+    "prompt": "Account",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_PAxValidator",
+    "parameter_name": "pPW",
+    "parameter_type": "String",
+    "prompt": "Password",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 5
+  },
+  {
+    "process_name": "Sys_PAxValidator",
+    "parameter_name": "pEnvironment",
+    "parameter_type": "String",
+    "prompt": "Environment",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 6
+  },
+  {
+    "process_name": "Sys_PAxValidator",
+    "parameter_name": "pInstance",
+    "parameter_type": "String",
+    "prompt": "Instance",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 7
+  },
+  {
+    "process_name": "Sys_PAxValidator",
+    "parameter_name": "pKeepCorrected",
+    "parameter_type": "String",
+    "prompt": "Keep Correction Entries (Y/N)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 8
+  },
+  {
+    "process_name": "Sys_Process_Rule Feeders",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Below the Line",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Send_EMail",
+    "parameter_name": "pEmailTo",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Send_EMail",
+    "parameter_name": "pEMailSubject",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Send_EMail",
+    "parameter_name": "pEMailBody",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Send_EMail",
+    "parameter_name": "pEMailAttachment",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Send_EMail_Html",
+    "parameter_name": "pEmailTo",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Send_EMail_Html",
+    "parameter_name": "pEMailSubject",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Send_EMail_Html",
+    "parameter_name": "pEMailBody",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "Sys_Send_EMail_Html",
+    "parameter_name": "pEMailAttachment",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "Sys_Virtual Dimension",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Virtual Dimension",
+    "parameter_name": "pLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "Sys_Virtual Dimension_Create",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Virtual Dimension_Destroy",
+    "parameter_name": "pDimension",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "Sys_Wrapper_PAxLoader_FileCheck",
+    "parameter_name": "pProcessGroup",
+    "parameter_type": "String",
+    "prompt": "Procress Group",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "zImport_Profit and Loss_Plan",
+    "parameter_name": "pYear",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zImport_Profit and Loss_Plan",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Plan",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp - Admin",
+    "parameter_name": "pEMail",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "lbotha@daisourceconsult.com",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp - Profit and Loss - Correct Legacy Qty",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> Required",
+    "default_value": "2025002",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp - Profit and Loss - Correct Legacy Qty",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> Required",
+    "default_value": "2025012",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp - Profit and Loss - Correct Legacy Qty",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenario (Required)",
+    "default_value": "O/L",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "zTemp - Profit and Loss - Correct Legacy Qty",
+    "parameter_name": "pProfitCenter",
+    "parameter_type": "String",
+    "prompt": "Profit Center / Profit Center Group (Required)",
+    "default_value": "ACL1",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "zTemp Export - Balance Sheet",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenarios",
+    "default_value": "O/L > Plan",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Export - Below the Line",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Export - Below the Line Assessment",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenarios",
+    "default_value": "O/L > Plan",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Export - Customer Profitability",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenarios",
+    "default_value": "O/L > Plan",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Export - Glenn Springs Outlook",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenarios",
+    "default_value": "O/L > Plan",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Export - Glenn Springs Project",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenarios",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Export - Inventory Walk",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenarios",
+    "default_value": "O/L > Plan",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Export - Manufacturing Cost",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenarios",
+    "default_value": "O/L >Actual > Plan > Plan B3 > NEXT YEAR TY O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Export - Profit and Loss",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "Scenarios",
+    "default_value": "O/L > Plan",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Balance Sheet",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "O/L ",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Below the Line",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "MAY TY O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Below the Line",
+    "parameter_name": "pFiscalyear",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp Import - Below the Line Assessment",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "JAN TY O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Below the Line Assessment",
+    "parameter_name": "pFiscalYear",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp Import - Cost Center",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "JAN TY O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Cost Center",
+    "parameter_name": "pFiscalyear",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp Import - Customer Profitability",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "JAN TY O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Customer Profitability",
+    "parameter_name": "pFiscalYear",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp Import - Glenn Springs Outlook",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "O/L > Plan",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Glenn Springs Project",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Inventory Walk",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "O/L > Plan",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Manufacturing Cost",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "O/L >Actual > Plan > Plan B3 > NEXT YEAR TY O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Profit and Loss",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "JAN TY O/L",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp Import - Profit and Loss",
+    "parameter_name": "pFiscalYear",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp_ Intercompany - Export Profit Centers",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "2026001",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp_ Intercompany - Export Profit Centers",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "2026005",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp_ Intercompany - Export Profit Centers",
+    "parameter_name": "pProfitCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "16091800",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "zTemp_Actual Project Spend",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "Period <<YYYY0MM>>",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp_DataUpdate - Below the Line Assessments - Outlook - Period Range",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025012",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp_DataUpdate - Below the Line Assessments - Outlook - Period Range",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025012",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp_DataUpdate - Manufacturing Cost - BW",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2025002",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp_DataUpdate - Manufacturing Cost - BW",
+    "parameter_name": "pScenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Act",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp_Document No_Index",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp_Document No_Index",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period <<YYYY0MM>> (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp_Export Intercompany Sandbox Issues",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026004",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp_Export Intercompany Sandbox Issues",
+    "parameter_name": "pEndperiod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026004",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp_Fixed MFG_Cost center",
+    "parameter_name": "pVersion",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Plan B3",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp_Fixed MFG_Cost center",
+    "parameter_name": "pPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "2026",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp_Test",
+    "parameter_name": "pSrcVersion",
+    "parameter_type": "String",
+    "prompt": "Source Scenario",
+    "default_value": "Outlook",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "zTemp_Test",
+    "parameter_name": "pTgtVersion",
+    "parameter_type": "String",
+    "prompt": "Archive Scenario",
+    "default_value": "Aug TY O/L",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "zTemp_Test",
+    "parameter_name": "pStartPeriod",
+    "parameter_type": "String",
+    "prompt": "Start Period (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 3
+  },
+  {
+    "process_name": "zTemp_Test",
+    "parameter_name": "pEndPeriod",
+    "parameter_type": "String",
+    "prompt": "End Period (Optional)",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 4
+  },
+  {
+    "process_name": "zTemp_Test",
+    "parameter_name": "pCube",
+    "parameter_type": "String",
+    "prompt": "Cube",
+    "default_value": "Profit and Loss",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "zTest_Record Count",
+    "parameter_name": "pFile",
+    "parameter_type": "String",
+    "prompt": "Filename",
+    "default_value": "",
+    "has_nonempty_default": false,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Balance Sheet",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "Company",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "COMPANY",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "ProfitCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-PCA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "TradingPartner",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Trading Partner",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "BSAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY1",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "FlowCode",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "F99",
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "BalanceSheetSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 9
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Detail",
+    "parameter_name": "mBalanceSheet",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "USD",
+    "has_nonempty_default": true,
+    "position": 10
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Balance Sheet",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "Company",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "COMPANY",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "ProfitCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-PCA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "TradingPartner",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Trading Partner",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "BSAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY1",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "FlowCode",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "F99",
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "BalanceSheetSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 9
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Manual Entry",
+    "parameter_name": "mBalanceSheet",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "USD",
+    "has_nonempty_default": true,
+    "position": 10
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Balance Sheet",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "Company",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "COMPANY",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "ProfitCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-PCA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "TradingPartner",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Trading Partner",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "BSAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY1",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "FlowCode",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "F99",
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "BalanceSheetSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 9
+  },
+  {
+    "process_name": "}Drill_Balance Sheet Source",
+    "parameter_name": "mBalanceSheet",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "USD",
+    "has_nonempty_default": true,
+    "position": 10
+  },
+  {
+    "process_name": "}Drill_BTL - Actual Data Sources",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Below the Line",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_BTL - Actual Data Sources",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_BTL - Actual Data Sources",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_BTL - Actual Data Sources",
+    "parameter_name": "CostCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-CCA",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_BTL - Actual Data Sources",
+    "parameter_name": "PLAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "EBITDA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_BTL - Actual Data Sources",
+    "parameter_name": "BelowtheLineSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_BTL - Actual Data Sources",
+    "parameter_name": "mBelowTheLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Local",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_BTL - Corporate Headcount",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Below the Line",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_BTL - Corporate Headcount",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_BTL - Corporate Headcount",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_BTL - Corporate Headcount",
+    "parameter_name": "CostCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-CCA",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_BTL - Corporate Headcount",
+    "parameter_name": "PLAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "EBITDA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_BTL - Corporate Headcount",
+    "parameter_name": "BelowtheLineSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_BTL - Corporate Headcount",
+    "parameter_name": "mBelowTheLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Local",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_BTL - Manual PAX Entry",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Below the Line",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_BTL - Manual PAX Entry",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_BTL - Manual PAX Entry",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_BTL - Manual PAX Entry",
+    "parameter_name": "CostCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-CCA",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_BTL - Manual PAX Entry",
+    "parameter_name": "PLAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "EBITDA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_BTL - Manual PAX Entry",
+    "parameter_name": "BelowtheLineSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_BTL - Manual PAX Entry",
+    "parameter_name": "mBelowTheLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Local",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_BTL - Profit and Loss Detail",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Below the Line",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_BTL - Profit and Loss Detail",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_BTL - Profit and Loss Detail",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_BTL - Profit and Loss Detail",
+    "parameter_name": "CostCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-CCA",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_BTL - Profit and Loss Detail",
+    "parameter_name": "PLAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "EBITDA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_BTL - Profit and Loss Detail",
+    "parameter_name": "BelowtheLineSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_BTL - Profit and Loss Detail",
+    "parameter_name": "mBelowTheLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Local",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_BTL Report - Actual Data Sources",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Below the Line Report",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_BTL Report - Actual Data Sources",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_BTL Report - Actual Data Sources",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_BTL Report - Actual Data Sources",
+    "parameter_name": "FunctionalArea",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "CUST_GROSS_MARGIN",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_BTL Report - Actual Data Sources",
+    "parameter_name": "CostCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-CCA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_BTL Report - Actual Data Sources",
+    "parameter_name": "PLAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "EBITDA",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_BTL Report - Actual Data Sources",
+    "parameter_name": "BelowtheLineSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_BTL Report - Actual Data Sources",
+    "parameter_name": "mBelowTheLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Local",
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "}Drill_BTL Report - Corporate Headcount",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Below the Line Report",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_BTL Report - Corporate Headcount",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_BTL Report - Corporate Headcount",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_BTL Report - Corporate Headcount",
+    "parameter_name": "FunctionalArea",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "CUST_GROSS_MARGIN",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_BTL Report - Corporate Headcount",
+    "parameter_name": "CostCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-CCA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_BTL Report - Corporate Headcount",
+    "parameter_name": "PLAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "EBITDA",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_BTL Report - Corporate Headcount",
+    "parameter_name": "BelowtheLineSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_BTL Report - Corporate Headcount",
+    "parameter_name": "mBelowTheLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Local",
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "}Drill_BTL Report - Manual PAX Entry",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Below the Line Report",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_BTL Report - Manual PAX Entry",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_BTL Report - Manual PAX Entry",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_BTL Report - Manual PAX Entry",
+    "parameter_name": "FunctionalArea",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "CUST_GROSS_MARGIN",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_BTL Report - Manual PAX Entry",
+    "parameter_name": "CostCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-CCA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_BTL Report - Manual PAX Entry",
+    "parameter_name": "PLAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "EBITDA",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_BTL Report - Manual PAX Entry",
+    "parameter_name": "BelowtheLineSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_BTL Report - Manual PAX Entry",
+    "parameter_name": "mBelowTheLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Local",
+    "has_nonempty_default": true,
+    "position": 8
+  },
+  {
+    "process_name": "}Drill_BTL Report - Profit and Loss Detail",
+    "parameter_name": "cubename",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Below the Line Report",
+    "has_nonempty_default": true,
+    "position": 1
+  },
+  {
+    "process_name": "}Drill_BTL Report - Profit and Loss Detail",
+    "parameter_name": "Scenario",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Actual",
+    "has_nonempty_default": true,
+    "position": 2
+  },
+  {
+    "process_name": "}Drill_BTL Report - Profit and Loss Detail",
+    "parameter_name": "FiscalPeriod",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Year",
+    "has_nonempty_default": true,
+    "position": 3
+  },
+  {
+    "process_name": "}Drill_BTL Report - Profit and Loss Detail",
+    "parameter_name": "FunctionalArea",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "CUST_GROSS_MARGIN",
+    "has_nonempty_default": true,
+    "position": 4
+  },
+  {
+    "process_name": "}Drill_BTL Report - Profit and Loss Detail",
+    "parameter_name": "CostCenter",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "OXY-CCA",
+    "has_nonempty_default": true,
+    "position": 5
+  },
+  {
+    "process_name": "}Drill_BTL Report - Profit and Loss Detail",
+    "parameter_name": "PLAccount",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "EBITDA",
+    "has_nonempty_default": true,
+    "position": 6
+  },
+  {
+    "process_name": "}Drill_BTL Report - Profit and Loss Detail",
+    "parameter_name": "BelowtheLineSource",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "All Sources",
+    "has_nonempty_default": true,
+    "position": 7
+  },
+  {
+    "process_name": "}Drill_BTL Report - Profit and Loss Detail",
+    "parameter_name": "mBelowTheLine",
+    "parameter_type": "String",
+    "prompt": "",
+    "default_value": "Local",
+    "has_nonempty_default": true,
+    "position": 8
+  }
+]

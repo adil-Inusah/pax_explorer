@@ -1,0 +1,546 @@
+[
+  {
+    "process_name": "DataUpdate - ML Stage",
+    "relationship_type": "WRITES_TO_CUBE",
+    "target_type": "cube",
+    "target_expression": "scube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_expression": "sCube",
+    "candidate_values": [
+      "Profit and Loss"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "LOCAL_ALIAS",
+        "procedure": "Prolog",
+        "line_number": 71,
+        "value": "Profit and Loss",
+        "expression": "pCube"
+      }
+    ]
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "relationship_type": "INCREMENTS_CUBE",
+    "target_type": "cube",
+    "target_expression": "pCube",
+    "candidate_values": [
+      "Profit and Loss"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Profit and Loss"
+      }
+    ]
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - Numeric",
+    "relationship_type": "WRITES_TO_CUBE",
+    "target_type": "cube",
+    "target_expression": "pCube",
+    "candidate_values": [
+      "Profit and Loss"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Profit and Loss"
+      }
+    ]
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - String",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_expression": "sCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - String",
+    "relationship_type": "INCREMENTS_CUBE",
+    "target_type": "cube",
+    "target_expression": "pCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "DataUpdate - Scenario Archive - String",
+    "relationship_type": "WRITES_TO_CUBE",
+    "target_type": "cube",
+    "target_expression": "pCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "SecurityUpdate - Element Security",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_expression": "sTgtCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "SecurityUpdate - Element Security",
+    "relationship_type": "WRITES_TO_CUBE",
+    "target_type": "cube",
+    "target_expression": "sTgtCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "SecurityUpdate - Element Security - Hierarchy Archive",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_expression": "sTgtCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "SecurityUpdate - Element Security - Hierarchy Archive",
+    "relationship_type": "WRITES_TO_CUBE",
+    "target_type": "cube",
+    "target_expression": "sTgtCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Attribute Hierarchy",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_expression": "sAttrCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Attribute Hierarchy",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Attribute Hierarchy",
+    "relationship_type": "WRITES_TO_CUBE",
+    "target_type": "cube",
+    "target_expression": "sAttrCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "sys_cube_clear",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_expression": "pCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Cube_Clear_Data",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_expression": "pCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Dim_AllConsols_Delete",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_values": [
+      "Validation"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Validation"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_values": [
+      "Validation"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Validation"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_values": [
+      "Sys_Check_Cost Center"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Sys_Check_Cost Center"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Element_Delete.FromSubset",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Clone",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_values": [
+      "Cost Center"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+        "calling_process": "DimUpdate - Dimension - Hierarchy Archive",
+        "procedure": "Prolog",
+        "line_number": 21,
+        "value": "Cost Center"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_values": [
+      "Cost Centre"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Cost Centre"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromAttribute_v2",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_values": [
+      "Account"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Account"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_values": [
+      "Account Test"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Account Test"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_values": [
+      "Account Test"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Account Test"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pdim",
+    "candidate_values": [
+      "Account Test"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Account Test"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Create_Orphans",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_values": [
+      "Account Test"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Account Test"
+      }
+    ]
+  },
+  {
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_values": [
+      "Account Test"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Account Test"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_All",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_expression": "sAttrCube",
+    "candidate_values": [
+      "}ElementAttributes_Material"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "LOCAL_ALIAS",
+        "procedure": "Prolog",
+        "line_number": 23,
+        "value": "}ElementAttributes_Material",
+        "expression": "'}ElementAttributes_' | pDimension"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_values": [
+      "Glenn Springs Order",
+      "Material",
+      "Production Order"
+    ],
+    "candidate_count": 3,
+    "resolution_status": "FINITE_CANDIDATE_SET",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Material"
+      },
+      {
+        "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+        "calling_process": "DimUpdate - Glenn Springs Order",
+        "procedure": "Prolog",
+        "line_number": 75,
+        "value": "Glenn Springs Order"
+      },
+      {
+        "source_kind": "EXECUTE_PROCESS_ARGUMENT",
+        "calling_process": "DimUpdate - Production Order",
+        "procedure": "Prolog",
+        "line_number": 76,
+        "value": "Production Order"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Hierarchy_Unwind_Consolidation_Large",
+    "relationship_type": "WRITES_TO_CUBE",
+    "target_type": "cube",
+    "target_expression": "sAttrCube",
+    "candidate_values": [
+      "}ElementAttributes_Material"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "LOCAL_ALIAS",
+        "procedure": "Prolog",
+        "line_number": 23,
+        "value": "}ElementAttributes_Material",
+        "expression": "'}ElementAttributes_' | pDimension"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Import_From_File",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_expression": "sAttrCube",
+    "candidate_values": [
+      "}ElementAttributes_Account"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "LOCAL_ALIAS",
+        "procedure": "Prolog",
+        "line_number": 10,
+        "value": "}ElementAttributes_Account",
+        "expression": "sAttrDim"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Dim_Import_From_File",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDim",
+    "candidate_values": [
+      "Account"
+    ],
+    "candidate_count": 1,
+    "resolution_status": "SINGLE_STATIC_CANDIDATE",
+    "provenance": [
+      {
+        "source_kind": "PARAMETER_DEFAULT",
+        "value": "Account"
+      }
+    ]
+  },
+  {
+    "process_name": "Sys_Legacy Element",
+    "relationship_type": "UPDATES_DIMENSION",
+    "target_type": "dimension",
+    "target_expression": "pDimension",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Virtual Dimension",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_expression": "sAttrCube",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  },
+  {
+    "process_name": "Sys_Virtual Dimension",
+    "relationship_type": "UPDATES_HIERARCHY",
+    "target_type": "hierarchy",
+    "target_expression": "pDimension",
+    "candidate_values": [],
+    "candidate_count": 0,
+    "resolution_status": "NO_STATIC_CANDIDATE",
+    "provenance": []
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "snapshot_id": "20260924T160750Z",
+  "status": "COMPLETE",
+  "scope": "all",
+  "started_at": "2026-09-24T16:07:50.624918+00:00",
+  "completed_at": "2026-09-24T16:08:52.885461+00:00",
+  "dimension_count": 902,
+  "hierarchy_count": 927,
+  "relationship_count": 927,
+  "validation_count": 927,
+  "error_count": 0,
+  "publish_current_requested": true,
+  "published_current": true
+}

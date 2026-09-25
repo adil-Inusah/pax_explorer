@@ -1,0 +1,854 @@
+[
+  {
+    "function_name": "ISLEAF",
+    "occurrence_count": 130,
+    "cube_count": 47,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ISLEAF",
+        "line_number": 6,
+        "expression": "ISLEAF ()"
+      },
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ISLEAF",
+        "line_number": 18,
+        "expression": "ISLEAF ()"
+      },
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ISLEAF",
+        "line_number": 29,
+        "expression": "ISLEAF()"
+      },
+      {
+        "cube_name": "Below the Line",
+        "function_name": "ISLEAF",
+        "line_number": 42,
+        "expression": "ISLEAF()"
+      },
+      {
+        "cube_name": "Intercompany",
+        "function_name": "ISLEAF",
+        "line_number": 164,
+        "expression": "ISLEAF()"
+      }
+    ]
+  },
+  {
+    "function_name": "COUNT",
+    "occurrence_count": 73,
+    "cube_count": 15,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Manual Input",
+        "function_name": "COUNT",
+        "line_number": 3,
+        "expression": "Count (System)"
+      },
+      {
+        "cube_name": "Manual Input",
+        "function_name": "COUNT",
+        "line_number": 18,
+        "expression": "Count (System)"
+      },
+      {
+        "cube_name": "Manual Input",
+        "function_name": "COUNT",
+        "line_number": 22,
+        "expression": "Count (System)"
+      },
+      {
+        "cube_name": "Manual Input",
+        "function_name": "COUNT",
+        "line_number": 62,
+        "expression": "Count (System)"
+      },
+      {
+        "cube_name": "Manual Input Balance Sheet",
+        "function_name": "COUNT",
+        "line_number": 3,
+        "expression": "Count (System)"
+      }
+    ]
+  },
+  {
+    "function_name": "NUMBR",
+    "occurrence_count": 62,
+    "cube_count": 8,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Manual Input",
+        "function_name": "NUMBR",
+        "line_number": 15,
+        "expression": "NUMBR ( DIMNM ( 'Manual Input LineNo' , DIMIX ('Manual Input LineNo' , !Manual Input LineNo)))"
+      },
+      {
+        "cube_name": "Project Spending",
+        "function_name": "NUMBR",
+        "line_number": 4,
+        "expression": "NUMBR( ATTRS ( 'Fiscal Period', !Fiscal Period, 'Period Index'))"
+      },
+      {
+        "cube_name": "Project Spending",
+        "function_name": "NUMBR",
+        "line_number": 7,
+        "expression": "NUMBR (ATTRS ( 'Fiscal Period', ATTRS ( 'AFE Number', ATTRS( 'AFE Number', !AFE Number, 'AFE Number'), 'Purge Month'), 'Period Index') )"
+      },
+      {
+        "cube_name": "SYS BS Account Hierarchy",
+        "function_name": "NUMBR",
+        "line_number": 61,
+        "expression": "NUMBR( DB('SYS BS Account Hierarchy', !SYS BS Account Hierarchy, !SYS BS Account Hierarchy LineNo, 'From Alpha Position 1')  )"
+      },
+      {
+        "cube_name": "SYS BS Account Hierarchy",
+        "function_name": "NUMBR",
+        "line_number": 66,
+        "expression": "NUMBR( DB('SYS BS Account Hierarchy', !SYS BS Account Hierarchy, !SYS BS Account Hierarchy LineNo, 'From Alpha Position 1') )"
+      }
+    ]
+  },
+  {
+    "function_name": "USD",
+    "occurrence_count": 31,
+    "cube_count": 4,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "USD",
+        "line_number": 8,
+        "expression": "USD (System)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "USD",
+        "line_number": 15,
+        "expression": "USD (System)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "USD",
+        "line_number": 42,
+        "expression": "USD (System)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "USD",
+        "line_number": 49,
+        "expression": "USD (System)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "USD",
+        "line_number": 103,
+        "expression": "USD (System)"
+      }
+    ]
+  },
+  {
+    "function_name": "LOCAL",
+    "occurrence_count": 31,
+    "cube_count": 4,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "LOCAL",
+        "line_number": 4,
+        "expression": "Local (System)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "LOCAL",
+        "line_number": 19,
+        "expression": "Local (System)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "LOCAL",
+        "line_number": 38,
+        "expression": "Local (System)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "LOCAL",
+        "line_number": 53,
+        "expression": "Local (System)"
+      },
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "LOCAL",
+        "line_number": 104,
+        "expression": "Local (System)"
+      }
+    ]
+  },
+  {
+    "function_name": "ROUNDP",
+    "occurrence_count": 30,
+    "cube_count": 2,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 440,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'SALES', 'USD Adjusted' ),2)"
+      },
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 441,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'COSTOFSALE', 'USD Adjusted' ),2)"
+      },
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 446,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'SALES', 'Reporting Qty Adjusted' ),2)"
+      },
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 447,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'COSTOFSALE', 'Reporting Qty Adjusted' ),2)"
+      },
+      {
+        "cube_name": "Intercompany Sandbox",
+        "function_name": "ROUNDP",
+        "line_number": 452,
+        "expression": "ROUNDP(DB('Intercompany Sandbox', !Scenario, !Fiscal Period, !Plant, !Functional Area, !Customer, !Ship To, !Profit Center, !Partner Profit Center, !Material, 'SALES', 'USD Adjusted' ),2)"
+      }
+    ]
+  },
+  {
+    "function_name": "UPLOAD",
+    "occurrence_count": 21,
+    "cube_count": 3,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "UPLOAD",
+        "line_number": 3,
+        "expression": "Upload (System)"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "UPLOAD",
+        "line_number": 18,
+        "expression": "Upload (System)"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "UPLOAD",
+        "line_number": 19,
+        "expression": "Upload (System)"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "UPLOAD",
+        "line_number": 71,
+        "expression": "Upload (System)"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "UPLOAD",
+        "line_number": 72,
+        "expression": "Upload (System)"
+      }
+    ]
+  },
+  {
+    "function_name": "STD",
+    "occurrence_count": 12,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "STD",
+        "line_number": 37,
+        "expression": "std (Local)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "STD",
+        "line_number": 49,
+        "expression": "std (Local)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "STD",
+        "line_number": 73,
+        "expression": "Std (Local)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "STD",
+        "line_number": 122,
+        "expression": "Std (Local)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "STD",
+        "line_number": 130,
+        "expression": "Std (Local)"
+      }
+    ]
+  },
+  {
+    "function_name": "UOM",
+    "occurrence_count": 8,
+    "cube_count": 2,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Profit and Loss",
+        "function_name": "UOM",
+        "line_number": 12,
+        "expression": "UOM (Material Master)"
+      },
+      {
+        "cube_name": "Profit and Loss",
+        "function_name": "UOM",
+        "line_number": 13,
+        "expression": "UOM (Material Master)"
+      },
+      {
+        "cube_name": "SYS Profit Center Sales Responsibility",
+        "function_name": "UOM",
+        "line_number": 3,
+        "expression": "UOM (Material Master)"
+      },
+      {
+        "cube_name": "SYS Profit Center Sales Responsibility",
+        "function_name": "UOM",
+        "line_number": 7,
+        "expression": "UOM (Material Master)"
+      },
+      {
+        "cube_name": "SYS Profit Center Sales Responsibility",
+        "function_name": "UOM",
+        "line_number": 12,
+        "expression": "UOM (Net Sales Actual)"
+      }
+    ]
+  },
+  {
+    "function_name": "VALIDATION",
+    "occurrence_count": 8,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Legacy Elements",
+        "function_name": "VALIDATION",
+        "line_number": 4,
+        "expression": "Validation (Error)"
+      },
+      {
+        "cube_name": "SYS Legacy Elements",
+        "function_name": "VALIDATION",
+        "line_number": 14,
+        "expression": "Validation (Error)"
+      },
+      {
+        "cube_name": "SYS Legacy Elements",
+        "function_name": "VALIDATION",
+        "line_number": 22,
+        "expression": "Validation (Error)"
+      },
+      {
+        "cube_name": "SYS Legacy Elements",
+        "function_name": "VALIDATION",
+        "line_number": 30,
+        "expression": "Validation (Error)"
+      },
+      {
+        "cube_name": "SYS Legacy Elements",
+        "function_name": "VALIDATION",
+        "line_number": 37,
+        "expression": "Validation (Error)"
+      }
+    ]
+  },
+  {
+    "function_name": "CONSOLIDATEDMAX",
+    "occurrence_count": 7,
+    "cube_count": 6,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Manual Input",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 20,
+        "expression": "ConsolidatedMax( 3,'Manual Input', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input )"
+      },
+      {
+        "cube_name": "Manual Input",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 24,
+        "expression": "ConsolidatedMax( 3,'Manual Input', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input )"
+      },
+      {
+        "cube_name": "Manual Input Balance Sheet",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 19,
+        "expression": "ConsolidatedMax( 3,'Manual Input Balance Sheet', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input Balance Sheet )"
+      },
+      {
+        "cube_name": "Manual Input Below the Line",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 20,
+        "expression": "ConsolidatedMax( 3,'Manual Input Below the Line', !Scenario, !Fiscal Period, !Manual Input LineNo, !mManual Input Below the Line )"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "CONSOLIDATEDMAX",
+        "line_number": 19,
+        "expression": "ConsolidatedMax( 3, 'Manual Upload', !}Clients, !Fiscal Period, 'All Lines', 'Upload (System)' )"
+      }
+    ]
+  },
+  {
+    "function_name": "ELCOMPN",
+    "occurrence_count": 7,
+    "cube_count": 6,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Balance Sheet",
+        "function_name": "ELCOMPN",
+        "line_number": 87,
+        "expression": "ELCOMPN ( 'Fiscal Period', !Fiscal Period )"
+      },
+      {
+        "cube_name": "Corporate Headcount",
+        "function_name": "ELCOMPN",
+        "line_number": 12,
+        "expression": "ELCOMPN ('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Corporate Headcount",
+        "function_name": "ELCOMPN",
+        "line_number": 19,
+        "expression": "ELCOMPN ('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Glenn Springs Project",
+        "function_name": "ELCOMPN",
+        "line_number": 15,
+        "expression": "ELCOMPN('Fiscal Period', !Fiscal Period)"
+      },
+      {
+        "cube_name": "Inventory Walk",
+        "function_name": "ELCOMPN",
+        "line_number": 71,
+        "expression": "ELCOMPN ( 'Fiscal Period', !Fiscal Period )"
+      }
+    ]
+  },
+  {
+    "function_name": "QTY",
+    "occurrence_count": 7,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "QTY",
+        "line_number": 43,
+        "expression": "Qty (Before)"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "QTY",
+        "line_number": 64,
+        "expression": "Qty (After)"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "QTY",
+        "line_number": 67,
+        "expression": "Qty (Before)"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "QTY",
+        "line_number": 78,
+        "expression": "Qty (Before)"
+      },
+      {
+        "cube_name": "Manual Upload",
+        "function_name": "QTY",
+        "line_number": 82,
+        "expression": "Qty (Before)"
+      }
+    ]
+  },
+  {
+    "function_name": "TRIM",
+    "occurrence_count": 5,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 50,
+        "expression": "TRIM(STR ( DB ('Project Spending', DB('SYS Control', 'Close Period', 'String' ), 'Total', 'All AFE Category', !AFE Number, 'APPR AMT'), 20,0))"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 52,
+        "expression": "TRIM(STR ( DB ('Project Spending', DB('SYS Control', 'Close Period', 'String' ), 'Total', 'All AFE Category', !AFE Number, 'TOT SPD EST'), 20,0))"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 54,
+        "expression": "TRIM(STR ( DB ('Project Spending', DB('SYS Control', 'Close Period', 'String' ), 'Total', 'All AFE Category', !AFE Number, 'PLAN ' | SUBST (DB('SYS Control', 'Close Period', 'String' ),1,4) ), 20,0))"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 57,
+        "expression": "TRIM( STR (  MAX ( ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CM APPR AMT') , ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CY PLAN AMT') ), 20,0))"
+      },
+      {
+        "cube_name": "}ElementAttributes_AFE Number",
+        "function_name": "TRIM",
+        "line_number": 59,
+        "expression": "TRIM( STR (  MAX ( ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'Max ( CM APPR AMT vs CY PLAN AMT )') , ATTRN ( 'AFE Number', ATTRS ('AFE Number', !AFE Number, 'AFE Number'), 'CM TOT SPD EST') ), 20,0))"
+      }
+    ]
+  },
+  {
+    "function_name": "DAYNO",
+    "occurrence_count": 4,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DAYNO",
+        "line_number": 88,
+        "expression": "DAYNO( DB ( 'SYS Control', 'Close Month - Start Date', 'String'))"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DAYNO",
+        "line_number": 91,
+        "expression": "DAYNO( DB ( 'SYS Control', 'Close Month - End Date', 'String'))"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DAYNO",
+        "line_number": 97,
+        "expression": "DAYNO( TIMST( Now() - (['GMT Offset','Numeric']/24), '\\Y-\\m-\\d'))"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "DAYNO",
+        "line_number": 100,
+        "expression": "Dayno ( DB ('SYS Control', !SYS Control, 'String' ))"
+      }
+    ]
+  },
+  {
+    "function_name": "LEVELS",
+    "occurrence_count": 4,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Attribute Hierarchy Control",
+        "function_name": "LEVELS",
+        "line_number": 9,
+        "expression": "Levels (System)"
+      },
+      {
+        "cube_name": "SYS Attribute Hierarchy Control",
+        "function_name": "LEVELS",
+        "line_number": 13,
+        "expression": "Levels (System)"
+      },
+      {
+        "cube_name": "SYS Attribute Hierarchy Control",
+        "function_name": "LEVELS",
+        "line_number": 17,
+        "expression": "Levels (System)"
+      },
+      {
+        "cube_name": "SYS Attribute Hierarchy Control",
+        "function_name": "LEVELS",
+        "line_number": 26,
+        "expression": "Levels (System)"
+      }
+    ]
+  },
+  {
+    "function_name": "VALUE",
+    "occurrence_count": 3,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "VALUE",
+        "line_number": 128,
+        "expression": "Value (Local)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "VALUE",
+        "line_number": 147,
+        "expression": "Value (Local)"
+      },
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "VALUE",
+        "line_number": 239,
+        "expression": "Value (Local)"
+      }
+    ]
+  },
+  {
+    "function_name": "CONSOLIDATECHILDREN",
+    "occurrence_count": 3,
+    "cube_count": 2,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Parent Child",
+        "function_name": "CONSOLIDATECHILDREN",
+        "line_number": 12,
+        "expression": "ConsolidateChildren('SYS Parent Child Hierarchy')"
+      },
+      {
+        "cube_name": "SYS Profit Center Sales Responsibility",
+        "function_name": "CONSOLIDATECHILDREN",
+        "line_number": 4,
+        "expression": "ConsolidateChildren ('UOM')"
+      },
+      {
+        "cube_name": "SYS Profit Center Sales Responsibility",
+        "function_name": "CONSOLIDATECHILDREN",
+        "line_number": 13,
+        "expression": "ConsolidateChildren ('UOM')"
+      }
+    ]
+  },
+  {
+    "function_name": "TIMST",
+    "occurrence_count": 2,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Control",
+        "function_name": "TIMST",
+        "line_number": 94,
+        "expression": "TIMST( Now() - (['GMT Offset','Numeric']/24), '\\Y-\\m-\\d \\H:\\i \\p')"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "TIMST",
+        "line_number": 97,
+        "expression": "TIMST( Now() - (['GMT Offset','Numeric']/24), '\\Y-\\m-\\d')"
+      }
+    ]
+  },
+  {
+    "function_name": "TYPE",
+    "occurrence_count": 2,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Inventory Walk",
+        "function_name": "TYPE",
+        "line_number": 9,
+        "expression": "Type (System)"
+      },
+      {
+        "cube_name": "SYS Inventory Walk",
+        "function_name": "TYPE",
+        "line_number": 23,
+        "expression": "Type (System)"
+      }
+    ]
+  },
+  {
+    "function_name": "NOW",
+    "occurrence_count": 2,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Control",
+        "function_name": "NOW",
+        "line_number": 94,
+        "expression": "Now()"
+      },
+      {
+        "cube_name": "SYS Control",
+        "function_name": "NOW",
+        "line_number": 97,
+        "expression": "Now()"
+      }
+    ]
+  },
+  {
+    "function_name": "ACCOUNT",
+    "occurrence_count": 2,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "SYS Inventory Walk",
+        "function_name": "ACCOUNT",
+        "line_number": 14,
+        "expression": "Account (System)"
+      },
+      {
+        "cube_name": "SYS Inventory Walk",
+        "function_name": "ACCOUNT",
+        "line_number": 25,
+        "expression": "Account (System)"
+      }
+    ]
+  },
+  {
+    "function_name": "CONSOLIDATEDAVG",
+    "occurrence_count": 1,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Cost Estimate",
+        "function_name": "CONSOLIDATEDAVG",
+        "line_number": 5,
+        "expression": "ConsolidatedAvg( 2, 'Cost Estimate', !Currency Type, !Fiscal Period, !Plant, !Profit Center, !Material, !Component, !ELEMENT, !mCost Estimate )"
+      }
+    ]
+  },
+  {
+    "function_name": "TOTAL",
+    "occurrence_count": 1,
+    "cube_count": 1,
+    "parser_status": "REVIEW_REQUIRED",
+    "lineage_category": "REVIEW_REQUIRED",
+    "relationship_type": null,
+    "target_object_type": null,
+    "registry_status": "UNCLASSIFIED",
+    "sample_evidence": [
+      {
+        "cube_name": "Material Ledger",
+        "function_name": "TOTAL",
+        "line_number": 200,
+        "expression": "Total (Local)"
+      }
+    ]
+  }
+]

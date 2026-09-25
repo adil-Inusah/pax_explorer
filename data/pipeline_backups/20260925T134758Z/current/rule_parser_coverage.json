@@ -1,0 +1,24 @@
+{
+  "ruled_cube_count": 92,
+  "unique_function_count": 26,
+  "classified_function_count": 26,
+  "unclassified_function_count": 0,
+  "total_function_occurrences": 2104,
+  "classified_occurrences": 2104,
+  "supported_occurrences": 1138,
+  "lineage_function_occurrences": 1138,
+  "supported_lineage_occurrences": 1138,
+  "dynamic_function_occurrences": 734,
+  "malformed_call_count": 0,
+  "syntactic_coverage_percent": 100.0,
+  "lineage_coverage_percent": 100.0,
+  "unsupported_or_review_functions": [
+    "IF",
+    "LONG",
+    "SCAN",
+    "STR",
+    "SUBST",
+    "TRIM"
+  ],
+  "malformed_calls": []
+}

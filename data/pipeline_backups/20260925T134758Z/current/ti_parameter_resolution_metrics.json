@@ -1,0 +1,22 @@
+{
+  "input_summary_count": 4010,
+  "output_summary_count": 4019,
+  "replaced_unresolved_count": 1,
+  "derived_relationship_count": 10,
+  "rejection_count": 63,
+  "missing_object_candidate_count": 11,
+  "deferred_reference_count": 52,
+  "missing_object_target_count": 5,
+  "deferred_reference_target_count": 17,
+  "missing_object_counts_by_type": {
+    "dimension": 11
+  },
+  "deferred_reference_counts_by_type": {
+    "attribute": 44,
+    "subset": 6,
+    "view": 2
+  },
+  "parameter_count": 694,
+  "binding_count": 4945,
+  "alias_count": 2175
+}

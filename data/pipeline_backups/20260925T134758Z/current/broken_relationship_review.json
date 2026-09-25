@@ -1,0 +1,437 @@
+[
+  {
+    "source_name": "AAQ_BUILD AFE ROLLUP_V2",
+    "process_name": "AAQ_BUILD AFE ROLLUP_V2",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "grpdesc",
+    "target_expression": "'grpdesc'",
+    "target_expressions": [
+      "'grpdesc'"
+    ],
+    "confidence": "CONFIRMED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "DataUpdate - SYS GL Account Hierarchy",
+    "process_name": "DataUpdate - SYS GL Account Hierarchy",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "SYS GL Account Hierarchy",
+    "target_expression": "sCube",
+    "target_expressions": [
+      "sCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "DataUpdate - SYS GL Account Hierarchy",
+    "process_name": "DataUpdate - SYS GL Account Hierarchy",
+    "relationship_type": "WRITES_TO_CUBE",
+    "target_type": "cube",
+    "target_name": "SYS GL Account Hierarchy",
+    "target_expression": "sCube",
+    "target_expressions": [
+      "sCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "DataUpdate - Turnaround Reserve - Actual",
+    "process_name": "DataUpdate - Turnaround Reserve - Actual",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_name": "Turnaround Reserve",
+    "target_expression": "sTgtCube",
+    "target_expressions": [
+      "sTgtCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "DataUpdate - Turnaround Reserve - Actual",
+    "process_name": "DataUpdate - Turnaround Reserve - Actual",
+    "relationship_type": "INCREMENTS_CUBE",
+    "target_type": "cube",
+    "target_name": "Turnaround Reserve",
+    "target_expression": "sTgtCube",
+    "target_expressions": [
+      "sTgtCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "DataUpdate - Turnaround Reserve - Outlook Seed Actual",
+    "process_name": "DataUpdate - Turnaround Reserve - Outlook Seed Actual",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_name": "Turnaround Reserve",
+    "target_expression": "sTgtCube",
+    "target_expressions": [
+      "sTgtCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "DataUpdate - Turnaround Reserve - Outlook Seed Actual",
+    "process_name": "DataUpdate - Turnaround Reserve - Outlook Seed Actual",
+    "relationship_type": "INCREMENTS_CUBE",
+    "target_type": "cube",
+    "target_name": "Turnaround Reserve",
+    "target_expression": "sTgtCube",
+    "target_expressions": [
+      "sTgtCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "DataUpdate - Turnaround Reserve - Roll Dates",
+    "process_name": "DataUpdate - Turnaround Reserve - Roll Dates",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "Turnaround Reserve",
+    "target_expression": "sTgtCube",
+    "target_expressions": [
+      "sTgtCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "DataUpdate - Turnaround Reserve - Roll Dates",
+    "process_name": "DataUpdate - Turnaround Reserve - Roll Dates",
+    "relationship_type": "WRITES_TO_CUBE",
+    "target_type": "cube",
+    "target_name": "Turnaround Reserve",
+    "target_expression": "sTgtCube",
+    "target_expressions": [
+      "sTgtCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "DimUpdateWrapper -  Functional Area",
+    "process_name": "DimUpdateWrapper -  Functional Area",
+    "relationship_type": "CALLS_PROCESS",
+    "target_type": "process",
+    "target_name": "DimUpdate - Functional Area- SAP Hierarchy",
+    "target_expression": "sProcess",
+    "target_expressions": [
+      "sProcess"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "SYS_Delete_Views_and_Subsets_By_Pattern",
+    "process_name": "SYS_Delete_Views_and_Subsets_By_Pattern",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Copy_Attributes",
+    "process_name": "Sys_Dim_Copy_Attributes",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttribute",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromAttributeList",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "process_name": "Sys_Dim_Create_Derived_Dim_FromMDX",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Create_Standard_Alias",
+    "process_name": "Sys_Dim_Create_Standard_Alias",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Export_To_File",
+    "process_name": "Sys_Dim_Export_To_File",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMDXSubset",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "process_name": "Sys_Dim_Hierarchy_Create_FromMultipleLevelAttributes",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Hierarchy_Create_Orphans",
+    "process_name": "Sys_Dim_Hierarchy_Create_Orphans",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Hierarchy_CreateFromConfig",
+    "process_name": "Sys_Dim_Hierarchy_CreateFromConfig",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Hierarchy_CreateFromConfig",
+    "process_name": "Sys_Dim_Hierarchy_CreateFromConfig",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Dimension Config",
+    "target_expression": "sCube",
+    "target_expressions": [
+      "sCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "process_name": "SYS_Dim_Hierarchy_CreateFromConsolidations",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "Sys_Dim_Import_From_File",
+    "process_name": "Sys_Dim_Import_From_File",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubSysCtrl",
+    "target_expressions": [
+      "sCubSysCtrl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "SYS_Dim_Sub_Delete_All_Control",
+    "process_name": "SYS_Dim_Sub_Delete_All_Control",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "cn_Global",
+    "target_expression": "cubeGlobalParameters",
+    "target_expressions": [
+      "cubeGlobalParameters"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "SYS_Dim_Update_All_Subsets_Wrapper",
+    "process_name": "SYS_Dim_Update_All_Subsets_Wrapper",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Control",
+    "target_expression": "sCubeControl",
+    "target_expressions": [
+      "sCubeControl"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "SYS_Dim_Update_All_Subsets_Wrapper",
+    "process_name": "SYS_Dim_Update_All_Subsets_Wrapper",
+    "relationship_type": "READS_FROM_CUBE",
+    "target_type": "cube",
+    "target_name": "System Subset",
+    "target_expression": "sCube",
+    "target_expressions": [
+      "sCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "zTemp Count",
+    "process_name": "zTemp Count",
+    "relationship_type": "CLEARS_CUBE",
+    "target_type": "cube",
+    "target_name": "Profit and Loss Count",
+    "target_expression": "sTgtCube",
+    "target_expressions": [
+      "sTgtCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  },
+  {
+    "source_name": "zTemp Count",
+    "process_name": "zTemp Count",
+    "relationship_type": "INCREMENTS_CUBE",
+    "target_type": "cube",
+    "target_name": "Profit and Loss Count",
+    "target_expression": "sTgtCube",
+    "target_expressions": [
+      "sTgtCube"
+    ],
+    "confidence": "RESOLVED",
+    "catalog_match_name": "",
+    "validation_status": "BROKEN_REFERENCE",
+    "reason": "The resolved target does not exist in objects.json."
+  }
+]
