@@ -11,6 +11,7 @@ import json
 import re
 import subprocess
 import sys
+from collections.abc import Mapping
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -34,6 +35,8 @@ MANIFEST_FILES = (
     "ti_lineage_manifest.json",
     "rule_lineage_manifest.json",
     "catalog_match_manifest.json",
+    "catalog_validation_resolution_manifest.json",
+    "semantic_validation_manifest.json",
 )
 
 ERROR_FILES = (
@@ -47,6 +50,8 @@ ERROR_FILES = (
     "data_source_collection_errors.json",
     "operational_dependency_errors.json",
     "catalog_match_errors.json",
+    "catalog_validation_resolution_errors.json",
+    "semantic_validation_errors.json",
 )
 
 RELATIONSHIP_DOMAINS = {
@@ -357,6 +362,147 @@ def check_data_source_and_profile(root: Path) -> dict[str, Any]:
     )
 
 
+def check_semantic_resolution_layers(root: Path) -> dict[str, Any]:
+    """Validate the governed resolution-plan and semantic-validation layers."""
+
+    required_files = (
+        "catalog_validation_resolution_manifest.json",
+        "catalog_validation_resolution_summary.json",
+        "catalog_validation_resolution_plan.json",
+        "catalog_validation_resolution_review.csv",
+        "catalog_validation_resolution_errors.json",
+        "semantic_validation_manifest.json",
+        "semantic_validation_summary.json",
+        "semantic_ti_relationship_validations.json",
+        "semantic_rule_relationship_validations.json",
+        "semantic_validation_errors.json",
+    )
+    missing_files = [
+        name for name in required_files if not (root / name).is_file()
+    ]
+    if missing_files:
+        return gate(
+            "semantic_resolution_layers",
+            False,
+            missing_files=missing_files,
+        )
+
+    plan_manifest = read_json(
+        root / "catalog_validation_resolution_manifest.json"
+    )
+    semantic_manifest = read_json(root / "semantic_validation_manifest.json")
+    plan = as_records(root / "catalog_validation_resolution_plan.json")
+    plan_errors = as_records(
+        root / "catalog_validation_resolution_errors.json"
+    )
+    semantic_ti = as_records(
+        root / "semantic_ti_relationship_validations.json"
+    )
+    semantic_rule = as_records(
+        root / "semantic_rule_relationship_validations.json"
+    )
+    semantic_errors = as_records(root / "semantic_validation_errors.json")
+
+    if not isinstance(plan_manifest, Mapping):
+        raise TypeError(
+            "catalog_validation_resolution_manifest.json must be an object"
+        )
+    if not isinstance(semantic_manifest, Mapping):
+        raise TypeError("semantic_validation_manifest.json must be an object")
+
+    automatic_count = sum(
+        item.get("decision_type") == "AUTOMATIC" for item in plan
+    )
+    review_count = sum(item.get("decision_type") == "REVIEW" for item in plan)
+    duplicate_plan_ids = len(plan) - len(
+        {str(item.get("plan_id") or "") for item in plan}
+    )
+
+    all_semantic = semantic_ti + semantic_rule
+    duplicate_semantic_ids = len(all_semantic) - len(
+        {
+            str(item.get("semantic_validation_id") or "")
+            for item in all_semantic
+        }
+    )
+    plan_based_semantic = [
+        item for item in all_semantic if str(item.get("plan_id") or "")
+    ]
+    unique_applied_plan_ids = {
+        str(item.get("plan_id")) for item in plan_based_semantic
+    }
+    semantic_decision_counts = Counter(
+        str(item.get("decision_type") or "") for item in all_semantic
+    )
+
+    plan_pass = (
+        plan_manifest.get("status") == "COMPLETE"
+        and int(plan_manifest.get("profile_record_count", 0)) == 2933
+        and int(plan_manifest.get("plan_record_count", 0)) == 2933
+        and int(plan_manifest.get("automatic_count", 0)) == 1720
+        and int(plan_manifest.get("review_count", 0)) == 1213
+        and int(plan_manifest.get("error_count", 0)) == 0
+        and plan_manifest.get("published_current") is True
+        and plan_manifest.get("source_artifacts_modified") is False
+        and len(plan) == 2933
+        and automatic_count == 1720
+        and review_count == 1213
+        and duplicate_plan_ids == 0
+        and not plan_errors
+    )
+
+    semantic_pass = (
+        semantic_manifest.get("status") == "COMPLETE"
+        and int(semantic_manifest.get("ti_source_validation_count", 0)) == 4019
+        and int(semantic_manifest.get("rule_source_validation_count", 0)) == 267
+        and int(semantic_manifest.get("ti_semantic_validation_count", 0)) == 4019
+        and int(semantic_manifest.get("rule_semantic_validation_count", 0)) == 267
+        and int(semantic_manifest.get("semantic_validation_count", 0)) == 4286
+        and int(semantic_manifest.get("plan_record_count", 0)) == 2933
+        and int(semantic_manifest.get("automatic_plan_count", 0)) == 1720
+        and int(semantic_manifest.get("review_plan_count", 0)) == 1213
+        and int(semantic_manifest.get("error_count", 0)) == 0
+        and semantic_manifest.get("published_current") is True
+        and semantic_manifest.get("source_artifacts_modified") is False
+        and len(semantic_ti) == 4019
+        and len(semantic_rule) == 267
+        and len(all_semantic) == 4286
+        and len(plan_based_semantic) == 2933
+        and len(unique_applied_plan_ids) == 2933
+        and semantic_decision_counts.get("AUTOMATIC", 0) == 1720
+        and semantic_decision_counts.get("REVIEW", 0) == 1213
+        and semantic_decision_counts.get("PARSER_PRESERVED", 0) == 1353
+        and duplicate_semantic_ids == 0
+        and not semantic_errors
+    )
+
+    return gate(
+        "semantic_resolution_layers",
+        plan_pass and semantic_pass,
+        plan_pass=plan_pass,
+        semantic_pass=semantic_pass,
+        resolution_plan_snapshot_id=plan_manifest.get("snapshot_id"),
+        semantic_validation_snapshot_id=semantic_manifest.get("snapshot_id"),
+        plan_records=len(plan),
+        automatic_plan_records=automatic_count,
+        review_plan_records=review_count,
+        duplicate_plan_ids=duplicate_plan_ids,
+        plan_error_count=len(plan_errors),
+        ti_semantic_validations=len(semantic_ti),
+        rule_semantic_validations=len(semantic_rule),
+        total_semantic_validations=len(all_semantic),
+        plan_based_semantic_validations=len(plan_based_semantic),
+        unique_applied_plan_ids=len(unique_applied_plan_ids),
+        semantic_decision_counts=dict(sorted(semantic_decision_counts.items())),
+        duplicate_semantic_validation_ids=duplicate_semantic_ids,
+        semantic_error_count=len(semantic_errors),
+        source_artifacts_modified=(
+            bool(plan_manifest.get("source_artifacts_modified"))
+            or bool(semantic_manifest.get("source_artifacts_modified"))
+        ),
+    )
+
+
 def check_sensitive_data(root: Path) -> dict[str, Any]:
     findings = []
     for name in SENSITIVE_FILES:
@@ -453,6 +599,7 @@ def run_acceptance(
         check_structural,
         check_cube_ordering,
         check_data_source_and_profile,
+        check_semantic_resolution_layers,
         check_sensitive_data,
     )
     for check in checks:

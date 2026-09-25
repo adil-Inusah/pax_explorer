@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T13:15:07.505782+00:00",
+  "generated_at": "2026-09-25T13:37:55.102616+00:00",
   "catalog_directory": "C:\\Users\\inusaad\\Pax_explorer\\data\\current",
   "gates": [
     {
@@ -13,7 +13,7 @@
           "-q"
         ],
         "return_code": 0,
-        "stdout": "........................................................................ [ 40%]\n........................................................................ [ 80%]\n...................................                                      [100%]\n179 passed in 2.34s\n",
+        "stdout": "........................................................................ [ 36%]\n........................................................................ [ 73%]\n....................................................                     [100%]\n196 passed in 4.48s\n",
         "stderr": "",
         "pass": true
       }
@@ -148,6 +148,24 @@
             "published_current": true,
             "snapshot_id": "20260924T185048Z",
             "pass": true
+          },
+          {
+            "file": "catalog_validation_resolution_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260925T132420Z",
+            "pass": true
+          },
+          {
+            "file": "semantic_validation_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260925T132949Z",
+            "pass": true
           }
         ]
       }
@@ -213,6 +231,18 @@
           },
           {
             "file": "catalog_match_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "catalog_validation_resolution_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "semantic_validation_errors.json",
             "exists": true,
             "error_count": 0,
             "pass": true
@@ -435,6 +465,34 @@
           "TARGET_NOT_IN_CATALOG": 22,
           "VALID_CREATE_TARGET": 45
         }
+      }
+    },
+    {
+      "gate": "semantic_resolution_layers",
+      "pass": true,
+      "details": {
+        "plan_pass": true,
+        "semantic_pass": true,
+        "resolution_plan_snapshot_id": "20260925T132420Z",
+        "semantic_validation_snapshot_id": "20260925T132949Z",
+        "plan_records": 2933,
+        "automatic_plan_records": 1720,
+        "review_plan_records": 1213,
+        "duplicate_plan_ids": 0,
+        "plan_error_count": 0,
+        "ti_semantic_validations": 4019,
+        "rule_semantic_validations": 267,
+        "total_semantic_validations": 4286,
+        "plan_based_semantic_validations": 2933,
+        "unique_applied_plan_ids": 2933,
+        "semantic_decision_counts": {
+          "AUTOMATIC": 1720,
+          "PARSER_PRESERVED": 1353,
+          "REVIEW": 1213
+        },
+        "duplicate_semantic_validation_ids": 0,
+        "semantic_error_count": 0,
+        "source_artifacts_modified": false
       }
     },
     {
