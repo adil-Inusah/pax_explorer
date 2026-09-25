@@ -1,0 +1,68 @@
+{
+  "HAS_CONFIGURED_SOURCE": {
+    "label": "Has configured source",
+    "category": "CONFIGURATION",
+    "impact_behavior": "CONFIGURATION_REFERENCE",
+    "visual_group": "CONFIGURATION"
+  },
+  "REFERENCES_SHARED_SOURCE": {
+    "label": "References shared source",
+    "category": "REFERENCE",
+    "impact_behavior": "CONFIGURATION_REFERENCE",
+    "visual_group": "REFERENCE"
+  },
+  "REFERENCES_TM1_VIEW": {
+    "label": "References TM1 view",
+    "category": "REFERENCE",
+    "impact_behavior": "UPSTREAM_DEPENDENCY",
+    "visual_group": "READ"
+  },
+  "REFERENCES_TM1_SUBSET": {
+    "label": "References TM1 subset",
+    "category": "REFERENCE",
+    "impact_behavior": "UPSTREAM_DEPENDENCY",
+    "visual_group": "READ"
+  },
+  "REFERENCES_FILE": {
+    "label": "References file",
+    "category": "REFERENCE",
+    "impact_behavior": "UPSTREAM_DEPENDENCY",
+    "visual_group": "READ"
+  },
+  "RESOLVES_TO_VIEW": {
+    "label": "Resolves to view",
+    "category": "RESOLUTION",
+    "impact_behavior": "IDENTITY_RESOLUTION",
+    "visual_group": "STRUCTURAL"
+  },
+  "RESOLVES_TO_SUBSET": {
+    "label": "Resolves to subset",
+    "category": "RESOLUTION",
+    "impact_behavior": "IDENTITY_RESOLUTION",
+    "visual_group": "STRUCTURAL"
+  },
+  "RESOLVES_TO_FILE": {
+    "label": "Resolves to file",
+    "category": "RESOLUTION",
+    "impact_behavior": "IDENTITY_RESOLUTION",
+    "visual_group": "STRUCTURAL"
+  },
+  "BELONGS_TO_HIERARCHY": {
+    "label": "Belongs to hierarchy",
+    "category": "STRUCTURAL",
+    "impact_behavior": "STRUCTURAL_OWNERSHIP",
+    "visual_group": "STRUCTURAL"
+  },
+  "BELONGS_TO_DIMENSION": {
+    "label": "Belongs to dimension",
+    "category": "STRUCTURAL",
+    "impact_behavior": "STRUCTURAL_OWNERSHIP",
+    "visual_group": "STRUCTURAL"
+  },
+  "BELONGS_TO_CUBE": {
+    "label": "Belongs to cube",
+    "category": "STRUCTURAL",
+    "impact_behavior": "STRUCTURAL_OWNERSHIP",
+    "visual_group": "STRUCTURAL"
+  }
+}

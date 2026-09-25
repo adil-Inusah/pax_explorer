@@ -1,0 +1,20 @@
+{
+  "READS_FROM_CUBE": {"label": "Reads from", "category": "DATA_FLOW", "source_role": "Consumer process", "target_role": "Input cube", "impact_behavior": "EDGE_DIRECTION", "visual_group": "READ"},
+  "WRITES_TO_CUBE": {"label": "Writes to", "category": "DATA_FLOW", "source_role": "Producer process", "target_role": "Output cube", "impact_behavior": "EDGE_DIRECTION", "visual_group": "WRITE"},
+  "INCREMENTS_CUBE": {"label": "Increments", "category": "DATA_FLOW", "source_role": "Producer process", "target_role": "Output cube", "impact_behavior": "EDGE_DIRECTION", "visual_group": "WRITE"},
+  "CLEARS_CUBE": {"label": "Clears", "category": "DATA_FLOW", "source_role": "Mutating process", "target_role": "Affected cube", "impact_behavior": "EDGE_DIRECTION", "visual_group": "WRITE"},
+  "CALLS_PROCESS": {"label": "Calls", "category": "EXECUTION", "source_role": "Calling process", "target_role": "Called process", "impact_behavior": "EDGE_DIRECTION", "visual_group": "CALL"},
+  "RUNS_PROCESS": {"label": "Runs", "category": "EXECUTION", "source_role": "Chore task", "target_role": "Process", "impact_behavior": "EDGE_DIRECTION", "visual_group": "CALL"},
+  "USES_DIMENSION": {"label": "Uses dimension", "category": "STRUCTURAL", "source_role": "Cube", "target_role": "Dimension", "impact_behavior": "EDGE_DIRECTION", "visual_group": "STRUCTURAL"},
+  "BELONGS_TO_DIMENSION": {"label": "Belongs to dimension", "category": "STRUCTURAL", "source_role": "Member object", "target_role": "Owning dimension", "impact_behavior": "EDGE_DIRECTION", "visual_group": "STRUCTURAL"},
+  "USES_VIEW": {"label": "Uses view", "category": "SEMANTIC_USAGE", "source_role": "Process", "target_role": "View", "impact_behavior": "EDGE_DIRECTION", "visual_group": "READ"},
+  "READS_ATTRIBUTE": {"label": "Reads attribute", "category": "SEMANTIC_USAGE", "source_role": "Process", "target_role": "Attribute", "impact_behavior": "EDGE_DIRECTION", "visual_group": "READ"},
+  "WRITES_ATTRIBUTE": {"label": "Writes attribute", "category": "SEMANTIC_USAGE", "source_role": "Process", "target_role": "Attribute", "impact_behavior": "EDGE_DIRECTION", "visual_group": "WRITE"},
+  "READS_FROM_FILE": {"label": "Reads from file", "category": "OPERATIONAL", "source_role": "Process", "target_role": "Input file", "impact_behavior": "EDGE_DIRECTION", "visual_group": "READ"},
+  "WRITES_FILE": {"label": "Writes file", "category": "OPERATIONAL", "source_role": "Process", "target_role": "Output file", "impact_behavior": "EDGE_DIRECTION", "visual_group": "WRITE"},
+  "USES_DATA_SOURCE": {"label": "Uses data source", "category": "OPERATIONAL", "source_role": "Process", "target_role": "Configured source", "impact_behavior": "EDGE_DIRECTION", "visual_group": "READ"},
+  "RESOLVES_TO_FILE": {"label": "Resolves to file", "category": "OPERATIONAL", "source_role": "Configured source", "target_role": "File", "impact_behavior": "EDGE_DIRECTION", "visual_group": "STRUCTURAL"},
+  "EXECUTES_COMMAND": {"label": "Executes command", "category": "EXECUTION", "source_role": "Process", "target_role": "Command", "impact_behavior": "EDGE_DIRECTION", "visual_group": "CALL"},
+  "READS_FROM": {"label": "Reads from", "category": "RULE_LINEAGE", "source_role": "Rule cube", "target_role": "Referenced cube", "impact_behavior": "EDGE_DIRECTION", "visual_group": "READ"},
+  "FEEDS": {"label": "Feeds", "category": "RULE_LINEAGE", "source_role": "Source cube", "target_role": "Fed cube", "impact_behavior": "EDGE_DIRECTION", "visual_group": "WRITE"}
+}
