@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T13:37:55.102616+00:00",
+  "generated_at": "2026-09-25T17:12:03.807886+00:00",
   "catalog_directory": "C:\\Users\\inusaad\\Pax_explorer\\data\\current",
   "gates": [
     {
@@ -13,7 +13,7 @@
           "-q"
         ],
         "return_code": 0,
-        "stdout": "........................................................................ [ 36%]\n........................................................................ [ 73%]\n....................................................                     [100%]\n196 passed in 4.48s\n",
+        "stdout": "........................................................................ [ 33%]\n........................................................................ [ 67%]\n......................................................................   [100%]\n214 passed in 7.66s\n",
         "stderr": "",
         "pass": true
       }
@@ -31,7 +31,7 @@
           "C:\\Users\\inusaad\\Pax_explorer\\config\\catalog_quality_exceptions.json"
         ],
         "return_code": 0,
-        "stdout": "========================================================================\nHOLISTIC TM1 CATALOG SMOKE TEST\n========================================================================\ncatalog_directory=C:\\Users\\inusaad\\Pax_explorer\\data\\current\nfile=manifest.json parse=PASS\nfile=objects.json parse=PASS\nfile=regular_objects.json parse=PASS\nfile=control_objects.json parse=PASS\nfile=rule_relationships.json parse=PASS\nfile=rule_relationship_validations.json parse=PASS\nfile=ti_relationships.json parse=PASS\nfile=ti_relationship_validations.json parse=PASS\nfile=attributes.json parse=PASS\nfile=attribute_manifest.json parse=PASS\nfile=attribute_collection_metrics.json parse=PASS\nfile=attribute_collection_errors.json parse=PASS\nrecords=objects.json count=1685\nrecords=regular_objects.json count=709\nrecords=control_objects.json count=976\nrecords=rule_relationships.json count=267\nrecords=rule_relationship_validations.json count=267\nrecords=ti_relationships.json count=4019\nrecords=ti_relationship_validations.json count=4019\nrecords=attributes.json count=2719\nrecords=attribute_collection_errors.json count=0\nquality_exception_register=C:\\Users\\inusaad\\Pax_explorer\\config\\catalog_quality_exceptions.json\noptional_files_present=7\n\n========================================================================\nSUMMARY\n========================================================================\nmanifest_keys=16\nobjects=1685\nregular_objects=709\ncontrol_objects=976\nobject_split_reconciles=True\nrule_relationships=267\nti_relationships=4019\nrelationships=4286\nrule_validations=267\nti_validations=4019\nvalidations=4286\nregistered_exception_targets=15\nregistered_exception_records=29\nexcluded_from_quality_score=29\nraw_missing_target_records=29\nunregistered_missing_target_records=0\nquality_exception_register_loaded=True\nattribute_collection=COMPLETE\nattributes=2719\nregular_attributes=2692\ncontrol_attributes=27\nattribute_dimensions=902\nattribute_hierarchies=927\ncompleted_attribute_hierarchies=927\nattribute_collection_errors=0\nattribute_identity_duplicates=0\nattribute_unknown_types=0\nattribute_alias_flag_errors=0\nattribute_inventory_reconciles=True\nobject_counts={\"CHORE\": 18, \"CUBE\": 379, \"DIMENSION\": 902, \"PROCESS\": 386}\nregular_object_counts={\"CHORE\": 18, \"CUBE\": 84, \"DIMENSION\": 232, \"PROCESS\": 375}\ncontrol_object_counts={\"CUBE\": 295, \"DIMENSION\": 670, \"PROCESS\": 11}\nrelationship_counts={\"CALLS_PROCESS\": 55, \"CLEARS_CUBE\": 181, \"CREATES_ATTRIBUTE\": 669, \"CREATES_SUBSET\": 51, \"CREATES_VIEW\": 7, \"DELETES_ATTRIBUTE\": 36, \"DELETES_SUBSET\": 50, \"DELETES_VIEW\": 9, \"EXECUTES_COMMAND\": 35, \"FEEDS\": 2, \"INCREMENTS_CUBE\": 119, \"READS_ATTRIBUTE\": 845, \"READS_FROM\": 75, \"READS_FROM_CUBE\": 376, \"REFERENCES_DIMENSION\": 38, \"REFERENCES_HIERARCHY\": 50, \"UPDATES_DIMENSION\": 110, \"UPDATES_HIERARCHY\": 1, \"UPDATES_SUBSET\": 199, \"USES_ATTRIBUTE\": 102, \"USES_VIEW\": 162, \"WRITES_ATTRIBUTE\": 763, \"WRITES_FILE\": 65, \"WRITES_TO_CUBE\": 286}\nvalidation_counts={\"ATTRIBUTE_CATALOG_DEFERRED\": 2415, \"BROKEN_REFERENCE\": 1, \"DYNAMIC_EXTERNAL_COMMAND\": 34, \"DYNAMIC_EXTERNAL_FILE\": 43, \"HIERARCHY_CATALOG_DEFERRED\": 50, \"NOT_CROSS_CHECKED\": 33, \"RESOLVED_TARGET_NOT_IN_CATALOG\": 28, \"RUNTIME_SUBSET_REFERENCE\": 297, \"RUNTIME_VIEW_REFERENCE\": 171, \"UNRESOLVED_DYNAMIC_REFERENCE\": 45, \"VALID\": 1169}\ninformational_validation_counts={\"ATTRIBUTE_CATALOG_DEFERRED\": 2415, \"DYNAMIC_EXTERNAL_COMMAND\": 34, \"DYNAMIC_EXTERNAL_FILE\": 43, \"HIERARCHY_CATALOG_DEFERRED\": 50, \"NOT_CROSS_CHECKED\": 33, \"RUNTIME_SUBSET_REFERENCE\": 297, \"RUNTIME_VIEW_REFERENCE\": 171}\nattribute_type_counts={\"ALIAS\": 127, \"NUMERIC\": 19, \"STRING\": 2573}\nfailures=0\nwarnings=1\nWARNING: UNRESOLVED_DYNAMIC_REFERENCE: 45\nHOLISTIC_SMOKE_TEST=PASS_WITH_WARNINGS\n",
+        "stdout": "========================================================================\nHOLISTIC TM1 CATALOG SMOKE TEST\n========================================================================\ncatalog_directory=C:\\Users\\inusaad\\Pax_explorer\\data\\current\nfile=manifest.json parse=PASS\nfile=objects.json parse=PASS\nfile=regular_objects.json parse=PASS\nfile=control_objects.json parse=PASS\nfile=rule_relationships.json parse=PASS\nfile=rule_relationship_validations.json parse=PASS\nfile=ti_relationships.json parse=PASS\nfile=ti_relationship_validations.json parse=PASS\nfile=attributes.json parse=PASS\nfile=attribute_manifest.json parse=PASS\nfile=attribute_collection_metrics.json parse=PASS\nfile=attribute_collection_errors.json parse=PASS\nrecords=objects.json count=1685\nrecords=regular_objects.json count=709\nrecords=control_objects.json count=976\nrecords=rule_relationships.json count=267\nrecords=rule_relationship_validations.json count=267\nrecords=ti_relationships.json count=4019\nrecords=ti_relationship_validations.json count=4019\nrecords=attributes.json count=2719\nrecords=attribute_collection_errors.json count=0\nquality_exception_register=C:\\Users\\inusaad\\Pax_explorer\\config\\catalog_quality_exceptions.json\noptional_files_present=4\noptional_files_missing=rule_function_profile.json,rule_function_review_queue.json,rule_parser_coverage.json\n\n========================================================================\nSUMMARY\n========================================================================\nmanifest_keys=16\nobjects=1685\nregular_objects=709\ncontrol_objects=976\nobject_split_reconciles=True\nrule_relationships=267\nti_relationships=4019\nrelationships=4286\nrule_validations=267\nti_validations=4019\nvalidations=4286\nregistered_exception_targets=15\nregistered_exception_records=29\nexcluded_from_quality_score=29\nraw_missing_target_records=29\nunregistered_missing_target_records=0\nquality_exception_register_loaded=True\nattribute_collection=COMPLETE\nattributes=2719\nregular_attributes=2692\ncontrol_attributes=27\nattribute_dimensions=902\nattribute_hierarchies=927\ncompleted_attribute_hierarchies=927\nattribute_collection_errors=0\nattribute_identity_duplicates=0\nattribute_unknown_types=0\nattribute_alias_flag_errors=0\nattribute_inventory_reconciles=True\nobject_counts={\"CHORE\": 18, \"CUBE\": 379, \"DIMENSION\": 902, \"PROCESS\": 386}\nregular_object_counts={\"CHORE\": 18, \"CUBE\": 84, \"DIMENSION\": 232, \"PROCESS\": 375}\ncontrol_object_counts={\"CUBE\": 295, \"DIMENSION\": 670, \"PROCESS\": 11}\nrelationship_counts={\"CALLS_PROCESS\": 55, \"CLEARS_CUBE\": 181, \"CREATES_ATTRIBUTE\": 669, \"CREATES_SUBSET\": 51, \"CREATES_VIEW\": 7, \"DELETES_ATTRIBUTE\": 36, \"DELETES_SUBSET\": 50, \"DELETES_VIEW\": 9, \"EXECUTES_COMMAND\": 35, \"FEEDS\": 2, \"INCREMENTS_CUBE\": 119, \"READS_ATTRIBUTE\": 845, \"READS_FROM\": 75, \"READS_FROM_CUBE\": 376, \"REFERENCES_DIMENSION\": 38, \"REFERENCES_HIERARCHY\": 50, \"UPDATES_DIMENSION\": 110, \"UPDATES_HIERARCHY\": 1, \"UPDATES_SUBSET\": 199, \"USES_ATTRIBUTE\": 102, \"USES_VIEW\": 162, \"WRITES_ATTRIBUTE\": 763, \"WRITES_FILE\": 65, \"WRITES_TO_CUBE\": 286}\nvalidation_counts={\"ATTRIBUTE_CATALOG_DEFERRED\": 2415, \"BROKEN_REFERENCE\": 1, \"DYNAMIC_EXTERNAL_COMMAND\": 34, \"DYNAMIC_EXTERNAL_FILE\": 43, \"HIERARCHY_CATALOG_DEFERRED\": 50, \"NOT_CROSS_CHECKED\": 33, \"RESOLVED_TARGET_NOT_IN_CATALOG\": 28, \"RUNTIME_SUBSET_REFERENCE\": 297, \"RUNTIME_VIEW_REFERENCE\": 171, \"UNRESOLVED_DYNAMIC_REFERENCE\": 45, \"VALID\": 1169}\ninformational_validation_counts={\"ATTRIBUTE_CATALOG_DEFERRED\": 2415, \"DYNAMIC_EXTERNAL_COMMAND\": 34, \"DYNAMIC_EXTERNAL_FILE\": 43, \"HIERARCHY_CATALOG_DEFERRED\": 50, \"NOT_CROSS_CHECKED\": 33, \"RUNTIME_SUBSET_REFERENCE\": 297, \"RUNTIME_VIEW_REFERENCE\": 171}\nattribute_type_counts={\"ALIAS\": 127, \"NUMERIC\": 19, \"STRING\": 2573}\nfailures=0\nwarnings=1\nWARNING: UNRESOLVED_DYNAMIC_REFERENCE: 45\nHOLISTIC_SMOKE_TEST=PASS_WITH_WARNINGS\n",
         "stderr": "",
         "pass": true
       }
@@ -47,7 +47,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": "IMPLICIT",
-            "snapshot_id": "20260923T231311Z",
+            "snapshot_id": "20260925T170442Z",
             "pass": true
           },
           {
@@ -56,7 +56,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260924T154855Z",
+            "snapshot_id": "20260925T170555Z",
             "pass": true
           },
           {
@@ -65,7 +65,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260924T160750Z",
+            "snapshot_id": "20260925T170803Z",
             "pass": true
           },
           {
@@ -74,7 +74,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260924T161006Z",
+            "snapshot_id": "20260925T170911Z",
             "pass": true
           },
           {
@@ -83,7 +83,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260924T164130Z",
+            "snapshot_id": "20260925T171018Z",
             "pass": true
           },
           {
@@ -92,7 +92,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260924T180355Z",
+            "snapshot_id": "20260925T171045Z",
             "pass": true
           },
           {
@@ -101,7 +101,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260924T171214Z",
+            "snapshot_id": "20260925T171115Z",
             "pass": true
           },
           {
@@ -110,7 +110,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260924T174521Z",
+            "snapshot_id": "20260925T171119Z",
             "pass": true
           },
           {
@@ -119,7 +119,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260924T173657Z",
+            "snapshot_id": "20260925T171147Z",
             "pass": true
           },
           {
@@ -128,7 +128,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": "IMPLICIT",
-            "snapshot_id": "20260924T140439Z",
+            "snapshot_id": "20260925T170447Z",
             "pass": true
           },
           {
@@ -137,7 +137,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": "IMPLICIT",
-            "snapshot_id": "20260923T231346Z",
+            "snapshot_id": "20260925T170523Z",
             "pass": true
           },
           {
@@ -146,7 +146,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260924T185048Z",
+            "snapshot_id": "20260925T171148Z",
             "pass": true
           },
           {
@@ -155,7 +155,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T132420Z",
+            "snapshot_id": "20260925T171149Z",
             "pass": true
           },
           {
@@ -164,7 +164,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T132949Z",
+            "snapshot_id": "20260925T171151Z",
             "pass": true
           }
         ]
@@ -334,8 +334,8 @@
           },
           {
             "domain": "DataSource",
-            "relationships": 375,
-            "validations": 375,
+            "relationships": 453,
+            "validations": 453,
             "id_coverage_checked": true,
             "duplicate_relationship_ids": 0,
             "duplicate_validation_ids": 0,
@@ -345,8 +345,8 @@
           },
           {
             "domain": "Operational",
-            "relationships": 101,
-            "validations": 101,
+            "relationships": 273,
+            "validations": 273,
             "id_coverage_checked": true,
             "duplicate_relationship_ids": 0,
             "duplicate_validation_ids": 0,
@@ -399,7 +399,7 @@
           },
           {
             "domain": "Operational",
-            "records": 34,
+            "records": 110,
             "missing_node_ids": 0,
             "duplicate_node_ids": 0,
             "pass": true
@@ -443,6 +443,13 @@
       "details": {
         "data_source_pass": true,
         "profile_pass": true,
+        "process_count": 386,
+        "configured_process_count": 280,
+        "data_source_count": 107,
+        "data_source_relationship_count": 453,
+        "data_source_validation_count": 453,
+        "data_source_error_count": 0,
+        "published_current": true,
         "actual_classifications": {
           "AMBIGUOUS_MATCH": 1,
           "DEFAULT_HIERARCHY_MATCH": 1625,
@@ -473,8 +480,8 @@
       "details": {
         "plan_pass": true,
         "semantic_pass": true,
-        "resolution_plan_snapshot_id": "20260925T132420Z",
-        "semantic_validation_snapshot_id": "20260925T132949Z",
+        "resolution_plan_snapshot_id": "20260925T171149Z",
+        "semantic_validation_snapshot_id": "20260925T171151Z",
         "plan_records": 2933,
         "automatic_plan_records": 1720,
         "review_plan_records": 1213,

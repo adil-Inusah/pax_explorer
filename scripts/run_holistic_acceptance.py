@@ -327,38 +327,244 @@ def check_cube_ordering(root: Path) -> dict[str, Any]:
     )
 
 
-def check_data_source_and_profile(root: Path) -> dict[str, Any]:
-    data_source = read_json(root / "data_source_manifest.json")
-    profile_manifest = read_json(root / "catalog_match_manifest.json")
-    detail = as_records(root / "catalog_match_profile_detail.json")
-    actual = Counter(str(item.get("match_classification")) for item in detail)
-    classification_pass = dict(actual) == EXPECTED_CLASSIFICATIONS
-    data_source_pass = (
-        data_source.get("status") == "COMPLETE"
-        and int(data_source.get("process_count", 0)) == 386
-        and int(data_source.get("configured_process_count", 0)) == 280
-        and int(data_source.get("data_source_count", 0)) == 107
-        and int(data_source.get("relationship_count", 0)) == 375
-        and int(data_source.get("validation_count", 0)) == 375
-        and int(data_source.get("error_count", 0)) == 0
-        and data_source.get("published_current") is True
+# def check_data_source_and_profile(root: Path) -> dict[str, Any]:
+#     data_source = read_json(root / "data_source_manifest.json")
+#     profile_manifest = read_json(root / "catalog_match_manifest.json")
+#     detail = as_records(root / "catalog_match_profile_detail.json")
+#     actual = Counter(str(item.get("match_classification")) for item in detail)
+#     classification_pass = dict(actual) == EXPECTED_CLASSIFICATIONS
+#     data_source_pass = (
+#         data_source.get("status") == "COMPLETE"
+#         and int(data_source.get("process_count", 0)) == 386
+#         and int(data_source.get("configured_process_count", 0)) == 280
+#         and int(data_source.get("data_source_count", 0)) == 107
+#         and int(data_source.get("relationship_count", 0)) == 453
+#         and int(data_source.get("validation_count", 0)) == 453
+#         and int(data_source.get("error_count", 0)) == 0
+#         and data_source.get("published_current") is True
+#     )
+#     profile_pass = (
+#         profile_manifest.get("status") == "COMPLETE"
+#         and int(profile_manifest.get("deferred_reference_count", 0)) == 2933
+#         and int(profile_manifest.get("review_queue_count", 0)) == 1213
+#         and int(profile_manifest.get("error_count", 0)) == 0
+#         and profile_manifest.get("published_current") is True
+#         and len(detail) == 2933
+#         and classification_pass
+#     )
+#     relationship_count = int(
+#         data_source.get(
+#             "relationship_count",
+#             0,
+#         )
+#     )
+
+#     validation_count = int(
+#         data_source.get(
+#             "validation_count",
+#             0,
+#         )
+#     )
+
+#     return gate(
+#         "data_source_and_catalog_profile",
+#         data_source_pass and profile_pass,
+#         data_source_pass=data_source_pass,
+#         profile_pass=profile_pass,
+#         process_count=int(
+#             data_source.get(
+#                 "process_count",
+#                 0,
+#             )
+#         ),
+#         configured_process_count=int(
+#             data_source.get(
+#                 "configured_process_count",
+#                 0,
+#             )
+#         ),
+#         data_source_count=int(
+#             data_source.get(
+#                 "data_source_count",
+#                 0,
+#             )
+#         ),
+#         data_source_relationship_count=(
+#             relationship_count
+#         ),
+#         data_source_validation_count=(
+#             validation_count
+#         ),
+#         data_source_error_count=int(
+#             data_source.get(
+#                 "error_count",
+#                 0,
+#             )
+#         ),
+#         actual_classifications=dict(
+#             sorted(actual.items())
+#         ),
+#         expected_classifications=(
+#             EXPECTED_CLASSIFICATIONS
+#         ),
+#     )
+
+
+def check_data_source_and_profile(
+    root: Path,
+) -> dict[str, Any]:
+    data_source = read_json(
+        root / "data_source_manifest.json"
     )
+
+    profile_manifest = read_json(
+        root / "catalog_match_manifest.json"
+    )
+
+    detail = as_records(
+        root / "catalog_match_profile_detail.json"
+    )
+
+    actual = Counter(
+        str(
+            item.get(
+                "match_classification"
+            )
+        )
+        for item in detail
+    )
+
+    classification_pass = (
+        dict(actual)
+        == EXPECTED_CLASSIFICATIONS
+    )
+
+    process_count = int(
+        data_source.get(
+            "process_count",
+            0,
+        )
+    )
+
+    configured_process_count = int(
+        data_source.get(
+            "configured_process_count",
+            0,
+        )
+    )
+
+    data_source_count = int(
+        data_source.get(
+            "data_source_count",
+            0,
+        )
+    )
+
+    relationship_count = int(
+        data_source.get(
+            "relationship_count",
+            0,
+        )
+    )
+
+    validation_count = int(
+        data_source.get(
+            "validation_count",
+            0,
+        )
+    )
+
+    error_count = int(
+        data_source.get(
+            "error_count",
+            0,
+        )
+    )
+
+    data_source_pass = (
+        data_source.get("status")
+        == "COMPLETE"
+        and process_count == 386
+        and configured_process_count == 280
+        and data_source_count == 107
+        and relationship_count == 453
+        and validation_count == 453
+        and relationship_count
+        == validation_count
+        and error_count == 0
+        and data_source.get(
+            "published_current"
+        )
+        is True
+    )
+
     profile_pass = (
-        profile_manifest.get("status") == "COMPLETE"
-        and int(profile_manifest.get("deferred_reference_count", 0)) == 2933
-        and int(profile_manifest.get("review_queue_count", 0)) == 1213
-        and int(profile_manifest.get("error_count", 0)) == 0
-        and profile_manifest.get("published_current") is True
+        profile_manifest.get("status")
+        == "COMPLETE"
+        and int(
+            profile_manifest.get(
+                "deferred_reference_count",
+                0,
+            )
+        )
+        == 2933
+        and int(
+            profile_manifest.get(
+                "review_queue_count",
+                0,
+            )
+        )
+        == 1213
+        and int(
+            profile_manifest.get(
+                "error_count",
+                0,
+            )
+        )
+        == 0
+        and profile_manifest.get(
+            "published_current"
+        )
+        is True
         and len(detail) == 2933
         and classification_pass
     )
+
     return gate(
         "data_source_and_catalog_profile",
-        data_source_pass and profile_pass,
-        data_source_pass=data_source_pass,
+        data_source_pass
+        and profile_pass,
+        data_source_pass=(
+            data_source_pass
+        ),
         profile_pass=profile_pass,
-        actual_classifications=dict(sorted(actual.items())),
-        expected_classifications=EXPECTED_CLASSIFICATIONS,
+        process_count=process_count,
+        configured_process_count=(
+            configured_process_count
+        ),
+        data_source_count=(
+            data_source_count
+        ),
+        data_source_relationship_count=(
+            relationship_count
+        ),
+        data_source_validation_count=(
+            validation_count
+        ),
+        data_source_error_count=(
+            error_count
+        ),
+        published_current=(
+            data_source.get(
+                "published_current"
+            )
+        ),
+        actual_classifications=dict(
+            sorted(actual.items())
+        ),
+        expected_classifications=(
+            EXPECTED_CLASSIFICATIONS
+        ),
     )
 
 

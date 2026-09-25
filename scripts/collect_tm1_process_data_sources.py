@@ -379,6 +379,7 @@ def collect_process_data_sources(
     process_source_records: list[dict[str, Any]] = []
     relationships: list[dict[str, Any]] = []
     validations: list[dict[str, Any]] = []
+    bridge_relationship_ids: set[str] = set()
     errors: list[dict[str, Any]] = []
     source_type_counts: Counter[str] = Counter()
 
@@ -459,7 +460,7 @@ def collect_process_data_sources(
         if specialized is not None:
             relationship_type, target_id, target_type, target_name = specialized
             specialized_id = f"process-source-target::{process_name}::{relationship_type}::{sha256_text(target_name)}"
-            relationships.append({
+            specialized_relationship = {
                 "snapshot_id": run_id,
                 "relationship_id": specialized_id,
                 "source_id": process_node_id(process_name),
@@ -469,7 +470,11 @@ def collect_process_data_sources(
                 "relationship_type": relationship_type,
                 "relationship_origin": "PROCESS_DEFINITION",
                 "resolution_method": "DATA_SOURCE_DEFINITION",
-            })
+                "process_name": process_name,
+                "target_expression": target_name,
+                "configured_data_source_id": node_id,
+            }
+            relationships.append(specialized_relationship)
             validations.append({
                 "snapshot_id": run_id,
                 "validation_id": f"validation::{specialized_id}",
@@ -477,12 +482,106 @@ def collect_process_data_sources(
                 "validation_status": status,
                 "source_id": process_node_id(process_name),
                 "target_id": target_id,
+                "process_name": process_name,
+                "target_expression": target_name,
+                "configured_data_source_id": node_id,
             })
+
+            # Preserve the explicit configured-source-to-file identity bridge.
+            if relationship_type == "READS_FROM_FILE":
+                bridge_id = f"data-source-file::{node_id}::{target_id}"
+                if bridge_id not in bridge_relationship_ids:
+                    bridge_relationship_ids.add(bridge_id)
+                    relationships.append({
+                        "snapshot_id": run_id,
+                        "relationship_id": bridge_id,
+                        "source_id": node_id,
+                        "source_type": "EXTERNAL_DATA_SOURCE",
+                        "target_id": target_id,
+                        "target_type": "FILE",
+                        "relationship_type": "RESOLVES_TO_FILE",
+                        "relationship_origin": "PROCESS_DEFINITION",
+                        "resolution_method": (
+                            "SERVER_SOURCE_NAME"
+                            if record.get("server_source_name")
+                            else "CLIENT_SOURCE_NAME"
+                        ),
+                        "target_expression": target_name,
+                        "configured_data_source_id": node_id,
+                    })
+                    validations.append({
+                        "snapshot_id": run_id,
+                        "validation_id": f"validation::{bridge_id}",
+                        "relationship_id": bridge_id,
+                        "validation_status": "EXTERNAL_DEPENDENCY_NOT_CROSS_CHECKED",
+                        "source_id": node_id,
+                        "target_id": target_id,
+                        "target_expression": target_name,
+                        "configured_data_source_id": node_id,
+                    })
 
     source_records = sorted(source_records_by_id.values(), key=lambda item: (item["source_type"], item["node_id"]))
     process_source_records.sort(key=lambda item: item["process_name"].casefold())
     relationships.sort(key=lambda item: item["relationship_id"].casefold())
     validations.sort(key=lambda item: item["relationship_id"].casefold())
+
+    # Cross-artifact integrity checks. A COMPLETE publication must be usable
+    # from an empty current directory without relying on stale enrichment.
+    relationship_ids = [clean(item.get("relationship_id")) for item in relationships]
+    validation_relationship_ids = [
+        clean(item.get("relationship_id")) for item in validations
+    ]
+    source_node_ids = {clean(item.get("node_id")) for item in source_records}
+    if len(relationships) != len(validations):
+        errors.append({
+            "stage": "VALIDATE_OUTPUT",
+            "error": "Relationship and validation counts do not reconcile",
+        })
+    if len(relationship_ids) != len(set(relationship_ids)):
+        errors.append({
+            "stage": "VALIDATE_OUTPUT",
+            "error": "Duplicate relationship IDs detected",
+        })
+    if set(relationship_ids) != set(validation_relationship_ids):
+        errors.append({
+            "stage": "VALIDATE_OUTPUT",
+            "error": "Relationship and validation identities do not reconcile",
+        })
+    bridge_keys = {
+        (clean(item.get("source_id")), clean(item.get("target_id")))
+        for item in relationships
+        if item.get("relationship_type") == "RESOLVES_TO_FILE"
+    }
+    for relationship in relationships:
+        if relationship.get("relationship_type") != "READS_FROM_FILE":
+            continue
+        expression = clean(relationship.get("target_expression"))
+        configured_id = clean(relationship.get("configured_data_source_id"))
+        if not expression:
+            errors.append({
+                "stage": "VALIDATE_OUTPUT",
+                "relationship_id": relationship.get("relationship_id"),
+                "error": "READS_FROM_FILE has no target_expression",
+            })
+        if not configured_id or configured_id not in source_node_ids:
+            errors.append({
+                "stage": "VALIDATE_OUTPUT",
+                "relationship_id": relationship.get("relationship_id"),
+                "error": "READS_FROM_FILE has no valid configured_data_source_id",
+            })
+        if expression and clean(relationship.get("target_id")) != file_node_id(expression):
+            errors.append({
+                "stage": "VALIDATE_OUTPUT",
+                "relationship_id": relationship.get("relationship_id"),
+                "error": "READS_FROM_FILE target_id does not match target_expression",
+            })
+        if (configured_id, clean(relationship.get("target_id"))) not in bridge_keys:
+            errors.append({
+                "stage": "VALIDATE_OUTPUT",
+                "relationship_id": relationship.get("relationship_id"),
+                "error": "READS_FROM_FILE has no RESOLVES_TO_FILE bridge",
+            })
+
     status = "PARTIAL" if errors else "COMPLETE"
 
     manifest = {

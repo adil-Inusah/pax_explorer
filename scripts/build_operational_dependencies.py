@@ -44,6 +44,7 @@ FILE_RELATIONSHIP_TYPES = {
     "RENAMES_FILE",
 }
 COMMAND_RELATIONSHIP_TYPES = {"EXECUTES_COMMAND"}
+SOURCE_FILE_BRIDGE_TYPES = {"RESOLVES_TO_FILE"}
 SCRIPT_EXTENSIONS = {
     ".ps1",
     ".bat",
@@ -248,8 +249,19 @@ def command_children(command: dict[str, Any]) -> list[tuple[str, dict[str, Any]]
     return result
 
 
+def name_from_node_id(value: Any, expected_prefix: str) -> str:
+    node_id = clean(value)
+    prefix = f"{expected_prefix}::"
+    if node_id.casefold().startswith(prefix.casefold()):
+        return node_id[len(prefix):]
+    return ""
+
+
 def process_name(record: Mapping[str, Any]) -> str:
-    return clean(first(record, "process_name", "source_name", "source_object_name"))
+    direct = clean(first(record, "process_name", "source_name", "source_object_name"))
+    if direct:
+        return direct
+    return name_from_node_id(record.get("source_id"), "process")
 
 
 def relationship_type(record: Mapping[str, Any]) -> str:
@@ -260,9 +272,9 @@ def target_expression(record: Mapping[str, Any]) -> str:
     return clean(
         first(
             record,
+            "target_expression",
             "target_name",
             "resolved_target_name",
-            "target_expression",
             "expression",
             "raw_argument",
             "value",
@@ -322,24 +334,53 @@ def build_operational_dependencies(
     candidates = ti_relationships + source_relationships
     for source_record in candidates:
         rel_type = relationship_type(source_record)
-        if rel_type not in FILE_RELATIONSHIP_TYPES | COMMAND_RELATIONSHIP_TYPES:
+        is_bridge = rel_type in SOURCE_FILE_BRIDGE_TYPES
+        if rel_type not in (
+            FILE_RELATIONSHIP_TYPES
+            | COMMAND_RELATIONSHIP_TYPES
+            | SOURCE_FILE_BRIDGE_TYPES
+        ):
             continue
-        source_process = process_name(source_record)
+
         expression = target_expression(source_record)
-        if not source_process or not expression:
-            errors.append(
-                {
+        source_process = process_name(source_record)
+        source_id = clean(source_record.get("source_id"))
+        source_type = token(source_record.get("source_type"))
+        if is_bridge:
+            if not source_id or source_type != "EXTERNAL_DATA_SOURCE" or not expression:
+                errors.append({
                     "stage": "NORMALIZE_OPERATIONAL_RELATIONSHIP",
                     "relationship_type": rel_type,
-                    "process_name": source_process or None,
-                    "error": "Missing process name or target expression",
-                }
-            )
+                    "source_id": source_id or None,
+                    "error": "Missing external data-source identity or target expression",
+                })
+                continue
+        elif not source_process or not expression:
+            errors.append({
+                "stage": "NORMALIZE_OPERATIONAL_RELATIONSHIP",
+                "relationship_type": rel_type,
+                "process_name": source_process or None,
+                "error": "Missing process name or target expression",
+            })
             continue
-        node = command_node(expression) if rel_type in COMMAND_RELATIONSHIP_TYPES else file_node(expression)
+
+        node = (
+            command_node(expression)
+            if rel_type in COMMAND_RELATIONSHIP_TYPES
+            else file_node(expression)
+        )
+        # Process-definition relationships already carry the canonical FILE ID.
+        supplied_target_id = clean(source_record.get("target_id"))
+        if supplied_target_id and (
+            token(source_record.get("relationship_origin")) == "PROCESS_DEFINITION"
+        ):
+            node["node_id"] = supplied_target_id
         nodes.setdefault(node["node_id"], node)
+
+        graph_source_id = source_id if is_bridge else process_node_id(source_process)
+        graph_source_type = "EXTERNAL_DATA_SOURCE" if is_bridge else "PROCESS"
         relationship_id = (
-            f"operational::{normalized_key(source_process)}::{rel_type}::"
+            f"operational::{normalized_key(graph_source_id)}::{rel_type}::"
             f"{node['node_id']}"
         )
         evidence_key = (
@@ -347,25 +388,26 @@ def build_operational_dependencies(
             rel_type,
             normalized_key(expression),
         )
-        relationships.setdefault(
-            relationship_id,
-            {
-                "snapshot_id": run_id,
-                "relationship_id": relationship_id,
-                "source_id": process_node_id(source_process),
-                "source_type": "PROCESS",
-                "target_id": node["node_id"],
-                "target_type": node["node_type"],
-                "relationship_type": rel_type,
-                "relationship_origin": "TI",
-                "resolution_method": (
-                    "DYNAMIC_EXPRESSION"
-                    if node.get("is_dynamic")
-                    else "NORMALIZED_LITERAL"
-                ),
-                "evidence_count": evidence_counts.get(evidence_key, 1),
-            },
+        origin = clean(source_record.get("relationship_origin")) or "TI"
+        method = clean(source_record.get("resolution_method")) or (
+            "DYNAMIC_EXPRESSION" if node.get("is_dynamic") else "NORMALIZED_LITERAL"
         )
+        relationship_payload = {
+            "snapshot_id": run_id,
+            "relationship_id": relationship_id,
+            "source_id": graph_source_id,
+            "source_type": graph_source_type,
+            "target_id": node["node_id"],
+            "target_type": node["node_type"],
+            "relationship_type": rel_type,
+            "relationship_origin": origin,
+            "resolution_method": method,
+            "evidence_count": evidence_counts.get(evidence_key, 1),
+        }
+        configured_id = clean(source_record.get("configured_data_source_id"))
+        if configured_id:
+            relationship_payload["configured_data_source_id"] = configured_id
+        relationships.setdefault(relationship_id, relationship_payload)
         validations.setdefault(
             relationship_id,
             {
@@ -373,11 +415,10 @@ def build_operational_dependencies(
                 "validation_id": f"validation::{relationship_id}",
                 "relationship_id": relationship_id,
                 "validation_status": validation_status(node),
-                "source_id": process_node_id(source_process),
+                "source_id": graph_source_id,
                 "target_id": node["node_id"],
             },
         )
-
     # Enrich command nodes with executable and script dependencies.
     for command in list(nodes.values()):
         if command.get("node_type") != "COMMAND":
@@ -422,6 +463,27 @@ def build_operational_dependencies(
     validation_payload = sorted(
         validations.values(), key=lambda item: item["relationship_id"]
     )
+    if len(relationship_payload) != len(validation_payload):
+        errors.append({
+            "stage": "VALIDATE_OUTPUT",
+            "error": "Relationship and validation counts do not reconcile",
+        })
+    if {item["relationship_id"] for item in relationship_payload} != {
+        item["relationship_id"] for item in validation_payload
+    }:
+        errors.append({
+            "stage": "VALIDATE_OUTPUT",
+            "error": "Relationship and validation identities do not reconcile",
+        })
+    node_ids = {item["node_id"] for item in node_payload}
+    for relationship in relationship_payload:
+        if relationship["target_id"] not in node_ids:
+            errors.append({
+                "stage": "VALIDATE_OUTPUT",
+                "relationship_id": relationship["relationship_id"],
+                "error": "Operational relationship target node is missing",
+            })
+
     status = "PARTIAL" if errors else "COMPLETE"
     manifest = {
         "snapshot_id": run_id,

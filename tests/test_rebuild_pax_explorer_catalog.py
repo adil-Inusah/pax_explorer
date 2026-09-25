@@ -161,3 +161,20 @@ def test_render_text_contains_failed_stage() -> None:
     text = module.render_text(report)
     assert "ti_lineage" in text
     assert "Restored:     True" in text
+
+
+def test_attribute_stage_uses_all_scope() -> None:
+    stage = next(
+        item
+        for item in module.PIPELINE
+        if item.name == "attributes"
+    )
+
+    assert stage.module == (
+        "scripts.collect_tm1_attributes"
+    )
+
+    assert stage.arguments == (
+        "--scope",
+        "all",
+    )

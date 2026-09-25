@@ -98,6 +98,7 @@ tm1p.ini
 # ============================================================
 # Generated metadata and snapshots
 # ============================================================
+data/*
 data/raw/*
 data/normalized/*
 data/snapshots/*
@@ -115,3 +116,4 @@ data/current/*
 
 !data/snapshots/.gitkeep
 !data/current/.gitkeep
+data/pipeline_backups/*

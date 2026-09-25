@@ -51,3 +51,117 @@ def test_sensitive_data_detects_unredacted_command(tmp_path: Path) -> None:
     assert result["pass"] is False
     assert result["details"]["findings"]
     assert result["details"]["unredacted_operational_dependencies"] == 1
+
+def write_data_source_gate_inputs(
+    root: Path,
+    *,
+    relationship_count: int = 453,
+    validation_count: int = 453,
+) -> None:
+    module.write_json(
+        root / "data_source_manifest.json",
+        {
+            "status": "COMPLETE",
+            "process_count": 386,
+            "configured_process_count": 280,
+            "data_source_count": 107,
+            "relationship_count": (
+                relationship_count
+            ),
+            "validation_count": (
+                validation_count
+            ),
+            "error_count": 0,
+            "published_current": True,
+        },
+    )
+
+    module.write_json(
+        root / "catalog_match_manifest.json",
+        {
+            "status": "COMPLETE",
+            "deferred_reference_count": 2933,
+            "review_queue_count": 1213,
+            "error_count": 0,
+            "published_current": True,
+        },
+    )
+
+    detail: list[dict[str, str]] = []
+
+    for classification, count in (
+        module.EXPECTED_CLASSIFICATIONS.items()
+    ):
+        detail.extend(
+            {
+                "match_classification": (
+                    classification
+                )
+            }
+            for _ in range(count)
+        )
+
+    module.write_json(
+        root / "catalog_match_profile_detail.json",
+        detail,
+    )
+
+def test_data_source_profile_gate_accepts_refactored_contract(
+    tmp_path: Path,
+) -> None:
+    write_data_source_gate_inputs(
+        tmp_path
+    )
+
+    result = (
+        module.check_data_source_and_profile(
+            tmp_path
+        )
+    )
+
+    assert result["pass"] is True
+
+    assert (
+        result["details"][
+            "data_source_pass"
+        ]
+        is True
+    )
+
+    assert (
+        result["details"][
+            "profile_pass"
+        ]
+        is True
+    )
+
+def test_data_source_profile_gate_rejects_validation_mismatch(
+    tmp_path: Path,
+) -> None:
+    write_data_source_gate_inputs(
+        tmp_path,
+        relationship_count=453,
+        validation_count=452,
+    )
+
+    result = (
+        module.check_data_source_and_profile(
+            tmp_path
+        )
+    )
+
+    assert result["pass"] is False
+
+    assert (
+        result["details"][
+            "data_source_pass"
+        ]
+        is False
+    )
+
+    assert (
+        result["details"][
+            "profile_pass"
+        ]
+        is True
+    )

@@ -1,26 +1,30 @@
 ========================================================================
 PAX EXPLORER FULL CATALOG REBUILD
 ========================================================================
-Run ID:       20260925T134758Z
-Status:       FAILED
+Run ID:       20260925T170437Z
+Status:       COMPLETE
 From scratch: True
-Started:      2026-09-25T13:47:58.302318+00:00
-Completed:    2026-09-25T13:54:15.621018+00:00
+Started:      2026-09-25T17:04:37.024183+00:00
+Completed:    2026-09-25T17:12:03.836353+00:00
 
-[PASS] connection_check (4.37s, rc=0)
-[PASS] core_metadata (3.93s, rc=0)
-[PASS] ti_lineage (29.60s, rc=0)
-[PASS] rule_lineage (26.91s, rc=0)
-[PASS] attributes (115.92s, rc=0)
-[PASS] hierarchies (59.29s, rc=0)
-[PASS] public_subsets (56.05s, rc=0)
-[PASS] public_views (24.30s, rc=0)
-[PASS] cube_dimensions (24.57s, rc=0)
-[PASS] chore_tasks (3.89s, rc=0)
-[PASS] process_data_sources (27.03s, rc=0)
-[FAIL] operational_dependencies (0.92s, rc=1)
+[PASS] connection_check (3.95s, rc=0)
+[PASS] core_metadata (4.22s, rc=0)
+[PASS] ti_lineage (36.76s, rc=0)
+[PASS] rule_lineage (29.53s, rc=0)
+[PASS] attributes (128.58s, rc=0)
+[PASS] hierarchies (67.62s, rc=0)
+[PASS] public_subsets (66.41s, rc=0)
+[PASS] public_views (27.82s, rc=0)
+[PASS] cube_dimensions (29.80s, rc=0)
+[PASS] chore_tasks (3.91s, rc=0)
+[PASS] process_data_sources (30.78s, rc=0)
+[PASS] operational_dependencies (0.84s, rc=0)
+[PASS] catalog_match_profile (1.37s, rc=0)
+[PASS] semantic_resolution_plan (1.13s, rc=0)
+[PASS] semantic_validations (1.39s, rc=0)
+[PASS] holistic_acceptance (12.41s, rc=0)
 
-Failed stage: operational_dependencies
-Backup:       C:\Users\inusaad\Pax_explorer\data\pipeline_backups\20260925T134758Z\current
-Restored:     True
-Decision:     CATALOG_REBUILD_FAILED
+Failed stage: <none>
+Backup:       C:\Users\inusaad\Pax_explorer\data\pipeline_backups\20260925T170437Z\current
+Restored:     False
+Decision:     CATALOG_REBUILD_COMPLETE

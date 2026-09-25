@@ -39,7 +39,7 @@ PIPELINE: tuple[Stage, ...] = (
     Stage("core_metadata", "scripts.collect_tm1_metadata"),
     Stage("ti_lineage", "scripts.collect_tm1_ti_lineage"),
     Stage("rule_lineage", "scripts.collect_tm1_rule_lineage"),
-    Stage("attributes", "scripts.collect_tm1_attributes"),
+    Stage("attributes", "scripts.collect_tm1_attributes",("--scope", "all")),
     Stage("hierarchies", "scripts.collect_tm1_hierarchies", ("--scope", "all")),
     Stage("public_subsets", "scripts.collect_tm1_subsets"),
     Stage("public_views", "scripts.collect_tm1_views"),

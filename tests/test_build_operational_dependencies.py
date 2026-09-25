@@ -150,3 +150,123 @@ def test_empty_inventory_completes(tmp_path: Path) -> None:
     )
     assert manifest["status"] == "COMPLETE"
     assert manifest["dependency_count"] == 0
+
+
+def test_process_definition_file_relationship_preserves_canonical_id(
+    tmp_path: Path,
+) -> None:
+    empty = tmp_path / "empty.json"
+    module.write_json(empty, [])
+    source_relationships = tmp_path / "source_relationships.json"
+    canonical_file_id = "file::" + ("a" * 64)
+    module.write_json(
+        source_relationships,
+        [
+            {
+                "source_id": "process::Load File",
+                "source_type": "PROCESS",
+                "target_id": canonical_file_id,
+                "target_type": "FILE",
+                "relationship_type": "READS_FROM_FILE",
+                "relationship_origin": "PROCESS_DEFINITION",
+                "resolution_method": "DATA_SOURCE_DEFINITION",
+                "process_name": "Load File",
+                "target_expression": r"model_upload\input.csv",
+                "configured_data_source_id": "data-source::ASCII_FILE::source1",
+            }
+        ],
+    )
+    manifest = module.build_operational_dependencies(
+        ti_relationships_path=empty,
+        ti_evidence_path=empty,
+        process_source_relationships_path=source_relationships,
+        process_sources_path=empty,
+        snapshot_root=tmp_path / "snapshots",
+        current_root=tmp_path / "current",
+        timestamp=when(),
+    )
+    assert manifest["status"] == "COMPLETE"
+    nodes = module.read_json(tmp_path / "current" / "operational_dependencies.json")
+    assert canonical_file_id in {node["node_id"] for node in nodes}
+    relationships = module.read_json(
+        tmp_path / "current" / "operational_relationships.json"
+    )
+    relationship = relationships[0]
+    assert relationship["source_id"] == "process::Load File"
+    assert relationship["target_id"] == canonical_file_id
+    assert relationship["configured_data_source_id"] == (
+        "data-source::ASCII_FILE::source1"
+    )
+
+
+def test_process_name_falls_back_to_process_node_id() -> None:
+    assert module.process_name({"source_id": "process::Load File"}) == "Load File"
+
+
+def test_resolves_to_file_bridge_is_preserved(tmp_path: Path) -> None:
+    empty = tmp_path / "empty.json"
+    module.write_json(empty, [])
+    source_relationships = tmp_path / "source_relationships.json"
+    canonical_file_id = "file::" + ("b" * 64)
+    module.write_json(
+        source_relationships,
+        [
+            {
+                "source_id": "data-source::ASCII_FILE::source1",
+                "source_type": "EXTERNAL_DATA_SOURCE",
+                "target_id": canonical_file_id,
+                "target_type": "FILE",
+                "relationship_type": "RESOLVES_TO_FILE",
+                "relationship_origin": "PROCESS_DEFINITION",
+                "resolution_method": "SERVER_SOURCE_NAME",
+                "target_expression": r"model_upload\input.csv",
+                "configured_data_source_id": "data-source::ASCII_FILE::source1",
+            }
+        ],
+    )
+    manifest = module.build_operational_dependencies(
+        ti_relationships_path=empty,
+        ti_evidence_path=empty,
+        process_source_relationships_path=source_relationships,
+        process_sources_path=empty,
+        snapshot_root=tmp_path / "snapshots",
+        current_root=tmp_path / "current",
+        timestamp=when(),
+    )
+    assert manifest["status"] == "COMPLETE"
+    relationships = module.read_json(
+        tmp_path / "current" / "operational_relationships.json"
+    )
+    assert relationships[0]["relationship_type"] == "RESOLVES_TO_FILE"
+    assert relationships[0]["source_type"] == "EXTERNAL_DATA_SOURCE"
+    assert relationships[0]["target_id"] == canonical_file_id
+
+
+def test_opaque_file_id_without_expression_is_rejected(tmp_path: Path) -> None:
+    empty = tmp_path / "empty.json"
+    module.write_json(empty, [])
+    source_relationships = tmp_path / "source_relationships.json"
+    module.write_json(
+        source_relationships,
+        [
+            {
+                "source_id": "process::Load File",
+                "source_type": "PROCESS",
+                "target_id": "file::" + ("c" * 64),
+                "target_type": "FILE",
+                "relationship_type": "READS_FROM_FILE",
+                "relationship_origin": "PROCESS_DEFINITION",
+            }
+        ],
+    )
+    manifest = module.build_operational_dependencies(
+        ti_relationships_path=empty,
+        ti_evidence_path=empty,
+        process_source_relationships_path=source_relationships,
+        process_sources_path=empty,
+        snapshot_root=tmp_path / "snapshots",
+        current_root=tmp_path / "current",
+        timestamp=when(),
+    )
+    assert manifest["status"] == "PARTIAL"
+    assert manifest["error_count"] == 1
