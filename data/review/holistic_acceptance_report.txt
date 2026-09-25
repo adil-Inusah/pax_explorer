@@ -1,7 +1,7 @@
 ========================================================================
 PAX EXPLORER HOLISTIC ACCEPTANCE
 ========================================================================
-Generated: 2026-09-25T17:12:03.807886+00:00
+Generated: 2026-09-25T19:25:50.842486+00:00
 Catalog:   C:\Users\inusaad\Pax_explorer\data\current
 
 [PASS] regression_tests
@@ -14,6 +14,7 @@ Catalog:   C:\Users\inusaad\Pax_explorer\data\current
 [PASS] cube_dimension_ordering
 [PASS] data_source_and_catalog_profile
 [PASS] semantic_resolution_layers
+[PASS] unified_graph
 [PASS] sensitive_data
 
 Failures: 0

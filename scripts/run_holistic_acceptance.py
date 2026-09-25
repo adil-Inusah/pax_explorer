@@ -806,8 +806,9 @@ def run_acceptance(
         check_cube_ordering,
         check_data_source_and_profile,
         check_semantic_resolution_layers,
+        check_unified_graph,
         check_sensitive_data,
-    )
+)
     for check in checks:
         try:
             gates.append(check(current_root))
@@ -839,6 +840,391 @@ def parse_arguments(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--skip-tests", action="store_true")
     parser.add_argument("--skip-legacy-smoke", action="store_true")
     return parser.parse_args(argv)
+
+def check_unified_graph(
+    root: Path,
+) -> dict[str, Any]:
+    required_files = (
+        "graph_nodes.json",
+        "graph_relationships.json",
+        "graph_validations.json",
+        "graph_provenance.json",
+        "graph_unresolved_references.json",
+        "graph_projection_outcomes.json",
+        "graph_outbound_index.json",
+        "graph_inbound_index.json",
+        "graph_type_summary.json",
+        "graph_manifest.json",
+        "graph_errors.json",
+        "catalog_build_lineage.json",
+        "catalog_scope.json",
+    )
+
+    missing_files = [
+        name
+        for name in required_files
+        if not (root / name).is_file()
+    ]
+
+    if missing_files:
+        return gate(
+            "unified_graph",
+            False,
+            missing_files=missing_files,
+        )
+
+    manifest = read_json(
+        root / "graph_manifest.json"
+    )
+
+    nodes = as_records(
+        root / "graph_nodes.json"
+    )
+
+    relationships = as_records(
+        root / "graph_relationships.json"
+    )
+
+    validations = as_records(
+        root / "graph_validations.json"
+    )
+
+    provenance = as_records(
+        root / "graph_provenance.json"
+    )
+
+    unresolved = as_records(
+        root
+        / "graph_unresolved_references.json"
+    )
+
+    outcomes = as_records(
+        root
+        / "graph_projection_outcomes.json"
+    )
+
+    errors = as_records(
+        root / "graph_errors.json"
+    )
+
+    node_ids = [
+        str(item.get("node_id") or "")
+        for item in nodes
+    ]
+
+    relationship_ids = [
+        str(
+            item.get(
+                "graph_relationship_id"
+            )
+            or ""
+        )
+        for item in relationships
+    ]
+
+    validation_relationship_ids = [
+        str(
+            item.get(
+                "graph_relationship_id"
+            )
+            or ""
+        )
+        for item in validations
+    ]
+
+    provenance_relationship_ids = [
+        str(
+            item.get(
+                "graph_relationship_id"
+            )
+            or ""
+        )
+        for item in provenance
+    ]
+
+    duplicate_node_ids = (
+        len(node_ids)
+        - len(set(node_ids))
+    )
+
+    duplicate_relationship_ids = (
+        len(relationship_ids)
+        - len(set(relationship_ids))
+    )
+
+    projected_outcomes = [
+        item
+        for item in outcomes
+        if item.get(
+            "projection_outcome"
+        )
+        in {
+            "PROJECTED",
+            "PROJECTED_AS_DYNAMIC_REFERENCE",
+            "PROJECTED_AS_PLANNED_TARGET",
+        }
+    ]
+
+    redundant_outcomes = [
+        item
+        for item in outcomes
+        if item.get(
+            "projection_outcome"
+        )
+        == (
+            "EXCLUDED_REDUNDANT_"
+            "WITH_PROVENANCE"
+        )
+    ]
+
+    error_outcomes = [
+        item
+        for item in outcomes
+        if item.get(
+            "projection_outcome"
+        )
+        == "ERROR"
+    ]
+
+    source_projection_counts = (
+        manifest.get(
+            "source_projection_counts",
+            {},
+        )
+    )
+
+    source_coverage_reconciles = (
+        isinstance(
+            source_projection_counts,
+            Mapping,
+        )
+        and all(
+            bool(details.get("reconciles"))
+            for details
+            in source_projection_counts.values()
+        )
+    )
+
+    passed = (
+        manifest.get("status")
+        == "COMPLETE"
+        and manifest.get(
+            "published_current"
+        )
+        is True
+        and manifest.get(
+            "source_artifacts_modified"
+        )
+        is False
+        and int(
+            manifest.get(
+                "error_count",
+                0,
+            )
+        )
+        == 0
+        and not errors
+        and len(nodes)
+        == int(
+            manifest.get(
+                "node_count",
+                0,
+            )
+        )
+        and len(relationships)
+        == len(validations)
+        == len(provenance)
+        == len(projected_outcomes)
+        and len(relationships)
+        == int(
+            manifest.get(
+                "relationship_count",
+                0,
+            )
+        )
+        and len(validations)
+        == int(
+            manifest.get(
+                "validation_count",
+                0,
+            )
+        )
+        and len(provenance)
+        == int(
+            manifest.get(
+                "provenance_count",
+                0,
+            )
+        )
+        and len(projected_outcomes)
+        == int(
+            manifest.get(
+                "projected_outcome_count",
+                0,
+            )
+        )
+        and len(outcomes)
+        == int(
+            manifest.get(
+                "projection_outcome_count",
+                0,
+            )
+        )
+        and len(unresolved)
+        == int(
+            manifest.get(
+                "unresolved_reference_count",
+                0,
+            )
+        )
+        and len(unresolved)
+        == int(
+            manifest.get(
+                "synthetic_endpoint_count",
+                0,
+            )
+        )
+        and set(relationship_ids)
+        == set(
+            validation_relationship_ids
+        )
+        == set(
+            provenance_relationship_ids
+        )
+        and all(node_ids)
+        and all(relationship_ids)
+        and duplicate_node_ids == 0
+        and duplicate_relationship_ids == 0
+        and int(
+            manifest.get(
+                "duplicate_node_ids",
+                0,
+            )
+        )
+        == 0
+        and int(
+            manifest.get(
+                "duplicate_relationship_ids",
+                0,
+            )
+        )
+        == 0
+        and int(
+            manifest.get(
+                "malformed_relationship_count",
+                0,
+            )
+        )
+        == 0
+        and int(
+            manifest.get(
+                "missing_endpoint_count",
+                0,
+            )
+        )
+        == 0
+        and int(
+            manifest.get(
+                "missing_unresolved_count",
+                0,
+            )
+        )
+        == 0
+        and int(
+            manifest.get(
+                "orphan_unresolved_count",
+                0,
+            )
+        )
+        == 0
+        and int(
+            manifest.get(
+                "source_coverage_failure_count",
+                0,
+            )
+        )
+        == 0
+        and source_coverage_reconciles
+        and not error_outcomes
+        and (
+            len(projected_outcomes)
+            + len(redundant_outcomes)
+            + len(error_outcomes)
+        )
+        == len(outcomes)
+    )
+
+    return gate(
+        "unified_graph",
+        passed,
+        snapshot_id=manifest.get(
+            "snapshot_id"
+        ),
+        pipeline_run_id=manifest.get(
+            "pipeline_run_id"        ),
+        nodes=len(nodes),
+        relationships=len(relationships),
+        validations=len(validations),
+        provenance_records=len(provenance),
+        projected_outcomes=len(
+            projected_outcomes
+        ),
+        redundant_outcomes=len(
+            redundant_outcomes
+        ),
+        error_outcomes=len(
+            error_outcomes
+        ),
+        total_outcomes=len(outcomes),
+        unresolved_references=len(
+            unresolved
+        ),
+        duplicate_node_ids=(
+            duplicate_node_ids
+        ),
+        duplicate_relationship_ids=(
+            duplicate_relationship_ids
+        ),
+        source_coverage_reconciles=(
+            source_coverage_reconciles
+        ),
+        source_coverage_failure_count=int(
+            manifest.get(
+                "source_coverage_failure_count",
+                0,
+            )
+        ),
+        malformed_relationship_count=int(
+            manifest.get(
+                "malformed_relationship_count",
+                0,
+            )
+        ),
+        missing_endpoint_count=int(
+            manifest.get(
+                "missing_endpoint_count",
+                0,
+            )
+        ),
+        missing_unresolved_count=int(
+            manifest.get(
+                "missing_unresolved_count",
+                0,
+            )
+        ),
+        orphan_unresolved_count=int(
+            manifest.get(
+                "orphan_unresolved_count",
+                0,
+            )
+        ),
+        graph_error_count=len(errors),
+        source_artifacts_modified=(
+            manifest.get(
+                "source_artifacts_modified"
+            )
+        ),
+    )
 
 
 def main(argv: list[str] | None = None) -> int:

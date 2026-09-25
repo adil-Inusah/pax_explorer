@@ -71,6 +71,10 @@ PIPELINE: tuple[Stage, ...] = (
         category="DERIVE",
     ),
     Stage(
+        "unified_graph",
+        "scripts.build_unified_graph",
+    ),
+    Stage(
         "holistic_acceptance",
         "scripts.run_holistic_acceptance",
         category="ACCEPTANCE",

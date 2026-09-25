@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T17:12:03.807886+00:00",
+  "generated_at": "2026-09-25T19:25:50.842486+00:00",
   "catalog_directory": "C:\\Users\\inusaad\\Pax_explorer\\data\\current",
   "gates": [
     {
@@ -13,7 +13,7 @@
           "-q"
         ],
         "return_code": 0,
-        "stdout": "........................................................................ [ 33%]\n........................................................................ [ 67%]\n......................................................................   [100%]\n214 passed in 7.66s\n",
+        "stdout": "........................................................................ [ 32%]\n........................................................................ [ 64%]\n........................................................................ [ 96%]\n.........                                                                [100%]\n225 passed in 6.27s\n",
         "stderr": "",
         "pass": true
       }
@@ -47,7 +47,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": "IMPLICIT",
-            "snapshot_id": "20260925T170442Z",
+            "snapshot_id": "20260925T191903Z",
             "pass": true
           },
           {
@@ -56,7 +56,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T170555Z",
+            "snapshot_id": "20260925T192011Z",
             "pass": true
           },
           {
@@ -65,7 +65,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T170803Z",
+            "snapshot_id": "20260925T192159Z",
             "pass": true
           },
           {
@@ -74,7 +74,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T170911Z",
+            "snapshot_id": "20260925T192256Z",
             "pass": true
           },
           {
@@ -83,7 +83,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T171018Z",
+            "snapshot_id": "20260925T192356Z",
             "pass": true
           },
           {
@@ -92,7 +92,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T171045Z",
+            "snapshot_id": "20260925T192421Z",
             "pass": true
           },
           {
@@ -101,7 +101,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T171115Z",
+            "snapshot_id": "20260925T192447Z",
             "pass": true
           },
           {
@@ -110,7 +110,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T171119Z",
+            "snapshot_id": "20260925T192451Z",
             "pass": true
           },
           {
@@ -119,7 +119,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T171147Z",
+            "snapshot_id": "20260925T192517Z",
             "pass": true
           },
           {
@@ -128,7 +128,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": "IMPLICIT",
-            "snapshot_id": "20260925T170447Z",
+            "snapshot_id": "20260925T191908Z",
             "pass": true
           },
           {
@@ -137,7 +137,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": "IMPLICIT",
-            "snapshot_id": "20260925T170523Z",
+            "snapshot_id": "20260925T191941Z",
             "pass": true
           },
           {
@@ -146,7 +146,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T171148Z",
+            "snapshot_id": "20260925T192518Z",
             "pass": true
           },
           {
@@ -155,7 +155,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T171149Z",
+            "snapshot_id": "20260925T192519Z",
             "pass": true
           },
           {
@@ -164,7 +164,7 @@
             "status": "COMPLETE",
             "error_count": 0,
             "published_current": true,
-            "snapshot_id": "20260925T171151Z",
+            "snapshot_id": "20260925T192520Z",
             "pass": true
           }
         ]
@@ -480,8 +480,8 @@
       "details": {
         "plan_pass": true,
         "semantic_pass": true,
-        "resolution_plan_snapshot_id": "20260925T171149Z",
-        "semantic_validation_snapshot_id": "20260925T171151Z",
+        "resolution_plan_snapshot_id": "20260925T192519Z",
+        "semantic_validation_snapshot_id": "20260925T192520Z",
         "plan_records": 2933,
         "automatic_plan_records": 1720,
         "review_plan_records": 1213,
@@ -499,6 +499,33 @@
         },
         "duplicate_semantic_validation_ids": 0,
         "semantic_error_count": 0,
+        "source_artifacts_modified": false
+      }
+    },
+    {
+      "gate": "unified_graph",
+      "pass": true,
+      "details": {
+        "snapshot_id": "20260925T192521Z",
+        "pipeline_run_id": null,
+        "nodes": 18493,
+        "relationships": 29663,
+        "validations": 29663,
+        "provenance_records": 29663,
+        "projected_outcomes": 29663,
+        "redundant_outcomes": 173,
+        "error_outcomes": 0,
+        "total_outcomes": 29836,
+        "unresolved_references": 598,
+        "duplicate_node_ids": 0,
+        "duplicate_relationship_ids": 0,
+        "source_coverage_reconciles": true,
+        "source_coverage_failure_count": 0,
+        "malformed_relationship_count": 0,
+        "missing_endpoint_count": 0,
+        "missing_unresolved_count": 0,
+        "orphan_unresolved_count": 0,
+        "graph_error_count": 0,
         "source_artifacts_modified": false
       }
     },
