@@ -1,0 +1,20 @@
+========================================================================
+PAX EXPLORER HOLISTIC ACCEPTANCE
+========================================================================
+Generated: 2026-09-25T13:15:07.505782+00:00
+Catalog:   C:\Users\inusaad\Pax_explorer\data\current
+
+[PASS] regression_tests
+[PASS] legacy_holistic_smoke
+[PASS] manifests
+[PASS] collection_errors
+[PASS] relationship_validation
+[PASS] entity_identity
+[PASS] structural_invariants
+[PASS] cube_dimension_ordering
+[PASS] data_source_and_catalog_profile
+[PASS] sensitive_data
+
+Failures: 0
+Warnings: 1
+Decision: READY_FOR_SEMANTIC_RESOLUTION

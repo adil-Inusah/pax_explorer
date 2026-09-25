@@ -1,0 +1,454 @@
+{
+  "generated_at": "2026-09-25T13:15:07.505782+00:00",
+  "catalog_directory": "C:\\Users\\inusaad\\Pax_explorer\\data\\current",
+  "gates": [
+    {
+      "gate": "regression_tests",
+      "pass": true,
+      "details": {
+        "command": [
+          "C:\\Users\\inusaad\\Pax_explorer\\.venv\\Scripts\\python.exe",
+          "-m",
+          "pytest",
+          "-q"
+        ],
+        "return_code": 0,
+        "stdout": "........................................................................ [ 40%]\n........................................................................ [ 80%]\n...................................                                      [100%]\n179 passed in 2.34s\n",
+        "stderr": "",
+        "pass": true
+      }
+    },
+    {
+      "gate": "legacy_holistic_smoke",
+      "pass": true,
+      "details": {
+        "warning_count": 1,
+        "command": [
+          "C:\\Users\\inusaad\\Pax_explorer\\.venv\\Scripts\\python.exe",
+          "C:\\Users\\inusaad\\Pax_explorer\\holistic_smoke_test.py",
+          "C:\\Users\\inusaad\\Pax_explorer\\data\\current",
+          "--exceptions",
+          "C:\\Users\\inusaad\\Pax_explorer\\config\\catalog_quality_exceptions.json"
+        ],
+        "return_code": 0,
+        "stdout": "========================================================================\nHOLISTIC TM1 CATALOG SMOKE TEST\n========================================================================\ncatalog_directory=C:\\Users\\inusaad\\Pax_explorer\\data\\current\nfile=manifest.json parse=PASS\nfile=objects.json parse=PASS\nfile=regular_objects.json parse=PASS\nfile=control_objects.json parse=PASS\nfile=rule_relationships.json parse=PASS\nfile=rule_relationship_validations.json parse=PASS\nfile=ti_relationships.json parse=PASS\nfile=ti_relationship_validations.json parse=PASS\nfile=attributes.json parse=PASS\nfile=attribute_manifest.json parse=PASS\nfile=attribute_collection_metrics.json parse=PASS\nfile=attribute_collection_errors.json parse=PASS\nrecords=objects.json count=1685\nrecords=regular_objects.json count=709\nrecords=control_objects.json count=976\nrecords=rule_relationships.json count=267\nrecords=rule_relationship_validations.json count=267\nrecords=ti_relationships.json count=4019\nrecords=ti_relationship_validations.json count=4019\nrecords=attributes.json count=2719\nrecords=attribute_collection_errors.json count=0\nquality_exception_register=C:\\Users\\inusaad\\Pax_explorer\\config\\catalog_quality_exceptions.json\noptional_files_present=7\n\n========================================================================\nSUMMARY\n========================================================================\nmanifest_keys=16\nobjects=1685\nregular_objects=709\ncontrol_objects=976\nobject_split_reconciles=True\nrule_relationships=267\nti_relationships=4019\nrelationships=4286\nrule_validations=267\nti_validations=4019\nvalidations=4286\nregistered_exception_targets=15\nregistered_exception_records=29\nexcluded_from_quality_score=29\nraw_missing_target_records=29\nunregistered_missing_target_records=0\nquality_exception_register_loaded=True\nattribute_collection=COMPLETE\nattributes=2719\nregular_attributes=2692\ncontrol_attributes=27\nattribute_dimensions=902\nattribute_hierarchies=927\ncompleted_attribute_hierarchies=927\nattribute_collection_errors=0\nattribute_identity_duplicates=0\nattribute_unknown_types=0\nattribute_alias_flag_errors=0\nattribute_inventory_reconciles=True\nobject_counts={\"CHORE\": 18, \"CUBE\": 379, \"DIMENSION\": 902, \"PROCESS\": 386}\nregular_object_counts={\"CHORE\": 18, \"CUBE\": 84, \"DIMENSION\": 232, \"PROCESS\": 375}\ncontrol_object_counts={\"CUBE\": 295, \"DIMENSION\": 670, \"PROCESS\": 11}\nrelationship_counts={\"CALLS_PROCESS\": 55, \"CLEARS_CUBE\": 181, \"CREATES_ATTRIBUTE\": 669, \"CREATES_SUBSET\": 51, \"CREATES_VIEW\": 7, \"DELETES_ATTRIBUTE\": 36, \"DELETES_SUBSET\": 50, \"DELETES_VIEW\": 9, \"EXECUTES_COMMAND\": 35, \"FEEDS\": 2, \"INCREMENTS_CUBE\": 119, \"READS_ATTRIBUTE\": 845, \"READS_FROM\": 75, \"READS_FROM_CUBE\": 376, \"REFERENCES_DIMENSION\": 38, \"REFERENCES_HIERARCHY\": 50, \"UPDATES_DIMENSION\": 110, \"UPDATES_HIERARCHY\": 1, \"UPDATES_SUBSET\": 199, \"USES_ATTRIBUTE\": 102, \"USES_VIEW\": 162, \"WRITES_ATTRIBUTE\": 763, \"WRITES_FILE\": 65, \"WRITES_TO_CUBE\": 286}\nvalidation_counts={\"ATTRIBUTE_CATALOG_DEFERRED\": 2415, \"BROKEN_REFERENCE\": 1, \"DYNAMIC_EXTERNAL_COMMAND\": 34, \"DYNAMIC_EXTERNAL_FILE\": 43, \"HIERARCHY_CATALOG_DEFERRED\": 50, \"NOT_CROSS_CHECKED\": 33, \"RESOLVED_TARGET_NOT_IN_CATALOG\": 28, \"RUNTIME_SUBSET_REFERENCE\": 297, \"RUNTIME_VIEW_REFERENCE\": 171, \"UNRESOLVED_DYNAMIC_REFERENCE\": 45, \"VALID\": 1169}\ninformational_validation_counts={\"ATTRIBUTE_CATALOG_DEFERRED\": 2415, \"DYNAMIC_EXTERNAL_COMMAND\": 34, \"DYNAMIC_EXTERNAL_FILE\": 43, \"HIERARCHY_CATALOG_DEFERRED\": 50, \"NOT_CROSS_CHECKED\": 33, \"RUNTIME_SUBSET_REFERENCE\": 297, \"RUNTIME_VIEW_REFERENCE\": 171}\nattribute_type_counts={\"ALIAS\": 127, \"NUMERIC\": 19, \"STRING\": 2573}\nfailures=0\nwarnings=1\nWARNING: UNRESOLVED_DYNAMIC_REFERENCE: 45\nHOLISTIC_SMOKE_TEST=PASS_WITH_WARNINGS\n",
+        "stderr": "",
+        "pass": true
+      }
+    },
+    {
+      "gate": "manifests",
+      "pass": true,
+      "details": {
+        "rows": [
+          {
+            "file": "manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": "IMPLICIT",
+            "snapshot_id": "20260923T231311Z",
+            "pass": true
+          },
+          {
+            "file": "attribute_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260924T154855Z",
+            "pass": true
+          },
+          {
+            "file": "hierarchy_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260924T160750Z",
+            "pass": true
+          },
+          {
+            "file": "subset_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260924T161006Z",
+            "pass": true
+          },
+          {
+            "file": "view_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260924T164130Z",
+            "pass": true
+          },
+          {
+            "file": "cube_dimension_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260924T180355Z",
+            "pass": true
+          },
+          {
+            "file": "chore_lineage_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260924T171214Z",
+            "pass": true
+          },
+          {
+            "file": "data_source_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260924T174521Z",
+            "pass": true
+          },
+          {
+            "file": "operational_dependency_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260924T173657Z",
+            "pass": true
+          },
+          {
+            "file": "ti_lineage_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": "IMPLICIT",
+            "snapshot_id": "20260924T140439Z",
+            "pass": true
+          },
+          {
+            "file": "rule_lineage_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": "IMPLICIT",
+            "snapshot_id": "20260923T231346Z",
+            "pass": true
+          },
+          {
+            "file": "catalog_match_manifest.json",
+            "exists": true,
+            "status": "COMPLETE",
+            "error_count": 0,
+            "published_current": true,
+            "snapshot_id": "20260924T185048Z",
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "gate": "collection_errors",
+      "pass": true,
+      "details": {
+        "rows": [
+          {
+            "file": "metadata_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "attribute_collection_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "hierarchy_collection_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "subset_collection_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "view_collection_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "cube_dimension_collection_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "chore_collection_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "data_source_collection_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "operational_dependency_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          },
+          {
+            "file": "catalog_match_errors.json",
+            "exists": true,
+            "error_count": 0,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "gate": "relationship_validation",
+      "pass": true,
+      "details": {
+        "rows": [
+          {
+            "domain": "TI",
+            "relationships": 4019,
+            "validations": 4019,
+            "id_coverage_checked": false,
+            "duplicate_relationship_ids": 0,
+            "duplicate_validation_ids": 0,
+            "missing_validations": 0,
+            "orphan_validations": 0,
+            "pass": true
+          },
+          {
+            "domain": "Rule",
+            "relationships": 267,
+            "validations": 267,
+            "id_coverage_checked": false,
+            "duplicate_relationship_ids": 0,
+            "duplicate_validation_ids": 0,
+            "missing_validations": 0,
+            "orphan_validations": 0,
+            "pass": true
+          },
+          {
+            "domain": "Hierarchy",
+            "relationships": 927,
+            "validations": 927,
+            "id_coverage_checked": true,
+            "duplicate_relationship_ids": 0,
+            "duplicate_validation_ids": 0,
+            "missing_validations": 0,
+            "orphan_validations": 0,
+            "pass": true
+          },
+          {
+            "domain": "Subset",
+            "relationships": 20402,
+            "validations": 20402,
+            "id_coverage_checked": true,
+            "duplicate_relationship_ids": 0,
+            "duplicate_validation_ids": 0,
+            "missing_validations": 0,
+            "orphan_validations": 0,
+            "pass": true
+          },
+          {
+            "domain": "View",
+            "relationships": 2059,
+            "validations": 2059,
+            "id_coverage_checked": true,
+            "duplicate_relationship_ids": 0,
+            "duplicate_validation_ids": 0,
+            "missing_validations": 0,
+            "orphan_validations": 0,
+            "pass": true
+          },
+          {
+            "domain": "CubeDimension",
+            "relationships": 1154,
+            "validations": 1154,
+            "id_coverage_checked": true,
+            "duplicate_relationship_ids": 0,
+            "duplicate_validation_ids": 0,
+            "missing_validations": 0,
+            "orphan_validations": 0,
+            "pass": true
+          },
+          {
+            "domain": "Chore",
+            "relationships": 282,
+            "validations": 282,
+            "id_coverage_checked": true,
+            "duplicate_relationship_ids": 0,
+            "duplicate_validation_ids": 0,
+            "missing_validations": 0,
+            "orphan_validations": 0,
+            "pass": true
+          },
+          {
+            "domain": "DataSource",
+            "relationships": 375,
+            "validations": 375,
+            "id_coverage_checked": true,
+            "duplicate_relationship_ids": 0,
+            "duplicate_validation_ids": 0,
+            "missing_validations": 0,
+            "orphan_validations": 0,
+            "pass": true
+          },
+          {
+            "domain": "Operational",
+            "relationships": 101,
+            "validations": 101,
+            "id_coverage_checked": true,
+            "duplicate_relationship_ids": 0,
+            "duplicate_validation_ids": 0,
+            "missing_validations": 0,
+            "orphan_validations": 0,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "gate": "entity_identity",
+      "pass": true,
+      "details": {
+        "rows": [
+          {
+            "domain": "Hierarchies",
+            "records": 927,
+            "missing_node_ids": 0,
+            "duplicate_node_ids": 0,
+            "pass": true
+          },
+          {
+            "domain": "Subsets",
+            "records": 10201,
+            "missing_node_ids": 0,
+            "duplicate_node_ids": 0,
+            "pass": true
+          },
+          {
+            "domain": "Views",
+            "records": 2059,
+            "missing_node_ids": 0,
+            "duplicate_node_ids": 0,
+            "pass": true
+          },
+          {
+            "domain": "ChoreTasks",
+            "records": 67,
+            "missing_node_ids": 0,
+            "duplicate_node_ids": 0,
+            "pass": true
+          },
+          {
+            "domain": "DataSources",
+            "records": 107,
+            "missing_node_ids": 0,
+            "duplicate_node_ids": 0,
+            "pass": true
+          },
+          {
+            "domain": "Operational",
+            "records": 34,
+            "missing_node_ids": 0,
+            "duplicate_node_ids": 0,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "gate": "structural_invariants",
+      "pass": true,
+      "details": {
+        "hierarchies": 927,
+        "hierarchy_parents": 927,
+        "subsets": 10201,
+        "subset_hierarchy_parents": 10201,
+        "subset_dimension_parents": 10201,
+        "views": 2059,
+        "view_cube_parents": 2059,
+        "chore_tasks": 67,
+        "chore_task_parents": 67,
+        "chore_process_calls": 67,
+        "chore_bindings": 148,
+        "chore_parameter_edges": 148,
+        "cube_dimension_edges": 1154
+      }
+    },
+    {
+      "gate": "cube_dimension_ordering",
+      "pass": true,
+      "details": {
+        "relationships": 1154,
+        "cubes_covered": 379,
+        "duplicate_positions": 0,
+        "duplicate_dimensions": 0,
+        "continuity_problems": 0
+      }
+    },
+    {
+      "gate": "data_source_and_catalog_profile",
+      "pass": true,
+      "details": {
+        "data_source_pass": true,
+        "profile_pass": true,
+        "actual_classifications": {
+          "AMBIGUOUS_MATCH": 1,
+          "DEFAULT_HIERARCHY_MATCH": 1625,
+          "DYNAMIC_REFERENCE": 557,
+          "EXACT_MATCH": 50,
+          "EXISTING_CREATE_TARGET": 599,
+          "INSUFFICIENT_CONTEXT": 1,
+          "MISSING_DELETE_TARGET": 33,
+          "TARGET_NOT_IN_CATALOG": 22,
+          "VALID_CREATE_TARGET": 45
+        },
+        "expected_classifications": {
+          "AMBIGUOUS_MATCH": 1,
+          "DEFAULT_HIERARCHY_MATCH": 1625,
+          "DYNAMIC_REFERENCE": 557,
+          "EXACT_MATCH": 50,
+          "EXISTING_CREATE_TARGET": 599,
+          "INSUFFICIENT_CONTEXT": 1,
+          "MISSING_DELETE_TARGET": 33,
+          "TARGET_NOT_IN_CATALOG": 22,
+          "VALID_CREATE_TARGET": 45
+        }
+      }
+    },
+    {
+      "gate": "sensitive_data",
+      "pass": true,
+      "details": {
+        "findings": [],
+        "unredacted_data_sources": 0,
+        "unredacted_operational_dependencies": 0
+      }
+    }
+  ],
+  "failure_count": 0,
+  "warning_count": 1,
+  "overall_pass": true,
+  "decision": "READY_FOR_SEMANTIC_RESOLUTION"
+}
